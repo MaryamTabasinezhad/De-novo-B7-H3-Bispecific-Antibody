@@ -270,14 +270,15 @@ reports/
 
 ### Tasks
 
-1. Run antibody-finetuned RF2 (`RF2_ab`) as the native, high-throughput RFantibody validation stage.
-2. Apply the documented RF2-specific confidence and pose-recovery filters before the more expensive independent predictors.
-3. Run RoseTTAFold3 (RF3) independently on RF2 survivors using multiple diffusion samples.
-4. Pin the RF3 Foundry version, checkpoint, input schema, inference steps, diffusion batch size, and random seeds because the RF3 inference API and confidence outputs are still evolving.
-5. Run AlphaFold 3 independently on the RF2/RF3-filtered subset using multiple seeds and samples.
-6. Do not provide the designed antibody–antigen interface as a structural template during RF3 or AlphaFold 3 validation.
-7. Evaluate all generated predictions, not only the top-ranked sample.
-8. Calculate:
+1. Confirm that the candidates originated from antibody-finetuned RFdiffusion backbone generation followed by ProteinMPNN sequence design; RF2 is a validator, not the antibody generator.
+2. Run antibody-finetuned RF2 (`RF2_ab`) as the native, high-throughput RFantibody self-consistency stage.
+3. Apply the documented RF2-specific confidence and pose-recovery filters before the more expensive independent predictors.
+4. Run AlphaFold 3 independently on RF2 survivors using multiple seeds and samples. Use AlphaFold 3 as the primary independent validation model because published RFantibody data show that its interface confidence enriches experimental binders.
+5. Run RoseTTAFold3 (RF3) as a complementary independent prediction and disagreement-analysis layer on the AF3-evaluated subset.
+6. Pin the RF3 Foundry version, checkpoint, input schema, inference steps, diffusion batch size, and random seeds because the RF3 inference API and confidence outputs are still evolving.
+7. Do not provide the designed antibody–antigen interface as a structural template during RF3 or AlphaFold 3 validation.
+8. Evaluate all generated predictions, not only the top-ranked sample.
+9. Calculate:
    - RF2 interface predicted alignment error and RF2 design-to-prediction RMSD.
    - RF3 model confidence, interface confidence, clash metrics, and design-to-prediction RMSD using metrics available in the pinned RF3 release.
    - AlphaFold 3 antibody–antigen chain-pair confidence and interface PAE summaries.
@@ -286,8 +287,9 @@ reports/
    - Fraction of anchor contacts recovered.
    - Interface contact-map consistency across samples, seeds, and predictors.
    - Agreement or disagreement among RF2, RF3, and AlphaFold 3.
-9. Repeat RF3 and AlphaFold 3 predictions against representative B7-H3 ensemble members for candidates surviving the first pass.
-10. Treat RF3 as an independent general all-atom predictor; do not apply RF2_ab thresholds directly to RF3 outputs without calibration.
+10. Repeat AlphaFold 3 predictions against representative B7-H3 ensemble members for candidates surviving the primary pass.
+11. Use RF3 to identify agreements, disagreements, alternative poses, and possible failure modes; do not require an RF3 pass for advancement until it is calibrated on experimentally tested RFantibody designs.
+12. Do not apply RF2_ab or AlphaFold 3 thresholds directly to RF3 outputs.
 
 ### Outputs
 
@@ -301,7 +303,8 @@ reports/
 ### Completion Gate
 
 - Predictions are independent of the original designed interface.
-- Multiple seeds and at least two independent predictors support the same epitope and broadly consistent binding pose for final survivors.
+- Multiple AlphaFold 3 seeds support the same epitope and a broadly consistent binding pose for final survivors.
+- RF3 agreement strengthens confidence, while RF3 disagreement triggers review rather than automatic rejection.
 - All raw confidence fields and derived metrics are retained.
 
 ## Step 7 — Apply Primary Structural, Interface, and Developability Filters
@@ -325,12 +328,13 @@ reports/
 2. Use RFantibody’s published starting filters as provisional defaults:
    - RF2 interface pAE `< 10`.
    - Design-versus-RF2-predicted RMSD `< 2 Å`.
-3. Define separate RF3 filters using the metrics supplied by the pinned release; do not reuse RF2 thresholds by name or scale.
-4. Use cross-predictor agreement as a ranking feature while retaining designs with interpretable disagreement for review.
-5. Calculate Rosetta InterfaceAnalyzer metrics such as `dG_separated`, `dSASA_int`, `packstat`, cross-interface hydrogen bonds, and buried unsatisfied hydrogen bonds.
-6. Treat Rosetta `ddG < -20` as an optional RFantibody enrichment feature, not as a universal physical affinity threshold.
-7. Calibrate RF2, RF3, and AlphaFold 3 thresholds using score distributions and known positive/negative antibody–antigen complexes when available.
-8. Record every rejection reason instead of deleting failed designs.
+3. Use calibrated AlphaFold 3 interface-confidence and pose-recovery criteria as the primary independent filtering layer.
+4. Record RF3 metrics from the pinned release as supporting evidence, but do not use RF3 as a hard pass/fail filter until experimental calibration is available.
+5. Use cross-predictor agreement as a ranking feature while retaining designs with interpretable RF3 disagreement for review.
+6. Calculate Rosetta InterfaceAnalyzer metrics such as `dG_separated`, `dSASA_int`, `packstat`, cross-interface hydrogen bonds, and buried unsatisfied hydrogen bonds.
+7. Treat Rosetta `ddG < -20` as an optional RFantibody enrichment feature, not as a universal physical affinity threshold.
+8. Calibrate RF2 and AlphaFold 3 thresholds using score distributions and known positive/negative antibody–antigen complexes when available; calibrate RF3 separately when suitable experimental design data become available.
+9. Record every rejection reason instead of deleting failed designs.
 
 ### Outputs
 
@@ -393,7 +397,8 @@ reports/
    - ProteinMPNN conditional sequence probabilities.
    - Rosetta Flex ddG or an equivalently sampled interface ΔΔG method.
    - InterfaceAnalyzer metrics after local repacking/minimization.
-   - Independent RF2, RF3, and AlphaFold 3 pose recovery.
+   - RF2_ab self-consistency and independent AlphaFold 3 pose recovery.
+   - RF3 agreement or disagreement as supporting evidence, not a hard gate.
 5. Eliminate mutations that create sequence liabilities, clashes, new glycan motifs, unstable CDR conformations, or altered epitope specificity.
 6. Combine favorable single mutations into double and higher-order variants only after explicit structural modeling; do not assume additivity.
 7. Repredict every combination and test for epistasis, binding-pose drift, and loss of framework stability.
@@ -695,8 +700,8 @@ The exact numbers remain configurable and should be revised after pilot runs.
 | RFantibody production backbones | Approximately 10,000 total |
 | ProteinMPNN sequences | 5–20 per retained backbone |
 | RF2 primary validation | All deduplicated sequences |
-| RF3 independent validation | RF2-filtered subset, multiple samples |
-| AlphaFold 3 validation | RF2/RF3-filtered subset, multiple seeds/samples |
+| AlphaFold 3 primary independent validation | RF2-filtered subset, multiple seeds/samples |
+| RF3 complementary analysis | AF3-evaluated subset, multiple samples; not a hard gate |
 | Parent antibodies | Approximately 20–50 diverse designs |
 | Affinity-optimization variants | Configured by mutable positions and compute budget |
 | Final A+B constructs | Diverse, experimentally manageable panel |
