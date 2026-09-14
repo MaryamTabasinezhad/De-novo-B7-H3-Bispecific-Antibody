@@ -1,0 +1,4 @@
+# Adapted from /scratch/ghaedi/mohcc_rorqual/.claude/settings.json
+# User requested equivalent permissions on 2026-09-14.
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
