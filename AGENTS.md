@@ -40,14 +40,26 @@ This file is the local agent contract. Keep it current when the layout, responsi
 
 The specification concerns two binders to distinct B7-H3/CD276 epitopes, combined into a biparatopic construct. Its current architecture assumption is a tandem-scFv-Fc dimer with two A and two B binding units. Planned tools and outputs in the workflow are not evidence of installed dependencies or completed experiments. Consult the workflow's execution rules and completion gates before implementing scientific work.
 
-## Development contracts
+## Analysis-first contract and standing memory
+
+User clarification, 2026-09-14: this is a computational research and analysis project, not a software-development project. The deliverables are the analyses, structures, candidate designs, tables, figures, and reports specified in the README and workflow document.
+
+- Prefer direct, readable analysis scripts, notebooks, and existing scientific tools. Use deterministic code where appropriate; record seeds and relevant settings for stochastic design or prediction tools without implying that all analyses are deterministic.
+- Do not build software frameworks, generalized validation layers, pytest suites, CI systems, or packaging infrastructure by default. Add engineering only when it solves a concrete analysis need or the user requests it.
+- Do not routinely hash every input/output or create elaborate provenance manifests. Record source/accession, version or retrieval date, tool/model version, commands, important parameters, and output locations at a useful level. Use a checksum only for a concrete integrity or identity question.
+- Keep checks focused on scientific correctness: correct target/isoform, residue and chain mapping, plausible counts and units, interpretable structures, and whether the requested analysis finished successfully. Avoid repetitive input validation and tests that merely restate the script.
+- Inspect representative results and use a small pilot before expensive runs when useful. Match verification effort to the scientific consequence and compute cost.
+- This user clarification overrides blanket checksum, input/output validation, and software-engineering requirements elsewhere in project documents, including the historical review. Preserve the workflow's scientific decisions and completion criteria while implementing them proportionately.
+- Skills should capture project-relevant methods, working examples, and scientific decision criteria. Do not import another project's contracts wholesale.
+
+## Analysis execution contracts
 
 ### Script reuse and change control
 
 - Before creating a script, search this project's existing code and applicable reference implementations. Reuse a suitable implementation and record its source and version.
 - When porting a validated worker, initially limit changes to paths and environment bindings. Preserve scientific arguments, versions, output naming, and restart checks unless the current task requires a deliberate change.
 - For a behavioral change, document the reason, affected inputs/outputs, and relevant validation. Do not silently substitute a tool, model checkpoint, reference, or scientific parameter.
-- If no applicable reference exists, Codex may develop a project-specific implementation within the user's authorized task. Record the reference search and intended behavior, and validate a small representative case before production use. Missing scientific decisions remain subject to the workflow's gates.
+- If no applicable reference exists, Codex may develop a project-specific implementation within the user's authorized task. Reuse working examples when useful and inspect representative results before scaling up. Missing scientific decisions remain subject to the workflow's gates.
 - Use `#!/usr/bin/env bash` and `set -euo pipefail` for Bash workers. Keep paths and run parameters configurable; avoid embedding another project's paths.
 - Keep edits focused, preserve user changes, and update usage documentation when behavior changes. Verify Git availability before attempting commits or branches.
 
@@ -55,22 +67,22 @@ The specification concerns two binders to distinct B7-H3/CD276 epitopes, combine
 
 - Inspect available modules, environments, containers, and project settings before choosing how to execute a tool.
 - Follow the existing command restrictions. Do not install software or create environments without authorization that covers the operation; do not bypass a restricted command through an alternate executable.
-- Pin software revisions, containers, model weights, and reference versions for reproducible scientific runs. Record checksums where applicable.
+- Record the software, model, and reference versions needed to interpret and repeat an analysis; reuse a known working environment when available.
 - Place scientific settings in the workflow's planned `config/` files as they are implemented. Agent permission settings remain in `.codex/` and `.claude/`.
 - Keep work scoped to this project. Changes to other projects require their own authorization.
 
 ### Validation and compute execution
 
-- Run checks appropriate to the change. Documentation changes need link/path and consistency checks; executable changes need meaningful behavior checks. Do not report unrun tests as passed.
-- Before batch submission, validate a small end-to-end case, including expected output structure and restart behavior. For GPU work, verify GPU visibility inside the selected runtime within a suitable allocation.
+- Use lightweight checks appropriate to the analysis or document change. Inspect scientific outputs rather than adding automated test infrastructure by default. Report what was actually checked.
+- Before an expensive batch, run a small representative analysis and inspect its outputs when useful. For GPU work, verify GPU visibility inside the selected runtime within a suitable allocation.
 - Use SLURM for substantial cluster compute. Use `--account=def-ghaedi` for this project's Alliance submissions unless the user specifies another account; inspect current partition and resource availability before submission.
 - Size resources from the antibody workload and pilot measurements.
 - Capture submission commands, job IDs, logs, exit status, and validation outcomes. Distinguish infrastructure failures from scientific filter rejections.
-- Mark a run complete only after expected outputs pass validation. File existence alone is insufficient. Resume only outputs compatible with the recorded inputs, parameters, and tool versions.
+- Mark an analysis complete after confirming successful execution and inspecting the relevant scientific outputs. Reuse prior results when the inputs and method still match the current question.
 
 ### Run provenance and progress
 
-- Record commands, parameters, seeds, software/model versions, input/output checksums, and lineage as required by the workflow. Use `reports/run_manifest.json` when run tracking is implemented.
+- Keep concise analysis notes with sources, commands, important parameters, relevant seeds, tool/model versions, output locations, and candidate lineage where scientifically needed. A machine-readable run manifest is optional, not a prerequisite to analysis.
 - Maintain `reports/status.md` once implementation or compute work begins: timestamp, current work, completed work, failures/blockers, active job IDs, and next steps. Report milestones and failures to the user in the current conversation.
 
 ### Data preservation
