@@ -1,0 +1,6 @@
+interface:
+  display_name: "Tissue Expression Specificity"
+  short_description: "Assess tissue expression and on-target safety"
+  default_prompt: "Use $tissue-expression-specificity to assess normal-tissue expression and on-target safety for this target."
+policy:
+  allow_implicit_invocation: true

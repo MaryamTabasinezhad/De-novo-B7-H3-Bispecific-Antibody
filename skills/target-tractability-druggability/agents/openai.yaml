@@ -1,0 +1,6 @@
+interface:
+  display_name: "Target Tractability and Druggability"
+  short_description: "Assess target tractability across therapeutic modalities"
+  default_prompt: "Use $target-tractability-druggability to assess this target across relevant therapeutic modalities."
+policy:
+  allow_implicit_invocation: true

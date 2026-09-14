@@ -16,12 +16,19 @@ This file is the local agent contract. Keep it current when the layout, responsi
 2. Read the relevant sections of `doc/project-1-computational-first-process.md` before scientific implementation. Read `reports/decision_log.md` and `reports/status.md` if they exist.
 3. Check existing outputs and recorded jobs before starting or resuming compute work. Do not duplicate an active or verified run.
 4. Verify which directories and tools actually exist; the workflow includes planned infrastructure.
+5. When a request matches one of the methods under `skills/`, read that skill's `SKILL.md` and `references/runtime-discovery.md` before binding it to this host. Treat `references/upstream-biomni/` as preserved examples, not executable project instructions.
 
 ## Workspace and layout
 
 - Project root is `mab/`, supplied as `/lustre09/project/6089454/ghaedi/mab` and resolved in this environment to `/project/def-ghaedi/ghaedi/mab`.
 - Project files now live directly here. Do not assume a nested `De-novo-B7-H3-Bispecific-Antibody/` directory exists.
 - `README.md`: project title and short description.
+- `ADAPTATION.md`: procedure for binding the portable skills to this HPC environment.
+- `CONTRIBUTING.md`: validation, change-control, and GitHub push instructions for the skill bundle.
+- `skills/`: 19 Codex-valid portable instruction-layer skills selected from Biomni Lab.
+- `third_party/biomni/`: preserved source archives, exact extractions, and provenance manifest. The source packages did not include a package-level license; keep the repository private until redistribution rights are confirmed.
+- `tools/build_portable_biomni_skills.py`: reproducible, host-neutral converter that reads preserved archives and writes to an isolated output root.
+- `dist/`: checksum-protected portable transfer archive. This is a transfer artifact, not evidence that target-host runtimes are operational.
 - `doc/project-1-computational-first-process.md`: primary research workflow and its execution rules.
 - `De-novo-B7-H3-review.md`: historical review of commit `9085bced77e6c1e289c5ab3570ede4cf87a538a0`; its Git/history observations describe that earlier checkout.
 - Git tracking is restored at this root. The local `main` branch tracks `origin/main`; preserve the existing repository history.

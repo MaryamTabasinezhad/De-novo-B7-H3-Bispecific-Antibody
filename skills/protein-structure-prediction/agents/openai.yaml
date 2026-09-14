@@ -1,0 +1,6 @@
+interface:
+  display_name: "Protein Structure Prediction"
+  short_description: "Predict protein structures with environment-aware methods"
+  default_prompt: "Use $protein-structure-prediction to select and run an available structure predictor for this sequence or complex."
+policy:
+  allow_implicit_invocation: true

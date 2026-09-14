@@ -1,0 +1,6 @@
+interface:
+  display_name: "Preclinical Literature Review"
+  short_description: "Synthesize target-disease preclinical evidence"
+  default_prompt: "Use $literature-preclinical to assess the preclinical evidence for this target-disease program."
+policy:
+  allow_implicit_invocation: true

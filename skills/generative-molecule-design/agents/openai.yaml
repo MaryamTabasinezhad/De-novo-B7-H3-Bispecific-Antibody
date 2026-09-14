@@ -1,0 +1,6 @@
+interface:
+  display_name: "Generative Small-Molecule Design"
+  short_description: "Generate and triage goal-directed small molecules"
+  default_prompt: "Use $generative-molecule-design to design and triage small molecules for this target and objective profile."
+policy:
+  allow_implicit_invocation: true

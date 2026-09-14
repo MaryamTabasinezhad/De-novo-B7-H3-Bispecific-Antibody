@@ -1,0 +1,6 @@
+interface:
+  display_name: "Small-Molecule Binding Affinity ML"
+  short_description: "Train honest target-specific small-molecule affinity models"
+  default_prompt: "Use $binding-affinity-ml-model to curate this target's small-molecule data and benchmark affinity models honestly."
+policy:
+  allow_implicit_invocation: true

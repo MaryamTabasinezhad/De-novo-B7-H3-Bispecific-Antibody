@@ -1,0 +1,6 @@
+interface:
+  display_name: "sgRNA Design"
+  short_description: "Find and rank CRISPR guide RNAs"
+  default_prompt: "Use $sgrna-design to find or design guides for this target, organism, nuclease, and perturbation mode."
+policy:
+  allow_implicit_invocation: true

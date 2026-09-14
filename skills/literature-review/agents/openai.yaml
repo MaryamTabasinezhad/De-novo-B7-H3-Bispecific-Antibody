@@ -1,0 +1,6 @@
+interface:
+  display_name: "Scientific Literature Review"
+  short_description: "Find and synthesize scientific literature"
+  default_prompt: "Use $literature-review to produce a source-grounded review of this scientific question."
+policy:
+  allow_implicit_invocation: true

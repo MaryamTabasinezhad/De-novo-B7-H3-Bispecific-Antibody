@@ -1,0 +1,6 @@
+interface:
+  display_name: "Ligand Binding-Mode Analysis"
+  short_description: "Map small-molecule contacts in protein structures"
+  default_prompt: "Use $ligand-binding-mode-analysis to map and compare the observed contacts in this protein-ligand structure."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Targeted Degrader Design"
+  short_description: "Design and triage small-molecule targeted degraders"
+  default_prompt: "Use $targeted-degrader-design to define and triage a targeted-degrader campaign for this protein."
+policy:
+  allow_implicit_invocation: true

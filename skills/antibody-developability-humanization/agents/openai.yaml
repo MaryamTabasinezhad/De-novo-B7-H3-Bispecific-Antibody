@@ -1,0 +1,6 @@
+interface:
+  display_name: "Antibody Developability and Humanization"
+  short_description: "Assess and humanize antibody variable regions"
+  default_prompt: "Use $antibody-developability-humanization to assess these antibody sequences and propose traceable humanization variants."
+policy:
+  allow_implicit_invocation: true

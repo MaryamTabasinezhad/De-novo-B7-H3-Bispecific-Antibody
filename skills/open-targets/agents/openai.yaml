@@ -1,0 +1,6 @@
+interface:
+  display_name: "Open Targets"
+  short_description: "Query and interpret Open Targets evidence"
+  default_prompt: "Use $open-targets to retrieve and interpret Open Targets evidence for this disease-target question."
+policy:
+  allow_implicit_invocation: true

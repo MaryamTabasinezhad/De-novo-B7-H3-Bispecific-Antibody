@@ -1,0 +1,6 @@
+interface:
+  display_name: "Clinical Trials Landscape"
+  short_description: "Map a bounded ClinicalTrials.gov landscape"
+  default_prompt: "Use $clinicaltrials-landscape to map registered trials for this disease and intervention scope."
+policy:
+  allow_implicit_invocation: true

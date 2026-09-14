@@ -1,0 +1,6 @@
+interface:
+  display_name: "Knowledge-Graph Target Reasoning"
+  short_description: "Rank disease targets using interpretable graph paths"
+  default_prompt: "Use $knowledge-graph-target-reasoning to rank therapeutic targets for this disease and explain the supporting graph paths."
+policy:
+  allow_implicit_invocation: true

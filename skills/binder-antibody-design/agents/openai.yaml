@@ -1,0 +1,6 @@
+interface:
+  display_name: "Binder and Antibody Design"
+  short_description: "Design protein binders and antibodies against structures"
+  default_prompt: "Use $binder-antibody-design to plan and execute a reproducible binder-design campaign for this target and epitope."
+policy:
+  allow_implicit_invocation: true

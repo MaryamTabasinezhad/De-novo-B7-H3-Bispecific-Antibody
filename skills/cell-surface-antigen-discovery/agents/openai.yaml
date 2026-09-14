@@ -1,0 +1,6 @@
+interface:
+  display_name: "Cell-Surface Antigen Discovery"
+  short_description: "Rank tumor-selective antibody-accessible antigens"
+  default_prompt: "Use $cell-surface-antigen-discovery to prioritize accessible tumor antigens for this modality and disease context."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Direction-of-Effect Concordance"
+  short_description: "Decide whether a target should be inhibited or activated"
+  default_prompt: "Use $direction-of-effect-concordance to determine whether this target should be activated or inhibited and explain conflicts."
+policy:
+  allow_implicit_invocation: true
