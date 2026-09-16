@@ -32,3 +32,16 @@ and exported the intended project paths and CPU/GPU accounts. Converter template
 match the maintained skill instructions. Upstream source files are unchanged.
 These checks establish instruction discovery and environment configuration, not
 scientific execution readiness.
+
+## 2026-09-16 plan-hardening milestone
+
+Revised `doc/project-1-computational-first-process.md` after a full workflow
+review. Added a pre-production scope gate, full-target back-mapping before
+RFantibody scale-up, and an explicit developability assessment spanning sequence
+and chemical liabilities, conformational stability, colloidal behavior, format
+and process risk, and immunogenicity hypotheses. Integrated the risk assessment
+through mutation, ensemble ranking, linker selection, and complete Fc-dimer
+filtering. Added construct-level risk records and fit-for-purpose experimental
+follow-up categories, while keeping computational predictions distinct from
+measurements. Plan references now include antibody developability and
+immunogenicity guidance.

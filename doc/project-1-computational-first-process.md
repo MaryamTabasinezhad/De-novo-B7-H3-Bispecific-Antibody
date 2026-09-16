@@ -22,13 +22,14 @@ This is different from a conventional heterodimeric IgG containing one A Fab and
 
 ## Agent Execution Rules
 
-- Record software versions, model weights, commands, parameters, random seeds, input checksums, and output checksums.
+- Record sources, software/model versions, commands, important parameters, relevant random seeds, and output locations in concise analysis notes. Use checksums only when they answer a concrete identity or integrity question.
 - Use human canonical CD276 numbering as the reporting coordinate system.
 - Keep experimental contacts, region-defining residues, and computational design anchors in separate fields.
 - Do not treat one predicted structure or one score as proof of binding or affinity.
 - Never silently replace a missing scientific decision. Write unresolved items to `reports/decision_log.md` and stop at the relevant gate.
 - Keep multiple structurally and sequence-diverse candidates through every stage.
 - Make every numerical cutoff configurable in `config/filters.yaml`.
+- Treat developability as a staged risk assessment, not as a single score. Separate computational hypotheses from measurements that require purified protein.
 
 ## Required Repository Structure
 
@@ -76,6 +77,39 @@ reports/
 
 ---
 
+## Step 0 — Lock Scientific Scope and Development Criteria
+
+Before collecting a large design library, record the decisions that change what
+counts as a useful molecule:
+
+- intended biological endpoint and its priority among binding, internalization,
+  tumor-cell removal, and Fc-mediated function;
+- B7-H3 isoforms and species to be covered, including whether soluble antigen is
+  an intended sink or an excluded context;
+- the exact tandem-scFv-Fc architecture, Fc species/isotype, hinge, effector
+  function, FcRn intent, and acceptable valency;
+- whether cis bivalent binding to one antigen is required, merely desirable, or
+  irrelevant to the program;
+- minimum candidate diversity, computational budget, and promotion limits at
+  each funnel stage;
+- developability priorities and disqualifying risks, including expression,
+  folding, aggregation/self-association, chemical stability, polyspecificity,
+  immunogenicity, viscosity, and manufacturability;
+- which properties are computational triage only and which will require purified
+  protein or cell-based measurements.
+
+Record unresolved choices in `reports/decision_log.md`. Do not let an affinity
+ranking silently choose the product format or biological endpoint.
+
+### Scope Gate
+
+The project has an explicit architecture, isoform scope, endpoint priority,
+developability risk policy, and candidate-budget policy before production-scale
+design begins. A pilot may proceed with provisional values when those values are
+clearly labeled and revisited after the pilot.
+
+---
+
 ## Step 1 — Prepare a Glycan- and Membrane-Aware B7-H3 Ensemble
 
 ### Inputs
@@ -115,8 +149,9 @@ reports/
 ### Completion Gate
 
 - Canonical numbering is unambiguous.
-- Each model has valid chain identity, isoform, glycan state, membrane orientation, provenance, quality metrics, and checksum.
+- Each model has valid chain identity, isoform, glycan state, membrane orientation, provenance, and quality notes.
 - No murine, predicted, or antibody-stabilized conformation is mislabeled as an unqualified native human state.
+- Glycan and membrane assumptions are preserved in the model labels; an unglycosylated or cropped model is not treated as the native target.
 
 ## Step 2 — Select Two Accessible, Non-Overlapping Epitopes
 
@@ -209,6 +244,8 @@ reports/
 5. Select productive anchor/CDR configurations.
 6. Run independent production campaigns for epitope A and epitope B. Plan for thousands of backbone designs; RFantibody notes that campaigns near 10,000 designs may be required in general.
 7. Store designs as Quiver files when practical and assign globally unique IDs.
+8. Reject designs with obvious framework disruption, buried unpaired cysteines, extreme loop geometry, or target approaches that are incompatible with the full glycan/membrane context before sequence design.
+9. Back-map promising cropped-target poses to the full glycan- and membrane-aware ensemble before promoting an anchor/CDR configuration to production.
 
 ### Outputs
 
@@ -244,7 +281,8 @@ reports/
    - Easily oxidized, deamidated, or isomerized motifs at exposed sites.
    - Strongly repetitive or low-complexity sequences.
 6. Number every antibody with a standard antibody-numbering tool and preserve the H/L/CDR mapping.
-7. Deduplicate exact sequences while retaining backbone and seed provenance.
+7. Record whether each liability is a hard exclusion, a review flag, or a context-dependent risk. Do not discard a candidate solely because of a weak proxy without recording the rationale.
+8. Deduplicate exact sequences while retaining backbone and sampling provenance; identical sequences from multiple backbones remain separate design instances.
 
 ### Outputs
 
@@ -260,6 +298,59 @@ reports/
 - Only allowed positions changed.
 - CDR and framework numbering is valid.
 - Sequence diversity is sufficient for downstream structural prediction.
+- Initial sequence triage has identified candidates with no unexplained severe liability; unresolved risks remain visible for later assessment.
+
+## Cross-Cutting Developability Assessment
+
+Developability is evaluated from the first sequence library onward and revisited
+after every mutation, fusion, linker, and Fc decision. The assessment is a risk
+register, not a claim that a computationally favorable sequence will express or
+formulate successfully.
+
+### Risk classes
+
+1. **Sequence and chemical liabilities:** unpaired cysteine, noncanonical residues,
+   N-linked glycosylation sequons in exposed or functionally disruptive locations,
+   deamidation/isomerization/oxidation-prone motifs, protease-sensitive motifs,
+   and sequence changes that disturb canonical disulfides or processing sites.
+2. **Conformational stability:** framework integrity, CDR strain, domain packing,
+   local unfolding risk, and whether mutations preserve the intended VH/VL
+   interface and scFv orientation.
+3. **Colloidal behavior:** exposed hydrophobic patches, asymmetric charge patches,
+   predicted self-interaction, polyspecificity/polyreactivity proxies, aggregation
+   propensity, and concentration-dependent viscosity risk.
+4. **Format and process risk:** linker cleavage or flexibility, domain swapping,
+   Fc/scFv interference, incorrect chain pairing, disulfide mispairing, clipping,
+   glycan heterogeneity, expression burden, and purification complexity.
+5. **Immunogenicity and human sequence context:** non-human framework features,
+   unusual exposed motifs, T-cell epitope hypotheses, and back-mutations that may
+   restore structure while increasing immune-risk hypotheses. These are risk flags,
+   not predictions of clinical immunogenicity.
+
+### Assessment rules
+
+- Apply cheap sequence and structure triage before expensive prediction; reassess
+  every promoted sequence and every assembled construct.
+- Keep affinity/interface evidence separate from developability evidence. A strong
+  predicted interface does not compensate for an unresolved severe liability.
+- Use several complementary proxies where available and report disagreement. Do
+  not sum correlated predictors into a falsely precise developability score.
+- Treat thresholds as provisional until calibrated against an appropriate antibody
+  reference set or local measurements. Preserve candidates with different risk
+  profiles when the evidence does not justify a hard exclusion.
+- Mark properties that cannot be inferred reliably in silico—especially viscosity,
+  polyspecificity, expression yield, aggregation under formulation conditions, and
+  immunogenicity—for experimental follow-up.
+
+### Required assessment record
+
+For each sequence or construct, retain a compact table with the risk class, method
+or proxy used, result, interpretation, confidence, action (`retain`, `review`, or
+`exclude`), and rationale. Include the exact mutation lineage for optimized
+variants and identify liabilities introduced or removed by each mutation.
+
+This framework follows the risk-based principle that early computational and
+biophysical triage should reduce development risk without replacing measurements.
 
 ## Step 6 — Repredict Antibody–B7-H3 Complexes with RF2, RF3, and AlphaFold 3
 
@@ -334,7 +425,8 @@ reports/
 6. Calculate Rosetta InterfaceAnalyzer metrics such as `dG_separated`, `dSASA_int`, `packstat`, cross-interface hydrogen bonds, and buried unsatisfied hydrogen bonds.
 7. Treat Rosetta `ddG < -20` as an optional RFantibody enrichment feature, not as a universal physical affinity threshold.
 8. Calibrate RF2 and AlphaFold 3 thresholds using score distributions and known positive/negative antibody–antigen complexes when available; calibrate RF3 separately when suitable experimental design data become available.
-9. Record every rejection reason instead of deleting failed designs.
+9. Apply the cross-cutting developability risk classes before promotion, with hard exclusion only for defined severe risks.
+10. Record every rejection reason instead of deleting failed designs.
 
 ### Outputs
 
@@ -403,7 +495,8 @@ reports/
 6. Combine favorable single mutations into double and higher-order variants only after explicit structural modeling; do not assume additivity.
 7. Repredict every combination and test for epistasis, binding-pose drift, and loss of framework stability.
 8. Run negative-design checks against unintended B7-family or relevant off-target surfaces when structural data are available.
-9. Maintain an explicit mutation lineage from each parent to each optimized child.
+9. Re-run the complete developability risk assessment for every promoted mutation and reject mutations that improve a proxy while creating an unresolved severe liability.
+10. Maintain an explicit mutation lineage from each parent to each optimized child.
 
 ### Outputs
 
@@ -433,9 +526,10 @@ reports/
 2. Calculate minimum, median, and worst-case interface metrics across the ensemble.
 3. Require persistence of the intended epitope, pose, and anchor contacts.
 4. Penalize glycan clashes, membrane-facing approaches, conformation-specific failures, and unintended isoform behavior.
-5. Compare affinity-related scores separately from stability, specificity, and developability.
+5. Compare affinity-related scores separately from stability, specificity, and each developability risk class.
 6. Produce Pareto rankings and weight-sensitivity analyses; do not collapse all evidence into one opaque score.
 7. Retain several optimized variants per parent lineage.
+8. Ensure that ensemble ranking does not hide a severe sequence, chemical, colloidal, or format liability behind a favorable mean score.
 
 ### Outputs
 
@@ -500,7 +594,8 @@ reports/
    - Intended same-antigen or two-antigen occupancy scenarios.
    - Minimal inter-domain and Fc clashes.
 5. Evaluate linker liabilities, protease-sensitive motifs, unwanted glycosylation motifs, and exposed hydrophobicity.
-6. Retain multiple linker/orientation combinations.
+6. Reassess scFv folding, domain swapping, self-association, and chemical liabilities for every linker/orientation combination.
+7. Retain multiple linker/orientation combinations.
 
 ### Outputs
 
@@ -596,24 +691,36 @@ reports/
    - Chemical sequence liabilities.
    - Non-human or potentially immunogenic sequence features.
    - Fc and glycan accessibility.
-2. Evaluate unwanted receptor networking or B7-H3 crosslinking using multiple antigen-density and spacing scenarios.
-3. Distinguish potentially useful clustering for internalization from uncontrolled higher-order networking.
-4. Confirm that neither domain is consistently occluded by the other domain or Fc.
-5. Run negative controls through the same scoring pipeline to identify score artifacts.
-6. Create a per-construct risk register and do not hide unresolved high-risk features inside a total score.
+2. Separate sequence-derived, structure-derived, and format-derived developability evidence in the scorecard.
+3. Evaluate unwanted receptor networking or B7-H3 crosslinking using multiple antigen-density and spacing scenarios.
+4. Distinguish potentially useful clustering for internalization from uncontrolled higher-order networking.
+5. Confirm that neither domain is consistently occluded by the other domain or Fc.
+6. Run negative controls through the same scoring pipeline to identify score artifacts.
+7. Create a per-construct risk register with severity, confidence, mitigation, and experimental follow-up; do not hide unresolved high-risk features inside a total score.
+8. Identify which risks are intrinsic to the molecule and which depend on formulation, concentration, expression system, or intended route of administration.
+
+For constructs that reach experimental planning, the risk register should nominate
+fit-for-purpose follow-up such as expression and SEC profile, thermal unfolding,
+monomer/aggregate and sub-visible-particle assessment, charge heterogeneity,
+hydrophobicity or self-interaction screens, polyspecificity/polyreactivity assays,
+chemical-stability or forced-degradation studies, and concentration-dependent
+viscosity. The exact panel depends on format and intended use; computational
+scores do not replace these measurements.
 
 ### Outputs
 
 - `work/15_full_construct_filtering/developability_scores.csv`
+- `work/15_full_construct_filtering/developability_risk_register.csv`
 - `work/15_full_construct_filtering/crosslinking_scenarios.csv`
 - `work/15_full_construct_filtering/risk_register.csv`
 - `results/scorecards/final_construct_scorecards/`
 
 ### Completion Gate
 
-- No unresolved severe clash, folding, aggregation, or sequence-liability flag.
+- No unresolved severe clash, folding, aggregation, or sequence-liability flag is accepted without an explicit decision and mitigation rationale.
 - Intended and unintended crosslinking scenarios are explicitly distinguished.
 - Remaining uncertainties are documented for experimental testing.
+- The selected constructs have an interpretable risk profile across all five developability classes; no single composite score is the sole basis for selection.
 
 ## Step 16 — Select the Computational Candidate and Control Panel
 
@@ -635,7 +742,7 @@ reports/
    - Parental, non-optimized A+B construct.
    - Optimized A+B constructs.
    - Nonbinding or paratope-disrupted control for later experiments.
-4. Freeze exact amino-acid sequences and calculate checksums.
+4. Freeze exact amino-acid sequences and record stable construct IDs and sequence versions.
 5. Record the reason each candidate or control was selected.
 
 ### Outputs
@@ -649,7 +756,7 @@ reports/
 ### Completion Gate
 
 - The panel tests architecture, orientation, linker, parent, and optimization effects.
-- Every construct has a frozen sequence, unique ID, checksum, provenance, and selection rationale.
+- Every construct has a frozen sequence, unique ID, provenance, developability risk summary, and selection rationale.
 
 ## Step 17 — Produce the Experimental Handoff Package
 
@@ -673,7 +780,7 @@ reports/
    - Internalization.
    - Tumor-cell removal and Fc-dependent function, where intended.
 6. Create a blinded construct key if unbiased experimental comparison is desired.
-7. Freeze the computational release with a version tag and reproducibility manifest.
+7. Freeze the computational release with a version tag and concise analysis notes; a machine-readable manifest is optional.
 
 ### Outputs
 
@@ -685,7 +792,7 @@ reports/
 
 ### Completion Gate
 
-- A second operator or agent can trace every final sequence back to its inputs, commands, models, and decisions.
+- A second operator or agent can trace every final sequence back to its inputs, important commands, models, and decisions.
 - All constructs are clearly labeled as computational predictions pending experimental validation.
 
 ---
@@ -720,3 +827,6 @@ The exact numbers remain configurable and should be revised after pilot runs.
 - [Rosetta InterfaceAnalyzer](https://docs.rosettacommons.org/docs/latest/application_documentation/analysis/interface-analyzer)
 - [Rosetta Flex ddG](https://docs.rosettacommons.org/docs/latest/flex-ddG)
 - [Human B7-H3–20G5 complex, PDB 9LY5](https://www.rcsb.org/structure/9LY5)
+- [Blueprint for antibody biologics developability](https://pmc.ncbi.nlm.nih.gov/articles/10012935/)
+- [Developability considerations for bispecific and multispecific antibodies](https://pmc.ncbi.nlm.nih.gov/articles/PMC11352713/)
+- [FDA: Immunogenicity Assessment for Therapeutic Protein Products](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/immunogenicity-assessment-therapeutic-protein-products)
