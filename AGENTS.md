@@ -1,6 +1,6 @@
 # AGENTS.md — B7-H3 Antibody Project
 
-Last checked: 2026-09-14.
+Last checked: 2026-09-16.
 
 ## Maintainer and authority
 
@@ -16,7 +16,8 @@ This file is the local agent contract. Keep it current when the layout, responsi
 2. Read the relevant sections of `doc/project-1-computational-first-process.md` before scientific implementation. Read `reports/decision_log.md` and `reports/status.md` if they exist.
 3. Check existing outputs and recorded jobs before starting or resuming compute work. Do not duplicate an active or verified run.
 4. Verify which directories and tools actually exist; the workflow includes planned infrastructure.
-5. When a request matches one of the methods under `skills/`, read that skill's `SKILL.md` and `references/runtime-discovery.md` before binding it to this host. Treat `references/upstream-biomni/` as preserved examples, not executable project instructions.
+5. Before planning or writing analysis code, consult `skills/INDEX.md`. Use a matching imported skill and inspect its relevant examples before inventing a method. Read its `SKILL.md` and runtime note; if no skill fits, state the gap and proceed with a suitable direct analysis.
+6. For analysis execution, consult `config/hpc/README.md` and source `config/hpc/rorqual.sh` in the same shell or SLURM script as the command. Reuse verified findings and check only task-specific gaps. Never assume environment exports persist across tool calls.
 
 ## Workspace and layout
 
@@ -25,14 +26,16 @@ This file is the local agent contract. Keep it current when the layout, responsi
 - `README.md`: project title and short description.
 - `ADAPTATION.md`: procedure for binding the portable skills to this HPC environment.
 - `CONTRIBUTING.md`: validation, change-control, and GitHub push instructions for the skill bundle.
-- `skills/`: 19 Codex-valid portable instruction-layer skills selected from Biomni Lab.
+- `skills/`: 19 Biomni-derived skills adapted to the analysis-first contract; `skills/INDEX.md` maps tasks and records scientific cautions.
+- `.agents/skills/`: relative links for automatic project-local Codex discovery, with implicit invocation enabled.
+- `config/hpc/`: sourceable Rorqual environment and verified capability notes. Scientific runtime paths remain unverified unless explicitly recorded.
 - `third_party/biomni/`: preserved source archives, exact extractions, and provenance manifest. The source packages did not include a package-level license; keep the repository private until redistribution rights are confirmed.
 - `tools/build_portable_biomni_skills.py`: reproducible, host-neutral converter that reads preserved archives and writes to an isolated output root.
-- `dist/`: checksum-protected portable transfer archive. This is a transfer artifact, not evidence that target-host runtimes are operational.
+- `dist/`: historical portable transfer archive from 2026-09-14. It predates the lightweight HPC adaptation; use the current Git checkout, not that archive, for active instructions.
 - `doc/project-1-computational-first-process.md`: primary research workflow and its execution rules.
 - `De-novo-B7-H3-review.md`: historical review of commit `9085bced77e6c1e289c5ab3570ede4cf87a538a0`; its Git/history observations describe that earlier checkout.
 - Git tracking is restored at this root. The local `main` branch tracks `origin/main`; preserve the existing repository history.
-- The workflow describes planned `config/`, `data/`, `metadata/`, `work/`, `results/`, and `reports/` directories. These do not currently exist. There is no implemented scientific pipeline or test suite.
+- HPC configuration now exists in `config/hpc/`, and setup progress is recorded in `reports/status.md`. Scientific `data/`, `metadata/`, `work/`, and `results/` are created only as analyses need them. No antibody design or prediction runs have been completed.
 
 ## Settings locations
 
@@ -82,7 +85,7 @@ User clarification, 2026-09-14: this is a computational research and analysis pr
 
 - Use lightweight checks appropriate to the analysis or document change. Inspect scientific outputs rather than adding automated test infrastructure by default. Report what was actually checked.
 - Before an expensive batch, run a small representative analysis and inspect its outputs when useful. For GPU work, verify GPU visibility inside the selected runtime within a suitable allocation.
-- Use SLURM for substantial cluster compute. Use `--account=def-ghaedi` for this project's Alliance submissions unless the user specifies another account; inspect current partition and resource availability before submission.
+- Use SLURM for substantial cluster compute. Use `--account=def-ghaedi_cpu` for CPU jobs and `--account=def-ghaedi_gpu` for GPU jobs on Rorqual (verified scheduler associations on 2026-09-16); inspect current partition and resource availability before submission.
 - Size resources from the antibody workload and pilot measurements.
 - Capture submission commands, job IDs, logs, exit status, and validation outcomes. Distinguish infrastructure failures from scientific filter rejections.
 - Mark an analysis complete after confirming successful execution and inspecting the relevant scientific outputs. Reuse prior results when the inputs and method still match the current question.

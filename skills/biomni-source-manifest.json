@@ -291,5 +291,13 @@
       "runtime_binding": "target-hpc-agent-pending",
       "package_license": "not-present-in-source-archive"
     }
-  ]
+  ],
+  "project_adaptation": {
+    "date": "2026-09-16",
+    "contract": "analysis-first",
+    "discovery": ".agents/skills/",
+    "host_notes": "config/hpc/README.md",
+    "environment": "config/hpc/rorqual.sh",
+    "status": "19 skills discovered and enabled; scientific dependencies remain task-specific and unverified"
+  }
 }

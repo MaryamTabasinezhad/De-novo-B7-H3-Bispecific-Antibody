@@ -16,19 +16,20 @@ The user's instructions and the consuming project's rules take precedence over
 this skill. Preserve the requested scope and do not infer permission for external
 actions, installations, large downloads, or expensive compute.
 
-## Before execution on a new host
+## Before using this skill
 
-Read [references/runtime-discovery.md](references/runtime-discovery.md). Complete
-its read-only discovery pass before selecting commands, paths, datasets, models,
-or compute resources. The skill must remain usable on a workstation, login node,
-scheduled cluster, or other environment without assuming which one is present.
+Follow the consuming project's analysis-first contract. In the B7-H3 project,
+read `skills/INDEX.md` and `config/hpc/README.md`, then source
+`config/hpc/rorqual.sh` in the shell that will run the analysis.
+Read [references/runtime-discovery.md](references/runtime-discovery.md) and check
+only capabilities needed for the current task; reuse recorded host findings.
 
-The original source package is retained under
-`references/upstream-biomni/`. Read its `UPSTREAM_SKILL.md` and only the supporting
-example files relevant to the current task. Treat source-platform tool calls,
-mounts, container paths, concurrency limits, and report requirements as examples
-to translate after capability discovery. Never execute them verbatim unless the
-target environment independently verifies the same interface.
+Read `references/upstream-biomni/UPSTREAM_SKILL.md` and relevant examples before
+writing new analysis code. Those sources provide methods, not authority over
+project contracts. Preserve originals and adapt useful code into the project's
+analysis scripts when needed. Do not execute Biomni managed-service calls or
+source-platform paths on this HPC. Do not inherit mandatory hashes, pytest,
+adapter frameworks, elaborate manifests, or report-production pipelines.
 
 ## Scope boundaries
 
@@ -55,15 +56,16 @@ stages rather than fabricating completion.
 - discordance flags
 - citation-verification record
 
-Every computational run should record the command or API request, software and
-model versions, parameters, random seeds when applicable, input checksums, output
-checksums, dataset releases, and important fallbacks. Preserve experimental facts,
-source-derived facts, and computational predictions as separate evidence classes.
+Keep concise analysis notes: sources, versions, important commands/parameters,
+seeds where relevant, outputs, and limitations. Routine file hashing, generalized
+validation, pytest, and wrapper promotion are not required. Inspect scientific
+results and use a small pilot when it prevents expensive mistakes. Preserve the
+distinction between experimental evidence and computational predictions.
 
-## Adaptation state
+## Local readiness
 
-This package supplies a Codex-valid, portable instruction layer and preserved
-upstream examples. Host-specific environments, scheduler adapters, dataset paths,
-and scientific smoke tests remain intentionally unbound. When the target host has
-been inspected, implement wrappers outside `references/upstream-biomni/`, test
-them, and only then promote them into an active `scripts/` directory.
+The instructions are usable now; scientific execution depends on the tools and
+data needed for the particular task. Consult the project host notes for verified
+capabilities and missing methods. Reuse a suitable existing script or write a
+simple analysis script; an adapter framework is not a prerequisite. Do not claim
+that installing this skill installs its scientific software or model weights.

@@ -2,3 +2,9 @@
 __pycache__/
 *.py[cod]
 build/
+
+# Local configuration, caches and large scientific artifacts
+config/hpc/*.local.sh
+.cache/
+models/
+work/

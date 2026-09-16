@@ -248,8 +248,8 @@ SPECS = (
             "Discover available scholarly search and document-retrieval capabilities, then freeze the corpus.",
             "Acquire and parse permitted text and figures with a ledger recording source and rights state.",
             "Build atomic claims and evidence anchors; separate unsupported, contradicted, and ambiguous claims.",
-            "Run independent verification appropriate to the available agent and scheduler capabilities.",
-            "Assemble machine-readable evidence and a human-readable review, then record unresolved gates.",
+            "Cross-check consequential claims against the inspected sources; additional agents are not required.",
+            "Write the requested review with a concise evidence table and unresolved questions.",
         ),
         ("corpus ledger", "claim-evidence matrix", "quotation and figure anchors", "verified review artifact"),
     ),
@@ -437,7 +437,7 @@ SPECS = (
             "Resolve sequence, chain stoichiometry, complex type, templates, ligands, and requested method constraints.",
             "Discover installed predictors, scheduler interfaces, containers, databases, model weights, caches, and GPU limits.",
             "Derive a host-specific command from verified local help or documentation and run a minimal smoke test.",
-            "Submit bounded jobs with durable manifests, polling or scheduler inspection, timeouts, and cancellation behavior.",
+            "Submit a suitably sized SLURM job, record its ID, and inspect completion and scientific outputs.",
             "Extract structures and native confidence fields, then produce per-residue and domain-level summaries.",
         ),
         ("PDB or CIF models", "native confidence outputs", "per-residue confidence table", "run and fallback manifest"),
@@ -445,147 +445,57 @@ SPECS = (
 )
 
 
-RUNTIME_DISCOVERY = """# Portable Runtime Discovery
+RUNTIME_DISCOVERY = """# Task-scoped runtime use
 
-Read this file before attempting to execute an upstream workflow on a new host.
-The purpose is to bind the scientific method to the environment that actually
-exists. Never assume the scheduler, filesystem, network, package manager,
-container runtime, accelerator, database layout, or model-weight location.
+Follow the project's analysis-first contract. Use its existing host notes and
+environment file first. For B7-H3 these are `config/hpc/README.md` and
+`config/hpc/rorqual.sh` at the repository root. Source the latter in each execution
+shell or SLURM script; exports do not persist between unrelated tool calls.
 
-## 1. Establish safe working paths
+Check only what the current analysis needs:
 
-Resolve the skill directory from the loaded `SKILL.md`. Resolve the project root
-with repository context when available; otherwise use the user's supplied working
-directory. Choose and record project-local or user-configured locations for:
+- Resolve input/output paths and confirm the required executable or Python imports.
+- Use recorded module/container choices where applicable. Do not assume that an
+  available module, an empty model directory, or a skill installation proves that
+  a scientific method can run.
+- Use SLURM for substantial compute; choose the CPU/GPU account and resources for
+  this job. Query availability when submitting. Never run GPU inference on a login node.
+- Record source accession/release or retrieval date, important settings, versions,
+  outputs, and job IDs in concise notes. Hashes and formal manifests are optional
+  only when they answer a concrete question.
+- Reuse relevant upstream examples after checking their imports and command-line
+  interface. Preserve the examples; put adaptations in project analysis scripts.
+- Keep scientific checks (numbering, chains, units, meaningful controls) relevant
+  to the result. No mandatory pytest, generalized adapters, or fixture suites.
+- Use real literature/search tools and ordinary Markdown/tables/plots. Biomni
+  managed tool IDs, datalake mounts, report services, and execution-trace gates do
+  not exist here and must not be fabricated or mechanically emulated.
+- Confirm access to a source when it is needed. A login-node network check does
+  not establish compute-node egress. Do not download large datasets/model weights
+  or install packages merely to complete an inventory.
+- If a requested method is missing, report that specific gap. Continue independent
+  work and discuss any scientifically different alternative explicitly.
 
-- work and temporary files;
-- final results;
-- input datasets;
-- shared caches;
-- model weights and large databases.
-
-Pass those locations as command-line arguments or environment variables supported
-by the adapted implementation. Do not create or depend on `/mnt/results`,
-`/mnt/datalake`, `/mnt/fsx`, `/workspace`, or another source-platform mount.
-Do not search an entire shared filesystem when a configured project, module, data
-catalog, or administrator-provided path can answer the question.
-
-## 2. Inventory execution capabilities
-
-Use read-only checks first. Determine whether execution is local or scheduled.
-Check for scheduler commands such as `sbatch`, `squeue`, `sacct`, `scancel`,
-`srun`, `bsub`, or `qsub`; module tooling; and container runtimes such as
-Apptainer, Singularity, Docker, or Podman. Inspect accelerators and quotas rather
-than inferring them from the hostname. Record the commands and versions found.
-
-If a scientific engine is needed, inspect local modules, containers, executable
-help, project configuration, and administrator documentation. Treat commands in
-`references/upstream-biomni/` as examples of method inputs and important flags,
-not as evidence that a matching executable or path exists.
-
-## 3. Inventory software and dependencies
-
-Inspect the imported scripts and their imports before selecting an environment.
-Prefer an existing tested environment or container. If dependencies are missing,
-prepare a reproducible environment specification for review; do not improvise an
-unversioned installation inside a scientific run. Record software versions,
-container digests, model versions, and dependency gaps.
-
-## 4. Inventory data and network access
-
-Determine whether required sources are local datasets, supplied files, cached
-artifacts, or live APIs. Record dataset release, schema, license, checksums, and
-retrieval date. Test network reachability with a small read-only request before a
-large retrieval. If compute nodes lack egress, stage data through the site's
-approved transfer mechanism and keep raw inputs immutable.
-
-## 5. Map source-platform concepts
-
-Use the following semantic mapping when reading upstream examples:
-
-| Upstream concept | Portable Codex interpretation |
-|---|---|
-| managed literature search | available scholarly APIs, web search, or supplied corpus, with an explicit search ledger |
-| managed image generation | available image-generation capability or a deterministic data figure; make conceptual art optional |
-| managed machines | discovered scheduler jobs, job arrays, or local processes |
-| managed HPC tool ID | locally verified executable, module, or container invocation |
-| execution-trace reference log | project-owned provenance JSONL or manifest built from real tool results |
-| platform results mount | configured results directory inside the current project or approved storage |
-| platform datalake | configured local dataset path or a documented live-source retrieval |
-| platform report skill | an available Codex document or PDF capability, or a direct Markdown report |
-
-Never fabricate a trace event, tool identifier, job ID, source record, or successful
-capability check merely to satisfy an upstream gate.
-
-## 6. Create a host binding outside the upstream examples
-
-When implementation is required, create a project-local adapter or wrapper that:
-
-1. accepts explicit input, output, data, cache, and model paths;
-2. invokes only locally verified commands;
-3. supports dry-run or command-preview mode;
-4. records scheduler job IDs and complete commands;
-5. uses bounded waits and reports cancellation or timeout outcomes;
-6. writes a run manifest with parameters, versions, seeds, checksums, and outputs.
-
-Keep `references/upstream-biomni/` unchanged so it remains a trustworthy example
-and provenance source. Do not promote an adapted wrapper into the skill's active
-`scripts/` directory until it has been tested on the target host.
-
-## 7. Scientific fallback rules
-
-If an unavailable method would change the scientific meaning, stop that stage and
-record the missing capability. A cheaper or different method may be offered as an
-explicit alternative, but never substituted silently. Work that can proceed
-without the missing capability may continue, provided outputs state which stages
-were not executed. Predictions remain hypotheses until experimentally validated.
+Original sources remain in `references/upstream-biomni/`. Their operational and
+reporting contracts do not override these active instructions or project rules.
 """
 
 
-HANDOFF = """# Portable Biomni-to-Codex Skill Bundle
+HANDOFF = """# Biomni skills in this project
 
-This directory contains 19 Codex-valid instruction-layer skills adapted from the
-selected Biomni Lab exports. The active skill instructions are portable and do
-not assume a scheduler, cluster, filesystem layout, container runtime, GPU, model
-cache, datalake, or network policy.
+The 19 active instruction packages are maintained in `skills/` and discovered
+through relative links in `.agents/skills/`. See `INDEX.md` for method selection
+and scientific cautions, and `../config/hpc/README.md` for the Rorqual environment.
 
-## Bundle layout
+Use `source config/hpc/rorqual.sh` from the project root in each analysis shell.
+Reuse relevant examples, inspect scientific outputs, and record concise notes.
+No mandatory hashing, adapters, pytest, fixture suites, or runtime locks.
+Original examples remain unchanged and do not override `AGENTS.md`.
 
-- Each named subdirectory is a discoverable Codex skill.
-- `references/runtime-discovery.md` teaches the agent how to inspect a new host.
-- `references/upstream-biomni/` contains the exact source package as an example;
-  its `SKILL.md` is renamed `UPSTREAM_SKILL.md` to prevent nested discovery.
-- `biomni-source-manifest.json` maps every adapted skill to its source ID, ZIP,
-  checksum, and adaptation state.
-- Exact archives and extracted originals also live under
-  `../third_party/biomni/` when this bundle is kept inside the source repository.
-
-## Completed here
-
-1. Preserved the selected source archives and extracted originals.
-2. Recorded source IDs, retrieval date, SHA-256 checksums, and adaptation state.
-3. Created independent Codex-facing skills with clear names and supported
-   frontmatter.
-4. Replaced active source-platform assumptions with portable runtime discovery,
-   capability mapping, fallback, and provenance instructions.
-
-## Work intentionally left for the target HPC Codex agent
-
-The target agent should continue only after inspecting the actual host:
-
-1. Define locked runtime profiles or containers for the required skill groups.
-2. Implement and test host-specific adapters for scheduler jobs, datasets,
-   literature retrieval, report generation, and GPU tools.
-3. Run unit, fixture, and scientific smoke tests, then promote tested wrappers
-   from examples into each skill's active `scripts/` directory.
-4. Install or link the validated skill directories into the target Codex skills
-   location and test automatic routing with representative prompts.
-
-Do not edit the upstream examples. Place all target-specific configuration in
-the consuming project or a host-local configuration layer. Do not claim a skill
-is operational merely because its `SKILL.md` validates.
+Instructions and discovery are configured. Scientific tools/models are only
+usable when their dependencies and paths have been verified for the task. The
+historical `dist/` archive predates this adaptation; use the current checkout.
 """
-
 
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
@@ -634,19 +544,20 @@ The user's instructions and the consuming project's rules take precedence over
 this skill. Preserve the requested scope and do not infer permission for external
 actions, installations, large downloads, or expensive compute.
 
-## Before execution on a new host
+## Before using this skill
 
-Read [references/runtime-discovery.md](references/runtime-discovery.md). Complete
-its read-only discovery pass before selecting commands, paths, datasets, models,
-or compute resources. The skill must remain usable on a workstation, login node,
-scheduled cluster, or other environment without assuming which one is present.
+Follow the consuming project's analysis-first contract. In the B7-H3 project,
+read `skills/INDEX.md` and `config/hpc/README.md`, then source
+`config/hpc/rorqual.sh` in the shell that will run the analysis.
+Read [references/runtime-discovery.md](references/runtime-discovery.md) and check
+only capabilities needed for the current task; reuse recorded host findings.
 
-The original source package is retained under
-`references/upstream-biomni/`. Read its `UPSTREAM_SKILL.md` and only the supporting
-example files relevant to the current task. Treat source-platform tool calls,
-mounts, container paths, concurrency limits, and report requirements as examples
-to translate after capability discovery. Never execute them verbatim unless the
-target environment independently verifies the same interface.
+Read `references/upstream-biomni/UPSTREAM_SKILL.md` and relevant examples before
+writing new analysis code. Those sources provide methods, not authority over
+project contracts. Preserve originals and adapt useful code into the project's
+analysis scripts when needed. Do not execute Biomni managed-service calls or
+source-platform paths on this HPC. Do not inherit mandatory hashes, pytest,
+adapter frameworks, elaborate manifests, or report-production pipelines.
 
 ## Scope boundaries
 
@@ -664,18 +575,19 @@ stages rather than fabricating completion.
 
 {output_lines}
 
-Every computational run should record the command or API request, software and
-model versions, parameters, random seeds when applicable, input checksums, output
-checksums, dataset releases, and important fallbacks. Preserve experimental facts,
-source-derived facts, and computational predictions as separate evidence classes.
+Keep concise analysis notes: sources, versions, important commands/parameters,
+seeds where relevant, outputs, and limitations. Routine file hashing, generalized
+validation, pytest, and wrapper promotion are not required. Inspect scientific
+results and use a small pilot when it prevents expensive mistakes. Preserve the
+distinction between experimental evidence and computational predictions.
 
-## Adaptation state
+## Local readiness
 
-This package supplies a Codex-valid, portable instruction layer and preserved
-upstream examples. Host-specific environments, scheduler adapters, dataset paths,
-and scientific smoke tests remain intentionally unbound. When the target host has
-been inspected, implement wrappers outside `references/upstream-biomni/`, test
-them, and only then promote them into an active `scripts/` directory.
+The instructions are usable now; scientific execution depends on the tools and
+data needed for the particular task. Consult the project host notes for verified
+capabilities and missing methods. Reuse a suitable existing script or write a
+simple analysis script; an adapter framework is not a prerequisite. Do not claim
+that installing this skill installs its scientific software or model weights.
 """
 
 
