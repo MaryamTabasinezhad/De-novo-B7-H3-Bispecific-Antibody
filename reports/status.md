@@ -1,6 +1,25 @@
 # Project status
 
-Updated 2026-09-16.
+Updated 2026-09-18.
+
+## Current work — Step 0 documentation and coordination
+
+Automatic PM–DEV handoffs are authorized for Step 0 only. The existing Codex
+session queue delivered the coordination check to PM, which acknowledged nonce
+`step0-link-20260918` and assigned `STEP0-001`. Protocol and role-owned records
+are under `coordination/`.
+
+DEV prepared `reports/step0_scope.md` and `reports/decision_log.md` from existing
+documents. PM accepted `STEP0-001` and returned its review through the session
+queue, completing a task-and-review cycle. The Step 0 scientific scope gate remains open:
+endpoint, coverage, Fc details, cis-binding intent, budget/diversity, and risk
+policies require user decisions. No target preparation, installation, model/data
+acquisition, or scientific run was performed. No active jobs were found in the
+startup scheduler check; no jobs were submitted by this work.
+
+Next: the user resolves scientific choices; no further task is dispatched meanwhile.
+Step 1 requires separate authorization. AGENTS.md and permission settings remain
+unchanged. The September 16 setup history below remains applicable.
 
 ## Completed milestone
 
@@ -16,7 +35,7 @@ paths and dependency-heavy analysis environments remain unverified; see
 `config/hpc/README.md`. No new packages or model downloads were installed.
 No active project jobs or transfer tasks were created.
 
-## Next analysis
+## Previously recorded next analysis — not currently authorized
 
 Use `binder-antibody-design` and relevant literature/structure references to
 prepare B7-H3 target inputs under Step 1 of the scientific workflow. Resolve the

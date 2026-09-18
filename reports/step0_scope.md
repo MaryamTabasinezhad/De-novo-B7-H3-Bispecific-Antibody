@@ -1,0 +1,45 @@
+# Step 0 scope record
+
+Recorded 2026-09-18 from existing project documents. Task: `STEP0-001`.
+
+**State: documentation prepared; scientific scope gate not satisfied.** This record does not authorize Step 1 or production computation.
+
+## Existing objective and assumptions
+
+| Item | Recorded scope | Status and source |
+|---|---|---|
+| Target and objective | Two independent antibodies against distinct human B7-H3/CD276 epitopes, combined as a biparatopic construct | Existing objective; workflow, Objective |
+| Architecture | Tetravalent tandem-scFv-Fc dimer, two A and two B units | Current assumption, not a finalized product specification; workflow, Current Architecture Assumption |
+| Order | Both A–linker–B and B–linker–A constructs are planned for later evaluation | No order selected; workflow, Step 11 |
+| Coordinates | Canonical human CD276 numbering, with explicit chain/residue mapping | Existing reporting rule; workflow, Agent Execution Rules |
+| Target context | Preserve isoform, glycan, membrane, provenance, and structure-quality assumptions | Existing requirements for later preparation; workflow, Step 1 |
+| Prediction limits | Computational binding and in-silico optimization remain hypotheses pending measurement | Existing interpretation rule; workflow, Objective and Agent Execution Rules |
+| Diversity | Preserve structurally and sequence-diverse candidates at every stage | Existing principle; numerical minimum remains unresolved; workflow, Agent Execution Rules and Step 0 |
+
+Source: [scientific workflow](../doc/project-1-computational-first-process.md).
+
+## Decisions still needed
+
+The workflow's Step 0 requires an endpoint priority, isoform/species scope, exact architecture/Fc intent, cis-binding requirement, candidate-budget policy, and developability risk policy. Their unresolved parts are recorded in [decision_log.md](decision_log.md). No values have been invented or promoted from assumptions to final choices.
+
+Human B7-H3 is the documented target. Step 1 names human canonical 4Ig and shorter 2Ig sequences, but the final coverage requirement and soluble-antigen policy still need a decision. Cross-species coverage is not established by the existing objective.
+
+The provisional funnel gives suggested counts, including 100–500 pilot backbones per anchor/CDR configuration, approximately 10,000 production backbones per epitope, 5–20 sequences per retained backbone, and approximately 20–50 parents per epitope. These are workflow suggestions, **not an approved compute budget or production instruction**.
+
+## Existing developability principles
+
+The workflow identifies five risk classes: sequence/chemical liabilities, conformational stability, colloidal behavior, format/process risk, and immunogenicity/human-sequence context. Assess them separately from interface evidence; preserve predictor disagreements and avoid a falsely precise combined score. Cutoffs remain provisional until appropriately calibrated.
+
+Expression yield, formulation aggregation, viscosity, polyspecificity, and immunogenicity cannot be established by computational triage alone. The workflow calls for experimental follow-up and a risk record containing method, result, interpretation, confidence, action, and rationale. Program-specific priorities and hard exclusions remain unresolved.
+
+Source: workflow, Cross-Cutting Developability Assessment. No new risk thresholds are set here.
+
+## Readiness and authorization
+
+The September 16 status and [HPC notes](../config/hpc/README.md) record setup completion but no scientific runs, and unverified predictor/model dependencies. The current workspace inspection found no `data/`, `metadata/`, `work/`, or `results/` directories. No runtime verification, data retrieval, analysis, installation, or compute submission was performed for this documentation task.
+
+The current authorization covers Step 0 documentation and PM–DEV coordination only. `config/project.yaml` is not created as a finalized scientific configuration while required choices remain unresolved. After user decisions, DEV can record approved settings within authorized scope; Step 1 requires separate authorization.
+
+## Validation
+
+Compared this record with the workflow's Objective, Current Architecture Assumption, Step 0, Step 1, Cross-Cutting Developability Assessment, Step 11, and Provisional Computational Funnel, plus existing status and HPC notes. Documented assumptions are separated from unresolved choices. Documentation completion does not satisfy the Step 0 scientific scope gate.

@@ -1,10 +1,14 @@
-# Read-only project manager prompt
+# Project manager prompt: Step 0 coordination
 
 To use this prompt, tell the agent in the `pm` tmux session:
 
 > Read `prompt_pm.md` and follow it as your role instructions for this session. Begin the read-only initial review. Do not modify files, settings, sessions, or jobs.
 
 These instructions define behavioral restrictions. They do not configure a technical read-only sandbox. The name of a tmux session does not enforce permissions.
+
+## Authorized coordination exception — 2026-09-18
+
+The user explicitly authorized automatic coordination between the existing PM and DEV sessions, limited to Step 0. Read `coordination/README.md` before acting. This section supersedes conflicting read-only, user-relay, and proposal-only clauses below: PM may write only its assigned coordination records and queue task/review messages to the verified DEV thread. PM must not modify scientific artifacts, run computation, use Git mutations, or change settings. Step 0 documentation tasks and corrections within the recorded authorization need no repeated approval. Unresolved scientific choices require the user; Step 1, installation, and compute submission remain excluded.
 
 ## Role and authority
 
