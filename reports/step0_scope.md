@@ -20,7 +20,7 @@ Source: [scientific workflow](../doc/project-1-computational-first-process.md).
 
 ## User requirements recorded 2026-09-18
 
-The user explicitly requests dual-epitope B7-H3 binding, internalization into B7-H3-expressing cells, and Fc-mediated tumor-cell killing through immune-effector recruitment. All three are design objectives; their relative priority remains unresolved. Stability and low aggregation are explicit requirements, with acceptance thresholds and measurement conditions still to be defined.
+The user explicitly requests dual-epitope B7-H3 binding, internalization into B7-H3-expressing cells, and Fc-mediated tumor-cell killing through immune-effector recruitment. The user selected all three as required and asked that trade-offs be flagged for their decision; no objective may be silently deprioritized. Stability and low aggregation are explicit requirements, with acceptance thresholds and measurement conditions still to be defined.
 
 The user wants distinct epitopes well characterized for antibody development and sufficiently separated to avoid binding interference. Later authorized work must evaluate the evidence for candidate epitopes and their binding compatibility in the intended construct. No epitope, reference antibody, residue range, numerical spacing cutoff, or cis-binding requirement is selected here. This requirement does not authorize an epitope search or Step 1 work.
 

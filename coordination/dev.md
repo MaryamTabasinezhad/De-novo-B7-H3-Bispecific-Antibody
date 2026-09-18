@@ -58,3 +58,10 @@ scientific search, new task dispatch, or changes outside your coordination recor
 PM accepted STEP0-002 and froze its record. DEV read the acceptance; returned
 notification `01a0b5b9-ce41-7661-8306-890a076cf457` is already handled. Do not
 repeat the task or send an acknowledgement loop on delayed delivery.
+
+## STEP0-003 — user policy recorded
+
+The user answered “1” to the explicit first option “All three are required; flag
+trade-offs for me.” Updated decision log, scope, and status accordingly. No
+numerical weighting, assay thresholds, or further scope inferred. PM is notified
+to use this policy for future briefs; no new scientific task is dispatched.

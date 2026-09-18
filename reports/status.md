@@ -12,7 +12,7 @@ are under `coordination/`.
 DEV prepared `reports/step0_scope.md` and `reports/decision_log.md` from existing
 documents. PM accepted `STEP0-001` and returned its review through the session
 queue, completing a task-and-review cycle. The Step 0 scientific scope gate remains open:
-endpoint trade-offs, coverage, Fc details, cis-binding intent, budget/diversity, and risk
+coverage, Fc details, cis-binding intent, budget/diversity, and risk
 policies require user decisions. No target preparation, installation, model/data
 acquisition, or scientific run was performed. No active jobs were found in the
 startup scheduler check; no jobs were submitted by this work.
@@ -20,7 +20,8 @@ startup scheduler check; no jobs were submitted by this work.
 `STEP0-002`: recorded the user's requirements for dual-epitope binding,
 internalization, Fc-mediated tumor-cell killing, stability, low aggregation, and
 well-characterized, sufficiently separated epitopes. PM accepted the transcription.
-Endpoint priority, numerical criteria, and remaining scope decisions stay open.
+The user then selected all three objectives as required, with trade-offs flagged
+for their decision (`STEP0-003`). Numerical criteria and other scope choices stay open.
 
 Next: the user resolves remaining choices.
 Step 1 requires separate authorization. AGENTS.md and permission settings remain

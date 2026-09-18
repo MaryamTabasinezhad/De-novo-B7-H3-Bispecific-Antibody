@@ -4,7 +4,7 @@ Updated 2026-09-18. Source: `doc/project-1-computational-first-process.md`, Step
 
 | ID | Decision required | Existing evidence | State / question for user |
 |---|---|---|---|
-| S0-01 | Biological endpoint priority | Workflow lists binding, internalization, tumor-cell removal, and Fc-mediated function | Partially resolved: user requires dual-epitope binding, internalization, and Fc-mediated tumor-cell killing; priority/trade-off policy remains unresolved |
+| S0-01 | Biological endpoint priority | Workflow lists binding, internalization, tumor-cell removal, and Fc-mediated function | Resolved at objective-policy level: all three are required; flag trade-offs to the user rather than deprioritizing an objective |
 | S0-02 | Isoform/species and soluble-antigen scope | Human CD276 is the target; Step 1 names 4Ig and 2Ig, with context-dependent 2Ig inclusion | Unresolved: required 4Ig/2Ig coverage, any additional species, and whether soluble antigen is an intended or excluded context |
 | S0-03 | Exact architecture and Fc intent | Tandem-scFv-Fc dimer with 2A + 2B is the current assumption | Partially resolved: immune-effector recruitment is desired; architecture/valency confirmation, Fc species/isotype, hinge, exact effector mechanism, and FcRn intent remain unresolved |
 | S0-04 | Cis binding | Step 0 explicitly asks whether binding both epitopes on one antigen is required | Unresolved: required, desirable, or irrelevant? |
@@ -24,10 +24,14 @@ Source: user message in the DEV conversation following the Step 0 endpoint quest
 
 Recorded requirements:
 
-- Include all three biological objectives; do not silently drop one. Relative priority and trade-off handling have been asked but not yet answered.
+- Include all three biological objectives; do not silently drop one. The user subsequently selected option 1: all three are required; flag trade-offs to the user.
 - Stability and low aggregation are explicit developability requirements; assay conditions and acceptance thresholds have not been selected.
 - Seek well-characterized antibody epitopes in later authorized epitope work. No particular antibody, epitope, residue range, or minimum evidence standard has been selected.
 - Require a later assessment of whether epitope placement and construct geometry permit binding without interference. No distance cutoff is inferred, and separation is not treated as proof of simultaneous binding.
 - Do not infer a requirement for cis binding on one antigen versus binding different antigen molecules from this statement alone.
 
 Affected records: `reports/step0_scope.md`, `reports/status.md`, and PM coordination. These are design objectives, not evidence of achieved biological activity or developability. No Step 1 or epitope search is initiated by recording them.
+
+### STEP0-003 — endpoint trade-off policy, 2026-09-18
+
+The user replied “1” to the DEV question whose first option was “All three are required; flag trade-offs for me.” Record all three objectives as required, without an inferred numerical weighting or permission to sacrifice one. Escalate conflicts between them to the user. This resolves the objective-level trade-off policy, not quantitative efficacy or assay acceptance criteria. Other scope decisions and the Step 1 boundary remain unchanged.
