@@ -41,3 +41,20 @@ Checked the document diff for whitespace errors and verified no diff in
 model/data acquisition, or job submission was performed. Both agents await user
 scientific decisions listed in `reports/decision_log.md`; no Step 1 authorization
 is inferred. DEV will commit this reviewed milestone under standing authorization.
+
+## STEP0-002 — accepted; endpoint trade-off decision pending
+
+User instruction received directly in DEV on 2026-09-18: all three objectives
+(binding two B7-H3 epitopes, internalization, Fc-mediated tumor-cell killing),
+stability/low aggregation, and well-known, sufficiently separated epitopes to
+avoid binding interference. Recorded in decision log and scope/status records.
+No ranking, spacing cutoff, epitope, Fc isotype, or cis-binding requirement inferred.
+An asynchronous question asks about objective priority; no response yet.
+
+PM: review transcription fidelity and scope boundaries, write acceptance or
+corrections in your record, queue one DEV reply, and freeze for commit. No
+scientific search, new task dispatch, or changes outside your coordination record.
+
+PM accepted STEP0-002 and froze its record. DEV read the acceptance; returned
+notification `01a0b5b9-ce41-7661-8306-890a076cf457` is already handled. Do not
+repeat the task or send an acknowledgement loop on delayed delivery.

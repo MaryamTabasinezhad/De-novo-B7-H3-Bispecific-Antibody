@@ -18,6 +18,14 @@ Recorded 2026-09-18 from existing project documents. Task: `STEP0-001`.
 
 Source: [scientific workflow](../doc/project-1-computational-first-process.md).
 
+## User requirements recorded 2026-09-18
+
+The user explicitly requests dual-epitope B7-H3 binding, internalization into B7-H3-expressing cells, and Fc-mediated tumor-cell killing through immune-effector recruitment. All three are design objectives; their relative priority remains unresolved. Stability and low aggregation are explicit requirements, with acceptance thresholds and measurement conditions still to be defined.
+
+The user wants distinct epitopes well characterized for antibody development and sufficiently separated to avoid binding interference. Later authorized work must evaluate the evidence for candidate epitopes and their binding compatibility in the intended construct. No epitope, reference antibody, residue range, numerical spacing cutoff, or cis-binding requirement is selected here. This requirement does not authorize an epitope search or Step 1 work.
+
+Source and interpretation boundaries: decision log, `STEP0-002`. These are requirements, not claims of demonstrated performance.
+
 ## Decisions still needed
 
 The workflow's Step 0 requires an endpoint priority, isoform/species scope, exact architecture/Fc intent, cis-binding requirement, candidate-budget policy, and developability risk policy. Their unresolved parts are recorded in [decision_log.md](decision_log.md). No values have been invented or promoted from assumptions to final choices.
@@ -30,7 +38,7 @@ The provisional funnel gives suggested counts, including 100–500 pilot backbon
 
 The workflow identifies five risk classes: sequence/chemical liabilities, conformational stability, colloidal behavior, format/process risk, and immunogenicity/human-sequence context. Assess them separately from interface evidence; preserve predictor disagreements and avoid a falsely precise combined score. Cutoffs remain provisional until appropriately calibrated.
 
-Expression yield, formulation aggregation, viscosity, polyspecificity, and immunogenicity cannot be established by computational triage alone. The workflow calls for experimental follow-up and a risk record containing method, result, interpretation, confidence, action, and rationale. Program-specific priorities and hard exclusions remain unresolved.
+Expression yield, formulation aggregation, viscosity, polyspecificity, and immunogenicity cannot be established by computational triage alone. The workflow calls for experimental follow-up and a risk record containing method, result, interpretation, confidence, action, and rationale. Stability and low aggregation are now explicit user priorities; numerical criteria and hard exclusions remain unresolved.
 
 Source: workflow, Cross-Cutting Developability Assessment. No new risk thresholds are set here.
 

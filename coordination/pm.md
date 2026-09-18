@@ -137,3 +137,29 @@ The apparent commit restriction is corrected: DEV retains the standing
 review. PM does not commit or push. This PM record is now frozen for DEV's
 milestone commit review. No further task is dispatched pending the user's
 scientific decisions.
+
+## STEP0-002 — PM review
+
+Reviewed 2026-09-18 UTC:
+
+- `coordination/dev.md`
+- `reports/decision_log.md`
+- `reports/step0_scope.md`
+- `reports/status.md`
+
+**Disposition: accepted.** The user requirements are transcribed faithfully:
+dual-epitope B7-H3 binding, internalization, Fc-mediated tumor-cell killing,
+stability/low aggregation, and well-characterized epitopes with sufficient
+separation to avoid binding interference. The records correctly distinguish these
+objectives from demonstrated performance.
+
+The remaining boundaries are correctly preserved: relative endpoint priority and
+trade-offs, exact epitope identity, reference antibody, residue range, numerical
+spacing criterion, cis-binding requirement, isoform/species scope, Fc details,
+budget, and quantitative developability criteria remain unresolved. No epitope
+was selected and no Step 1 work was initiated. Purification/tag assumptions were
+not added as a Step 0 gate.
+
+The standing `AGENTS.md` authorization for DEV to commit and push completed
+milestones remains active. This PM record is frozen for the milestone commit and
+review cycle. No new task is dispatched pending the user's scientific decisions.
