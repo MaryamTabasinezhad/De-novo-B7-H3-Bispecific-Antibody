@@ -1,11 +1,11 @@
 # Scientific decision log
 
-Updated 2026-09-18. Source: `doc/project-1-computational-first-process.md`, Step 0 and related sections. Initial record: `STEP0-001`. User requirements recorded below in `STEP0-002`.
+Updated 2026-09-18. Source: `doc/project-1-computational-first-process.md`, Step 0 and related sections. Initial record: `STEP0-001`. User requirements and decisions recorded below in `STEP0-002` through `STEP0-004`.
 
 | ID | Decision required | Existing evidence | State / question for user |
 |---|---|---|---|
 | S0-01 | Biological endpoint priority | Workflow lists binding, internalization, tumor-cell removal, and Fc-mediated function | Resolved at objective-policy level: all three are required; flag trade-offs to the user rather than deprioritizing an objective |
-| S0-02 | Isoform/species and soluble-antigen scope | Human CD276 is the target; Step 1 names 4Ig and 2Ig, with context-dependent 2Ig inclusion | Unresolved: required 4Ig/2Ig coverage, any additional species, and whether soluble antigen is an intended or excluded context |
+| S0-02 | Isoform/species and soluble-antigen scope | Human CD276 is the target; Step 1 names 4Ig and 2Ig, with context-dependent 2Ig inclusion | Partially resolved: human B7-H3 required; other-species binding not required. Human 4Ig/2Ig coverage and soluble-antigen policy remain unresolved |
 | S0-03 | Exact architecture and Fc intent | Tandem-scFv-Fc dimer with 2A + 2B is the current assumption | Partially resolved: immune-effector recruitment is desired; architecture/valency confirmation, Fc species/isotype, hinge, exact effector mechanism, and FcRn intent remain unresolved |
 | S0-04 | Cis binding | Step 0 explicitly asks whether binding both epitopes on one antigen is required | Unresolved: required, desirable, or irrelevant? |
 | S0-05 | Candidate diversity and compute policy | Multiple diverse candidates required; funnel counts are explicitly provisional | Unresolved: minimum diversity, compute budget, promotion limits, and allowable initial scale |
@@ -35,3 +35,9 @@ Affected records: `reports/step0_scope.md`, `reports/status.md`, and PM coordina
 ### STEP0-003 — endpoint trade-off policy, 2026-09-18
 
 The user replied “1” to the DEV question whose first option was “All three are required; flag trade-offs for me.” Record all three objectives as required, without an inferred numerical weighting or permission to sacrifice one. Escalate conflicts between them to the user. This resolves the objective-level trade-off policy, not quantitative efficacy or assay acceptance criteria. Other scope decisions and the Step 1 boundary remain unchanged.
+
+### STEP0-004 — species requirement, 2026-09-18
+
+Source: direct user instruction in DEV: “human B7-H3 is required; binding to other species is not required”.
+
+Human B7-H3 recognition is required. Cross-species binding is not a design requirement, and candidates must not be rejected solely for lacking it. This is not a requirement to eliminate cross-species reactivity or proof that any candidate is human-specific. It does not decide a later safety-testing strategy, human isoform coverage, or soluble-antigen policy. No animal-target design, cross-species screening, or Step 1 work is initiated by recording this decision.

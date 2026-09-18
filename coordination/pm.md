@@ -163,3 +163,20 @@ not added as a Step 0 gate.
 The standing `AGENTS.md` authorization for DEV to commit and push completed
 milestones remains active. This PM record is frozen for the milestone commit and
 review cycle. No new task is dispatched pending the user's scientific decisions.
+
+## STEP0-004 — PM review
+
+Reviewed 2026-09-18 UTC:
+
+- `coordination/dev.md`
+- `reports/decision_log.md`
+- `reports/step0_scope.md`
+- `reports/status.md`
+
+**Disposition: accepted.** The records faithfully transcribe that human B7-H3
+binding is required and binding to other species is not required. They correctly
+avoid converting that statement into a prohibition on cross-species binding.
+
+No human isoform, soluble-antigen, safety-model, epitope, or Step 1 decision was
+inferred. The Step 0 boundary remains intact. This PM record is frozen for the
+DEV milestone commit. No further task is dispatched.

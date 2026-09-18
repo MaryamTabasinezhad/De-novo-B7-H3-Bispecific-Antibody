@@ -30,7 +30,7 @@ Source and interpretation boundaries: decision log, `STEP0-002`. These are requi
 
 The workflow's Step 0 requires an endpoint priority, isoform/species scope, exact architecture/Fc intent, cis-binding requirement, candidate-budget policy, and developability risk policy. Their unresolved parts are recorded in [decision_log.md](decision_log.md). No values have been invented or promoted from assumptions to final choices.
 
-Human B7-H3 is the documented target. Step 1 names human canonical 4Ig and shorter 2Ig sequences, but the final coverage requirement and soluble-antigen policy still need a decision. Cross-species coverage is not established by the existing objective.
+Human B7-H3 is the documented target. Step 1 names human canonical 4Ig and shorter 2Ig sequences, but the final coverage requirement and soluble-antigen policy still need a decision. The user confirmed that human B7-H3 binding is required and binding to other species is not required (`STEP0-004`). Lack of cross-species binding is not a rejection criterion; avoiding such binding is not a requirement either. This does not settle a later safety-testing strategy.
 
 The provisional funnel gives suggested counts, including 100–500 pilot backbones per anchor/CDR configuration, approximately 10,000 production backbones per epitope, 5–20 sequences per retained backbone, and approximately 20–50 parents per epitope. These are workflow suggestions, **not an approved compute budget or production instruction**.
 

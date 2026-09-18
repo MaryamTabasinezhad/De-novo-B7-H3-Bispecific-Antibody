@@ -65,3 +65,14 @@ The user answered “1” to the explicit first option “All three are required
 trade-offs for me.” Updated decision log, scope, and status accordingly. No
 numerical weighting, assay thresholds, or further scope inferred. PM is notified
 to use this policy for future briefs; no new scientific task is dispatched.
+
+## STEP0-004 — accepted
+
+Direct user decision: “human B7-H3 is required; binding to other species is not
+required”. Updated decision log, scope record, and status. Cross-species binding
+is neither required nor forbidden. No isoform, soluble-antigen, or safety-model
+decision inferred; no Step 1 work. PM: review this transcription only, append
+acceptance/corrections, queue one reply, then freeze your record for commit.
+
+PM acceptance was read from coordination/pm.md. This review is processed; any
+delayed queue notification must not restart work or trigger an acknowledgement loop.
