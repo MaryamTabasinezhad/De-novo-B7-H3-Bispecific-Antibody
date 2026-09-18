@@ -180,3 +180,86 @@ avoid converting that statement into a prohibition on cross-species binding.
 No human isoform, soluble-antigen, safety-model, epitope, or Step 1 decision was
 inferred. The Step 0 boundary remains intact. This PM record is frozen for the
 DEV milestone commit. No further task is dispatched.
+
+## STEP0-005 — independent evidence review (PM findings)
+
+Reviewed 2026-09-18 UTC at the user's request, before any user decision. Sources
+inspected:
+
+- [Unraveling the dynamics of B7-H3-targeting therapeutic antibodies in cancer through PET imaging and antibody pharmacokinetics](https://pmc.ncbi.nlm.nih.gov/articles/PMC11830545/) (PMC11830545; publisher DOI 10.1016/j.jconrel.2025.01.030).
+- [Anti-cancer immune priming with beta-radioligand therapy using a novel high affinity antibody selectively targeting the 4Ig-isoform of B7-H3](https://pmc.ncbi.nlm.nih.gov/articles/PMC13080693/) (PMC13080693).
+
+### Findings and limitations
+
+1. Keep three concepts separate: membrane-associated human molecular isoforms
+(4Ig and 2Ig), a soluble or shed extracellular antigen, and the assay reagent
+used to represent either one. A shorter 2Ig membrane isoform is not itself proof
+that a soluble species is present, absent, or structurally identical. Soluble
+material can arise through ectodomain shedding or alternative splicing, and the
+species and processing state matter.
+
+2. PMC11830545 reports Ab-1 binding both 4Ig and 2Ig and Ab-2 as 4Ig-selective
+in the tested binding panel. Its in-vivo work is PET/biodistribution in mouse
+xenografts; the authors explicitly note that their imaging study could not
+distinguish 2Ig from 4Ig expression in tumors. The washout and internalization
+observations therefore inform antibody pharmacokinetics and assay-context target
+engagement, but do not establish soluble-antigen concentration, human isoform
+distribution, or behavior of the proposed tandem-scFv-Fc.
+
+3. PMC13080693 describes MIL33B as having high affinity for 4Ig and lower,
+measurable binding to 2Ig, with an 8–18-fold selectivity range in the reported
+assays. That is discrimination, not a no-binding guarantee. The paper itself
+treats shed 2Ig ectodomain as a possible pharmacokinetic sink. “4Ig-selective”
+must not be transcribed as “does not bind soluble B7-H3.”
+
+4. Neither paper demonstrates that isoform coverage or selectivity yields human
+clinical benefit. The RLT study's tumor killing is caused by radionuclide
+deposition (with immune-priming observations), whereas this project requires
+internalization and Fc-mediated tumor-cell killing by a tandem-scFv-Fc.
+Radioligand uptake/retention is supporting evidence for target accessibility,
+trafficking, and possible sink risks; it is not a surrogate for simultaneous
+dual-epitope binding, construct geometry, Fc-receptor engagement, ADCC/ADCP, or
+clinical efficacy.
+
+5. The evidence supports making soluble-antigen policy and desired human isoform
+coverage explicit user choices. A reasonable recommendation for the next scope
+record is to evaluate 4Ig-only and 4Ig-plus-2Ig coverage as separate hypotheses,
+and to state whether soluble/shed antigen should be excluded, tolerated, or
+treated as a pharmacokinetic liability. This is a recommendation boundary only;
+no option is selected here and no Step 1 work is authorized.
+
+**Disposition:** findings recorded for DEV's STEP0-005 artifact preparation.
+No scientific decision was made, no isoform or soluble-antigen policy was
+selected, and no computation or Step 1 activity was performed. PM will wait for
+DEV's `review_requested` notification before reviewing `reports/step0_isoform_review.md`.
+
+## STEP0-005 — artifact review and disposition
+
+Reviewed 2026-09-18 UTC after DEV's `review_requested` notification:
+
+- `coordination/dev.md`
+- `reports/step0_isoform_review.md`
+- `reports/status.md`
+- `reports/decision_log.md`
+
+**Disposition: accepted with no material correction.** The report preserves the
+required distinction between human 4Ig/2Ig membrane isoforms and soluble or shed
+forms, and it does not convert 4Ig preference into a zero-soluble-binding claim.
+It correctly records E4's access limitation and the human-4Ig versus murine-2Ig
+confound, and it treats E5's approximately eightfold human preference as
+measurable discrimination rather than absence of human 2Ig binding. The report
+also correctly notes that naked-antibody activity in the described E5 model was
+not significant and that radioligand efficacy cannot stand in for the requested
+tandem-scFv-Fc internalization, Fc-mediated killing, or clinical benefit.
+
+The proposed wording is appropriately conditional: require native cell-surface
+human 4Ig recognition, characterize human 2Ig without mandating or prohibiting
+it, and treat soluble antigen as a competition/exposure risk rather than an
+intended target. It keeps all three user-required objectives active, does not
+select epitopes or thresholds, and leaves the policy as a user decision. The
+source table, modality limitations, uncertainty statements, and absence of Step
+1 authorization are adequate for this milestone. No new scientific decision is
+made by this review.
+
+This PM record is frozen for DEV's milestone commit. No further task is
+dispatched; Step 1 remains excluded pending the user's decision.

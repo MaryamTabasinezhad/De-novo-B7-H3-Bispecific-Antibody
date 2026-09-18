@@ -41,3 +41,12 @@ The user replied “1” to the DEV question whose first option was “All three
 Source: direct user instruction in DEV: “human B7-H3 is required; binding to other species is not required”.
 
 Human B7-H3 recognition is required. Cross-species binding is not a design requirement, and candidates must not be rejected solely for lacking it. This is not a requirement to eliminate cross-species reactivity or proof that any candidate is human-specific. It does not decide a later safety-testing strategy, human isoform coverage, or soluble-antigen policy. No animal-target design, cross-species screening, or Step 1 work is initiated by recording this decision.
+
+### STEP0-005 — evidence recommendation, not a user decision
+
+The user authorized PM and DEV to review isoform coverage and soluble-antigen
+policy within Step 0. See [evidence review](step0_isoform_review.md). Proposed:
+require membrane human 4Ig recognition, characterize but do not require/exclude
+human 2Ig binding, and assess soluble antigen as a potential interference risk
+rather than intentionally target it. No zero-binding rule or numerical cutoff
+is proposed. User acceptance remains pending; S0-02 is not closed.

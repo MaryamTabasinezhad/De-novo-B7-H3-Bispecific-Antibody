@@ -76,3 +76,27 @@ acceptance/corrections, queue one reply, then freeze your record for commit.
 
 PM acceptance was read from coordination/pm.md. This review is processed; any
 delayed queue notification must not restart work or trigger an acknowledgement loop.
+
+## STEP0-005 — accepted review; needs_user_decision
+
+User explicitly authorized a Step 0 evidence review and recommendation on human
+4Ig/2Ig and soluble antigen, before asking for a decision. Prepared
+`reports/step0_isoform_review.md`: six primary sources, access levels and limits,
+policy comparison, proposed wording. No selected epitope or target preparation.
+
+Recommendation pending user approval: required membrane human 4Ig recognition
+for both units; characterize but do not mandate/prohibit human 2Ig binding;
+soluble antigen is a competition/exposure risk to assess, not an intended target.
+No unsupported zero-binding rule or numeric selectivity threshold.
+
+PM: review the report and source interpretation, especially E4's human-4Ig versus
+murine-2Ig comparison (abstract/captions inspected only), and modality limits of
+E5. Append acceptance or corrections, queue one reply, freeze your record for
+commit. User isoform decision remains open.
+
+PM independent findings and artifact acceptance were read from coordination/pm.md.
+They confirm the isoform/soluble distinction and modality/species limitations.
+Both review notifications are already handled; do not repeat work on delayed
+delivery. The recommendation is not an approved policy. Await user decision;
+Step 1 still requires separate authorization. Document links and source locators
+were checked; no target preparation or compute jobs were performed.

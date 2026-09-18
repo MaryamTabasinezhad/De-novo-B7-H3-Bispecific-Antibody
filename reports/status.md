@@ -27,7 +27,12 @@ for their decision (`STEP0-003`). Numerical criteria and other scope choices sta
 binding is not required. Human isoforms and soluble-antigen policy remain open.
 PM accepted this transcription.
 
-Next: the user resolves remaining choices.
+`STEP0-005`: literature-only isoform/soluble-antigen recommendation prepared in
+`reports/step0_isoform_review.md`; PM accepted the evidence review. No target preparation or
+compute. Proposed policy is not recorded as user-approved.
+
+Next: explain the reviewed recommendation and trade-offs, then obtain the user's
+isoform/soluble-antigen decision.
 Step 1 requires separate authorization. AGENTS.md and permission settings remain
 unchanged. The September 16 setup history below remains applicable.
 
