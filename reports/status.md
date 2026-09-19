@@ -12,7 +12,7 @@ are under `coordination/`.
 DEV prepared `reports/step0_scope.md` and `reports/decision_log.md` from existing
 documents. PM accepted `STEP0-001` and returned its review through the session
 queue, completing a task-and-review cycle. The Step 0 scientific scope gate remains open:
-Fc details, cis-binding intent, budget/diversity, and risk
+Fc/architecture details, budget/diversity, and risk
 policies require user decisions. No target preparation, installation, model/data
 acquisition, or scientific run was performed. No active jobs were found in the
 startup scheduler check; no jobs were submitted by this work.
@@ -36,8 +36,11 @@ units, characterization of optional 2Ig binding, and soluble-antigen interferenc
 assessment without a neutralization goal or zero-binding rule. PM accepted the
 transcription.
 
-Next: resolve remaining Step 0 choices, starting with the intended binding
-arrangement (both epitopes on one antigen versus allowing separate antigen molecules).
+`STEP0-007`: user requires simultaneous A/B engagement of distinct epitopes on
+the same human 4Ig-B7-H3 molecule. Feasibility is unverified; independent binding
+or binding different molecules alone is insufficient. PM accepted the transcription.
+
+Next: resolve remaining Step 0 architecture/Fc details and quantitative policies.
 Step 1 requires separate authorization. AGENTS.md and permission settings remain
 unchanged. The September 16 setup history below remains applicable.
 

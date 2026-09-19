@@ -1,6 +1,6 @@
 # Step 0 scope record
 
-Initial record 2026-09-18; updated 2026-09-19 through `STEP0-006`.
+Initial record 2026-09-18; updated 2026-09-19 through `STEP0-007`.
 
 **State: documentation prepared; scientific scope gate not satisfied.** This record does not authorize Step 1 or production computation.
 
@@ -22,7 +22,7 @@ Source: [scientific workflow](../doc/project-1-computational-first-process.md).
 
 The user explicitly requests dual-epitope B7-H3 binding, internalization into B7-H3-expressing cells, and Fc-mediated tumor-cell killing through immune-effector recruitment. The user selected all three as required and asked that trade-offs be flagged for their decision; no objective may be silently deprioritized. Stability and low aggregation are explicit requirements, with acceptance thresholds and measurement conditions still to be defined.
 
-The user wants distinct epitopes well characterized for antibody development and sufficiently separated to avoid binding interference. Later authorized work must evaluate the evidence for candidate epitopes and their binding compatibility in the intended construct. No epitope, reference antibody, residue range, numerical spacing cutoff, or cis-binding requirement is selected here. This requirement does not authorize an epitope search or Step 1 work.
+The user wants distinct epitopes well characterized for antibody development and sufficiently separated to avoid binding interference. Later authorized work must evaluate the evidence for candidate epitopes and their binding compatibility in the intended construct. The user subsequently required simultaneous A/B engagement of two distinct epitopes on the same human 4Ig-B7-H3 molecule (`STEP0-007`). Feasibility is unverified; binding separate molecules alone does not satisfy this criterion. No epitope, reference antibody, residue range, or numerical spacing cutoff is selected here. This requirement does not authorize an epitope search or Step 1 work.
 
 Source and interpretation boundaries: decision log, `STEP0-002`. These are requirements, not claims of demonstrated performance.
 

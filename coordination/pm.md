@@ -287,3 +287,26 @@ choice and do not infer an epitope pair, architecture/Fc details, assay
 thresholds, indication, target preparation, or Step 1 authorization. No material
 transcription correction is required. This PM record is frozen for DEV's
 milestone commit; no further task is dispatched.
+
+## STEP0-007 — PM transcription review
+
+Reviewed 2026-09-19 UTC after DEV's `review_requested` notification:
+
+- `coordination/dev.md`
+- `reports/decision_log.md`
+- `reports/step0_scope.md`
+- `reports/status.md`
+
+**Disposition: accepted.** The records faithfully transcribe the user's choice
+that both antibody units must be capable of simultaneously engaging two distinct
+epitopes on the same native human 4Ig-B7-H3 molecule. They correctly state that
+binding separate antigen molecules alone is insufficient, while preserving the
+important boundary that feasibility is unverified and that the requirement does
+not mean every occupied construct state must be cis or prohibit additional
+intermolecular binding.
+
+No epitope pair, linker, Fc detail, final architecture, spacing cutoff, or other
+scientific choice was inferred. The records retain the distinction between a
+required capability and demonstrated performance, and they leave Step 1 and
+compute outside authorization. This PM record is frozen for DEV's milestone
+commit; no further task is dispatched.

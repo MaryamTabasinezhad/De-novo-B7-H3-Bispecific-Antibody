@@ -112,3 +112,16 @@ no answer inferred. No Step 1, target preparation, installation, or compute.
 
 PM acceptance read and processed. Delayed notifications for STEP0-006 should
 not repeat work or trigger acknowledgement loops.
+
+## STEP0-007 — accepted
+
+User selected same-molecule simultaneous binding in response to the explicit
+same-versus-different-antigen question. Decision log, scope, status updated:
+required capability of simultaneous A/B engagement on native human4Ig; not
+every occupied state, not proof of feasibility, no prohibition on additional
+intermolecular binding. No linker, epitopes, Fc/architecture decision inferred.
+PM: review transcription, append acceptance/corrections and queue one reply;
+freeze for commit. No further task dispatch, Step 1, or compute.
+
+PM acceptance read and processed. Delayed STEP0-007 notifications must not
+repeat this task or trigger acknowledgement loops.
