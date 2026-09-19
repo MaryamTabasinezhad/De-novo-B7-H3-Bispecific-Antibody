@@ -1,6 +1,6 @@
 # Step 0 recommendation: human B7-H3 isoforms and soluble antigen
 
-Reviewed 2026-09-18. Task `STEP0-005`. Status: evidence review accepted by PM; recommendation awaits user decision and is not an approved scope change. Literature/document review only; no target preparation, biological data generation, software installation, or compute jobs.
+Reviewed 2026-09-18. Task `STEP0-005`. Status: evidence review accepted by PM; policy approved by the user on 2026-09-19 (decision log, STEP0-006). Literature/document review only; no target preparation, biological data generation, software installation, or compute jobs.
 
 ## Recommendation
 
@@ -52,10 +52,10 @@ Main limitations: selected studies span different indications and modalities; no
 
 Confidence: moderate for prioritizing cell-surface human 4Ig; lower for the value of mandatory human 2Ig coverage without a chosen indication, and for any quantitative soluble-binding exclusion threshold. PM's independent review is recorded in `coordination/pm.md`.
 
-## Decision requested after review
+## Policy approved after review — 2026-09-19
 
-Proposed scope wording:
+Approved scope wording:
 
 > Human cell-surface 4Ig-B7-H3 recognition is required for both binding units. Human 2Ig binding will be characterized but is neither required nor prohibited. Soluble B7-H3 is not an intended therapeutic target; its effects on binding, internalization, Fc-mediated activity, and disposition will be assessed when those studies are authorized. Prefer low functional interference without imposing an unsupported zero-binding rule. Revisit this policy if the selected cancer indication provides compelling contrary evidence.
 
-This remains a proposal until the user decides. It does not authorize Step 1.
+The user approved this policy in STEP0-006. It does not authorize Step 1.

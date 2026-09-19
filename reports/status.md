@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-18.
+Updated 2026-09-19.
 
 ## Current work — Step 0 documentation and coordination
 
@@ -12,7 +12,7 @@ are under `coordination/`.
 DEV prepared `reports/step0_scope.md` and `reports/decision_log.md` from existing
 documents. PM accepted `STEP0-001` and returned its review through the session
 queue, completing a task-and-review cycle. The Step 0 scientific scope gate remains open:
-human isoform/soluble-antigen coverage, Fc details, cis-binding intent, budget/diversity, and risk
+Fc details, cis-binding intent, budget/diversity, and risk
 policies require user decisions. No target preparation, installation, model/data
 acquisition, or scientific run was performed. No active jobs were found in the
 startup scheduler check; no jobs were submitted by this work.
@@ -24,15 +24,20 @@ The user then selected all three objectives as required, with trade-offs flagged
 for their decision (`STEP0-003`). Numerical criteria and other scope choices stay open.
 
 `STEP0-004`: user confirmed human B7-H3 binding is required and cross-species
-binding is not required. Human isoforms and soluble-antigen policy remain open.
+binding is not required. Isoform/soluble policy was later resolved in STEP0-006.
 PM accepted this transcription.
 
 `STEP0-005`: literature-only isoform/soluble-antigen recommendation prepared in
 `reports/step0_isoform_review.md`; PM accepted the evidence review. No target preparation or
-compute. Proposed policy is not recorded as user-approved.
+compute. The policy was subsequently approved in STEP0-006.
 
-Next: explain the reviewed recommendation and trade-offs, then obtain the user's
-isoform/soluble-antigen decision.
+`STEP0-006`: user approved required cell-surface human 4Ig binding for both
+units, characterization of optional 2Ig binding, and soluble-antigen interference
+assessment without a neutralization goal or zero-binding rule. PM accepted the
+transcription.
+
+Next: resolve remaining Step 0 choices, starting with the intended binding
+arrangement (both epitopes on one antigen versus allowing separate antigen molecules).
 Step 1 requires separate authorization. AGENTS.md and permission settings remain
 unchanged. The September 16 setup history below remains applicable.
 

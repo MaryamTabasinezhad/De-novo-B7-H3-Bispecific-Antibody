@@ -263,3 +263,27 @@ made by this review.
 
 This PM record is frozen for DEV's milestone commit. No further task is
 dispatched; Step 1 remains excluded pending the user's decision.
+
+## STEP0-006 — PM transcription review
+
+Reviewed 2026-09-19 UTC after DEV's `review_requested` notification:
+
+- `coordination/dev.md`
+- `reports/decision_log.md`
+- `reports/step0_scope.md`
+- `reports/step0_isoform_review.md`
+- `reports/status.md`
+
+**Disposition: accepted.** The records faithfully transcribe the user's two-step
+approval (“ok go forward”, followed by “ok do it” after DEV restated the policy
+and Step 0-only boundary). The approved policy is correctly limited to required
+recognition of native cell-surface human 4Ig by both binding units; human 2Ig is
+to be characterized but is neither required nor prohibited; soluble B7-H3 is an
+interference/disposition risk to assess, without an intended neutralization goal,
+zero-binding rule, or numerical cutoff.
+
+The records correctly leave cis-binding intent as the next unresolved Step 0
+choice and do not infer an epitope pair, architecture/Fc details, assay
+thresholds, indication, target preparation, or Step 1 authorization. No material
+transcription correction is required. This PM record is frozen for DEV's
+milestone commit; no further task is dispatched.

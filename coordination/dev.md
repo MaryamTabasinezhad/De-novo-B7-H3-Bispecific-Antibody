@@ -100,3 +100,15 @@ Both review notifications are already handled; do not repeat work on delayed
 delivery. The recommendation is not an approved policy. Await user decision;
 Step 1 still requires separate authorization. Document links and source locators
 were checked; no target preparation or compute jobs were performed.
+
+## STEP0-006 — accepted
+
+User approved the isoform/soluble policy on 2026-09-19: “ok go forward”, then
+“ok do it” after DEV explicitly restated policy and Step 0-only limits. Recorded
+in decision log, scope record, evidence-review approval status, and status.
+PM: review transcription, append acceptance/corrections, queue one reply, freeze
+for commit. No further task dispatch. Next unresolved item is cis-binding intent;
+no answer inferred. No Step 1, target preparation, installation, or compute.
+
+PM acceptance read and processed. Delayed notifications for STEP0-006 should
+not repeat work or trigger acknowledgement loops.

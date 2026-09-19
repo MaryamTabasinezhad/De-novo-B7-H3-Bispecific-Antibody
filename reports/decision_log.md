@@ -1,11 +1,11 @@
 # Scientific decision log
 
-Updated 2026-09-18. Source: `doc/project-1-computational-first-process.md`, Step 0 and related sections. Initial record: `STEP0-001`. User requirements and decisions recorded below in `STEP0-002` through `STEP0-004`.
+Updated 2026-09-19. Source: `doc/project-1-computational-first-process.md`, Step 0 and related sections. Initial record: `STEP0-001`. User requirements and decisions recorded below in `STEP0-002` through `STEP0-006`.
 
 | ID | Decision required | Existing evidence | State / question for user |
 |---|---|---|---|
 | S0-01 | Biological endpoint priority | Workflow lists binding, internalization, tumor-cell removal, and Fc-mediated function | Resolved at objective-policy level: all three are required; flag trade-offs to the user rather than deprioritizing an objective |
-| S0-02 | Isoform/species and soluble-antigen scope | Human CD276 is the target; Step 1 names 4Ig and 2Ig, with context-dependent 2Ig inclusion | Partially resolved: human B7-H3 required; other-species binding not required. Human 4Ig/2Ig coverage and soluble-antigen policy remain unresolved |
+| S0-02 | Isoform/species and soluble-antigen scope | Human CD276 is the target; Step 1 names 4Ig and 2Ig, with context-dependent 2Ig inclusion | Resolved at scope-policy level: both units must recognize cell-surface human 4Ig; characterize optional human 2Ig binding; assess soluble-antigen interference without targeting neutralization; other-species binding not required |
 | S0-03 | Exact architecture and Fc intent | Tandem-scFv-Fc dimer with 2A + 2B is the current assumption | Partially resolved: immune-effector recruitment is desired; architecture/valency confirmation, Fc species/isotype, hinge, exact effector mechanism, and FcRn intent remain unresolved |
 | S0-04 | Cis binding | Step 0 explicitly asks whether binding both epitopes on one antigen is required | Unresolved: required, desirable, or irrelevant? |
 | S0-05 | Candidate diversity and compute policy | Multiple diverse candidates required; funnel counts are explicitly provisional | Unresolved: minimum diversity, compute budget, promotion limits, and allowable initial scale |
@@ -49,4 +49,22 @@ policy within Step 0. See [evidence review](step0_isoform_review.md). Proposed:
 require membrane human 4Ig recognition, characterize but do not require/exclude
 human 2Ig binding, and assess soluble antigen as a potential interference risk
 rather than intentionally target it. No zero-binding rule or numerical cutoff
-is proposed. User acceptance remains pending; S0-02 is not closed.
+is proposed. At review time acceptance was pending; subsequently approved in STEP0-006 below.
+
+### STEP0-006 — isoform and soluble-antigen policy approved, 2026-09-19
+
+Source: after the reviewed recommendation, the user said “ok go forward”. DEV
+explicitly restated approval of the proposed policy and the Step 0-only boundary;
+the user confirmed “ok do it”.
+
+Approved: both binding units must recognize distinct accessible epitopes on native
+cell-surface human 4Ig-B7-H3. Characterize human 2Ig binding, but neither require
+nor prohibit it. Soluble B7-H3 is not an intended therapeutic neutralization
+target; assess its interference with binding, internalization, Fc-mediated
+activity, and disposition when those studies are authorized. Prefer low functional
+interference without an unsupported zero-binding rule or numerical threshold.
+Revisit if a selected cancer indication supplies compelling contrary evidence.
+
+This resolves S0-02 at policy level. It does not choose epitopes, cis-binding
+requirements, Fc details, assay cutoffs, or an indication; it does not authorize
+Step 1, target preparation, installations, or compute jobs.
