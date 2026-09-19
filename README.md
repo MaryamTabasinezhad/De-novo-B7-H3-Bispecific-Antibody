@@ -1,7 +1,9 @@
 # De-novo-B7-H3-Bispecific-Antibody
 
 Computational design of two binders against distinct B7-H3/CD276 epitopes and
-assembly into the biparatopic antibody construct described in the
+assembly into a full IgG-like antibody with Fc, one A Fab arm and one B Fab arm
+(1A + 1B), with required simultaneous engagement of one human B7-H3 molecule.
+The stages and remaining implementation choices are described in the
 [scientific workflow](doc/project-1-computational-first-process.md).
 
 This is an analysis project. [AGENTS.md](AGENTS.md) defines the analysis-first

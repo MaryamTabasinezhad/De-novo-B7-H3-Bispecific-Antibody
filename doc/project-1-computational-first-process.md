@@ -6,19 +6,35 @@ Design two independent antibodies against distinct human B7-H3/CD276 epitopes, o
 
 > **Terminology:** Before experimental measurement, the maturation stage is **in-silico affinity optimization**, not confirmed affinity maturation. High affinity cannot be claimed until measured by SPR, BLI, or an equivalent method.
 
-## Current Architecture Assumption
+## User-Selected Architecture — 2026-09-19
 
-The planned **2A + 2B Fc dimer** corresponds to a tetravalent tandem-scFv-Fc architecture:
+The required product is a **1A + 1B IgG-like biparatopic antibody with Fc**:
+one Fab arm recognizes epitope A on human B7-H3 and the other Fab arm recognizes
+epitope B. The antigen sites are epitopes; the corresponding antibody binding
+sites are paratopes.
 
 ```text
-(A-scFv–linker–B-scFv)–hinge–Fc
-                  │
-                  Fc dimer
-                  │
-(A-scFv–linker–B-scFv)–hinge–Fc
+Fab A (VH-A/VL-A)       Fab B (VH-B/VL-B)
+           \             /
+             hinge region
+                  Fc
+      one A site + one B site
 ```
 
-This is different from a conventional heterodimeric IgG containing one A Fab and one B Fab, which is normally **1A + 1B**. The architecture must be locked in `config/project.yaml` before fusion modeling.
+Both arms must be capable of simultaneously binding their distinct epitopes on
+one native cell-surface human 4Ig-B7-H3 molecule. This geometry is required but
+unverified. Binding different antigen molecules alone does not satisfy it.
+
+The former tandem-scFv-Fc assumption had two A and two B sites. The user-selected
+product instead has one A and one B site. Historical descriptions of the former format, including the
+unchanged AGENTS.md research-context paragraph, are superseded for architecture
+by this user decision (reports/decision_log.md, STEP0-008).
+
+Exact Fc isotype/sequence, hinge, heavy-chain heterodimerization and light-chain
+pairing strategy remain unresolved. Do not infer a common light chain, particular
+pairing mutations, or a different format. Record approved implementation settings
+in `config/project.yaml` before format-dependent design and assembly. Fv models
+may remain intermediate design inputs; they do not define the final product.
 
 ## Agent Execution Rules
 
@@ -60,10 +76,10 @@ work/
   08_parent_selection/
   09_affinity_optimization/
   10_consensus_ranking/
-  11_fusion_assembly/
-  12_linker_optimization/
+  11_fab_assembly/
+  12_hinge_geometry/
   13_binding_scenarios/
-  14_fc_dimer_models/
+  14_full_igg_models/
   15_full_construct_filtering/
 results/
   candidates/
@@ -86,7 +102,7 @@ counts as a useful molecule:
   tumor-cell removal, and Fc-mediated function;
 - B7-H3 isoforms and species to be covered, including whether soluble antigen is
   an intended sink or an excluded context;
-- the exact tandem-scFv-Fc architecture, Fc species/isotype, hinge, effector
+- the selected 1A + 1B IgG-like architecture, heavy/light-chain pairing strategy, Fc species/isotype, hinge, effector
   function, FcRn intent, and acceptable valency;
 - whether cis bivalent binding to one antigen is required, merely desirable, or
   irrelevant to the program;
@@ -175,7 +191,7 @@ clearly labeled and revisited after the pilot.
    - Evidence relevant to native-cell binding and internalization.
 3. Apply hard gates for verified numbering, extracellular accessibility, glycan assessment, isoform scope, native-surface accessibility, membrane geometry, and provenance.
 4. Rank candidate regions with a transparent multi-criteria score and weight-sensitivity analysis.
-5. Select epitope A and epitope B only if they are spatially distinct and can support the intended biparatopic geometry.
+5. Select epitope A and epitope B only if they are spatially distinct and have preliminary support for simultaneous engagement of one human 4Ig-B7-H3 molecule by the two Fab arms of the 1A + 1B antibody. Separation alone is insufficient; consider approach vectors and available Fab/hinge reach. Reassess with designed poses before production scale-up.
 6. Retain at least one alternative pair in case the primary pair proves poorly designable.
 
 ### Outputs
@@ -233,7 +249,7 @@ clearly labeled and revisited after the pilot.
 
 ### Tasks
 
-1. Lock one human antibody framework for the core comparison; the RFantibody example scFv framework is `hu-4D5-8_Fv`, but the final choice must be documented.
+1. Lock one human antibody framework for the core comparison; the RFantibody example scFv framework is `hu-4D5-8_Fv`, but the final choice must be documented. An example Fv/scFv input does not prescribe a tandem-scFv product. Resolve whether the selected chain-pairing strategy constrains light-chain design before independent A/B production.
 2. Convert the framework to RFantibody HLT format:
    - Heavy chain `H`.
    - Light chain `L`.
@@ -245,7 +261,7 @@ clearly labeled and revisited after the pilot.
 6. Run independent production campaigns for epitope A and epitope B. Plan for thousands of backbone designs; RFantibody notes that campaigns near 10,000 designs may be required in general.
 7. Store designs as Quiver files when practical and assign globally unique IDs.
 8. Reject designs with obvious framework disruption, buried unpaired cysteines, extreme loop geometry, or target approaches that are incompatible with the full glycan/membrane context before sequence design.
-9. Back-map promising cropped-target poses to the full glycan- and membrane-aware ensemble before promoting an anchor/CDR configuration to production.
+9. Back-map promising cropped-target poses to the full glycan- and membrane-aware ensemble before promoting an anchor/CDR configuration to production. Check preliminary A/B Fab-pair compatibility with the required same-antigen 1A + 1B geometry before expensive scale-up; later full-antibody validation remains necessary.
 
 ### Outputs
 
@@ -303,7 +319,7 @@ clearly labeled and revisited after the pilot.
 ## Cross-Cutting Developability Assessment
 
 Developability is evaluated from the first sequence library onward and revisited
-after every mutation, fusion, linker, and Fc decision. The assessment is a risk
+after every mutation, Fab assembly, hinge, chain-pairing, and Fc decision. The assessment is a risk
 register, not a claim that a computationally favorable sequence will express or
 formulate successfully.
 
@@ -315,12 +331,12 @@ formulate successfully.
    and sequence changes that disturb canonical disulfides or processing sites.
 2. **Conformational stability:** framework integrity, CDR strain, domain packing,
    local unfolding risk, and whether mutations preserve the intended VH/VL
-   interface and scFv orientation.
+   interface and Fab domain organization.
 3. **Colloidal behavior:** exposed hydrophobic patches, asymmetric charge patches,
    predicted self-interaction, polyspecificity/polyreactivity proxies, aggregation
    propensity, and concentration-dependent viscosity risk.
-4. **Format and process risk:** linker cleavage or flexibility, domain swapping,
-   Fc/scFv interference, incorrect chain pairing, disulfide mispairing, clipping,
+4. **Format and process risk:** hinge cleavage or flexibility, domain swapping,
+   Fab/Fc interference, incorrect chain pairing, disulfide mispairing, clipping,
    glycan heterogeneity, expression burden, and purification complexity.
 5. **Immunogenicity and human sequence context:** non-human framework features,
    unusual exposed motifs, T-cell epitope hypotheses, and back-mutations that may
@@ -543,89 +559,85 @@ biophysical triage should reduce development risk without replacing measurements
 
 - Selected antibodies remain acceptable across relevant B7-H3 states.
 - The ranking is robust to reasonable score-weight changes.
-- Diversity is preserved for fusion assembly.
+- Diversity is preserved for Fab-arm assembly.
 
-## Step 11 — Assemble A–Linker–B and B–Linker–A Constructs
+## Step 11 — Assemble the Two Distinct Fab Arms
 
 ### Inputs
 
-- Ranked optimized A and B scFvs.
-- Locked tandem-scFv-Fc architecture.
+- Ranked optimized A and B variable-domain pairs and their target-binding poses.
+- User-selected 1A + 1B IgG-like architecture.
+- Approved constant-domain identities and heavy/light-chain pairing strategy.
 
 ### Tasks
 
 1. Pair multiple top A and B lineages; do not pair only the two top scalar scores.
-2. Build both orientations:
-   - `A-scFv–linker–B-scFv–hinge–Fc`
-   - `B-scFv–linker–A-scFv–hinge–Fc`
-3. Define exact VH–VL orientation and intramolecular scFv linkers for each antibody.
-4. Preserve domain boundaries, disulfide-forming cysteines, and correct termini.
-5. Assign stable construct IDs encoding orientation, parent IDs, linker ID, Fc ID, and version.
-6. Generate FASTA, annotated GenBank, and initial structural models for every construct.
+2. Assemble VH-A/CH1 with its intended light chain and VH-B/CH1 with its intended light chain. Preserve parent lineage and explicit chain identities.
+3. Document how the product will favor A/B heavy-chain pairing and correct heavy/light pairing. Do not silently substitute a common light chain or mutate a validated variable region.
+4. Preserve domain boundaries, disulfide-forming cysteines, and correct termini. Reassess each parent binding pose in Fab context.
+5. Assign stable construct IDs encoding A/B parents, constant domains, pairing strategy, hinge/Fc identifiers, and version.
+6. Generate chain-resolved FASTA, annotated GenBank, and initial Fab models when assembly is authorized.
 
 ### Outputs
 
-- `work/11_fusion_assembly/fusions.fasta`
-- `work/11_fusion_assembly/fusions.gb`
-- `work/11_fusion_assembly/fusion_manifest.csv`
-- `work/11_fusion_assembly/initial_models/`
+- `work/11_fab_assembly/fab_chains.fasta`
+- `work/11_fab_assembly/fab_chains.gb`
+- `work/11_fab_assembly/chain_manifest.csv`
+- `work/11_fab_assembly/initial_models/`
 
 ### Completion Gate
 
-- Every fusion is traceable to its A and B parents.
-- Chain order, linkers, termini, and Fc junctions are sequence-valid.
-- Both A–B and B–A orientations are represented.
+- Each Fab maps to its A or B parent, with valid chain/domain boundaries and disulfides.
+- Heavy/light-chain pairing and the intended A/B assembly strategy are explicit.
+- Neither Fab context nor pairing changes invalidate the parent binding hypothesis.
+- There is one A arm and one B arm; no tandem A–B scFv chain is introduced.
 
-## Step 12 — Optimize Linker Length and Sequence Computationally
+## Step 12 — Assess Hinge and Fab-Arm Geometry
 
 ### Inputs
 
-- Fusion constructs from Step 11.
+- Fab constructs and chain definitions from Step 11.
 - Single-arm binding poses for A and B.
+- Approved hinge/Fc candidates and native target/membrane context.
 
 ### Tasks
 
-1. Create a linker panel spanning several flexible lengths; an initial computational panel can include approximately 10, 15, 20, and 25 residues.
-2. Use low-complexity Gly/Ser-rich linkers as the baseline and add alternatives only with a stated purpose.
-3. Sample linker conformational ensembles rather than relying on one AlphaFold structure for a flexible region.
-4. Test whether each linker permits:
-   - Independent folding of both scFvs.
-   - Access of A and B to their epitopes.
-   - Intended same-antigen or two-antigen occupancy scenarios.
-   - Minimal inter-domain and Fc clashes.
-5. Evaluate linker liabilities, protease-sensitive motifs, unwanted glycosylation motifs, and exposed hydrophobicity.
-6. Reassess scFv folding, domain swapping, self-association, and chemical liabilities for every linker/orientation combination.
-7. Retain multiple linker/orientation combinations.
+1. Sample plausible Fab elbow and hinge conformations within the approved format; do not assume a flexible region has one fixed predicted conformation.
+2. Assess whether both Fab arms can engage their respective epitopes on the same human 4Ig-B7-H3 molecule without excessive strain or steric interference.
+3. Assess Fab–Fab, Fab–Fc, glycan, and membrane clashes in the intended geometry.
+4. Evaluate hinge/disulfide integrity, protease-sensitive and chemical liabilities, and exposure of hydrophobic regions.
+5. Retain diverse feasible conformations and, where authorized, hinge variants. Do not add arbitrary tandem-scFv linkers as a geometry workaround.
+6. If no feasible geometry remains, report the conflict with the required same-antigen binding capability rather than silently switching to two-antigen binding or another format.
 
 ### Outputs
 
-- `work/12_linker_optimization/linker_library.fasta`
-- `work/12_linker_optimization/linker_ensemble_metrics.csv`
-- `work/12_linker_optimization/accepted_linkers.csv`
+- `work/12_hinge_geometry/hinge_candidates.fasta`
+- `work/12_hinge_geometry/geometry_ensemble_metrics.csv`
+- `work/12_hinge_geometry/accepted_geometries.csv`
 
 ### Completion Gate
 
-- Both binding domains remain structurally stable and accessible.
-- Acceptance is supported by an ensemble of linker conformations.
-- At least two linker/orientation solutions survive when possible.
+- Both Fab arms remain structurally plausible and accessible.
+- An ensemble supports low-strain same-antigen A/B binding within the approved hinge/Fc context.
+- Hinge/pairing choices and uncertainties remain explicit; geometry feasibility is not measured simultaneous binding.
 
 ## Step 13 — Model Separate and Simultaneous Binding Scenarios
 
 ### Inputs
 
-- Accepted fusion/linker constructs.
+- Accepted Fab-arm/hinge arrangements.
 - B7-H3 target ensemble and membrane plane.
 
 ### Tasks
 
-1. Model A-only binding with the B domain unbound.
-2. Model B-only binding with the A domain unbound.
-3. Model two different simultaneous scenarios separately:
-   - **Cis/intramolecular:** A and B bind two epitopes on one B7-H3 molecule.
-   - **Intermolecular:** A and B bind different B7-H3 molecules.
-4. Do not require cis binding if the project only needs heterogeneous or intermolecular occupancy.
-5. Sample target spacing, receptor tilt, membrane separation, and flexible linker conformations.
-6. Calculate epitope reachability, linker strain, domain clashes, membrane clashes, and unbound-domain accessibility.
+1. Model A-only binding with Fab B unbound.
+2. Model B-only binding with Fab A unbound.
+3. Model simultaneous scenarios separately:
+   - **Required cis/intramolecular capability:** A and B engage distinct epitopes on one B7-H3 molecule.
+   - **Additional intermolecular scenario:** A and B engage different B7-H3 molecules.
+4. Do not accept intermolecular binding alone as fulfillment of the user's cis-binding requirement.
+5. Sample target spacing, receptor tilt, membrane geometry, and plausible hinge/Fab conformations.
+6. Calculate epitope reachability, hinge strain, domain clashes, membrane clashes, and unbound-arm accessibility.
 7. Record which occupancy states are geometrically feasible, unfavorable, or unresolved.
 
 ### Outputs
@@ -639,52 +651,54 @@ biophysical triage should reduce development risk without replacing measurements
 ### Completion Gate
 
 - A-only and B-only binding remain feasible.
-- Any claim of simultaneous binding is supported by a feasible structural ensemble, not one hand-positioned model.
-- Cis and intermolecular interpretations are never mixed.
+- Required simultaneous same-antigen binding has support from a plausible structural ensemble, not one hand-positioned model.
+- Cis and intermolecular interpretations are never mixed; feasibility is not experimental validation.
 
-## Step 14 — Add Fc and Model the Complete 2A + 2B Dimer
+## Step 14 — Model the Complete 1A + 1B IgG-like Antibody with Fc
 
 ### Inputs
 
-- Accepted tandem-scFv constructs.
-- Exact Fc/hinge sequence and intended Fc behavior.
+- Accepted Fab arms and hinge/occupancy ensembles.
+- Exact approved Fc/hinge sequences and intended Fc behavior.
+- Explicit heavy-chain heterodimer and light-chain pairing strategy.
 
 ### Tasks
 
-1. Lock Fc isotype, hinge, species, allotype, effector-function mutations, FcRn-related mutations, and purification tags.
-2. Build the covalent Fc dimer with correct hinge and inter-chain disulfides.
+1. Lock Fc isotype, species, allotype, effector-function and FcRn intent, hinge, pairing implementation, and any production tags before full assembly.
+2. Assemble the complete chain-defined antibody with correct intra- and inter-chain disulfides. Keep shared versus distinct light-chain identities explicit if a corresponding strategy has been approved.
 3. Include representative Fc N-glycan states or conservative glycan-exclusion envelopes.
-4. Generate full dimer ensembles rather than one static model.
-5. Model zero-, one-, two-, three-, and four-antigen occupancy where computationally tractable.
-6. Check scFv–scFv, scFv–Fc, antigen–Fc, antigen–antigen, glycan, and membrane clashes.
-7. Measure arm reach, inter-paratope distance distributions, exit vectors, symmetry, and unoccupied-site accessibility.
-8. Verify that the model actually contains two A and two B paratopes.
+4. Generate full-antibody ensembles rather than one static model.
+5. Model zero-, one-, and two-antigen occupancy, distinguishing one-antigen A-only/B-only states from simultaneous A+B engagement of one antigen. Do not model three/four specific antigen occupancies as properties of this two-site product.
+6. Check Fab–Fab, Fab–Fc, antigen–Fc, antigen–antigen, glycan, and membrane clashes.
+7. Measure arm reach, inter-paratope distance distributions, hinge geometry, and unoccupied-site accessibility without imposing false A/B symmetry.
+8. Verify exactly one A and one B binding site. Evaluate incorrect chain-pairing risks separately from the intended product model.
 
 ### Outputs
 
-- `work/14_fc_dimer_models/full_dimer_models/`
-- `work/14_fc_dimer_models/occupancy_models/`
-- `work/14_fc_dimer_models/dimer_geometry.csv`
-- `work/14_fc_dimer_models/clash_report.csv`
+- `work/14_full_igg_models/full_antibody_models/`
+- `work/14_full_igg_models/occupancy_models/`
+- `work/14_full_igg_models/antibody_geometry.csv`
+- `work/14_full_igg_models/clash_report.csv`
+- `work/14_full_igg_models/chain_pairing_assessment.csv`
 
 ### Completion Gate
 
-- Covalent architecture, disulfides, glycans, and valency are correct.
-- At least one low-strain ensemble supports both A and B accessibility.
-- Full-dimer geometry does not invalidate the single-chain fusion results.
+- Chain pairing, covalent architecture, disulfides, glycans, and 1A + 1B valency are correct in the intended model.
+- Full-antibody geometry preserves required same-antigen simultaneous binding and independent arm access in plausible ensembles.
+- Sequence/model checks do not substitute for later experimental confirmation of correct assembly and product purity.
 
 ## Step 15 — Filter Complete Constructs for Geometry and Developability
 
 ### Inputs
 
-- Full Fc-dimer ensembles.
+- Full 1A + 1B antibody ensembles.
 - Sequence and interface results from earlier steps.
 
 ### Tasks
 
 1. Evaluate full-construct properties:
    - Domain folding confidence.
-   - Inter-domain clashes and linker strain.
+   - Inter-domain clashes, hinge strain, and incorrect chain-pairing risks.
    - Exposed hydrophobic patches.
    - Charge distribution and predicted pI.
    - Aggregation and self-association risk.
@@ -732,13 +746,13 @@ scores do not replace these measurements.
 
 1. Select a diverse panel rather than only the top-ranked construct.
 2. Include several A+B candidates spanning:
-   - A–B and B–A orientations.
-   - More than one linker.
+   - Feasible Fab-arm/hinge geometries within the approved 1A + 1B format.
+   - Approved hinge or pairing variants where relevant.
    - More than one A and B parent lineage.
    - Different predicted affinity/developability trade-offs.
 3. Include controls processed through the same computational pipeline:
-   - A-only construct.
-   - B-only construct.
+   - A-only binding control with explicit valency/Fc matching or documented mismatch.
+   - B-only binding control with explicit valency/Fc matching or documented mismatch.
    - Parental, non-optimized A+B construct.
    - Optimized A+B constructs.
    - Nonbinding or paratope-disrupted control for later experiments.
@@ -755,7 +769,7 @@ scores do not replace these measurements.
 
 ### Completion Gate
 
-- The panel tests architecture, orientation, linker, parent, and optimization effects.
+- The panel tests Fab/hinge geometry, approved pairing variants, parent lineage, and optimization effects within the 1A + 1B architecture.
 - Every construct has a frozen sequence, unique ID, provenance, developability risk summary, and selection rationale.
 
 ## Step 17 — Produce the Experimental Handoff Package
@@ -775,7 +789,8 @@ scores do not replace these measurements.
    - Expression and monodispersity.
    - A-only and B-only binding.
    - Measured affinity and kinetics.
-   - Simultaneous-binding behavior.
+   - Required simultaneous A/B engagement of one antigen, distinct from separate-antigen occupancy.
+   - Correct heavy/light-chain pairing, A/B assembly, and product purity.
    - Native cell-surface binding.
    - Internalization.
    - Tumor-cell removal and Fc-dependent function, where intended.

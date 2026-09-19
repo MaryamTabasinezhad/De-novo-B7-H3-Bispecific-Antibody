@@ -1,6 +1,6 @@
 # Step 0 scope record
 
-Initial record 2026-09-18; updated 2026-09-19 through `STEP0-007`.
+Initial record 2026-09-18; updated 2026-09-19 through `STEP0-008`.
 
 **State: documentation prepared; scientific scope gate not satisfied.** This record does not authorize Step 1 or production computation.
 
@@ -9,8 +9,8 @@ Initial record 2026-09-18; updated 2026-09-19 through `STEP0-007`.
 | Item | Recorded scope | Status and source |
 |---|---|---|
 | Target and objective | Two independent antibodies against distinct human B7-H3/CD276 epitopes, combined as a biparatopic construct | Existing objective; workflow, Objective |
-| Architecture | Tetravalent tandem-scFv-Fc dimer, two A and two B units | Current assumption, not a finalized product specification; workflow, Current Architecture Assumption |
-| Order | Both A–linker–B and B–linker–A constructs are planned for later evaluation | No order selected; workflow, Step 11 |
+| Architecture | Full IgG-like antibody with Fc, one A Fab and one B Fab (1A + 1B) | User-selected architecture, STEP0-008; Fc and chain-pairing implementation unresolved |
+| Order | Two distinct Fab arms joined through the hinge/Fc architecture | No tandem A–B scFv order; heavy/light-chain pairing method unresolved, Step 11 |
 | Coordinates | Canonical human CD276 numbering, with explicit chain/residue mapping | Existing reporting rule; workflow, Agent Execution Rules |
 | Target context | Preserve isoform, glycan, membrane, provenance, and structure-quality assumptions | Existing requirements for later preparation; workflow, Step 1 |
 | Prediction limits | Computational binding and in-silico optimization remain hypotheses pending measurement | Existing interpretation rule; workflow, Objective and Agent Execution Rules |
@@ -51,3 +51,12 @@ The current authorization covers Step 0 documentation and PM–DEV coordination 
 ## Validation
 
 Compared this record with the workflow's Objective, Current Architecture Assumption, Step 0, Step 1, Cross-Cutting Developability Assessment, Step 11, and Provisional Computational Funnel, plus existing status and HPC notes. Documented assumptions are separated from unresolved choices. Documentation completion does not satisfy the Step 0 scientific scope gate.
+
+## Architecture clarification — STEP0-008
+
+The user chose a full 1A + 1B IgG-like antibody with Fc on 2026-09-19. This
+replaces the previous tandem-scFv-Fc assumption, while preserving same-antigen
+simultaneous binding and all three biological objectives. The updated workflow
+uses Fab assembly and hinge geometry rather than tandem-linker optimization.
+Fc isotype/sequence and heavy/light-chain pairing remain open; feasibility is
+unverified. Historical references to the older format are not current instructions.

@@ -40,7 +40,13 @@ transcription.
 the same human 4Ig-B7-H3 molecule. Feasibility is unverified; independent binding
 or binding different molecules alone is insufficient. PM accepted the transcription.
 
-Next: resolve remaining Step 0 architecture/Fc details and quantitative policies.
+`STEP0-008`: user clarified a full IgG-like 1A + 1B antibody with Fc, replacing
+the tandem-scFv-Fc 2A + 2B assumption. Workflow Steps 11–14, controls/handoff,
+README, and scope/decision records updated; PM accepted the final revision. No target
+preparation or compute. Historical architecture descriptions are superseded.
+
+Next: resolve Fc isotype/hinge and heavy/light-chain pairing implementation,
+then remaining quantitative policies. Same-antigen binding remains required.
 Step 1 requires separate authorization. AGENTS.md and permission settings remain
 unchanged. The September 16 setup history below remains applicable.
 

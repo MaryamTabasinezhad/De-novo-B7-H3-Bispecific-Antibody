@@ -2,6 +2,15 @@
 
 Reviewed 2026-09-18. Task `STEP0-005`. Status: evidence review accepted by PM; policy approved by the user on 2026-09-19 (decision log, STEP0-006). Literature/document review only; no target preparation, biological data generation, software installation, or compute jobs.
 
+## Architecture update, 2026-09-19
+
+The user subsequently selected a full 1A + 1B IgG-like antibody with Fc
+(STEP0-008), replacing the tandem-scFv-Fc assumption referenced in this review.
+The approved isoform/soluble policy is unchanged. Historical statements about
+the proposed tandem format describe the review-time assumption; evidence still
+does not validate simultaneous binding, internalization, or Fc killing for the
+new format. No source result has been reinterpreted as proof of its performance.
+
 ## Recommendation
 
 **Require both binders to recognize distinct accessible epitopes on native, cell-surface human 4Ig-B7-H3. Characterize human 2Ig binding, but make it neither mandatory nor an automatic exclusion. Treat soluble B7-H3 as a potential competing antigen and exposure risk, not an intended therapeutic target in this campaign.**

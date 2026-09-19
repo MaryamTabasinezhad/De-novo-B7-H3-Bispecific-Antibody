@@ -1,12 +1,12 @@
 # Scientific decision log
 
-Updated 2026-09-19. Source: `doc/project-1-computational-first-process.md`, Step 0 and related sections. Initial record: `STEP0-001`. User requirements and decisions recorded below in `STEP0-002` through `STEP0-007`.
+Updated 2026-09-19. Source: `doc/project-1-computational-first-process.md`, Step 0 and related sections. Initial record: `STEP0-001`. User requirements and decisions recorded below in `STEP0-002` through `STEP0-008`.
 
 | ID | Decision required | Existing evidence | State / question for user |
 |---|---|---|---|
 | S0-01 | Biological endpoint priority | Workflow lists binding, internalization, tumor-cell removal, and Fc-mediated function | Resolved at objective-policy level: all three are required; flag trade-offs to the user rather than deprioritizing an objective |
 | S0-02 | Isoform/species and soluble-antigen scope | Human CD276 is the target; Step 1 names 4Ig and 2Ig, with context-dependent 2Ig inclusion | Resolved at scope-policy level: both units must recognize cell-surface human 4Ig; characterize optional human 2Ig binding; assess soluble-antigen interference without targeting neutralization; other-species binding not required |
-| S0-03 | Exact architecture and Fc intent | Tandem-scFv-Fc dimer with 2A + 2B is the current assumption | Partially resolved: immune-effector recruitment is desired; architecture/valency confirmation, Fc species/isotype, hinge, exact effector mechanism, and FcRn intent remain unresolved |
+| S0-03 | Exact architecture and Fc intent | User selected a full 1A + 1B IgG-like antibody with Fc (STEP0-008) | Partially resolved: full 1A + 1B IgG-like architecture and immune-effector recruitment required; Fc isotype/sequence, hinge, heavy/light-chain pairing strategy, exact effector mechanism, and FcRn intent remain unresolved |
 | S0-04 | Cis binding | Step 0 explicitly asks whether binding both epitopes on one antigen is required | Resolved: simultaneous binding of the two distinct epitopes on the same human B7-H3 molecule is required (STEP0-007) |
 | S0-05 | Candidate diversity and compute policy | Multiple diverse candidates required; funnel counts are explicitly provisional | Unresolved: minimum diversity, compute budget, promotion limits, and allowable initial scale |
 | S0-06 | Developability priorities and disqualifying risks | Five risk classes and a retain/review/exclude record are specified; thresholds provisional | Partially resolved: stability and low aggregation explicitly required; quantitative criteria and other hard exclusions/review flags remain unresolved |
@@ -89,3 +89,26 @@ No epitope pair, linker, Fc detail, numerical spacing cutoff, or final architect
 is chosen here. If this requirement conflicts with another required objective,
 raise the trade-off with the user rather than silently relax it. Step 1 and
 compute remain outside the present authorization.
+
+### STEP0-008 — full IgG-like 1A + 1B architecture, 2026-09-19
+
+Source: user clarified a whole antibody with Fc, one arm binding site A on B7-H3
+and the other arm binding site B. The antigen sites are epitopes; antibody binding
+sites are paratopes. Record one Fab A and one Fab B with Fc (1A + 1B), replacing
+the earlier 2A + 2B tandem-scFv-Fc assumption. Preserve STEP0-007: both arms must
+be capable of simultaneous engagement of the same native human 4Ig-B7-H3 molecule.
+
+Exact Fc isotype/sequence, hinge, heavy-chain heterodimerization and light-chain
+pairing strategy remain unresolved; no common light chain or pairing mutations
+are selected. Correct assembly and same-antigen geometry require later validation.
+If the chosen pairing strategy constrains variable-region design, resolve that
+before independent A/B production. No epitope pair or linker sequence is chosen.
+
+Revised the primary workflow, especially Steps 11–14 and format-dependent
+controls/handoff, plus README and current scope/status. Planned output directories
+change from 11_fusion_assembly, 12_linker_optimization, 14_fc_dimer_models to
+11_fab_assembly, 12_hinge_geometry, 14_full_igg_models. No existing analysis output
+was moved; no design runs exist. Historical review/coordination records retain
+the prior assumption as history. AGENTS.md and permission settings remain
+unchanged by the user's earlier boundary; its old architecture description is
+superseded by this explicit user instruction. Step 1 remains unauthorized.

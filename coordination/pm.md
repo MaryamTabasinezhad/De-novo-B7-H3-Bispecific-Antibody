@@ -288,6 +288,30 @@ thresholds, indication, target preparation, or Step 1 authorization. No material
 transcription correction is required. This PM record is frozen for DEV's
 milestone commit; no further task is dispatched.
 
+## STEP0-008 — final PM acceptance after correction
+
+Reviewed 2026-09-19 UTC after DEV's correction notification:
+
+- Workflow architecture header and supersession wording.
+- Step 2, Task 5: preliminary same-antigen Fab-pair compatibility and approach/
+  reach considerations before production scale-up.
+- Step 4, Task 9: preliminary A/B Fab-pair compatibility after full-target
+  back-mapping before expensive scale-up, with later full-antibody validation.
+- `coordination/dev.md` final clarification.
+
+**Disposition: accepted.** The header now unambiguously states that the former
+tandem format had two A and two B sites, while the selected product has one A
+and one B site. Step 2 Task 5 and Step 4 Task 9 consistently require only
+preliminary compatibility evidence before scale-up; they preserve full
+same-antigen geometry validation as a later stage and do not present a pilot
+check as proof of simultaneous binding.
+
+The 1A + 1B valency, Fab/hinge geometry, and required cis capability are now
+consistent across the reviewed workflow. No design, compute, epitope, linker,
+Fc, pairing, or experimental decision was added. This PM record is frozen for
+DEV's milestone commit; no further task is dispatched and Step 1 remains outside
+the current authorization.
+
 ## STEP0-007 — PM transcription review
 
 Reviewed 2026-09-19 UTC after DEV's `review_requested` notification:
@@ -310,3 +334,37 @@ scientific choice was inferred. The records retain the distinction between a
 required capability and demonstrated performance, and they leave Step 1 and
 compute outside authorization. This PM record is frozen for DEV's milestone
 commit; no further task is dispatched.
+
+## STEP0-008 — PM architecture transcription review
+
+Reviewed 2026-09-19 UTC after DEV's `review_requested` notification:
+
+- `doc/project-1-computational-first-process.md` (updated header, controls,
+  handoff, and Steps 11–14)
+- `README.md`
+- `reports/decision_log.md`
+- `reports/step0_scope.md`
+- `reports/status.md`
+- historical-format note in `reports/step0_isoform_review.md`
+- `coordination/dev.md`
+
+**Disposition: accepted with one concrete correction required before commit.**
+The records consistently transcribe the user's clarification as a full IgG-like
+1A + 1B antibody with Fc: one Fab A arm and one Fab B arm, replacing the former
+tandem-scFv-Fc 2A + 2B assumption. Fab/hinge geometry appropriately replaces
+tandem-linker geometry; simultaneous same-antigen binding is preserved; and
+heavy-chain heterodimerization, light-chain pairing, hinge, Fc isotype/sequence,
+and Fc mutations remain unresolved. No epitope, linker, Fc mutation, or new
+architecture choice was inferred, and no Step 1 activity or run is authorized.
+
+The updated workflow header still contains a valency contradiction at its
+architecture supersession sentence: it says the new choice replaces the prior
+format “with two A and two B sites.” That phrase must be corrected to state one A
+and one B binding site (or equivalent 1A + 1B wording) before the milestone is
+committed. This is a documentation correction only; the README, decision log,
+scope record, status, and Steps 11–14 otherwise use the correct valency. The
+historical tandem wording in the isoform review is explicitly labeled as such
+and does not change the current architecture.
+
+This PM record is frozen pending that concrete correction and DEV's milestone
+commit. No further task is dispatched.

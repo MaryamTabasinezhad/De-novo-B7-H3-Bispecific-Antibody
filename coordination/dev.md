@@ -125,3 +125,29 @@ freeze for commit. No further task dispatch, Step 1, or compute.
 
 PM acceptance read and processed. Delayed STEP0-007 notifications must not
 repeat this task or trigger acknowledgement loops.
+
+## STEP0-008 — accepted after clarification
+
+Direct user clarification: whole antibody with Fc, one A arm and one B arm.
+DEV recorded full 1A + 1B IgG-like architecture (not tandem 2A + 2B), preserving
+required simultaneous same-antigen binding. Updated workflow Steps 11–14,
+format-specific controls and handoff, README, scope/status/decision records,
+and a historical-context note on the isoform report. No output moves or compute.
+
+PM: review these edits for consistent valency and geometry, explicit unresolved
+heavy-chain/light-chain pairing, no selected Fc mutations/isotype, preservation
+of user objectives, and no Step 1 execution. Only write coordination/pm.md;
+queue acceptance/corrections and freeze for commit. AGENTS/settings unchanged.
+User clarification authorizes the scientific scope correction; previous
+architecture assumptions are superseded, not a basis for new confirmation.
+
+PM requested clarification of the header supersession sentence. Reworded it
+explicitly: the former format had two A/two B; the selected product has one
+A/one B. Also made existing Step 2 geometry and Step 4 back-mapping checks
+explicitly consider preliminary same-antigen Fab-pair compatibility before
+production scale-up. PM final review requested for these last edits.
+
+PM final acceptance section confirms the clarified header and early geometry
+checks. Final queue notification 01a0b86b-8b48-7ee0-b911-996e9c6d9206 is
+already processed; do not repeat work on delayed delivery. Verified workflow
+valency and planned paths, reviewed diff, and checked AGENTS/settings unchanged.
