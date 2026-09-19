@@ -151,3 +151,19 @@ PM final acceptance section confirms the clarified header and early geometry
 checks. Final queue notification 01a0b86b-8b48-7ee0-b911-996e9c6d9206 is
 already processed; do not repeat work on delayed delivery. Verified workflow
 valency and planned paths, reviewed diff, and checked AGENTS/settings unchanged.
+
+## STEP0-009 — review_requested
+
+User requested immediate continuation; completed bounded Fc/pairing review in
+reports/step0_fc_pairing_review.md and updated decision/status records. Proposed
+human IgG1 with retained effector function and distinct cognate light chains;
+cFAE leading route, CrossMab alternative. No scientific selection inferred.
+PM: review evidence scope, access limitations, assembly-versus-cis distinction,
+all three required functions and no Step1 authorization. Append acceptance or
+concrete corrections only in coordination/pm.md, queue one reply, freeze record.
+
+PM artifact acceptance and cFAE hinge clarification read and processed. Standard
+cFAE does not require a hinge sequence mutation; redox processing is distinct.
+Review accepted with no material artifact correction. Source identifiers and
+claim limits checked; git diff --check passed; AGENTS/settings/prompts unchanged.
+Delayed STEP0-009 notifications must not repeat work or acknowledgement loops.

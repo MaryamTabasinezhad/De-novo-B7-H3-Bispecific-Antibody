@@ -368,3 +368,117 @@ and does not change the current architecture.
 
 This PM record is frozen pending that concrete correction and DEV's milestone
 commit. No further task is dispatched.
+
+## STEP0-009 — independent Fc and chain-pairing evidence review
+
+Reviewed 2026-09-19 UTC as a Step 0 literature-only task. No sequence, target
+preparation, installation, computation, or design run was performed. Primary
+records inspected:
+
+- [Shields et al., 2001, human IgG1 Fc receptor mapping and Fc variants](https://pubmed.ncbi.nlm.nih.gov/11096108/), which mapped human FcγRI, FcγRIIA/IIB, FcγRIIIA and FcRn contacts and showed selected IgG1 variants increasing human-effector-cell ADCC.
+- [Merchant et al., 1998, common-light-chain plus heavy-chain heterodimerization](https://pubmed.ncbi.nlm.nih.gov/9661204/), which reported approximately 95% heterodimerization, simultaneous HER3/cMpl binding, and retained ADCC in an anti-HER2 IgG1 context.
+- [Labrijn et al., 2013, controlled Fab-arm exchange (cFAE)](https://pmc.ncbi.nlm.nih.gov/articles/PMC3612680/), with [scale-up evidence](https://www.tandfonline.com/doi/abs/10.4161/mabs.26233), which reported stable bispecific IgG1, high exchange efficiency, normal IgG architecture, and retained Fc-mediated function.
+- [Schaefer et al., 2011, CrossMab domain crossover](https://pubmed.ncbi.nlm.nih.gov/21690412/), which combined heavy-chain heterodimerization with Fab-domain crossover to prevent cognate light-chain mispairing while retaining dual binding and stability in Ang-2/VEGF-A examples.
+- [Ridgway et al., 1996, original knobs-into-holes CH3 engineering](https://doi.org/10.1093/protein/9.7.617), the primary basis for engineered heavy-chain heterodimerization.
+
+### Findings and trade-offs
+
+1. A native human IgG1 Fc is a plausible effector-competent starting class for
+   the required Fc-mediated tumor-cell killing. FcγR and C1q engagement, Fc
+   glycosylation at N297, Fc sequence, antigen density, antibody orientation,
+   and effector-cell context all affect ADCC, ADCP, and CDC. IgG1 class alone
+   does not guarantee killing for a B7-H3 construct, and these studies do not
+   establish activity on B7-H3-positive cells.
+
+2. **Controlled Fab-arm exchange:** preserves a near-native full-IgG shape and
+   each parental Fab's cognate H-L pair during exchange. It offers a direct route
+   to one A arm plus one B arm with evidence for Fc function, stability, and high
+   exchange efficiency. Costs include separately produced parental antibodies,
+   engineered CH3/hinge exchange residues, controlled redox processing, and
+   product/side-product characterization. Exchange efficiency does not establish
+   same-antigen cis reachability or internalization.
+
+3. **Knobs-into-holes plus common light chain:** strongly favors the desired
+   heavy-chain heterodimer and removes most light-chain mispairing by using one
+   light chain. Merchant et al. demonstrated high heterodimerization, dual
+   binding, and retained ADCC. The common-light-chain requirement constrains
+   discovery because both B7-H3 paratopes must work with the same VL, potentially
+   excluding useful epitope solutions or affinity.
+
+4. **CrossMab:** combines heavy-chain heterodimerization with a Fab-domain
+   crossover so distinct cognate light chains can be retained without ordinary
+   combinatorial H-L mispairing. Primary data support production, simultaneous
+   binding, and stability. The crossover adds non-native domain topology and
+   junction/interface liabilities that can affect Fab orientation, glycan or
+   membrane clashes, and the reach needed for same-molecule B7-H3 cis binding.
+
+5. No platform is intrinsically proven superior for simultaneous binding of two
+   B7-H3 epitopes, internalization, or Fc killing. cFAE minimizes permanent
+   format changes but adds an exchange step; KiH/common-LC simplifies pairing but
+   narrows variable-domain search; CrossMab permits distinct light chains but
+   adds crossover geometry and interface risk. Each must be judged on 1A + 1B
+   valency, cognate H-L pairing, Fab accessibility, same-human-4Ig cis
+   reachability, target-cell internalization, Fc-receptor engagement, and
+   developability.
+
+6. Correct chain assembly does not establish cis binding. A molecule can be
+   correctly paired, bind both epitopes separately, and retain Fc activity while
+   failing to engage both epitopes on one B7-H3 molecule. Preliminary Fab-pair
+   checks can triage formats before scale-up; full-antibody and experimental
+   validation remain necessary.
+
+**Recommendation boundary:** retain human IgG1 as the effector-competent Fc
+class under consideration, keep cFAE, KiH/common-LC, and CrossMab as explicit
+alternatives, and compare them using the project's cis-binding, internalization,
+Fc-killing, pairing, and developability criteria. Do not select an Fc sequence,
+mutation set, pairing platform, common light chain, or architecture variant in
+this review. DEV may prepare a Step 0 comparison artifact; PM will wait for
+`review_requested` before reviewing it.
+
+## STEP0-009 — artifact review and disposition
+
+Reviewed 2026-09-19 UTC after DEV's `review_requested` notification:
+
+- `reports/step0_fc_pairing_review.md`
+- `reports/decision_log.md`
+- `reports/status.md`
+- `coordination/dev.md`
+
+**Disposition: accepted with no material correction.** The artifact clearly
+labels human IgG1 with retained effector competence, cognate Fab pairing, cFAE,
+and CrossMab/KiH as recommendations rather than user-selected settings. It
+keeps the common-light-chain option as a constrained alternative and does not
+select an Fc sequence, allotype, hinge, glycoform, mutation set, FcRn policy, or
+pairing platform.
+
+The source-access limits are explicit and appropriate: Merchant is treated at
+abstract level, cFAE and CrossMab direct PMC access encountered recaptcha, and
+the report does not claim inaccessible details as verified. The direct B7-H3
+DS-5573a evidence is correctly limited to target-specific Fc activity and does
+not establish internalization, cis engagement, safety, or clinical benefit.
+
+The artifact correctly separates assembly from biology: none of the three
+pairing approaches establishes same-human-4Ig cis reachability, internalization,
+or Fc-mediated killing in this construct. It preserves the preliminary geometry
+gate before scale-up and later full validation, and it keeps all three required
+objectives and developability risks visible. No selection, design, Step 1 work,
+installation, or compute is inferred.
+
+This PM record is frozen for DEV's milestone commit. No further task is
+dispatched.
+
+## STEP0-009 — cFAE wording clarification
+
+Clarification recorded 2026-09-19 after the independent findings were read:
+standard IgG1 controlled Fab-arm exchange is driven by matched CH3 mutations
+(the commonly used F405L/K409R pair) and controlled reducing/reoxidizing
+conditions. The native IgG1 hinge sequence need not be mutated as a mandatory
+part of cFAE. “Hinge” in this context refers to the inter-heavy-chain disulfide
+and its redox susceptibility during processing; it is distinct from mandatory
+hinge-sequence engineering. Alternative hinge engineering may be explored in a
+separate construct-specific comparison, but none is selected here.
+
+This corrects the earlier shorthand in the PM findings that grouped “CH3/hinge
+exchange residues.” The STEP0-009 artifact's conditional recommendation and
+unselected status are unchanged. No platform, sequence, Fc mutation, hinge
+variant, Step 1 activity, or compute is authorized by this clarification.

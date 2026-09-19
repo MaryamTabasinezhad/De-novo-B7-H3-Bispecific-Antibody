@@ -112,3 +112,14 @@ was moved; no design runs exist. Historical review/coordination records retain
 the prior assumption as history. AGENTS.md and permission settings remain
 unchanged by the user's earlier boundary; its old architecture description is
 superseded by this explicit user instruction. Step 1 remains unauthorized.
+
+### STEP0-009 — Fc/pairing recommendation, 2026-09-19
+
+Authorized literature review completed in `reports/step0_fc_pairing_review.md`.
+Proposed: effector-competent human IgG1, preserve distinct cognate light chains,
+cFAE as leading assembly option; CrossMab plus heavy-chain heterodimerization is
+an alternative. Common-light-chain constraints would need early incorporation.
+Effector enhancement is a comparison question, not selected. This is a DEV
+recommendation awaiting user scientific selection, not an approved sequence,
+mutation, glycoform, hinge, FcRn policy or Step 1 authorization. Assembly evidence
+does not establish same-antigen geometry, internalization, safety or efficacy.

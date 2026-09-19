@@ -93,3 +93,11 @@ filtering. Added construct-level risk records and fit-for-purpose experimental
 follow-up categories, while keeping computational predictions distinct from
 measurements. Plan references now include antibody developability and
 immunogenicity guidance.
+
+`STEP0-009`: Fc/pairing evidence review prepared in
+`reports/step0_fc_pairing_review.md`. Recommends effector-competent human IgG1 and
+preservation of cognate Fab pairs, with cFAE the leading assembly route and
+CrossMab an alternative. Recommendations remain unselected; PM artifact review
+requested. No scientific runs, installations, target preparation or Step 1 work.
+PM accepted STEP0-009 with no material artifact correction. The independent PM
+record clarifies that standard cFAE need not mutate the native IgG1 hinge.
