@@ -123,3 +123,18 @@ Effector enhancement is a comparison question, not selected. This is a DEV
 recommendation awaiting user scientific selection, not an approved sequence,
 mutation, glycoform, hinge, FcRn policy or Step 1 authorization. Assembly evidence
 does not establish same-antigen geometry, internalization, safety or efficacy.
+
+### STEP0-010 — provisional full-antibody baseline, 2026-09-21
+
+User said “ok go” after the full-antibody explanation and recommendation. Record
+the working baseline as a complete human IgG1-like 1A + 1B antibody with active
+Fc: one Fab-A arm, one Fab-B arm, and Fc retained in the final product. Preserve
+each arm's cognate heavy/light variable pair. Controlled Fab-arm exchange (cFAE)
+is the leading assembly route; CrossMab remains the fallback comparison.
+
+This is a provisional development baseline, not exact sequences or a claim that
+cFAE is superior for B7-H3. Exact Fc mutations, hinge sequence, allotype,
+glycoform, FcRn intent, and construct-specific geometry remain open. No common
+light chain is required by this baseline. Cis reachability, internalization,
+Fc-mediated killing, stability, and low aggregation still require later testing.
+Step 1 remains separately gated.

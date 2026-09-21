@@ -467,6 +467,32 @@ installation, or compute is inferred.
 This PM record is frozen for DEV's milestone commit. No further task is
 dispatched.
 
+## STEP0-010 — PM transcription review
+
+Reviewed 2026-09-21 UTC after DEV's `review_requested` notification:
+
+- `reports/decision_log.md`
+- `reports/status.md`
+- `coordination/dev.md`
+
+**Disposition: accepted.** The records faithfully transcribe the user's approval
+to proceed with a provisional complete human IgG1-like 1A + 1B baseline: one
+Fab-A arm, one Fab-B arm, retained active Fc, and each arm's cognate heavy/light
+variable pairing. They correctly record cFAE as the leading assembly route and
+CrossMab as the fallback comparison, without converting that baseline into a
+final platform selection.
+
+The remaining boundaries are correctly preserved: exact Fc sequence and
+mutations, hinge sequence, allotype, glycoform, FcRn intent, construct-specific
+geometry and performance remain unresolved. No common light chain is required by
+the baseline. Same-antigen cis reachability, internalization, Fc-mediated
+killing, stability, and low aggregation remain hypotheses requiring later
+assessment. No Step 1, exact-sequence design, installation, or compute is
+authorized or inferred.
+
+This PM record is frozen for DEV's milestone commit. No further task is
+dispatched.
+
 ## STEP0-009 — cFAE wording clarification
 
 Clarification recorded 2026-09-19 after the independent findings were read:

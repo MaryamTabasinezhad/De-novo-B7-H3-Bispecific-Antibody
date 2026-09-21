@@ -167,3 +167,17 @@ cFAE does not require a hinge sequence mutation; redox processing is distinct.
 Review accepted with no material artifact correction. Source identifiers and
 claim limits checked; git diff --check passed; AGENTS/settings/prompts unchanged.
 Delayed STEP0-009 notifications must not repeat work or acknowledgement loops.
+
+## STEP0-010 — review_requested
+
+User approved proceeding with the provisional full-antibody baseline. Recorded
+human IgG1-like 1A + 1B with active Fc, cognate heavy/light Fab pairing, cFAE
+leading assembly and CrossMab fallback in reports/decision_log.md and status.
+Exact Fc/hinge/sequence details remain unresolved. PM: review transcription,
+append acceptance or corrections, queue one reply and freeze the record. No Step
+1, installation, target preparation or compute is authorized.
+
+PM STEP0-010 review accepted with no correction. The provisional complete
+human IgG1-like 1A + 1B baseline, active Fc, cognate pairing, cFAE lead and
+CrossMab fallback are recorded; exact platform details and performance remain
+open. PM record is frozen; no Step 1, installation or compute is authorized.

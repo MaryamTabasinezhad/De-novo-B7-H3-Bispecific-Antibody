@@ -101,3 +101,9 @@ CrossMab an alternative. Recommendations remain unselected; PM artifact review
 requested. No scientific runs, installations, target preparation or Step 1 work.
 PM accepted STEP0-009 with no material artifact correction. The independent PM
 record clarifies that standard cFAE need not mutate the native IgG1 hinge.
+
+`STEP0-010`: the user approved proceeding with the recommended provisional
+baseline. The working product is a complete human IgG1-like 1A + 1B antibody
+with active Fc, cognate Fab pairing, cFAE as leading assembly, and CrossMab as
+fallback. Exact sequences, Fc mutations, hinge, glycoform, FcRn policy and
+construct-specific performance remain unresolved. PM review is pending.
