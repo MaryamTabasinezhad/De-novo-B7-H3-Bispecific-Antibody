@@ -2,7 +2,7 @@
 
 Updated 2026-09-21.
 
-## Current work — Step 2 epitope carry-forward decision
+## Current work — Step 1 validation and Step 2 geometry preparation
 
 Automatic PM–DEV handoffs are authorized for Step 0 only. The existing Codex
 session queue delivered the coordination check to PM, which acknowledged nonce
@@ -50,10 +50,11 @@ preparation or compute. Historical architecture descriptions are superseded.
 
 Step 0 baseline and screening policy are recorded. Step 1 target preparation is
 complete as a preliminary mapped ensemble, with PM acceptance after correcting
-the Q5ZPR3-2 isoform interpretation and 9LME affinity-tag mapping. The next
-decision is whether to carry forward the preliminary 20G5-like and T3CL11-like
-regions for Step 2 geometry analysis. No antibody sequence design has started.
-AGENTS.md, prompts, and permission settings remain unchanged.
+the Q5ZPR3-2 isoform interpretation and 9LME affinity-tag mapping. The user has
+now confirmed the Step 2 preliminary pair: Arm A is the 8H9-like exposed IgV1
+FG-loop region and Arm B is the coordinate-derived exposed IgC1 patch 2 around
+Q228–R241. No antibody sequence design has started. AGENTS.md, prompts, and
+permission settings remain unchanged.
 
 ## Completed milestone
 
@@ -69,11 +70,20 @@ module. It produced mapped target metadata, membrane-frame PDB outputs, glycan
 controls, and QC records. No antibody sequence design, SLURM job, installation,
 model download, or production-scale compute run has occurred.
 
-## Current next analysis — awaiting scientific decision
+## Current next analysis — preliminary same-antigen geometry check
 
-Carry forward the preliminary 20G5-like and T3CL11-like regions only after the
-user selects them for Step 2 geometry analysis. Preserve glycan and membrane
-context; contact evidence is not proof of cis binding.
+Carry forward the confirmed Arm A/Arm B pair for the preliminary same-antigen
+Fab-pair geometry check. Preserve glycan and membrane context; contact evidence
+and coordinate exposure are not proof of cis binding. Sequence design remains
+gated on this geometry check.
+
+The Step 1 worker was rerun on 2026-09-21 with the verified
+`scipy-stack/2023b` module. The canonical mappings, five-model manifest, and
+798-row numbering map were regenerated and inspected. Remaining Step 1
+ensemble tasks—representative modeled glycoforms, loop repair/relaxation,
+4Ig oligomer hypotheses, and a validated membrane-tilt ensemble—remain blocked
+by unverified scientific runtimes; no substitute software or installation was
+used.
 
 ## Setup checks
 

@@ -1,6 +1,6 @@
 # Step 1 target preparation
 
-Retrieved UTC: 2026-09-21T15:35:54.088633+00:00
+Retrieved UTC: 2026-09-21T17:30:37.026269+00:00
 
 Inputs: UniProt Q5ZPR3 entry version 176 / sequence version 1; AlphaFold DB model v6; RCSB 9LY5, 9LY6, 9LME.
 
