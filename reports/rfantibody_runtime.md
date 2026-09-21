@@ -29,3 +29,8 @@ now used. Pilot job 21526329 reached the GPU but exposed a wrapper PATH issue
 two-arm RFdiffusion pilot was resubmitted as job **21526509** on
 `gpubase_bygpu_b1` using a 40-GB H100 MIG resource, with the virtual environment
 first on PATH; it is currently queued for priority.
+
+Dependent pilot jobs are staged: ProteinMPNN **21526896** depends on successful
+RFdiffusion, and RF2 **21526897** depends on successful ProteinMPNN. These jobs
+are limited to the four pilot backbones and three RF2 recycles; no production
+campaign is queued.
