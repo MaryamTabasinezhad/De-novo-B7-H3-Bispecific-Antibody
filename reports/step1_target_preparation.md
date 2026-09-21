@@ -106,3 +106,41 @@ These residues are design-analysis anchors rather than final validated antibody
 contacts. Before sequence design, confirm that both surfaces are accessible on
 the same B7-H3 molecule and that the selected IgG geometry permits simultaneous
 binding.
+
+## Coordinate-derived surface-exposure screen
+
+The preceding binder table reports known antibody or nanobody contacts. Those
+contacts must not be treated as an independent list of exposed residues. A
+separate screening pass was therefore performed from the coordinates: residues
+were retained when their relative solvent exposure was at least approximately
+0.45 in both the 9LY6 B7-H3 chain and the unbound AlphaFold model. The result is
+a geometry-derived surface shortlist, not an experimentally validated epitope.
+
+Among the available structures, 9LY6 is the best broad-coverage reference: it
+contains a 433-residue human B7-H3 chain in a 3.67-A cryo-EM reconstruction.
+9LY5 is a higher-resolution 2.98-A local 20G5 complex, while 9LME is a 2.40-A
+partial IgV–IgC module with T3CL11. [9LY6](https://www.rcsb.org/structure/9LY6),
+[9LY5](https://www.rcsb.org/structure/9LY5),
+[9LME](https://www.rcsb.org/structure/9LME)
+
+| Region | Coordinate-derived exposed residue candidates (canonical numbering) | Design interpretation |
+|---|---|---|
+| IgV1 patch 1 | **D71, T72, K73** | Compact exposed loop; membrane-distal and suitable for an independent binder screen |
+| IgV1 patch 2 | **E81, Q83** | Exposed polar surface near patch 1 |
+| IgV1 patch 3 | **R111, R113, A115** | Exposed loop region separate from the 20G5 IgC site |
+| IgV1 FG-loop neighborhood | **R127, F129** | Strongly exposed in the coordinates, but overlaps the known 8H9-like region |
+| IgC1 patch 1 | **E198, Q199, R209, V211** | Exposed C1 surface, near but not identical to the 20G5 contact patch |
+| IgC1 patch 2 | **Q228, Q229, H232, S234, T236, T238, Q240, R241** | Broad exposed C1 surface and a strong independent IgC design region |
+| IgC1 patch 3 | **E253, D254, R267, S271, E273, P274, G275** | Exposed C1 surface farther from the main 20G5 contact patch |
+| IgV2 | **R345, F347, K362, E368, K371, D372, R374** | Exposed V2 regions; extracellular but less membrane-distal than IgV1 |
+| IgC2 | **E416, Q417, R427, V429, H450, T456** | Exposed but membrane-proximal, so whole-IgG access may be less favorable |
+
+For the current design objective, the highest-priority structure-derived regions
+are IgV1 **D71–K73**, **E81/Q83**, or **R111–A115**, paired with an IgC1 patch
+around **Q228–R241** or **E253–D254/R267–G275**. The R127/F129 region remains a
+known-antibody reference rather than an independent new epitope.
+
+This screen used protein coordinates and did not fully model native glycan
+shielding, membrane orientation, or Fab occupancy. Glycosylation and
+same-molecule simultaneous reachability must therefore be checked before any
+design anchors are frozen.
