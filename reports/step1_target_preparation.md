@@ -73,3 +73,36 @@ epitope**. The 20G5 site has the strongest structural and mutational support;
 8H9 has the clearest residue-level IgV reference, while T3CL11 remains a
 useful domain-level and project-specific structural hypothesis pending further
 validation.
+
+## B7-H3 domain architecture and surface-design anchors
+
+The common human 4Ig B7-H3 extracellular architecture is:
+
+```text
+outside of cell
+  IgV1 — IgC1 — IgV2 — IgC2 — transmembrane helix — cytoplasm
+  membrane-distal                                  membrane-proximal
+```
+
+IgV and IgC identify immunoglobulin-like domain types within B7-H3; they do
+not refer to antibody variable and constant regions. The 2Ig isoform contains
+one V–C repeat. Antibody design should focus on exposed extracellular loops,
+while checking native membrane geometry, glycosylation, and simultaneous access
+to both sites.
+
+| Candidate epitope | Surface location | Better-supported residues | Confidence |
+|---|---|---|---|
+| 20G5-like site | Exposed IgC surface, mainly IgC1; a corresponding IgC2 site may also bind | Approximately **F177, Q179, D180, Q182, V184, P185 and R223**; broader project region approximately **177–188 and 214–230** | Strong structural and mutational evidence |
+| 8H9-like site | Exposed FG loop of membrane-distal IgV | Approximately **126–129 (`IRDF`)**; the homologous region occurs in the second V domain of 4Ig | Strong biochemical epitope mapping |
+| T3CL11-like site | Membrane-distal IgV surface, opposite two N-glycosylation sites | Preliminary project regions **64–89 and 123–130** | Good domain-level structure; residue-level map remains preliminary |
+
+For the planned whole-antibody design, the strongest starting pair is a
+**20G5-like IgC site** and an **8H9-like IgV FG-loop site**. T3CL11 remains an
+alternative IgV hypothesis. The project records N-glycosylation sites at 104,
+189, 215, 322, 407 and 433; nearby glycans may alter access and must be tested
+on native, glycosylated, membrane-bound human 4Ig B7-H3.
+
+These residues are design-analysis anchors rather than final validated antibody
+contacts. Before sequence design, confirm that both surfaces are accessible on
+the same B7-H3 molecule and that the selected IgG geometry permits simultaneous
+binding.
