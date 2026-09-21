@@ -26,11 +26,14 @@ loaded. The first smoke attempt (21526195) failed only because `uv run` tried to
 resolve the DGL index from the compute node; the direct `.venv` invocation is
 now used. Pilot job 21526329 reached the GPU but exposed a wrapper PATH issue
 (the subprocess called system Python and could not import Hydra). The corrected
-two-arm RFdiffusion pilot was resubmitted as job **21526509** on
+two-arm RFdiffusion pilot **21526509** then completed successfully on
 `gpubase_bygpu_b1` using a 40-GB H100 MIG resource, with the virtual environment
-first on PATH; it is currently queued for priority.
+first on PATH. It produced two backbones for each arm.
 
-Dependent pilot jobs are staged: ProteinMPNN **21526896** depends on successful
-RFdiffusion, and RF2 **21526897** depends on successful ProteinMPNN. These jobs
-are limited to the four pilot backbones and three RF2 recycles; no production
-campaign is queued.
+The dependent ProteinMPNN **21526896** and RF2 **21526897** pilot jobs also
+completed successfully (exit 0). ProteinMPNN produced four sequences per arm;
+RF2 produced four predicted structures per arm. RF2 reported “No interface
+residues found, not using hotspots” for every input, so these outputs are
+runtime/format evidence only and are not accepted as binding designs. The pilot
+outputs remain in scratch under `/scratch/ghaedi/mab/rfantibody_pilot/`; a
+representative-output review is required before any larger campaign.

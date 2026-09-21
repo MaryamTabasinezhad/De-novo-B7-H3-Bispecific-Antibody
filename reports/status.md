@@ -88,11 +88,16 @@ ensemble tasks—representative modeled glycoforms, loop repair/relaxation,
 by unverified scientific runtimes; no substitute software or installation was
 used.
 
-RFantibody provisioning is now authorized and underway outside the repository.
-The official RosettaCommons source, isolated uv environment, CUDA 11.8 PyTorch
-stack, and official weights are installed in scratch. The target crops and
-framework inputs are prepared. GPU smoke job 21526260 is pending; no production
-backbone or sequence design has started.
+RFantibody provisioning is authorized and complete outside the repository. The
+official RosettaCommons source, isolated uv environment, CUDA 11.8 PyTorch
+stack, and official weights are installed in scratch. GPU smoke job 21526260
+completed successfully. The bounded two-arm pilot then completed: RFdiffusion
+21526509, ProteinMPNN 21526896, and RF2 21526897 all exited 0. The pilot
+produced backbones, sequences, and RF2 structures, but RF2 detected no interface
+residues for any candidate and therefore did not apply hotspots. These outputs
+are not yet evidence of target binding; representative scientific QC and input
+interface diagnosis are required before scaling. No production campaign has
+started.
 
 ## Setup checks
 
