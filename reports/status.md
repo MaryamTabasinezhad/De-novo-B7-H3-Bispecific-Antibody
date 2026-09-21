@@ -88,6 +88,12 @@ ensemble tasks—representative modeled glycoforms, loop repair/relaxation,
 by unverified scientific runtimes; no substitute software or installation was
 used.
 
+RFantibody provisioning is now authorized and underway outside the repository.
+The official RosettaCommons source, isolated uv environment, CUDA 11.8 PyTorch
+stack, and official weights are installed in scratch. The target crops and
+framework inputs are prepared. GPU smoke job 21526260 is pending; no production
+backbone or sequence design has started.
+
 ## Setup checks
 
 All 19 skills passed the existing skill-format checker. Codex app-server
