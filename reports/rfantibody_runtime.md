@@ -26,5 +26,6 @@ loaded. The first smoke attempt (21526195) failed only because `uv run` tried to
 resolve the DGL index from the compute node; the direct `.venv` invocation is
 now used. Pilot job 21526329 reached the GPU but exposed a wrapper PATH issue
 (the subprocess called system Python and could not import Hydra). The corrected
-two-arm RFdiffusion pilot (two backbones per arm) is queued as job **21526409**
-on `gpubase_bygpu_b1` with the virtual environment first on PATH.
+two-arm RFdiffusion pilot was resubmitted as job **21526509** on
+`gpubase_bygpu_b1` using a 40-GB H100 MIG resource, with the virtual environment
+first on PATH; it is currently queued for priority.
