@@ -2,12 +2,15 @@
 
 Updated 2026-09-21.
 
-## Current work — Step 0 documentation and coordination
+## Current work — Step 2 epitope carry-forward decision
 
 Automatic PM–DEV handoffs are authorized for Step 0 only. The existing Codex
 session queue delivered the coordination check to PM, which acknowledged nonce
 `step0-link-20260918` and assigned `STEP0-001`. Protocol and role-owned records
 are under `coordination/`.
+
+The following paragraphs summarize the initial Step 0 coordination history;
+later execution updates appear below.
 
 DEV prepared `reports/step0_scope.md` and `reports/decision_log.md` from existing
 documents. PM accepted `STEP0-001` and returned its review through the session
@@ -45,10 +48,12 @@ the tandem-scFv-Fc 2A + 2B assumption. Workflow Steps 11–14, controls/handoff,
 README, and scope/decision records updated; PM accepted the final revision. No target
 preparation or compute. Historical architecture descriptions are superseded.
 
-Next: resolve Fc isotype/hinge and heavy/light-chain pairing implementation,
-then remaining quantitative policies. Same-antigen binding remains required.
-Step 1 requires separate authorization. AGENTS.md and permission settings remain
-unchanged. The September 16 setup history below remains applicable.
+Step 0 baseline and screening policy are recorded. Step 1 target preparation is
+complete as a preliminary mapped ensemble, with PM acceptance after correcting
+the Q5ZPR3-2 isoform interpretation and 9LME affinity-tag mapping. The next
+decision is whether to carry forward the preliminary 20G5-like and T3CL11-like
+regions for Step 2 geometry analysis. No antibody sequence design has started.
+AGENTS.md, prompts, and permission settings remain unchanged.
 
 ## Completed milestone
 
@@ -59,17 +64,16 @@ added the task index and Rorqual environment, and reconciled key project docs.
 
 ## Scientific execution status
 
-No antibody analyses or compute jobs were run for this setup. Predictor/model
-paths and dependency-heavy analysis environments remain unverified; see
-`config/hpc/README.md`. No new packages or model downloads were installed.
-No active project jobs or transfer tasks were created.
+Step 1 target preparation ran locally with the verified `scipy-stack/2023b`
+module. It produced mapped target metadata, membrane-frame PDB outputs, glycan
+controls, and QC records. No antibody sequence design, SLURM job, installation,
+model download, or production-scale compute run has occurred.
 
-## Previously recorded next analysis — not currently authorized
+## Current next analysis — awaiting scientific decision
 
-Use `binder-antibody-design` and relevant literature/structure references to
-prepare B7-H3 target inputs under Step 1 of the scientific workflow. Resolve the
-specific scientific scope and dependencies needed for that task. Preserve glycan
-and membrane context when considering the upstream target-cropping example.
+Carry forward the preliminary 20G5-like and T3CL11-like regions only after the
+user selects them for Step 2 geometry analysis. Preserve glycan and membrane
+context; contact evidence is not proof of cis binding.
 
 ## Setup checks
 
@@ -106,7 +110,8 @@ record clarifies that standard cFAE need not mutate the native IgG1 hinge.
 baseline. The working product is a complete human IgG1-like 1A + 1B antibody
 with active Fc, cognate Fab pairing, cFAE as leading assembly, and CrossMab as
 fallback. Exact sequences, Fc mutations, hinge, glycoform, FcRn policy and
-construct-specific performance remain unresolved. PM review is pending.
+construct-specific performance remain unresolved. PM accepted the Step 0
+baseline with no material correction.
 
 `STEP0-011`: prepared a provisional screening and developability policy. It
 keeps binding, cis geometry, internalization, Fc activity, and developability

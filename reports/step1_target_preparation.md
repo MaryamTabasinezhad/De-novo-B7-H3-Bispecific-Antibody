@@ -1,5 +1,7 @@
 # Step 1 — target-preparation result
 
+Reviewed and regenerated 2026-09-21.
+
 Date: 2026-09-21. The existing project worker was run with
 `source config/hpc/rorqual.sh; module load scipy-stack/2023b`.
 

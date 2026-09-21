@@ -1,5 +1,7 @@
 # Step 2 — preliminary epitope evidence
 
+Prepared 2026-09-21. Candidate regions remain unselected.
+
 The prepared structures provide two experimentally observed antibody-contact
 regions that are candidates for the requested distinct epitopes:
 

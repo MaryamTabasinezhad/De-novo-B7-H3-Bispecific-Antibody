@@ -1,6 +1,6 @@
 # PM coordination record
 
-Updated: 2026-09-18 UTC.
+Updated: 2026-09-21 UTC.
 
 ## COORD-001 — acknowledged
 

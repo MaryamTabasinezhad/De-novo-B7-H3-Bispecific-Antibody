@@ -1,6 +1,6 @@
 # Scientific decision log
 
-Updated 2026-09-19. Source: `doc/project-1-computational-first-process.md`, Step 0 and related sections. Initial record: `STEP0-001`. User requirements and decisions recorded below in `STEP0-002` through `STEP0-008`.
+Updated 2026-09-21. Source: `doc/project-1-computational-first-process.md`, Step 0 and related sections. Initial record: `STEP0-001`. User requirements and decisions recorded below in `STEP0-002` through `STEP0-011`.
 
 | ID | Decision required | Existing evidence | State / question for user |
 |---|---|---|---|
@@ -111,7 +111,8 @@ change from 11_fusion_assembly, 12_linker_optimization, 14_fc_dimer_models to
 was moved; no design runs exist. Historical review/coordination records retain
 the prior assumption as history. AGENTS.md and permission settings remain
 unchanged by the user's earlier boundary; its old architecture description is
-superseded by this explicit user instruction. Step 1 remains unauthorized.
+superseded by this explicit user instruction. At that milestone Step 1 remained
+unauthorized; later authorization and execution are recorded in STEP1-001.
 
 ### STEP0-009 — Fc/pairing recommendation, 2026-09-19
 
@@ -147,3 +148,14 @@ approximately 20–50 parents per epitope when supported by the pool, and explic
 hard-exclusion, review-flag, and context-dependent risk dispositions. Numerical
 budgets, thresholds, assay conditions, and promotion cutoffs remain open; no
 scientific run or Step 1 authorization is inferred.
+
+### STEP1-001 — preliminary target preparation accepted, 2026-09-21
+
+The target-preparation worker produced a preliminary human 4Ig/2Ig ensemble,
+canonical numbering metadata, membrane-frame structures, glycan controls, and
+QC. PM accepted the corrected artifact: Q5ZPR3-2 is a membrane 2Ig comparison
+with its own shifted transmembrane span; soluble/shed antigen remains distinct;
+and 9LME model residues 29–240 map to canonical 29–240 after affinity-tag
+removal. The 20G5-like and T3CL11-like regions remain approximate preliminary
+contact observations. No epitope pair, design anchor, cis result, or antibody
+sequence is selected. Step 2 carry-forward awaits the user's decision.

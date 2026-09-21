@@ -1,8 +1,11 @@
 # Step 0 scope record
 
-Initial record 2026-09-18; updated 2026-09-19 through `STEP0-008`.
+Initial record 2026-09-18; Step 0 records updated through `STEP0-011`; current
+execution state recorded in `reports/status.md` on 2026-09-21.
 
-**State: documentation prepared; scientific scope gate not satisfied.** This record does not authorize Step 1 or production computation.
+**State: Step 0 documentation and policy records prepared; Step 1 preliminary
+target preparation completed.** This historical scope record does not by itself
+select epitopes or authorize production antibody design.
 
 ## Existing objective and assumptions
 
@@ -44,9 +47,16 @@ Source: workflow, Cross-Cutting Developability Assessment. No new risk threshold
 
 ## Readiness and authorization
 
-The September 16 status and [HPC notes](../config/hpc/README.md) record setup completion but no scientific runs, and unverified predictor/model dependencies. The current workspace inspection found no `data/`, `metadata/`, `work/`, or `results/` directories. No runtime verification, data retrieval, analysis, installation, or compute submission was performed for this documentation task.
+The September 16 setup history and [HPC notes](../config/hpc/README.md) remain
+the infrastructure baseline. The workspace now contains preliminary `data/`,
+`metadata/`, and `work/01_target_preparation/` outputs from the authorized Step
+1 target preparation. No production design, installation, or SLURM compute
+submission has occurred.
 
-The current authorization covers Step 0 documentation and PM–DEV coordination only. `config/project.yaml` is not created as a finalized scientific configuration while required choices remain unresolved. After user decisions, DEV can record approved settings within authorized scope; Step 1 requires separate authorization.
+The remaining gate is the user's selection of preliminary epitope regions for
+Step 2 geometry analysis. `config/project.yaml` is not created as a finalized
+scientific configuration while that choice and later numerical policies remain
+unresolved.
 
 ## Validation
 
