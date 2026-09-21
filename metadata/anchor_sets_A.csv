@@ -1,0 +1,4 @@
+anchor_set_id,arm,canonical_residues,rationale,status
+A1,A,127;129,"minimal independent exposed anchors for 8H9-like FG-loop",pilot_candidate
+A2,A,127;128;129,"expanded polar/aromatic FG-loop set",pilot_candidate
+A3,A,126;127;129,"loop-envelope alternative retaining exposed aromatic anchor",pilot_candidate

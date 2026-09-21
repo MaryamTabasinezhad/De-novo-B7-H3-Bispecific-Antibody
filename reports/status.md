@@ -2,7 +2,7 @@
 
 Updated 2026-09-21.
 
-## Current work — Step 1 validation and Step 2 geometry preparation
+## Current work — Step 2 geometry and Step 3 anchor preparation
 
 Automatic PM–DEV handoffs are authorized for Step 0 only. The existing Codex
 session queue delivered the coordination check to PM, which acknowledged nonce
@@ -72,10 +72,13 @@ model download, or production-scale compute run has occurred.
 
 ## Current next analysis — preliminary same-antigen geometry check
 
-Carry forward the confirmed Arm A/Arm B pair for the preliminary same-antigen
-Fab-pair geometry check. Preserve glycan and membrane context; contact evidence
-and coordinate exposure are not proof of cis binding. Sequence design remains
-gated on this geometry check.
+The confirmed Arm A/Arm B pair has been carried into a preliminary same-antigen
+geometry check. The oriented unbound model gives approximately 61.6 Å centroid
+separation and 33.5 Å minimum heavy-atom separation; the 9LY6 model gives 62.0 Å
+and 34.2 Å. These are distinct-surface measurements, not Fab-reach or
+simultaneous-binding evidence. Preliminary Step 3 anchor sets are recorded for
+both arms, while sequence design remains gated on glycan/membrane-aware Fab-pair
+geometry.
 
 The Step 1 worker was rerun on 2026-09-21 with the verified
 `scipy-stack/2023b` module. The canonical mappings, five-model manifest, and

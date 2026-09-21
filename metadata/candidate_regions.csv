@@ -1,0 +1,3 @@
+region_id,arm,label,domain,canonical_residues,evidence_class,status,notes
+B7H3-A,A,8H9-like exposed IgV1 FG-loop,IgV1,126-129,experimental_contact + coordinate exposure,user-confirmed preliminary,8H9-like FG-loop; R127 and F129 pass the independent exposure screen
+B7H3-B,B,coordinate-derived exposed IgC1 patch 2,IgC1,"228,229,232,234,236,238,240,241",coordinate-derived exposure,user-confirmed preliminary,Adjacent to and partly overlapping the edge of the broader 20G5 region; not assumed identical

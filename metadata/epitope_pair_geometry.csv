@@ -1,0 +1,7 @@
+model,arm,label,canonical_residues,n_atoms,centroid_x_A,centroid_y_A,centroid_z_A,z_min_A,z_max_A,evidence
+human_4ig_afdb_v6_oriented,A,8H9-like exposed IgV1 FG-loop,126;127;128;129,38,104.83,-64.372,53.392,49.742,57.36,experimental 8H9 mapping plus coordinate exposure
+human_4ig_afdb_v6_oriented,B,coordinate-derived exposed IgC1 patch 2,228;229;232;234;236;238;240;241,68,69.526,-23.88,83.496,72.145,97.282,coordinate-derived exposure screen
+human_4ig_afdb_v6_oriented,PAIR,A/B preliminary same-antigen separation,"A:126-129;B:228,229,232,234,236,238,240,241",,61.58,33.452,,,,centroid distance / minimum heavy-atom distance; not a Fab reach result
+human_4ig_20G5_fab2,A,8H9-like exposed IgV1 FG-loop,126;127;128;129,38,123.056,-42.491,48.914,40.934,57.057,experimental 8H9 mapping plus coordinate exposure
+human_4ig_20G5_fab2,B,coordinate-derived exposed IgC1 patch 2,228;229;232;234;236;238;240;241,68,65.224,-27.107,65.227,54.74,74.976,coordinate-derived exposure screen
+human_4ig_20G5_fab2,PAIR,A/B preliminary same-antigen separation,"A:126-129;B:228,229,232,234,236,238,240,241",,62.026,34.158,,,,centroid distance / minimum heavy-atom distance; not a Fab reach result

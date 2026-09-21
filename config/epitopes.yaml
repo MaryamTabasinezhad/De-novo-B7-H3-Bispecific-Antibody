@@ -1,0 +1,28 @@
+version: 1
+updated: 2026-09-21
+isoform_scope:
+  primary: human_4Ig_cell_surface
+  optional_characterization: human_2Ig_membrane
+  soluble_shed: interference_assessment_only
+pair_status: user_confirmed_preliminary
+arm_A:
+  label: 8H9-like_exposed_IgV1_FG_loop
+  canonical_residues: [126, 127, 128, 129]
+  sequence_context: IRDF
+  design_anchor_candidates: [127, 129]
+  evidence: experimental_8H9_mapping_plus_coordinate_exposure
+arm_B:
+  label: coordinate_derived_exposed_IgC1_patch_2
+  canonical_residues: [228, 229, 232, 234, 236, 238, 240, 241]
+  design_anchor_candidates: [228, 229, 232, 240, 241]
+  evidence: 9LY6_and_unbound_model_coordinate_exposure_screen
+  relation_to_20G5: adjacent_to_and_partly_overlaps_edge_of_broader_region; not_assumed_identical
+requirements:
+  same_native_human_4Ig_molecule: true
+  full_1A_plus_1B_IgG_with_Fc: true
+validation_gates:
+  - glycan_and_membrane_accessibility
+  - preliminary_same_antigen_Fab_pair_geometry
+  - competition_and_mutational_mapping
+  - native_cell_surface_binding
+  - soluble_shed_interference

@@ -1,0 +1,13 @@
+arm,canonical_residue,aa,evidence_class,exposure_support,design_role,glycan_risk,notes
+A,126,I,region_defining,partial_consensus_exposure,optional_anchor,low,"Part of 8H9 FG-loop envelope; not an independent consensus hit"
+A,127,R,experimental_contact_and_predicted_anchor,consensus_exposed,anchor_candidate,low,"8H9-like FG-loop and coordinate-derived exposed residue"
+A,128,D,region_defining,partial_consensus_exposure,optional_anchor,low,"Part of 8H9 FG-loop envelope; not an independent consensus hit"
+A,129,F,experimental_contact_and_predicted_anchor,consensus_exposed,anchor_candidate,low,"8H9-like FG-loop and coordinate-derived exposed residue"
+B,228,Q,region_defining,consensus_exposed,anchor_candidate,low,"IgC1 patch 2"
+B,229,Q,region_defining,consensus_exposed,anchor_candidate,low,"IgC1 patch 2"
+B,232,H,region_defining,consensus_exposed,anchor_candidate,low,"IgC1 patch 2"
+B,234,S,region_defining,consensus_exposed,optional_anchor,low,"IgC1 patch 2"
+B,236,T,region_defining,consensus_exposed,anchor_candidate,low,"IgC1 patch 2"
+B,238,T,region_defining,consensus_exposed,optional_anchor,low,"IgC1 patch 2"
+B,240,Q,region_defining,consensus_exposed,anchor_candidate,low,"IgC1 patch 2"
+B,241,R,region_defining,consensus_exposed,anchor_candidate,low,"IgC1 patch 2"

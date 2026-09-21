@@ -1,0 +1,4 @@
+anchor_set_id,arm,canonical_residues,rationale,status
+B1,B,228;232;240;241,"distributed IgC1 patch 2 set",pilot_candidate
+B2,B,229;236;240;241,"alternative polar/threonine set",pilot_candidate
+B3,B,228;229;238;241,"edge-spanning patch 2 set",pilot_candidate

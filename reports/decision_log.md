@@ -176,3 +176,23 @@ geometry check only. It does not authorize antibody sequence design, production,
 compute, or a claim of simultaneous cis binding. Glycan shielding, membrane
 clearance, approach vectors, competition, native-cell accessibility, and
 whole-IgG reachability remain validation gates.
+
+### STEP2-002 — preliminary pair geometry recorded, 2026-09-21
+
+The confirmed Arm A/Arm B pair was screened on the oriented unbound 4Ig model
+and the oriented 9LY6 antigen chain. Centroid separation was approximately
+61.6 Å and minimum heavy-atom separation approximately 33.5 Å in the unbound
+model; corresponding 9LY6 values were approximately 62.0 Å and 34.2 Å. These
+measurements support distinct surface locations but do not establish Fab reach,
+approach-vector compatibility, or simultaneous cis binding. Outputs are in
+`metadata/epitope_pair_geometry.csv` and `reports/step2_geometry_check.md`.
+
+### STEP3-001 — preliminary design-anchor candidates recorded, 2026-09-21
+
+Candidate anchor sets were prepared without generating antibody sequences:
+Arm A sets A1 (127,129), A2 (127,128,129), and A3 (126,127,129); Arm B sets B1
+(228,232,240,241), B2 (229,236,240,241), and B3 (228,229,238,241). These remain
+pilot candidates, with evidence classes and canonical mappings in `metadata/`.
+Arm B is a polar-rich coordinate-derived surface hypothesis and requires
+interaction-diversity and developability review. No RFantibody, ProteinMPNN, or
+other sequence-design run is authorized by this record.

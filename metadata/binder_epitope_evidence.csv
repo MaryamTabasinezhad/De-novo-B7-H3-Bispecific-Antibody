@@ -1,0 +1,4 @@
+binder,source,domain,canonical_region,evidence,resolution
+8H9/omburtamab,PMC4705981,IgV1 / homologous IgV2,126-129 (IRDF),experimental mapping and validation,residue-level
+20G5,PDB 9LY5/9LY6,IgC1 / corresponding IgC2,approximately 177-188 and 214-230,cryo-EM structure and mutational support,structural contact region
+T3CL11,PDB 9LME,membrane-distal IgV,project preliminary 64-89 and 123-130,2.4-A complex; partial module,partial structure; preliminary canonical mapping
