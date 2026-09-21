@@ -24,5 +24,7 @@ The corrected GPU smoke test completed successfully as job **21526260** on an
 H100: PyTorch reported CUDA 11.8, CUDA was available, and the RFantibody CLI
 loaded. The first smoke attempt (21526195) failed only because `uv run` tried to
 resolve the DGL index from the compute node; the direct `.venv` invocation is
-now used. The two-arm RFdiffusion pilot (two backbones per arm) is queued as job
-**21526329** on `gpubase_bygpu_b1`.
+now used. Pilot job 21526329 reached the GPU but exposed a wrapper PATH issue
+(the subprocess called system Python and could not import Hydra). The corrected
+two-arm RFdiffusion pilot (two backbones per arm) is queued as job **21526409**
+on `gpubase_bygpu_b1` with the virtual environment first on PATH.
