@@ -93,11 +93,12 @@ official RosettaCommons source, isolated uv environment, CUDA 11.8 PyTorch
 stack, and official weights are installed in scratch. GPU smoke job 21526260
 completed successfully. The bounded two-arm pilot then completed: RFdiffusion
 21526509, ProteinMPNN 21526896, and RF2 21526897 all exited 0. The pilot
-produced backbones, sequences, and RF2 structures, but RF2 detected no interface
-residues for any candidate and therefore did not apply hotspots. These outputs
-are not yet evidence of target binding; representative scientific QC and input
-interface diagnosis are required before scaling. No production campaign has
-started.
+produced backbones, sequences, and RF2 structures. QC found severe sub-angstrom
+heavy-atom overlaps between antibody and target chains in the output structures;
+RF2 also reported no interface residues for the B-arm inputs and disabled
+hotspots. These outputs are rejected for design ranking and are not evidence of
+target binding. Input/output geometry and hotspot encoding must be diagnosed
+before any corrected representative pilot or production campaign.
 
 ## Setup checks
 
