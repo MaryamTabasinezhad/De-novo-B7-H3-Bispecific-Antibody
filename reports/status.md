@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-19.
+Updated 2026-09-21.
 
 ## Current work — Step 0 documentation and coordination
 
