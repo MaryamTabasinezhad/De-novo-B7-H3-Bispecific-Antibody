@@ -1,0 +1,6 @@
+canonical_end,canonical_start,glycan_control,mapped_residues,membrane_orientation,model,type
+461,31,resolved and unglycosylated copies,181,oriented to AFDB transmembrane axis; ectodomain is +z,human_4ig_20G5_fab,experimental
+461,29,resolved and unglycosylated copies,405,oriented to AFDB transmembrane axis; ectodomain is +z,human_4ig_20G5_fab2,experimental
+240,29,resolved and unglycosylated copies,212,oriented to AFDB transmembrane axis; ectodomain is +z,human_4ig_T3CL11_nanobody_partial,experimental
+534,1,not modeled; experimental glycan controls retained separately,534,TM 467-487 centered at z=0; extracellular +z,human_4ig_afdb_v6_oriented,predicted
+isoform 2,isoform 2,not modeled,316,TM mapped from canonical coordinates; extracellular +z,human_2ig_afdb_v6_oriented,predicted
