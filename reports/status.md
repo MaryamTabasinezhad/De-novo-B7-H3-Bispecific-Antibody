@@ -107,3 +107,8 @@ baseline. The working product is a complete human IgG1-like 1A + 1B antibody
 with active Fc, cognate Fab pairing, cFAE as leading assembly, and CrossMab as
 fallback. Exact sequences, Fc mutations, hinge, glycoform, FcRn policy and
 construct-specific performance remain unresolved. PM review is pending.
+
+`STEP0-011`: prepared a provisional screening and developability policy. It
+keeps binding, cis geometry, internalization, Fc activity, and developability
+as separate evidence tracks; preserves diversity; and keeps numerical budgets,
+thresholds and assay cutoffs open. PM review requested.

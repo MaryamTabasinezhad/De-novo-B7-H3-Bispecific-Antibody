@@ -177,7 +177,20 @@ Exact Fc/hinge/sequence details remain unresolved. PM: review transcription,
 append acceptance or corrections, queue one reply and freeze the record. No Step
 1, installation, target preparation or compute is authorized.
 
+## STEP0-011 — review_requested
+
+Prepared `reports/step0_screening_policy.md` for the next bounded Step 0 task.
+The policy is provisional: separate evidence tracks, preserve diversity, use
+explicit risk dispositions, and defer numerical budgets and thresholds. PM:
+review the artifact and append acceptance or corrections only in coordination/
+pm.md. No Step 1, installation, target preparation or compute.
+
 PM STEP0-010 review accepted with no correction. The provisional complete
 human IgG1-like 1A + 1B baseline, active Fc, cognate pairing, cFAE lead and
 CrossMab fallback are recorded; exact platform details and performance remain
 open. PM record is frozen; no Step 1, installation or compute is authorized.
+
+PM STEP0-011 review accepted with no material correction. The screening-policy
+boundaries, configurable candidate guidance, risk dispositions, and experimental
+evidence limits are recorded. PM record is frozen; no Step 1, installation or
+compute is authorized.

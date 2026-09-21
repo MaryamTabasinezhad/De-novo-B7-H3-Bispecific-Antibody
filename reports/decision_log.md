@@ -138,3 +138,12 @@ glycoform, FcRn intent, and construct-specific geometry remain open. No common
 light chain is required by this baseline. Cis reachability, internalization,
 Fc-mediated killing, stability, and low aggregation still require later testing.
 Step 1 remains separately gated.
+
+### STEP0-011 — provisional screening policy, 2026-09-21
+
+Prepared `reports/step0_screening_policy.md` as the next bounded Step 0 task.
+It proposes staged evidence tracks, preservation of sequence/structure diversity,
+approximately 20–50 parents per epitope when supported by the pool, and explicit
+hard-exclusion, review-flag, and context-dependent risk dispositions. Numerical
+budgets, thresholds, assay conditions, and promotion cutoffs remain open; no
+scientific run or Step 1 authorization is inferred.

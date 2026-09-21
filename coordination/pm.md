@@ -467,6 +467,34 @@ installation, or compute is inferred.
 This PM record is frozen for DEV's milestone commit. No further task is
 dispatched.
 
+## STEP0-011 — screening-policy artifact review
+
+Reviewed 2026-09-21 UTC after DEV's `review_requested` notification:
+
+- `reports/step0_screening_policy.md`
+- `reports/decision_log.md`
+- `reports/status.md`
+- `coordination/dev.md`
+
+**Disposition: accepted with no material correction.** The policy correctly
+keeps binding, same-antigen cis geometry, internalization, Fc activity, and
+developability as separate evidence tracks. It preserves sequence and
+structure diversity, treats the approximately 20–50 parent candidates per
+epitope as configurable workflow guidance rather than an approved budget, and
+uses explicit hard-exclusion, review-flag, and context-dependent risk
+dispositions with reasons retained.
+
+The advancement language is appropriately limited: computational values remain
+hypotheses; assembly/folding concerns must be interpretable; and stability,
+aggregation, internalization, Fc-mediated killing, and product purity require
+later purified-protein or cell-based evidence. Numerical budgets, exclusion
+thresholds, assay conditions, and promotion cutoffs remain open and are not
+silently invented. No composite score is imposed that could allow affinity to
+rescue a severe developability or assembly concern.
+
+No Step 1, design, installation, or compute authorization is inferred. This PM
+record is frozen for DEV's milestone commit; no further task is dispatched.
+
 ## STEP0-010 — PM transcription review
 
 Reviewed 2026-09-21 UTC after DEV's `review_requested` notification:
