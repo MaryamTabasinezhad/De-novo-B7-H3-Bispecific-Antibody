@@ -159,3 +159,20 @@ and 9LME model residues 29–240 map to canonical 29–240 after affinity-tag
 removal. The 20G5-like and T3CL11-like regions remain approximate preliminary
 contact observations. No epitope pair, design anchor, cis result, or antibody
 sequence is selected. Step 2 carry-forward awaits the user's decision.
+
+### STEP2-001 — preliminary epitope pair confirmed, 2026-09-21
+
+The user confirmed the preliminary design pair recorded in
+`reports/step2_epitope_evidence.md`: Arm A targets the exposed 8H9-like IgV1
+FG-loop region around canonical 126–129 (`IRDF`), and Arm B targets the
+coordinate-derived exposed IgC1 patch 2 around Q228, Q229, H232, S234, T236,
+T238, Q240 and R241. Arm A is supported by experimental 8H9 mapping plus the
+independent coordinate exposure screen. Arm B is a structure-derived surface
+hypothesis, adjacent to and partly overlapping the edge of the broader 20G5
+region, not an assertion that it is identical to the 20G5 footprint.
+
+This decision authorizes carry-forward to the preliminary same-antigen Fab-pair
+geometry check only. It does not authorize antibody sequence design, production,
+compute, or a claim of simultaneous cis binding. Glycan shielding, membrane
+clearance, approach vectors, competition, native-cell accessibility, and
+whole-IgG reachability remain validation gates.
