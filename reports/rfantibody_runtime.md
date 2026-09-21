@@ -19,3 +19,10 @@ for Arm A hotspots T126–T129, a 12-A spatial crop for Arm B hotspots
 T228/T229/T232/T234/T236/T238/T240/T241, and the official hu-4D5-8 Fv HLT
 framework. The preparation implementation is tracked in
 `tools/prepare_rfantibody_inputs.py`.
+
+The corrected GPU smoke test completed successfully as job **21526260** on an
+H100: PyTorch reported CUDA 11.8, CUDA was available, and the RFantibody CLI
+loaded. The first smoke attempt (21526195) failed only because `uv run` tried to
+resolve the DGL index from the compute node; the direct `.venv` invocation is
+now used. The two-arm RFdiffusion pilot (two backbones per arm) is queued as job
+**21526329** on `gpubase_bygpu_b1`.
