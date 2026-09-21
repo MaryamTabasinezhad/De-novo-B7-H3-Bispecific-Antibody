@@ -1,0 +1,6 @@
+canonical_range,chain,glycan_state,label,mapped_residues,membrane_orientation,method,pdb,release_date,resolution,retrieved_utc,source,title,type,url
+"[31, 461]",C,resolved HETATM retained,human_4ig_20G5_fab,181,,EM,9LY5,2026-03-04T00:00:00.000+00:00,[2.98],2026-09-21T15:35:54.088633+00:00,,antibody 20G5 Fab in complex with human B7-H3 (IgC),,https://data.rcsb.org/rest/v1/core/entry/9LY5
+"[29, 461]",A,resolved HETATM retained,human_4ig_20G5_fab2,405,,EM,9LY6,2026-03-04T00:00:00.000+00:00,[3.67],2026-09-21T15:35:54.088633+00:00,,antibody 20G5 (Fab')2 in complex with human B7-H3,,https://data.rcsb.org/rest/v1/core/entry/9LY6
+"[29, 240]",A,resolved HETATM retained,human_4ig_T3CL11_nanobody_partial,212,,X-ray,9LME,2026-01-21T00:00:00.000+00:00,[2.404],2026-09-21T15:35:54.088633+00:00,,Checkpoint regulator protein in complex with a nanobody,,https://data.rcsb.org/rest/v1/core/entry/9LME
+1-534,A,none; glycan-free model,human_4ig_afdb_v6_oriented,534,TM 467-487 centered at z=0; extracellular +z,,,,,,AlphaFold DB AF-Q5ZPR3-F1-model_v6,,predicted,https://alphafold.ebi.ac.uk/entry/AF-Q5ZPR3-F1
+isoform 2 coordinates,A,none; glycan-free model,human_2ig_afdb_v6_oriented,316,isoform-2 TM mapped from canonical 467-487; extracellular +z,,,,,,AlphaFold DB AF-Q5ZPR3-2-F1-model_v6,,predicted,https://alphafold.ebi.ac.uk/entry/AF-Q5ZPR3-2-F1

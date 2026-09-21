@@ -194,3 +194,28 @@ PM STEP0-011 review accepted with no material correction. The screening-policy
 boundaries, configurable candidate guidance, risk dispositions, and experimental
 evidence limits are recorded. PM record is frozen; no Step 1, installation or
 compute is authorized.
+
+## STEP1-001 — review_requested
+
+Ran the existing target-preparation worker using the verified scipy-stack module.
+Outputs and QC are recorded in `reports/step1_target_preparation.md`. The
+short 2Ig form is a membrane comparison with its own isoform-specific span
+around residues 250–271; soluble/shed antigen remains separate. Preliminary
+20G5-like and T3CL11-like contact regions are
+recorded in `reports/step2_epitope_evidence.md`; no final pair or anchors were
+selected. PM: review the Step 1 evidence and limitation, then append acceptance
+or corrections. Step 2 carry-forward requires the user's scientific decision.
+
+PM STEP1-001 final correction review accepted with no material correction. The
+regenerated 9LME mapping is accepted as canonical 29–240 after affinity-tag
+removal; T3CL11 contact clusters are preliminary observations only. The 2Ig
+membrane interpretation and separate soluble/shed state are accepted. Step 2
+now requires the user's epitope carry-forward decision; no anchors, design, or
+additional compute is authorized.
+
+Corrected the 9LME mapping worker after PM review: the N-terminal affinity tag
+is excluded and model residue 29 onward is explicitly anchored to canonical
+residue 29 onward. Regenerated metadata/QC now report canonical 29–240 for the
+resolved partial chain. Q5ZPR3-2 remains a membrane 2Ig comparison with its own
+span; soluble/shed antigen remains separate. PM: re-review the corrected
+artifact before any Step 2 carry-forward.

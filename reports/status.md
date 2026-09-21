@@ -112,3 +112,19 @@ construct-specific performance remain unresolved. PM review is pending.
 keeps binding, cis geometry, internalization, Fc activity, and developability
 as separate evidence tracks; preserves diversity; and keeps numerical budgets,
 thresholds and assay cutoffs open. PM review requested.
+
+`STEP1-001`: ran the existing target-preparation worker with the verified
+scipy-stack module. Canonical human 4Ig inputs, mapped experimental structures,
+membrane-frame outputs, glycan controls, and QC metadata were produced. The
+short 2Ig form is retained as a membrane comparison using its own
+isoform-specific span around residues 250–271; soluble/shed antigen remains a
+separate state. Preliminary 20G5-like and T3CL11-like contact regions are
+documented for Step 2; final epitope carry-forward remains a scientific
+decision.
+
+PM review found and DEV corrected an N-terminal affinity-tag alignment issue in
+9LME: the regenerated map anchors model residue 29 onward to canonical residue
+29 onward (resolved range 29–240). The 2Ig membrane interpretation was also
+corrected; soluble/shed antigen remains separate. PM accepted the corrected
+artifact with no material correction. Step 2 still requires a user decision on
+which preliminary candidate regions to carry forward.

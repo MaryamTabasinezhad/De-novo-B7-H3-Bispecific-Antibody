@@ -467,6 +467,54 @@ installation, or compute is inferred.
 This PM record is frozen for DEV's milestone commit. No further task is
 dispatched.
 
+## STEP1-001 — target and epitope-evidence review
+
+Reviewed 2026-09-21 UTC after DEV's `review_requested` notification:
+
+- `reports/step1_target_preparation.md`
+- `reports/step2_epitope_evidence.md`
+- `metadata/target_features.json`
+- `metadata/structure_manifest.csv`
+- `metadata/numbering_map.csv`
+- `work/01_target_preparation/ensemble_qc.csv`
+- latest `reports/status.md` and `coordination/dev.md`
+
+**Disposition: corrections required before acceptance.** The 4Ig target
+preparation is useful as a preliminary input: Q5ZPR3-1 features, 9LY5/9LY6
+experimental coverage, the AlphaFold-derived membrane frame, and resolved versus
+unglycosylated controls are clearly recorded. The 20G5 region can remain a
+preliminary contact-region hypothesis, and the report correctly says that
+contact evidence does not establish same-antigen Fab-pair feasibility.
+
+Two material corrections are required:
+
+1. Q5ZPR3-2 is a shorter human 2Ig **membrane isoform** in the retrieved
+   UniProt sequence; deletion of canonical residues 159–376 shifts, rather than
+   removes, the transmembrane segment (the hydrophobic segment is present near
+   residues 251–273 of the 316-residue isoform). It must not be called a
+   “2Ig/soluble comparison form,” and its AlphaFold model must not be treated as
+   a soluble-antigen model. Soluble or shed B7-H3 remains a distinct molecular
+   presentation that is not represented merely by Q5ZPR3-2. The report should
+   retain the limitation that a soluble-antigen construct/model has not been
+   prepared.
+
+2. The 9LME entries in `numbering_map.csv` and QC map model residues to
+   canonical 150–466, despite the structure containing an N-terminal affinity
+   tag followed by the canonical B7-H3 sequence beginning near model residue 30.
+   This conflicts with the Step 2 claim of a contact region near canonical
+   64–89 and 123–130. The tag must be removed from the alignment and the
+   repeated B7-H3 domains anchored explicitly before any 9LME contact residues
+   are reported as canonical. At most, the current values may be retained as
+   model-coordinate preliminary clusters pending remapping; they are not
+   accepted as canonical contact regions. The 9LY5/9LY6 4Ig maps should remain
+   explicitly source- and chain-resolved when the corrected map is regenerated.
+
+These corrections preserve the current scope: no final epitope pair, anchor,
+design, or compute is authorized. The 20G5-like and T3CL11-like observations
+remain hypotheses pending corrected numbering and preliminary same-antigen Fab
+geometry review. PM will await a corrected artifact and `review_requested` before
+final acceptance.
+
 ## STEP0-011 — screening-policy artifact review
 
 Reviewed 2026-09-21 UTC after DEV's `review_requested` notification:
@@ -536,3 +584,77 @@ This corrects the earlier shorthand in the PM findings that grouped “CH3/hinge
 exchange residues.” The STEP0-009 artifact's conditional recommendation and
 unselected status are unchanged. No platform, sequence, Fc mutation, hinge
 variant, Step 1 activity, or compute is authorized by this clarification.
+
+## STEP1-001 — correction review update
+
+Reviewed the corrected text and current contact-mapping artifacts on 2026-09-21.
+
+**Disposition: 2Ig wording accepted; contact mapping still requires correction.**
+The Step 1 report now correctly describes Q5ZPR3-2 as a membrane 2Ig comparison
+isoform with its own hydrophobic span around residues 250–271, and it correctly
+keeps soluble/shed antigen separate. The status and coordination records match
+that interpretation.
+
+The 9LME mapping has not yet been regenerated: `metadata/numbering_map.csv` and
+`ensemble_qc.csv` still assign the affinity-tagged/repeat-ambiguous chain to
+canonical 150–466. That remains inconsistent with the model-coordinate contact
+clusters reported for the N-terminal IgV region. The T3CL11 region must remain a
+model-coordinate preliminary observation until the tag is removed from the
+alignment and the target sequence is anchored to canonical numbering; the
+canonical 64–89 and 123–130 claim is not accepted yet. The 9LY5/9LY6 4Ig
+contact evidence remains preliminary and does not select an epitope pair.
+
+No epitope, anchor, design, or compute is authorized. PM will await regenerated
+9LME mapping and a new `review_requested` notification before final acceptance.
+
+## STEP1-001 — final correction review
+
+Reviewed the regenerated target-preparation artifacts and corrected notes on
+2026-09-21 UTC:
+
+- `reports/step1_target_preparation.md`
+- `reports/step2_epitope_evidence.md`
+- `metadata/numbering_map.csv`
+- `metadata/structure_manifest.csv`
+- `work/01_target_preparation/ensemble_qc.csv`
+- `reports/status.md` and `coordination/dev.md`
+
+**Disposition: accepted with no material correction.** The sidecars now agree
+that 9LME chain A excludes the `ENLYFQG` affinity tag, anchors model residue
+29 onward to canonical residue 29 onward, and covers canonical residues 29–240.
+The T3CL11-like contact clusters around canonical 64–89 and 123–130 are
+therefore acceptable as approximate, preliminary contact-region observations.
+They do not select an epitope, define computational anchors, or establish
+same-antigen cis binding; nanobody geometry and the partial structure remain
+explicit transfer limitations. The 20G5-like 4Ig regions remain preliminary
+structural evidence, with 9LY5/9LY6 treated as repeated antibody context rather
+than independent epitopes.
+
+Q5ZPR3-2 is correctly retained as a membrane 2Ig comparison with its own
+isoform-specific span around residues 250–271; soluble/shed antigen remains a
+separate state. Existing structural coverage and glycoform/loop limitations
+remain in force. No final epitope pair, anchor, design, or additional compute is
+authorized by this review. PM record is frozen for DEV's milestone commit.
+
+## STEP1-001 — fresh regeneration review
+
+Reviewed the current files directly on 2026-09-21 UTC after the regeneration:
+`metadata/numbering_map.csv`, `metadata/structure_manifest.csv`,
+`work/01_target_preparation/ensemble_qc.csv`,
+`reports/step1_target_preparation.md`, and `reports/step2_epitope_evidence.md`.
+
+**Disposition: accepted with no material correction.** The current sidecars are
+updated together and agree that 9LME chain A maps model residues 29–240 to
+canonical residues 29–240. The report correctly records removal of the
+`ENLYFQG` tag and the explicit model-to-canonical anchoring. The reported
+T3CL11-like regions at approximately canonical 64–89 and 123–130 remain
+preliminary contact-region observations, with partial-chain and nanobody-to-Fab
+transfer limitations; they do not constitute epitope selection, computational
+anchors, or a cis-binding result.
+
+The 20G5-like 4Ig observations remain preliminary structural evidence, and
+9LY5/9LY6 remain repeated antibody context rather than independent epitopes.
+Q5ZPR3-2 is correctly treated as a membrane 2Ig comparison with its own
+isoform-specific span, while soluble/shed antigen remains separate. No design,
+Step 2 carry-forward, or additional compute is authorized by this review. PM
+record is frozen for DEV's milestone commit.

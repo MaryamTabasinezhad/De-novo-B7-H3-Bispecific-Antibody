@@ -1,0 +1,63 @@
+{
+  "accession": "Q5ZPR3",
+  "entry_version": 176,
+  "sequence_version": 1,
+  "retrieved_utc": "2026-09-21T15:35:54.088633+00:00",
+  "signal_peptide": [
+    1,
+    28
+  ],
+  "transmembrane": [
+    467,
+    487
+  ],
+  "extracellular": [
+    29,
+    466
+  ],
+  "cytoplasmic": [
+    488,
+    534
+  ],
+  "domains": [
+    [
+      29,
+      139
+    ],
+    [
+      145,
+      238
+    ],
+    [
+      243,
+      357
+    ],
+    [
+      363,
+      456
+    ]
+  ],
+  "n_linked_glycosylation_sites": [
+    104,
+    189,
+    215,
+    322,
+    407,
+    433
+  ],
+  "isoforms": {
+    "Q5ZPR3-1": {
+      "length": 534,
+      "role": "canonical human 4Ig; membrane baseline"
+    },
+    "Q5ZPR3-2": {
+      "length": 316,
+      "role": "shorter human 2Ig; optional characterization; membrane/soluble presentation not conflated"
+    }
+  },
+  "sources": [
+    "https://rest.uniprot.org/uniprotkb/Q5ZPR3.txt",
+    "https://rest.uniprot.org/uniprotkb/Q5ZPR3-1.fasta",
+    "https://rest.uniprot.org/uniprotkb/Q5ZPR3-2.fasta"
+  ]
+}
