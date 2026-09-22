@@ -47,3 +47,19 @@ encoding (including chain order, target crop preparation, and coordinate
 interpretation), then rerun only a corrected representative pilot if needed.
 The approved Arm A and Arm B target residues remain unchanged; this QC does not
 select epitopes or antibody sequences.
+
+## Corrected RFdiffusion-only pilot
+
+Follow-up job `21563096` removed the previous `diffuser.T=50` override and used
+the model default horizon (T=200), with one design per arm. The change did not
+resolve the failure: the RFdiffusion log still reported motif RMSDs of about
+24–28 Å, and the output PDBs had minimum H/L–T heavy-atom distances of 0.38 Å
+(Arm A) and 0.17 Å (Arm B). Both corrected backbones therefore also fail
+geometry QC. The Arm A output target is renumbered T228–T274 and Arm B to
+T228–T310; this is output-local numbering, while canonical hotspot mapping is
+recorded separately. No ProteinMPNN or RF2 job was launched for this follow-up.
+
+The diffusion-horizon override was not the sole cause. The next diagnostic must
+compare RFantibody's expected target/framework coordinate and motif handling with
+a known-good example or revise target-crop preparation; no candidate is eligible
+for sequence design yet.

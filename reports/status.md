@@ -100,9 +100,12 @@ hotspots. These outputs are rejected for design ranking and are not evidence of
 target binding. Diagnosis identified the previous pilot's non-default
 `diffuser.T=50` override as a likely contributor to the large motif RMSD and
 clashes. A one-design-per-arm corrected RFdiffusion pilot using the model
-default diffusion horizon is queued as SLURM job 21563096 (pending priority).
-Dependent ProteinMPNN and RF2 jobs remain unsubmitted until its backbones pass
-geometry QC.
+default diffusion horizon was submitted as SLURM job 21563096. It completed,
+but the follow-up still reported approximately 24–28 Å motif RMSD and produced
+sub-angstrom H/L–T overlaps for both arms. It therefore also fails geometry QC;
+the diffusion-horizon override was not the sole cause. Dependent ProteinMPNN and
+RF2 jobs remain unsubmitted while RFantibody target-crop and motif handling are
+diagnosed against a known-good example.
 
 ## Setup checks
 
