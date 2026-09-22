@@ -37,3 +37,11 @@ residues found, not using hotspots” for every input, so these outputs are
 runtime/format evidence only and are not accepted as binding designs. The pilot
 outputs remain in scratch under `/scratch/ghaedi/mab/rfantibody_pilot/`; a
 representative-output review is required before any larger campaign.
+
+Pilot QC identified a likely configuration issue: the first RFdiffusion pilot
+overrode the trained diffusion horizon with `diffuser.T=50`; its logs showed
+large motif RMSD and the resulting structures had sub-angstrom inter-chain
+overlaps. A corrected one-design-per-arm RFdiffusion-only pilot was submitted
+as **21563096** using the model default horizon (T=200). It is pending scheduler
+priority. No dependent sequence or RF2 job has been submitted for this
+corrected pilot.
