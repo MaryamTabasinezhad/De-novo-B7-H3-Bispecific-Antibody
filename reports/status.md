@@ -123,6 +123,11 @@ official RSV example produced motif RMSD 0.13 Å, H/L/T chains, and no runtime
 errors. The next gated task is one corrected B7-H3 RFantibody backbone design
 per arm using the passing input-pipeline crops.
 
+Corrected B7-H3 RFantibody pilot job `21670962` was submitted on 2026-09-23
+using the passing input crops, one design per arm, default diffusion horizon,
+and the approved Arm A/Arm B hotspots. It is pending GPU scheduler priority.
+No ProteinMPNN or RF2 job is submitted for it yet.
+
 ## Setup checks
 
 All 19 skills passed the existing skill-format checker. Codex app-server

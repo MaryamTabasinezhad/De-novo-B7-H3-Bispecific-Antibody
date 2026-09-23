@@ -55,3 +55,8 @@ Runtime control **21666899** completed successfully (exit 0). The official RSV
 example reported motif RMSD 0.13 Å, retained H/L/T chains, and wrote a valid
 output structure without runtime errors. The next gated task is a one-design
 per-arm B7-H3 RFdiffusion pilot using the corrected input crops.
+
+Corrected B7-H3 pilot **21670962** was submitted on 2026-09-23 using the
+passing AFDB-target crops, one design per arm, default diffusion horizon, and
+the approved hotspot lists. It is pending GPU scheduler priority. ProteinMPNN
+and RF2 remain gated on backbone QC.
