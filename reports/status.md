@@ -129,9 +129,12 @@ and the approved Arm A/Arm B hotspots. Slurm terminated it at the one-hour time
 limit before either arm produced an output PDB. This is an execution-time
 failure, not a scientific result. ProteinMPNN and RF2 remain unsubmitted.
 
-The retry is split into independent two-hour arm jobs: Arm A `21676743` and Arm
-B `21676744`. Both are pending GPU scheduler priority. Their outputs will be
-checked independently before any sequence-design jobs are submitted.
+The retry was split into independent two-hour arm jobs: Arm A `21676743` and
+Arm B `21676744`. Both completed successfully. Motif RMSD was below 0.35 Å for
+both arms and hotspot sequences were IRDF (A) and QQHSTTQR (B). Arm B has a
+3.047 Å minimum H/L–T distance and is a provisional backbone-QC pass. Arm A
+has one 1.758 Å H/L–T atom pair and is held for a fresh backbone draw. No
+ProteinMPNN or RF2 job has been submitted yet.
 
 ## Setup checks
 
