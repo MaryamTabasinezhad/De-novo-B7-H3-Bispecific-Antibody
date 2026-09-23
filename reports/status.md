@@ -125,8 +125,9 @@ per arm using the passing input-pipeline crops.
 
 Corrected B7-H3 RFantibody pilot job `21670962` was submitted on 2026-09-23
 using the passing input crops, one design per arm, default diffusion horizon,
-and the approved Arm A/Arm B hotspots. It is pending GPU scheduler priority.
-No ProteinMPNN or RF2 job is submitted for it yet.
+and the approved Arm A/Arm B hotspots. Slurm terminated it at the one-hour time
+limit before either arm produced an output PDB. This is an execution-time
+failure, not a scientific result. ProteinMPNN and RF2 remain unsubmitted.
 
 ## Setup checks
 

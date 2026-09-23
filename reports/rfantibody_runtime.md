@@ -58,5 +58,7 @@ per-arm B7-H3 RFdiffusion pilot using the corrected input crops.
 
 Corrected B7-H3 pilot **21670962** was submitted on 2026-09-23 using the
 passing AFDB-target crops, one design per arm, default diffusion horizon, and
-the approved hotspot lists. It is pending GPU scheduler priority. ProteinMPNN
-and RF2 remain gated on backbone QC.
+the approved hotspot lists. Slurm terminated it at the one-hour time limit
+before writing either arm's output PDB. This is an execution-time failure, not
+a binder-quality result. ProteinMPNN and RF2 remain gated on backbone QC. The
+next attempt will run Arm A and Arm B as separate longer jobs.
