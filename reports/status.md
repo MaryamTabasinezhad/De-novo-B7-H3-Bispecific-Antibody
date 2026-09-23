@@ -114,6 +114,10 @@ windows now pass chain, hotspot, continuity, and pre-existing clash checks. The
 next gated task is an official runtime control, followed by one corrected
 RFantibody backbone design per arm.
 
+The tracked official runtime-control job `21666899` was submitted on 2026-09-23
+to the H100 MIG partition and is pending scheduler priority. No B7-H3 design,
+ProteinMPNN, or RF2 job has been submitted while this control is pending.
+
 ## Setup checks
 
 All 19 skills passed the existing skill-format checker. Codex app-server

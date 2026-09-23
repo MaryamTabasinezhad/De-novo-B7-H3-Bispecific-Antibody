@@ -45,3 +45,8 @@ overlaps. A corrected one-design-per-arm RFdiffusion-only pilot was submitted
 as **21563096** using the model default horizon (T=200). It is pending scheduler
 priority. No dependent sequence or RF2 job has been submitted for this
 corrected pilot.
+
+The tracked official runtime-control job **21666899** was submitted on
+2026-09-23 using the RFantibody RSV example and hu-4D5-8 Fv framework. It is
+pending scheduler priority; no B7-H3 design job has been submitted while the
+control is pending.
