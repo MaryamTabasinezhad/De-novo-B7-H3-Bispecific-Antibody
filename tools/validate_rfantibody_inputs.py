@@ -55,7 +55,7 @@ def validate(framework: Path, target: Path, hotspots: list[int]):
         if d > 4.5:
             gaps.append({"from": a["resnum"], "to": b["resnum"], "distance_A": round(d, 3)})
     antibody = [a for a in fa if a["chain"] in {"H", "L"}]
-    target = [a for a in ta if a["chain"] == "T"]
+    target_atoms = [a for a in ta if a["chain"] == "T"]
     return {
         "framework": str(framework),
         "target": str(target),
@@ -64,8 +64,8 @@ def validate(framework: Path, target: Path, hotspots: list[int]):
         "hotspots": hotspots,
         "missing_hotspots": missing,
         "target_ca_gaps_over_4_5A": gaps,
-        "min_antibody_target_heavy_atom_distance_A": round(min_distance(antibody, target), 3),
-        "pass": chains == ["H", "L", "T"] and not missing and not gaps and min_distance(antibody, target) >= 1.5,
+        "min_antibody_target_heavy_atom_distance_A": round(min_distance(antibody, target_atoms), 3),
+        "pass": chains == ["H", "L", "T"] and not missing and not gaps and min_distance(antibody, target_atoms) >= 1.5,
     }
 
 
