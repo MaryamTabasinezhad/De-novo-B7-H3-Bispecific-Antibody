@@ -136,6 +136,10 @@ both arms and hotspot sequences were IRDF (A) and QQHSTTQR (B). Arm B has a
 has one 1.758 Å H/L–T atom pair and is held for a fresh backbone draw. No
 ProteinMPNN or RF2 job has been submitted yet.
 
+Fresh nondeterministic Arm A retry job `21681492` was submitted with a separate
+two-hour allocation. Arm B remains at its provisional backbone-QC pass while
+this retry is pending.
+
 ## Setup checks
 
 All 19 skills passed the existing skill-format checker. Codex app-server

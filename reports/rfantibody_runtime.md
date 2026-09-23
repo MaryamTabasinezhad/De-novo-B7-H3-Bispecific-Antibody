@@ -63,3 +63,7 @@ before writing either arm's output PDB. This is an execution-time failure, not
 a binder-quality result. ProteinMPNN and RF2 remain gated on backbone QC. The
 retry is split into independent two-hour jobs: Arm A **21676743** and Arm B
 **21676744**, both pending GPU scheduler priority.
+
+Because Arm A had one severe close contact, fresh nondeterministic Arm A retry
+**21681492** was submitted with a separate two-hour allocation. Arm B remains
+provisionally accepted for backbone QC; no sequence-design job has been started.
