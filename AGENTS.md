@@ -130,6 +130,43 @@ The user explicitly requested this standing practice on 2026-09-14: **commit and
 - Existing commit style: concise imperative subjects without mandatory type prefixes, for example `Refine RF2, RF3, and AlphaFold 3 validation roles`. Follow that style for milestones.
 - Use Codex as the author for maintainer commits when no user-specified Git identity is configured; do not impersonate prior authors.
 
+## Continuous GitHub synchronization
+
+The user authorizes Codex to commit and push every project-file change without
+asking for confirmation again. After every change, including small
+documentation, configuration, script, report, or workflow edits:
+
+1. Review the diff.
+2. Commit the change to the tracked branch.
+3. Push it to the verified GitHub remote.
+4. Verify the push succeeded.
+5. Report the commit hash, changed files, and push status.
+
+Do not accumulate multiple unrelated changes before pushing. If a push fails,
+report the exact failure immediately and preserve the local commit.
+
+## Traceable workspace requirement
+
+All project work must occur in a traceable project workspace or a documented,
+version-controlled worktree. Do not keep durable project work only in an
+untracked local directory, temporary session storage, or undocumented scratch
+location.
+
+Scratch space may be used only for temporary computation, downloaded software,
+model weights, intermediate files, or Slurm outputs. For every scratch use:
+
+- record the exact path;
+- record the command, job ID, and relevant runtime details;
+- copy required results or summaries into the tracked project workspace;
+- commit and push the durable record immediately.
+
+Before reporting work as complete, verify that the relevant code, reports,
+decisions, metadata, and results are present in the tracked workspace and
+available on GitHub.
+
+A task is not considered complete until its durable artifacts and status record
+have been committed, pushed, and verified on GitHub.
+
 ## Scope of these contracts
 
 Deliver the artifacts specified by `README.md` and `doc/project-1-computational-first-process.md`, with the workflow's inputs, outputs, and completion gates guiding implementation. Keep contracts proportional to that work.
