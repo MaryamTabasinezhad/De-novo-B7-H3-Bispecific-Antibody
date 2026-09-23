@@ -8,7 +8,7 @@
 #SBATCH --error=/scratch/ghaedi/mab/jobs/rfantibody_input_qc_%j.err
 set -euo pipefail
 source /lustre09/project/6089454/ghaedi/mab/config/hpc/rorqual.sh
-INPUTS="$MAB_SCRATCH_ROOT/rfantibody_inputs_corrected2"
+INPUTS="$MAB_SCRATCH_ROOT/rfantibody_inputs_corrected3"
 python "$MAB_PROJECT_ROOT/tools/validate_rfantibody_inputs.py" \
   --framework "$INPUTS/framework_HLT.pdb" \
   --target-a "$INPUTS/target_A.pdb" \
