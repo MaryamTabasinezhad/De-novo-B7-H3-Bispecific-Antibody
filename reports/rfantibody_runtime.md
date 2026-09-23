@@ -61,4 +61,5 @@ passing AFDB-target crops, one design per arm, default diffusion horizon, and
 the approved hotspot lists. Slurm terminated it at the one-hour time limit
 before writing either arm's output PDB. This is an execution-time failure, not
 a binder-quality result. ProteinMPNN and RF2 remain gated on backbone QC. The
-next attempt will run Arm A and Arm B as separate longer jobs.
+retry is split into independent two-hour jobs: Arm A **21676743** and Arm B
+**21676744**, both pending GPU scheduler priority.

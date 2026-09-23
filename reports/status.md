@@ -129,6 +129,10 @@ and the approved Arm A/Arm B hotspots. Slurm terminated it at the one-hour time
 limit before either arm produced an output PDB. This is an execution-time
 failure, not a scientific result. ProteinMPNN and RF2 remain unsubmitted.
 
+The retry is split into independent two-hour arm jobs: Arm A `21676743` and Arm
+B `21676744`. Both are pending GPU scheduler priority. Their outputs will be
+checked independently before any sequence-design jobs are submitted.
+
 ## Setup checks
 
 All 19 skills passed the existing skill-format checker. Codex app-server
