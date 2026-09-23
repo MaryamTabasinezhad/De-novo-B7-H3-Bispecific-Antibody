@@ -50,3 +50,8 @@ The tracked official runtime-control job **21666899** was submitted on
 2026-09-23 using the RFantibody RSV example and hu-4D5-8 Fv framework. It is
 pending scheduler priority; no B7-H3 design job has been submitted while the
 control is pending.
+
+Runtime control **21666899** completed successfully (exit 0). The official RSV
+example reported motif RMSD 0.13 Å, retained H/L/T chains, and wrote a valid
+output structure without runtime errors. The next gated task is a one-design
+per-arm B7-H3 RFdiffusion pilot using the corrected input crops.
