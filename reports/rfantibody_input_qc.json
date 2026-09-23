@@ -1,0 +1,55 @@
+{
+  "arm_A": {
+    "framework": "/scratch/ghaedi/mab/rfantibody_inputs_corrected3/framework_HLT.pdb",
+    "target": "/scratch/ghaedi/mab/rfantibody_inputs_corrected3/target_A.pdb",
+    "chains": [
+      "H",
+      "L",
+      "T"
+    ],
+    "chain_residue_counts": {
+      "H": 116,
+      "L": 107,
+      "T": 84
+    },
+    "hotspots": [
+      126,
+      127,
+      128,
+      129
+    ],
+    "missing_hotspots": [],
+    "target_ca_gaps_over_4_5A": [],
+    "min_antibody_target_heavy_atom_distance_A": 146.093,
+    "pass": true
+  },
+  "arm_B": {
+    "framework": "/scratch/ghaedi/mab/rfantibody_inputs_corrected3/framework_HLT.pdb",
+    "target": "/scratch/ghaedi/mab/rfantibody_inputs_corrected3/target_B.pdb",
+    "chains": [
+      "H",
+      "L",
+      "T"
+    ],
+    "chain_residue_counts": {
+      "H": 116,
+      "L": 107,
+      "T": 94
+    },
+    "hotspots": [
+      228,
+      229,
+      232,
+      234,
+      236,
+      238,
+      240,
+      241
+    ],
+    "missing_hotspots": [],
+    "target_ca_gaps_over_4_5A": [],
+    "min_antibody_target_heavy_atom_distance_A": 130.451,
+    "pass": true
+  },
+  "pass": true
+}

@@ -104,8 +104,15 @@ default diffusion horizon was submitted as SLURM job 21563096. It completed,
 but the follow-up still reported approximately 24–28 Å motif RMSD and produced
 sub-angstrom H/L–T overlaps for both arms. It therefore also fails geometry QC;
 the diffusion-horizon override was not the sole cause. Dependent ProteinMPNN and
-RF2 jobs remain unsubmitted while RFantibody target-crop and motif handling are
+RF2 jobs remain unsubmitted while RFantibody target and motif handling are
 diagnosed against a known-good example.
+
+`21666857` passed the tracked input-pipeline QC after correcting two preparation
+errors: the wrong source chain had been selected from the 20G5 complex, and the
+spatial crop had disconnected Cα segments. Corrected contiguous AFDB-target
+windows now pass chain, hotspot, continuity, and pre-existing clash checks. The
+next gated task is an official runtime control, followed by one corrected
+RFantibody backbone design per arm.
 
 ## Setup checks
 
