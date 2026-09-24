@@ -165,6 +165,14 @@ geometry screen. The workflow's approximately 10,000-backbone
 production figure and 5–20 sequences per retained backbone are planning ranges,
 not completed work or a current production run.
 
+To distinguish a model/input problem from a B7-H3-specific result, the tracked
+official RF2 H/L/T example control
+(`tools/rfantibody_rf2_official_control_job.sh`) was committed and pushed as
+`5aa41c9`. It was submitted as Slurm job `21747881` with the same RF2_ab
+weights, three recycles, cautious mode, and the shared geometry checker used by
+the B7-H3 pilot. Its output and clash metrics will determine whether the
+sub-2 Å overlaps are reproduced on the official example.
+
 ## Setup checks
 
 All 19 skills passed the existing skill-format checker. Codex app-server
