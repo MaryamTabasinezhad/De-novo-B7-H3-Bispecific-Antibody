@@ -145,10 +145,9 @@ Arm A retry `21681492` completed successfully. It reported motif RMSD
 arms now pass the preliminary backbone QC and are eligible for a bounded
 ProteinMPNN sequence pilot. No sequence-design job has started yet.
 
-ProteinMPNN pilot job `21719319` was submitted for the accepted Arm A retry and
-Arm B backbone, with two deterministic sequences per structure and CDR-loop
-design only. It is pending GPU scheduler priority. RF2 remains gated on the
-sequence outputs and their QC.
+ProteinMPNN pilot job `21719319` completed successfully with two deterministic
+CDR-loop sequences per accepted backbone (four candidates total). RF2 is now
+the next gated stage; no RF2 job has been submitted yet.
 
 ## Setup checks
 

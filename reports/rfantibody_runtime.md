@@ -73,6 +73,7 @@ minimum H/L–T distance 2.768 Å, and no pair below 2.0 Å. Both arms now pass
 the preliminary backbone screen and are eligible for the bounded ProteinMPNN
 pilot.
 
-ProteinMPNN pilot **21719319** was submitted for the accepted Arm A and Arm B
-backbones, generating two deterministic CDR-loop sequences per structure.
-It is pending GPU scheduler priority; RF2 remains gated on sequence QC.
+ProteinMPNN pilot **21719319** completed successfully with two deterministic
+CDR-loop sequences per accepted Arm A and Arm B backbone. The four candidates
+are recorded in `reports/rfantibody_b7h3_mpnn_qc.md`; RF2 is the next gated
+stage and has not yet been submitted.
