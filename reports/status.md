@@ -148,18 +148,20 @@ ProteinMPNN sequence pilot. No sequence-design job has started yet.
 ProteinMPNN pilot job `21719319` completed successfully with two deterministic
 CDR-loop sequences per accepted backbone (four candidates total). The tracked
 RF2 wrapper `tools/rfantibody_b7h3_rf2_job.sh` was committed and pushed as
-`bd0dc0b`. It was submitted as Slurm job `21741284` on 2026-09-24 with three
+`bd0dc0b`. RF2 job `21741284` completed successfully on 2026-09-24 with three
 recycles per arm, official `RF2_ab.pt` weights, and seeds 101 (Arm A) and 202
-(Arm B). Outputs are being written to
-`/scratch/ghaedi/mab/rfantibody_b7h3_rf2_20260924/`. This is a bounded
-sequence/structure validation pilot; it is not a final 1A+1B IgG or
-same-antigen bispecific result.
+(Arm B). It produced four best PDBs, but all four failed the preliminary
+geometry screen: each had a minimum H/L–T heavy-atom distance below 2.0 Å.
+Therefore 0/4 candidates pass RF2 QC. Results and the scratch paths are
+recorded in `reports/rfantibody_b7h3_rf2_qc.md`; no candidate advances to
+independent validation or whole-IgG assembly until coordinate handling is
+diagnosed.
 
 The full pilot candidate accounting is recorded in
 `reports/candidate_accounting.md`. In the corrected lineage, 2/2 input windows
 passed QC, 2 arm backbones passed after the Arm A retry, ProteinMPNN produced 4
-sequence candidates (2 per arm), and all 4 are awaiting RF2 validation. No RF2
-survivor is confirmed yet. The workflow's approximately 10,000-backbone
+sequence candidates (2 per arm), and RF2 evaluated all 4; 0/4 passed the RF2
+geometry screen. The workflow's approximately 10,000-backbone
 production figure and 5–20 sequences per retained backbone are planning ranges,
 not completed work or a current production run.
 

@@ -11,7 +11,7 @@ No count below is an experimental antibody count or a claim of binding.
 | Target/input QC | 2 arm windows | 2 corrected continuous target inputs | 2/2 | Passed chain, hotspot-presence, continuity, and pre-existing-clash checks in job `21666857` |
 | RFantibody backbone pilot | 3 arm-level attempts with usable output | 3 H/L/T backbones | 2/3 | Arm B from `21676744` passed; Arm A from `21676743` held for a 1.758 Å close contact; Arm A retry `21681492` passed |
 | ProteinMPNN pilot | 2 accepted backbones | 4 sequences (2 per arm) | 4/4 eligible for RF2 | Job `21719319` completed; scores are sequence-model scores, not affinity |
-| RF2 validation | 4 sequence candidates | Pending | 0 confirmed until QC completes | Job `21741284` is pending Slurm priority |
+| RF2 validation | 4 sequence candidates | 4 RF2 best PDBs | 0/4 | Job `21741284` completed; all four failed the preliminary heavy-atom geometry screen |
 
 The accepted backbone set entering ProteinMPNN is therefore **two arm-specific
 Fv designs**: one Arm A retry and one Arm B design. The four current sequence
@@ -19,10 +19,10 @@ IDs are:
 
 | Arm | Candidate | ProteinMPNN score | RF2 status |
 |---|---|---:|---|
-| A | `ab_0_dldesign_0` | 1.0752 | Pending in job `21741284` |
-| A | `ab_0_dldesign_1` | 1.1878 | Pending in job `21741284` |
-| B | `ab_0_dldesign_0` | 1.3557 | Pending in job `21741284` |
-| B | `ab_0_dldesign_1` | 1.4213 | Pending in job `21741284` |
+| A | `ab_0_dldesign_0` | 1.0752 | RF2 completed; rejected by geometry QC |
+| A | `ab_0_dldesign_1` | 1.1878 | RF2 completed; rejected by geometry QC |
+| B | `ab_0_dldesign_0` | 1.3557 | RF2 completed; rejected by geometry QC |
+| B | `ab_0_dldesign_1` | 1.4213 | RF2 completed; rejected by geometry QC |
 
 The broad RFantibody target windows are QC/context windows, not complete
 epitope definitions: Arm A is canonical 86–169 and Arm B is 188–281. The
@@ -48,11 +48,12 @@ campaign. The current work is deliberately a small pilot: one accepted
 backbone per arm and two sequences per backbone.
 
 After RF2, candidates must pass structural/interface QC before any survivor is
-sent to independent AlphaFold 3 or RF3 validation. Only after those filters
+sent to independent AlphaFold 3 or RF3 validation. The current RF2 pilot had
+**0/4 survivors**, so no candidate has reached those independent predictors.
+Only after those filters
 would the workflow begin parent selection, Fab-pair geometry, simultaneous
 same-antigen modeling, complete 1A+1B IgG-Fc assembly, and developability
-ranking. At present, the number of RF2 survivors is **zero confirmed** because
-the job has not completed.
+ranking. At present, the number of RF2 survivors is **zero**.
 
 ## Interpretation
 
