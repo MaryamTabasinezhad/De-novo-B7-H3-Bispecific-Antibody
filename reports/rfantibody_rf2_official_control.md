@@ -22,12 +22,14 @@ RF2 produced one best PDB with H, L, and T chains and best pLDDT `0.903`.
 
 | Output | H atoms | L atoms | T atoms | Minimum H/L–T distance | Contacts <4.5 Å | Overlaps <2.0 Å | Closest pair |
 |---|---:|---:|---:|---:|---:|---:|---|
-| `ab_proteinmpnn_output_best.pdb` | 1421 | 1283 | 3087 | 2.229 Å | 48 | 0 | H:59ARG–243ASN |
+| `ab_proteinmpnn_output_best.pdb` | 908 | 797 | 1896 | 3.167 Å | 6 | 0 | H:59ARG–243ASN |
 
 The same tracked checker used on the B7-H3 RF2 outputs reports no severe
 sub-2 Å antibody–target overlap for the official example. The runtime,
 official weights, H/L/T parser path, and geometry calculation therefore pass
-this control.
+this control. The checker was corrected to recognize digit-prefixed hydrogen
+atom names when the PDB element field is blank; the control and B7-H3 results
+were then recomputed.
 
 ## Interpretation and consequence
 

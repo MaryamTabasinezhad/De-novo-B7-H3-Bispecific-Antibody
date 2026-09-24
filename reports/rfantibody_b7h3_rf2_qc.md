@@ -8,10 +8,10 @@ Arm B. RF2 produced one best PDB for each of the four ProteinMPNN candidates.
 
 | Arm | Candidate | Best RF2 pLDDT | Minimum H/L–T heavy-atom distance | H/L–T contacts <4.5 Å | Preliminary disposition |
 |---|---|---:|---:|---:|---|
-| A | `ab_0_dldesign_0` | 0.916 | 0.422 Å | 1117 | Reject geometry QC |
-| A | `ab_0_dldesign_1` | 0.923 | 0.122 Å | 9990 | Reject geometry QC |
-| B | `ab_0_dldesign_0` | 0.899 | 0.291 Å | 820 | Reject geometry QC |
-| B | `ab_0_dldesign_1` | 0.892 | 1.016 Å | 546 | Reject geometry QC |
+| A | `ab_0_dldesign_0` | 0.916 | 0.422 Å | 454 | Reject geometry QC |
+| A | `ab_0_dldesign_1` | 0.923 | 0.331 Å | 4341 | Reject geometry QC |
+| B | `ab_0_dldesign_0` | 0.899 | 0.291 Å | 337 | Reject geometry QC |
+| B | `ab_0_dldesign_1` | 0.892 | 1.485 Å | 170 | Reject geometry QC |
 
 All four outputs retained H, L, and T chains and were written to
 `/scratch/ghaedi/mab/rfantibody_b7h3_rf2_20260924/{A,B}/`. The pLDDT values are
@@ -20,11 +20,16 @@ model confidence values, not affinity measurements.
 ## QC interpretation
 
 The four predicted complexes contain physically implausible heavy-atom
-overlaps: every minimum H/L–T distance is below the preliminary 2.0 Å severe
-overlap screen. The very large numbers of nominal contacts are consistent with
-coordinate collapse or an input/output geometry problem, so these structures
-cannot be used as evidence for productive binding or ranked as antibody
-candidates.
+overlaps: every output has at least one H/L–T pair below the preliminary 2.0 Å
+severe-overlap screen. The very large numbers of nominal contacts are
+consistent with coordinate collapse or an input/output geometry problem, so
+these structures cannot be used as evidence for productive binding or ranked
+as antibody candidates.
+
+The input-versus-output audit is recorded in
+`reports/rfantibody_b7h3_coordinate_audit.md`. The accepted backbones and
+ProteinMPNN inputs have zero sub-2 Å overlaps; the overlaps are introduced in
+the RF2 outputs.
 
 This is a completed computational run with a failed geometry QC outcome. It is
 not evidence that Arm A, Arm B, or the selected B7-H3 epitopes are biologically

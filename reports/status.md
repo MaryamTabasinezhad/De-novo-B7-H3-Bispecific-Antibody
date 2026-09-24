@@ -170,9 +170,11 @@ official RF2 H/L/T example control
 (`tools/rfantibody_rf2_official_control_job.sh`) was committed and pushed as
 `5aa41c9`, then completed successfully as Slurm job `21747881`. With the same
 RF2_ab weights, three recycles, cautious mode, and shared geometry checker, the
-official output had pLDDT `0.903`, minimum H/L–T distance `2.229 Å`, 48
-contacts below 4.5 Å, and zero overlaps below 2.0 Å. The control therefore
-passes and points to a B7-H3 input/output representation issue rather than a
+official output had pLDDT `0.903`, minimum heavy-atom H/L–T distance `3.167 Å`,
+6 contacts below 4.5 Å, and zero overlaps below 2.0 Å. The shared checker was
+corrected to recognize digit-prefixed hydrogen atom names, and both the
+official control and B7-H3 outputs were recomputed. The control still passes
+and points to a B7-H3 input/output representation issue rather than a
 universal RF2 or checker failure. Details are in
 `reports/rfantibody_rf2_official_control.md`.
 

@@ -16,7 +16,10 @@ def atoms_for(path: Path):
         chain = line[21]
         if chain not in atoms:
             continue
-        element = (line[76:78].strip() or line[12:16].strip()[0]).upper()
+        atom_name = line[12:16].strip()
+        element = line[76:78].strip().upper()
+        if not element:
+            element = next((char for char in atom_name if char.isalpha()), "").upper()
         if element == "H":
             continue
         try:
