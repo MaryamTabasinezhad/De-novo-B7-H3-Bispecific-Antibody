@@ -72,3 +72,7 @@ Arm A retry **21681492** completed successfully with motif RMSD 0.21–0.25 Å,
 minimum H/L–T distance 2.768 Å, and no pair below 2.0 Å. Both arms now pass
 the preliminary backbone screen and are eligible for the bounded ProteinMPNN
 pilot.
+
+ProteinMPNN pilot **21719319** was submitted for the accepted Arm A and Arm B
+backbones, generating two deterministic CDR-loop sequences per structure.
+It is pending GPU scheduler priority; RF2 remains gated on sequence QC.
