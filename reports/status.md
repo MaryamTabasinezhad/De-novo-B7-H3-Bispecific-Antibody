@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-21.
+Updated 2026-09-24.
 
 ## Current work — Step 2 geometry and Step 3 anchor preparation
 
@@ -146,8 +146,14 @@ arms now pass the preliminary backbone QC and are eligible for a bounded
 ProteinMPNN sequence pilot. No sequence-design job has started yet.
 
 ProteinMPNN pilot job `21719319` completed successfully with two deterministic
-CDR-loop sequences per accepted backbone (four candidates total). RF2 is now
-the next gated stage; no RF2 job has been submitted yet.
+CDR-loop sequences per accepted backbone (four candidates total). The tracked
+RF2 wrapper `tools/rfantibody_b7h3_rf2_job.sh` was committed and pushed as
+`bd0dc0b`. It was submitted as Slurm job `21741284` on 2026-09-24 with three
+recycles per arm, official `RF2_ab.pt` weights, and seeds 101 (Arm A) and 202
+(Arm B). Outputs are being written to
+`/scratch/ghaedi/mab/rfantibody_b7h3_rf2_20260924/`. This is a bounded
+sequence/structure validation pilot; it is not a final 1A+1B IgG or
+same-antigen bispecific result.
 
 ## Setup checks
 
