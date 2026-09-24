@@ -140,6 +140,11 @@ Fresh nondeterministic Arm A retry job `21681492` was submitted with a separate
 two-hour allocation. Arm B remains at its provisional backbone-QC pass while
 this retry is pending.
 
+Arm A retry `21681492` completed successfully. It reported motif RMSD
+0.21–0.25 Å, minimum H/L–T distance 2.768 Å, and no pair below 2.0 Å. Both
+arms now pass the preliminary backbone QC and are eligible for a bounded
+ProteinMPNN sequence pilot. No sequence-design job has started yet.
+
 ## Setup checks
 
 All 19 skills passed the existing skill-format checker. Codex app-server

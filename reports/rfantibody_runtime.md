@@ -67,3 +67,8 @@ retry is split into independent two-hour jobs: Arm A **21676743** and Arm B
 Because Arm A had one severe close contact, fresh nondeterministic Arm A retry
 **21681492** was submitted with a separate two-hour allocation. Arm B remains
 provisionally accepted for backbone QC; no sequence-design job has been started.
+
+Arm A retry **21681492** completed successfully with motif RMSD 0.21–0.25 Å,
+minimum H/L–T distance 2.768 Å, and no pair below 2.0 Å. Both arms now pass
+the preliminary backbone screen and are eligible for the bounded ProteinMPNN
+pilot.

@@ -19,3 +19,13 @@ affinity or biological activity.
 Arm B may proceed to a bounded ProteinMPNN/RF2 check after the Arm A retry is
 recorded. Arm A is held for a fresh backbone draw; no final arm or whole-IgG
 claim is made.
+
+## Arm A retry
+
+Retry job `21681492` completed successfully. Its output
+`/scratch/ghaedi/mab/rfantibody_b7h3_arm_a_retry_20260923/ab_0.pdb` retained the
+expected hotspot sequence `IRDF`, had motif RMSD `0.21–0.25 Å`, a minimum H/L–T
+heavy-atom distance of `2.768 Å`, and no H/L–T pair below 2.0 Å. Arm A now
+passes the preliminary backbone screen alongside Arm B. Both arms are eligible
+for a bounded ProteinMPNN sequence-design pilot; this does not establish
+affinity or biological activity.
