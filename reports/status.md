@@ -168,10 +168,13 @@ not completed work or a current production run.
 To distinguish a model/input problem from a B7-H3-specific result, the tracked
 official RF2 H/L/T example control
 (`tools/rfantibody_rf2_official_control_job.sh`) was committed and pushed as
-`5aa41c9`. It was submitted as Slurm job `21747881` with the same RF2_ab
-weights, three recycles, cautious mode, and the shared geometry checker used by
-the B7-H3 pilot. Its output and clash metrics will determine whether the
-sub-2 Å overlaps are reproduced on the official example.
+`5aa41c9`, then completed successfully as Slurm job `21747881`. With the same
+RF2_ab weights, three recycles, cautious mode, and shared geometry checker, the
+official output had pLDDT `0.903`, minimum H/L–T distance `2.229 Å`, 48
+contacts below 4.5 Å, and zero overlaps below 2.0 Å. The control therefore
+passes and points to a B7-H3 input/output representation issue rather than a
+universal RF2 or checker failure. Details are in
+`reports/rfantibody_rf2_official_control.md`.
 
 ## Setup checks
 
