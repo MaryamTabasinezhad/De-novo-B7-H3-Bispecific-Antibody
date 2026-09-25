@@ -6,7 +6,7 @@ Updated 2026-09-25 13:58 UTC.
 status report. All future job submissions, completions, QC results, blockers,
 and next-step updates must be recorded here and pushed to GitHub.
 
-## Current work — Step 2 geometry and Step 3 anchor preparation
+## Current work — Step 4–5 breadth pilot planning
 
 Automatic PM–DEV handoffs are authorized for Step 0 only. The existing Codex
 session queue delivered the coordination check to PM, which acknowledged nonce
@@ -191,11 +191,21 @@ four B7-H3 RF2 outputs remain rejected for sub-2 Å overlaps. The coordinate
 audit confirms that the accepted backbones and ProteinMPNN inputs are clean and
 that the problematic overlaps are introduced in the RF2 B7-H3 outputs.
 
-The project is paused at this diagnostic gate: no candidate advances to AF3,
-RF3, whole-IgG assembly, or production-scale generation. The next authorized
-technical task is a B7-H3-specific RF2 input/output handling correction and a
-small representative retest. This refresh was written on 2026-09-25 so the
-tracked status reflects the current scheduler and scientific state.
+The project was previously paused at this diagnostic gate: no candidate
+advances to AF3, RF3, whole-IgG assembly, or production-scale generation. That
+diagnostic-only next step is superseded by the user's later STEP4-001 breadth
+pilot decision below. This refresh was written on 2026-09-25 so the tracked
+status reflects the current scheduler and scientific state.
+
+The user has now approved a bounded Step 4–5 breadth pilot. The scope is
+100–300 RFantibody backbones per active epitope/hotspot definition and
+approximately four ProteinMPNN sequences per retained backbone. The current
+two-definition scope is Arm A and Arm B, for a planning range of 200–600
+backbones and approximately 800–2,400 sequences before filtering. This is a
+documentation and authorization milestone only; no jobs have been launched for
+this breadth pilot. The complete scope and promotion gates are in
+`reports/step4_backbone_sequence_pilot.md`, and the decision is recorded as
+`STEP4-001` in `reports/decision_log.md`.
 
 ## Setup checks
 

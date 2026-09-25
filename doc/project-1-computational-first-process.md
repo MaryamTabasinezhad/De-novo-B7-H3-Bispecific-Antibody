@@ -256,8 +256,8 @@ clearly labeled and revisited after the pilot.
    - Target chain `T`.
    - Correct HLT CDR remarks.
 3. Define CDRs to redesign and allowable length ranges. Use conservative, naturally common lengths for initial runs.
-4. Run small pilot campaigns across anchor sets to detect undocked outputs, framework clashes, or unproductive orientations.
-5. Select productive anchor/CDR configurations.
+4. Run the approved breadth pilot: generate 100–300 backbone designs for each active epitope/hotspot definition (currently one Arm A and one Arm B definition), across documented seeds and CDR configurations, to measure docking productivity, CDR geometry, and structural diversity.
+5. Select productive anchor/CDR configurations using the documented backbone QC gates while preserving diversity and parent provenance.
 6. Run independent production campaigns for epitope A and epitope B. Plan for thousands of backbone designs; RFantibody notes that campaigns near 10,000 designs may be required in general.
 7. Store designs as Quiver files when practical and assign globally unique IDs.
 8. Reject designs with obvious framework disruption, buried unpaired cysteines, extreme loop geometry, or target approaches that are incompatible with the full glycan/membrane context before sequence design.
@@ -288,7 +288,7 @@ clearly labeled and revisited after the pilot.
 
 1. Use the RFantibody ProteinMPNN wrapper so only intended CDR positions are redesigned.
 2. Preserve framework sequence and structurally important residues outside the design mask.
-3. Generate multiple sequences per backbone using several configurable sampling temperatures; a practical initial panel is 5–20 sequences per backbone across low-to-moderate temperatures.
+3. For the approved breadth pilot, generate approximately 4 sequences per retained backbone. Broader 5–20-sequence panels remain configurable for later optimization campaigns.
 4. Save per-position probabilities and sequence scores.
 5. Exclude or penalize sequence liabilities unless structurally justified:
    - Unpaired cysteine.
@@ -814,13 +814,15 @@ scores do not replace these measurements.
 
 ## Provisional Computational Funnel
 
-The exact numbers remain configurable and should be revised after pilot runs.
+The approved Step 4–5 breadth pilot is documented in
+`reports/step4_backbone_sequence_pilot.md`. Its values are fixed for this
+pilot and may be revised only after the pilot is reviewed.
 
 | Stage | Suggested starting scale per epitope |
 |---|---:|
-| RFantibody pilot backbones | 100–500 per anchor/CDR configuration |
+| RFantibody pilot backbones | 100–300 per active epitope/hotspot definition |
 | RFantibody production backbones | Approximately 10,000 total |
-| ProteinMPNN sequences | 5–20 per retained backbone |
+| ProteinMPNN sequences | Approximately 4 per retained backbone in the approved pilot; 5–20 remains configurable later |
 | RF2 primary validation | All deduplicated sequences |
 | AlphaFold 3 primary independent validation | RF2-filtered subset, multiple seeds/samples |
 | RF3 complementary analysis | AF3-evaluated subset, multiple samples; not a hard gate |

@@ -196,3 +196,21 @@ pilot candidates, with evidence classes and canonical mappings in `metadata/`.
 Arm B is a polar-rich coordinate-derived surface hypothesis and requires
 interaction-diversity and developability review. No RFantibody, ProteinMPNN, or
 other sequence-design run is authorized by this record.
+
+### STEP4-001 — breadth pilot scope approved, 2026-09-25
+
+The user approved moving from the tiny setup/diagnostic run to a bounded
+Step 4–5 breadth pilot. For each active epitope/hotspot definition, generate
+100–300 RFantibody backbone designs and approximately four ProteinMPNN
+sequences per retained backbone. The current scope contains one Arm A
+definition (8H9-like exposed IgV1 FG-loop) and one Arm B definition (exposed
+IgC1 patch 2 around Q228–R241), giving an expected planning range of 200–600
+backbones and approximately 800–2,400 sequences before filtering.
+
+The RFantibody, ProteinMPNN, and RF2 toolchain is accepted as operational for
+this pilot based on the official runtime/control checks. The earlier four-
+sequence B7-H3 RF2 run remains diagnostic and excluded from ranking; its
+coordinate failures remain visible in the QC reports. This decision authorizes
+documentation and the bounded pilot scope, not production-scale generation or
+whole-IgG assembly. Pilot gates, provenance requirements, and planned outputs
+are defined in `reports/step4_backbone_sequence_pilot.md`.
