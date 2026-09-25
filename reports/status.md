@@ -257,6 +257,15 @@ deterministic CDR-loop sequences per backbone, up to 1,200 Arm A and 1,200 Arm
 B sequences (2,400 total) before sequence QC. RF2 remains downstream of
 ProteinMPNN outputs and will not be submitted in advance.
 
+The ProteinMPNN wrapper `tools/rfantibody_b7h3_proteinmpnn_array.sh` was
+committed and pushed as `def2020`. Arm A array `21807824` and Arm B array
+`21807825` were submitted with 300 one-backbone tasks each, maximum concurrency
+20, one-hour task limits, CDR loops H1/H2/H3/L1/L2/L3, temperature 0.1, four
+sequences per backbone, and the official
+`ProteinMPNN_v48_noise_0.2.pt` weights. Both arrays are currently pending
+scheduler priority. Outputs and per-task metadata will be written under
+`/scratch/ghaedi/mab/rfantibody_b7h3_proteinmpnn_20260925/{input,output}/`.
+
 ## Setup checks
 
 All 19 skills passed the existing skill-format checker. Codex app-server
