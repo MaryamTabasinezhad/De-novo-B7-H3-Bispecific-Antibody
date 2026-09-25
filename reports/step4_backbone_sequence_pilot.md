@@ -1,7 +1,7 @@
 # Step 4–5 RFantibody/ProteinMPNN pilot plan
 
-Status: approved scope, documentation only; no pilot jobs launched under this
-plan. Updated 2026-09-25.
+Status: approved scope; execution state and job records are maintained in
+`reports/status.md`. Updated 2026-09-25.
 
 ## Purpose
 
