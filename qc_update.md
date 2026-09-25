@@ -1,6 +1,6 @@
 # B7-H3 antibody design QC update
 
-Updated 2026-09-24.
+Updated 2026-09-25 13:58 UTC.
 
 ## Current corrected lineage
 
@@ -42,6 +42,13 @@ Diagnose the RFantibody/RF2 coordinate-handling and target-interface problem,
 then run only a small corrected representative pilot if the issue is resolved.
 No candidate advances to independent validation or whole-IgG assembly, and no
 final antibody selection has been made.
+
+## 2026-09-25 status refresh
+
+No Slurm jobs are currently active. The official RF2 control passed, while all
+four B7-H3 RF2 outputs remain rejected by the corrected geometry screen. The
+next task is a small B7-H3-specific RF2 input/output handling retest; no AF3,
+RF3, whole-IgG assembly, or production-scale campaign has started.
 
 ## GitHub record
 

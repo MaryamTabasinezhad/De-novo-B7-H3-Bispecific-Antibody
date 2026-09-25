@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-24.
+Updated 2026-09-25 13:58 UTC.
 
 ## Current work — Step 2 geometry and Step 3 anchor preparation
 
@@ -177,6 +177,21 @@ official control and B7-H3 outputs were recomputed. The control still passes
 and points to a B7-H3 input/output representation issue rather than a
 universal RF2 or checker failure. Details are in
 `reports/rfantibody_rf2_official_control.md`.
+
+## Current refresh — 2026-09-25
+
+No project Slurm jobs are active. The official RF2 control `21747881` and the
+B7-H3 RF2 pilot `21741284` both completed successfully at the scheduler level.
+The official control passed the corrected heavy-atom geometry check, while the
+four B7-H3 RF2 outputs remain rejected for sub-2 Å overlaps. The coordinate
+audit confirms that the accepted backbones and ProteinMPNN inputs are clean and
+that the problematic overlaps are introduced in the RF2 B7-H3 outputs.
+
+The project is paused at this diagnostic gate: no candidate advances to AF3,
+RF3, whole-IgG assembly, or production-scale generation. The next authorized
+technical task is a B7-H3-specific RF2 input/output handling correction and a
+small representative retest. This refresh was written on 2026-09-25 so the
+tracked status reflects the current scheduler and scientific state.
 
 ## Setup checks
 
