@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-25 16:34 UTC.
+Updated 2026-09-25 16:41 UTC.
 
 **Reporting contract:** `reports/status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
@@ -251,6 +251,11 @@ array task failures recorded. The full breadth pilot therefore contains 300/300
 Arm A backbone PDBs and 300/300 Arm B backbone PDBs, each with per-task
 metadata. Backbone QC is the current gate. No ProteinMPNN jobs have been
 submitted for the breadth pilot yet.
+
+The next stage is a traceable ProteinMPNN array: approximately four
+deterministic CDR-loop sequences per backbone, up to 1,200 Arm A and 1,200 Arm
+B sequences (2,400 total) before sequence QC. RF2 remains downstream of
+ProteinMPNN outputs and will not be submitted in advance.
 
 ## Setup checks
 
