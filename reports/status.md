@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-25 16:03 UTC.
+Updated 2026-09-25 16:34 UTC.
 
 **Reporting contract:** `reports/status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
@@ -245,9 +245,12 @@ backbone PDBs and metadata records available out of the 300 target. The
 additional Arm B array `21802538` remains pending, so Arm B currently has 100
 backbone PDBs out of the 300 target. No array task failures are recorded.
 
-No ProteinMPNN jobs have been submitted for the breadth pilot. Backbone QC and
-sequence design remain gated on completion and inspection of the 300-design
-arm sets.
+Both expanded arrays have now completed successfully: Arm A array `21802537`
+and Arm B array `21802538` each completed 200/200 additional tasks, with no
+array task failures recorded. The full breadth pilot therefore contains 300/300
+Arm A backbone PDBs and 300/300 Arm B backbone PDBs, each with per-task
+metadata. Backbone QC is the current gate. No ProteinMPNN jobs have been
+submitted for the breadth pilot yet.
 
 ## Setup checks
 
