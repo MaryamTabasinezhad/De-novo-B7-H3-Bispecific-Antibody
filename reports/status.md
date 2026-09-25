@@ -2,6 +2,10 @@
 
 Updated 2026-09-25 13:58 UTC.
 
+**Reporting contract:** `reports/status.md` is the single canonical project
+status report. All future job submissions, completions, QC results, blockers,
+and next-step updates must be recorded here and pushed to GitHub.
+
 ## Current work — Step 2 geometry and Step 3 anchor preparation
 
 Automatic PM–DEV handoffs are authorized for Step 0 only. The existing Codex
