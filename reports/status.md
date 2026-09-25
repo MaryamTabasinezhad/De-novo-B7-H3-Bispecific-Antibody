@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-25 13:58 UTC.
+Updated 2026-09-25 14:15 UTC.
 
 **Reporting contract:** `reports/status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
@@ -206,6 +206,18 @@ documentation and authorization milestone only; no jobs have been launched for
 this breadth pilot. The complete scope and promotion gates are in
 `reports/step4_backbone_sequence_pilot.md`, and the decision is recorded as
 `STEP4-001` in `reports/decision_log.md`.
+
+The first breadth-pilot execution has now been submitted through the tracked
+array wrapper `tools/rfantibody_b7h3_backbone_pilot_array.sh` (commit
+`fe5da2d`). Arm A array `21799356` and Arm B array `21799357` each contain 100
+one-design GPU tasks with a maximum concurrency of 20 and a two-hour task
+limit. They use the corrected target crops, the fixed H/L/T framework, the
+approved Arm A/Arm B hotspot sets, the RFdiffusion antibody weights, one design
+per task, and independent nondeterministic tasks for pilot diversity. Outputs
+are written under
+`/scratch/ghaedi/mab/rfantibody_b7h3_backbone_pilot_20260925/{A,B}/task_<id>/`.
+No ProteinMPNN or RF2 expansion has been submitted for this breadth pilot yet;
+those stages remain gated on backbone output inspection and QC.
 
 ## Setup checks
 
