@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-25 15:22 UTC.
+Updated 2026-09-25 15:24 UTC.
 
 **Reporting contract:** `reports/status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
@@ -228,6 +228,13 @@ priority; 12 backbone PDBs with metadata are currently available for Arm B.
 No task failures or timeouts are recorded so far. Output inspection and
 backbone QC will begin only after the corresponding arm's task set is complete;
 ProteinMPNN remains unsubmitted for this pilot.
+
+The user expanded the pilot to the upper bound of **300 backbones per arm**.
+Additional array `21802537` (Arm A, tasks 100–299) and array `21802538` (Arm B,
+tasks 100–299) were submitted with the same tracked wrapper and resources.
+Together with the original 0–99 arrays, these will produce 300 Arm A and 300
+Arm B backbone tasks without duplicating completed task IDs. The additional
+arrays are currently pending scheduler priority.
 
 ## Setup checks
 
