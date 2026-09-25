@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-25 16:41 UTC.
+Updated 2026-09-25 16:56 UTC.
 
 **Reporting contract:** `reports/status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
@@ -268,8 +268,11 @@ committed and pushed as `def2020`. Arm A array `21807824` and Arm B array
 `21807825` were submitted with 300 one-backbone tasks each, maximum concurrency
 20, one-hour task limits, CDR loops H1/H2/H3/L1/L2/L3, temperature 0.1, four
 sequences per backbone, and the official
-`ProteinMPNN_v48_noise_0.2.pt` weights. Both arrays are currently pending
-scheduler priority. Outputs and per-task metadata will be written under
+`ProteinMPNN_v48_noise_0.2.pt` weights. Arm A array `21807824` currently has
+73/300 tasks completed, 4 running, and 223 pending; 276 sequence PDBs are
+already present because each completed task writes four sequences. Arm B array
+`21807825` remains pending with 0/300 tasks started. Outputs and per-task
+metadata are written under
 `/scratch/ghaedi/mab/rfantibody_b7h3_proteinmpnn_20260925/{input,output}/`.
 
 ## Setup checks
