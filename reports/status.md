@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-25 14:15 UTC.
+Updated 2026-09-25 15:22 UTC.
 
 **Reporting contract:** `reports/status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
@@ -218,6 +218,16 @@ are written under
 `/scratch/ghaedi/mab/rfantibody_b7h3_backbone_pilot_20260925/{A,B}/task_<id>/`.
 No ProteinMPNN or RF2 expansion has been submitted for this breadth pilot yet;
 those stages remain gated on backbone output inspection and QC.
+
+## Pilot execution refresh — 2026-09-25 15:22 UTC
+
+Arm A array `21799356` has completed all 100/100 tasks successfully and has
+produced 100 backbone PDBs with per-task metadata. Arm B array `21799357` has
+completed 12/100 tasks, has 6 tasks running, and has 82 tasks pending scheduler
+priority; 12 backbone PDBs with metadata are currently available for Arm B.
+No task failures or timeouts are recorded so far. Output inspection and
+backbone QC will begin only after the corresponding arm's task set is complete;
+ProteinMPNN remains unsubmitted for this pilot.
 
 ## Setup checks
 
