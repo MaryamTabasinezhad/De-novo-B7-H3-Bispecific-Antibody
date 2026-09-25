@@ -257,6 +257,11 @@ deterministic CDR-loop sequences per backbone, up to 1,200 Arm A and 1,200 Arm
 B sequences (2,400 total) before sequence QC. RF2 remains downstream of
 ProteinMPNN outputs and will not be submitted in advance.
 
+The detailed RF3/RF3-ab assessment is recorded in
+`reports/rf3_ab_review.md`. It confirms that no separately verified
+antibody-specific `RF3-ab` checkpoint is currently part of this project; RF3 is
+reserved as a possible later independent predictor after RF2 validation.
+
 The ProteinMPNN wrapper `tools/rfantibody_b7h3_proteinmpnn_array.sh` was
 committed and pushed as `def2020`. Arm A array `21807824` and Arm B array
 `21807825` were submitted with 300 one-backbone tasks each, maximum concurrency
