@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-26 04:47 UTC.
+Updated 2026-09-26 04:53 UTC.
 
 **Reporting contract:** `reports/status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
@@ -281,6 +281,17 @@ Before retry, 278 Arm A tasks produced four sequences each (1,112 PDBs) and
 with the corrected wrapper. Outputs and metadata remain under
 `/scratch/ghaedi/mab/rfantibody_b7h3_proteinmpnn_20260925/{input,output}/`.
 RF2 remains gated until all 2,400 sequence outputs are present and checked.
+
+The user authorized RF2 on the sequence models already available, without
+waiting for the missing ProteinMPNN retries. The tracked wrapper
+`tools/rfantibody_b7h3_rf2_array.sh` was committed and pushed as `434773c`.
+Arm A RF2 array `21836656` and Arm B RF2 array `21836657` were submitted with
+300 task slots each, three recycles, `RF2_ab.pt`, task-specific seeds, and
+empty-task skipping. At submission, 1,128 Arm A and 1,064 Arm B sequence PDBs
+were available; the arrays process each existing task directory and record
+skipped empty directories. Both RF2 arrays are currently pending scheduler
+priority. RF2 outputs will be QC'd before any candidate ranking or whole-IgG
+assembly.
 
 ## Setup checks
 
