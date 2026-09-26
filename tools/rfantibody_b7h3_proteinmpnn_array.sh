@@ -30,8 +30,11 @@ fi
 mkdir -p "$IN" "$OUT"
 cp "$SOURCE" "$IN/ab_0.pdb"
 
-cd "$RFA"
-.venv/bin/proteinmpnn \
+# ProteinMPNN's RFantibody wrapper uses a relative temp.pdb during feature
+# generation. Each array task must run from its own output directory so
+# concurrent tasks on one node cannot delete or overwrite another task's file.
+cd "$OUT"
+"$RFA/.venv/bin/proteinmpnn" \
   -i "$IN" \
   -o "$OUT" \
   -l 'H1,H2,H3,L1,L2,L3' \
