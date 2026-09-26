@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-25 16:56 UTC.
+Updated 2026-09-26 04:47 UTC.
 
 **Reporting contract:** `reports/status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
@@ -268,12 +268,19 @@ committed and pushed as `def2020`. Arm A array `21807824` and Arm B array
 `21807825` were submitted with 300 one-backbone tasks each, maximum concurrency
 20, one-hour task limits, CDR loops H1/H2/H3/L1/L2/L3, temperature 0.1, four
 sequences per backbone, and the official
-`ProteinMPNN_v48_noise_0.2.pt` weights. Arm A array `21807824` currently has
-73/300 tasks completed, 4 running, and 223 pending; 276 sequence PDBs are
-already present because each completed task writes four sequences. Arm B array
-`21807825` remains pending with 0/300 tasks started. Outputs and per-task
-metadata are written under
+`ProteinMPNN_v48_noise_0.2.pt` weights. The original arrays completed at the
+Slurm level, but output inspection found 22 Arm A tasks and 34 Arm B tasks with
+zero sequence PDBs. Their logs show a `FileNotFoundError` from the RFantibody
+wrapper's shared relative `temp.pdb`; concurrent tasks on the same node could
+collide even though Slurm reported exit 0. The wrapper was corrected in commit
+`6b962a3` to run each task from its unique output directory.
+
+Before retry, 278 Arm A tasks produced four sequences each (1,112 PDBs) and
+266 Arm B tasks produced four each (1,064 PDBs). Retry arrays `21836469` (Arm A,
+22 missing task IDs) and `21836470` (Arm B, 34 missing task IDs) were submitted
+with the corrected wrapper. Outputs and metadata remain under
 `/scratch/ghaedi/mab/rfantibody_b7h3_proteinmpnn_20260925/{input,output}/`.
+RF2 remains gated until all 2,400 sequence outputs are present and checked.
 
 ## Setup checks
 
