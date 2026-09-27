@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-27 04:03 UTC.
+Updated 2026-09-27 04:07 UTC.
 
 **Reporting contract:** `reports/status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
@@ -384,3 +384,15 @@ submission is required and will supersede the failed job.
 
 Replacement QC job `21885145` was submitted with the corrected module and was
 pending at the scheduler check. Its Slurm result and QC counts remain pending.
+
+Replacement job `21885145` completed successfully in 34 seconds (Slurm exit
+`0:0`). It processed 1,176 Arm A and 1,188 Arm B RF2 structures and wrote the
+durable TSV summaries under `results/rfantibody_b7h3_rf2_qc_20260927/`. Under
+the current hard geometry screen (minimum heavy-atom distance at least 2.0 Å
+and zero antibody–target pairs below 2.0 Å), Arm A passed 0/1,176 and Arm B
+passed 0/1,188. Every structure was rejected: Arm A had 55,880 sub-2.0 Å
+overlaps and Arm B had 70,993. The mean minimum distances were 1.047 Å and
+0.975 Å, respectively. These are computational geometry failures, not claims
+about measured binding, and the results block candidate ranking and all
+downstream AF3/RF3 or whole-IgG work until the RF2 generation/QC issue is
+resolved.
