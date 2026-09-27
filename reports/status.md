@@ -402,3 +402,6 @@ The initial report incorrectly stated zero passes because its shell count did
 not strip carriage returns from the TSV status field. The QC worker now writes
 Unix line endings, and the job is being rerun to replace the durable summaries
 and verify the corrected counts.
+
+Corrected QC rerun `21885271` was submitted and was pending at the scheduler
+check. Its output will supersede the earlier line-ending-affected summaries.
