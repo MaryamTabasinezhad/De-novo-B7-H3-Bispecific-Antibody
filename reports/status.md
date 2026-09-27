@@ -455,3 +455,11 @@ independent validation method for the RF2-filtered shortlist. It must be run
 with documented local availability, multiple seeds/samples, and retained
 confidence/interface metrics; AlphaFold 3 predictions remain computational
 hypotheses and do not establish affinity or biological activity.
+
+The official-control-equivalent shortlist worker was committed as `01fd0cf` and
+submitted as CPU Slurm job `21886323`. It applies the control's observed
+minimum H/L–T distance of 3.167 Å and zero sub-2.0 Å overlaps, requires the
+existing H/L/T and sequence-mapping checks, and keeps one strongest
+interface-scored model per RF2 task. B7-H3 outputs have no pLDDT field matching
+the control, so no pLDDT cutoff is invented. The job was running at submission;
+its shortlist counts will be recorded here after completion.
