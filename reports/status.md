@@ -474,3 +474,13 @@ full criteria are recorded in
 `reports/rfantibody_b7h3_control_shortlist.md` and
 `results/rfantibody_b7h3_control_shortlist_20260927/`. This is a structural
 shortlist only; the next independent validation gate remains AlphaFold 3.
+
+## AlphaFold 3 runtime check — 2026-09-27
+
+The required AF3 validation cannot be submitted on the current cluster yet.
+Runtime discovery found the module `hmmer-alphafold3/3.4`, but it provides only
+the `jackhmmer` executable; no AlphaFold 3 runner, model weights, or supported
+AF3 command is installed or visible. No AF3 job was submitted, no software was
+installed, and no alternative predictor was silently substituted. The 40 Arm A
+and 29 Arm B shortlist files remain the frozen input for AF3 once an authorized
+and verified runtime is available.
