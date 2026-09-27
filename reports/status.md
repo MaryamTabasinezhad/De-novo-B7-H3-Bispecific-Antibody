@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-27 04:07 UTC.
+Updated 2026-09-27 04:31 UTC.
 
 **Reporting contract:** `reports/status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
@@ -436,7 +436,7 @@ in `reports/rfantibody_b7h3_interface_screen.md` and
 observations, not affinity or biological validation; no final interface cutoff
 has been selected.
 
-## Current RF2 gate interpretation — 2026-09-27 04:15 UTC
+## Current RF2 gate interpretation — 2026-09-27 04:31 UTC
 
 There are 322 geometry-passing RF2 models in total (167 Arm A plus 155 Arm B).
 “Passing” here means that the generated coordinates do not contain the defined
@@ -444,6 +444,8 @@ sub-2.0 Å antibody–target steric overlap; it does not establish affinity,
 epitope engagement, internalization, Fc activity, or developability. The next
 step is interface screening of these 322 models: confirm H/L/T chain integrity,
 count meaningful target contacts, map contacts to the selected Arm A and Arm B
-B7-H3 regions, and preserve per-model rejection reasons. Only after that
-screen should a smaller diverse set advance to independent structure
-validation.
+B7-H3 regions, and preserve per-model rejection reasons. That interface screen
+is now complete. No Slurm jobs are active. The next gate is to define a
+transparent diversity/contact shortlist from these records and run independent
+structure validation on that shortlist; no affinity, internalization, Fc, or
+developability claim has been made.
