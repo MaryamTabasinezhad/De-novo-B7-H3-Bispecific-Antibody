@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-26 04:53 UTC.
+Updated 2026-09-27 04:03 UTC.
 
 **Reporting contract:** `reports/status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
@@ -351,3 +351,20 @@ PM review found and DEV corrected an N-terminal affinity-tag alignment issue in
 corrected; soluble/shed antigen remains separate. PM accepted the corrected
 artifact with no material correction. Step 2 still requires a user decision on
 which preliminary candidate regions to carry forward.
+
+## RF2 execution update — 2026-09-27 04:03 UTC
+
+The authorized RF2_ab arrays completed successfully at the scheduler level:
+Arm A job `21836656` and Arm B job `21836657` completed all 300/300 task
+slots with Slurm exit code 0. RF2 processed the currently available
+ProteinMPNN outputs and wrote 1,176 Arm A `*_best.pdb` structures and 1,188
+Arm B structures, 2,364 RF2 structures total. The RF2 metadata records six
+Arm A and three Arm B task directories as skipped because their input sequence
+directory was empty; this reflects the earlier ProteinMPNN output shortfall,
+not a successful design result.
+
+No non-empty RF2 stderr files were found for these arrays. The structures have
+not yet passed the project geometry/interface QC or candidate-ranking gate.
+RF2 completion therefore does not authorize AF3/RF3, whole-IgG assembly, or
+experimental claims. The next computational gate is a traceable QC summary
+over the 2,364 RF2 outputs, with rejected structures and reasons preserved.
