@@ -414,3 +414,15 @@ passes, 50 Arm A and 37 Arm B have minimum distances at least 3.0 Å, and 11
 Arm A and 13 Arm B are at least 4.0 Å. The pass subset is now the valid input
 for the next interface-screening stage, while the rejected structures remain
 excluded.
+
+## Current RF2 gate interpretation — 2026-09-27 04:15 UTC
+
+There are 322 geometry-passing RF2 models in total (167 Arm A plus 155 Arm B).
+“Passing” here means that the generated coordinates do not contain the defined
+sub-2.0 Å antibody–target steric overlap; it does not establish affinity,
+epitope engagement, internalization, Fc activity, or developability. The next
+step is interface screening of these 322 models: confirm H/L/T chain integrity,
+count meaningful target contacts, map contacts to the selected Arm A and Arm B
+B7-H3 regions, and preserve per-model rejection reasons. Only after that
+screen should a smaller diverse set advance to independent structure
+validation.
