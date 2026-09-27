@@ -389,10 +389,16 @@ Replacement job `21885145` completed successfully in 34 seconds (Slurm exit
 `0:0`). It processed 1,176 Arm A and 1,188 Arm B RF2 structures and wrote the
 durable TSV summaries under `results/rfantibody_b7h3_rf2_qc_20260927/`. Under
 the current hard geometry screen (minimum heavy-atom distance at least 2.0 Å
-and zero antibody–target pairs below 2.0 Å), Arm A passed 0/1,176 and Arm B
-passed 0/1,188. Every structure was rejected: Arm A had 55,880 sub-2.0 Å
-overlaps and Arm B had 70,993. The mean minimum distances were 1.047 Å and
-0.975 Å, respectively. These are computational geometry failures, not claims
-about measured binding, and the results block candidate ranking and all
-downstream AF3/RF3 or whole-IgG work until the RF2 generation/QC issue is
-resolved.
+and zero antibody–target pairs below 2.0 Å), direct inspection found 167/1,176
+Arm A and 155/1,188 Arm B structures meeting that geometry criterion. The
+remaining structures contain 55,880 Arm A and 70,993 Arm B sub-2.0 Å overlap
+pairs. The mean minimum distances across all models were 1.047 Å and 0.975 Å,
+respectively. These are computational geometry results, not claims about
+measured binding. The pass subset is eligible for the next screening report;
+the overlap-rejected structures remain excluded from ranking and downstream
+AF3/RF3 or whole-IgG work.
+
+The initial report incorrectly stated zero passes because its shell count did
+not strip carriage returns from the TSV status field. The QC worker now writes
+Unix line endings, and the job is being rerun to replace the durable summaries
+and verify the corrected counts.

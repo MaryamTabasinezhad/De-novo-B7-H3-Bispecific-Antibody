@@ -69,7 +69,9 @@ def main() -> int:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     fields = ["file", "min_hl_t_angstrom", "contacts_lt_4_5", "overlaps_lt_2_0", "closest_pair", "status"]
     with args.output.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t")
+        writer = csv.DictWriter(
+            handle, fieldnames=fields, delimiter="\t", lineterminator="\n"
+        )
         writer.writeheader()
         for path in paths:
             writer.writerow(measure(path))
