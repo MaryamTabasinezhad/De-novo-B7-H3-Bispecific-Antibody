@@ -405,3 +405,12 @@ and verify the corrected counts.
 
 Corrected QC rerun `21885271` was submitted and was pending at the scheduler
 check. Its output will supersede the earlier line-ending-affected summaries.
+
+Corrected QC rerun `21885271` completed successfully in 25 seconds (Slurm exit
+`0:0`). The Unix-line-ending summaries now count 167/1,176 Arm A models and
+155/1,188 Arm B models as geometry passes; 1,009 Arm A and 1,033 Arm B models
+remain rejected for at least one sub-2.0 Å antibody–target overlap. Among the
+passes, 50 Arm A and 37 Arm B have minimum distances at least 3.0 Å, and 11
+Arm A and 13 Arm B are at least 4.0 Å. The pass subset is now the valid input
+for the next interface-screening stage, while the rejected structures remain
+excluded.
