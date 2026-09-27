@@ -463,3 +463,14 @@ existing H/L/T and sequence-mapping checks, and keeps one strongest
 interface-scored model per RF2 task. B7-H3 outputs have no pLDDT field matching
 the control, so no pLDDT cutoff is invented. The job was running at submission;
 its shortlist counts will be recorded here after completion.
+
+Control-equivalent shortlist job `21886323` completed successfully in one
+second (Slurm exit `0:0`). It found 42 Arm A and 30 Arm B models meeting the
+official-control geometry gate, then retained one strongest interface-scored
+representative per RF2 task: 40 Arm A and 29 Arm B models. Among those
+representatives, 11 Arm A and 19 Arm B contact at least one selected epitope
+residue; 4 Arm A and 11 Arm B contact at least two. The durable shortlist and
+full criteria are recorded in
+`reports/rfantibody_b7h3_control_shortlist.md` and
+`results/rfantibody_b7h3_control_shortlist_20260927/`. This is a structural
+shortlist only; the next independent validation gate remains AlphaFold 3.
