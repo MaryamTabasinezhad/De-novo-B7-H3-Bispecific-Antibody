@@ -424,6 +424,18 @@ and writes durable per-model TSV files under
 `results/rfantibody_b7h3_interface_20260927/`. The job was pending at
 submission; its completion and contact-coverage counts will be recorded here.
 
+Interface screen job `21885408` completed successfully in four seconds (Slurm
+exit `0:0`). Of the 167 Arm A geometry passes, 162 contacted some target
+residue and 70 contacted at least one selected Arm A residue; 37 contacted at
+least two selected residues. Of the 155 Arm B geometry passes, 148 contacted
+some target residue and 129 contacted at least one selected Arm B residue; 98
+contacted at least two selected residues. H/L chain contact counts were 98/167
+for Arm A and 107/155 for Arm B. The detailed method and per-model records are
+in `reports/rfantibody_b7h3_interface_screen.md` and
+`results/rfantibody_b7h3_interface_20260927/`. These are contact-coverage
+observations, not affinity or biological validation; no final interface cutoff
+has been selected.
+
 ## Current RF2 gate interpretation — 2026-09-27 04:15 UTC
 
 There are 322 geometry-passing RF2 models in total (167 Arm A plus 155 Arm B).
