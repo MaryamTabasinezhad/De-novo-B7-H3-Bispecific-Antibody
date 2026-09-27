@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-27 04:31 UTC.
+Updated 2026-09-27 04:36 UTC.
 
 **Reporting contract:** `reports/status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
@@ -449,3 +449,9 @@ is now complete. No Slurm jobs are active. The next gate is to define a
 transparent diversity/contact shortlist from these records and run independent
 structure validation on that shortlist; no affinity, internalization, Fc, or
 developability claim has been made.
+
+The workflow contract now explicitly records AlphaFold 3 as the required
+independent validation method for the RF2-filtered shortlist. It must be run
+with documented local availability, multiple seeds/samples, and retained
+confidence/interface metrics; AlphaFold 3 predictions remain computational
+hypotheses and do not establish affinity or biological activity.

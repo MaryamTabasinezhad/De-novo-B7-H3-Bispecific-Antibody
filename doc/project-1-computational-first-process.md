@@ -375,12 +375,20 @@ biophysical triage should reduce development risk without replacing measurements
 - Designed antibody sequences.
 - Relevant B7-H3 target models.
 
+**AlphaFold 3 validation policy — user-approved 2026-09-27:** AlphaFold 3 is a
+required independent validation method for the RF2-filtered shortlist, subject
+to verified local availability and documented runtime configuration. It is used
+to test fold plausibility, intended-epitope pose recovery, and predictor
+agreement. AlphaFold 3 confidence and interface metrics are computational
+hypotheses; they are not measurements of affinity, internalization, Fc killing,
+or clinical activity.
+
 ### Tasks
 
 1. Confirm that the candidates originated from antibody-finetuned RFdiffusion backbone generation followed by ProteinMPNN sequence design; RF2 is a validator, not the antibody generator.
 2. Run antibody-finetuned RF2 (`RF2_ab`) as the native, high-throughput RFantibody self-consistency stage.
 3. Apply the documented RF2-specific confidence and pose-recovery filters before the more expensive independent predictors.
-4. Run AlphaFold 3 independently on RF2 survivors using multiple seeds and samples. Use AlphaFold 3 as the primary independent validation model because published RFantibody data show that its interface confidence enriches experimental binders.
+4. Run AlphaFold 3 independently on RF2 survivors using multiple seeds and samples. Use AlphaFold 3 as the primary independent validation model because published RFantibody data show that its interface confidence enriches experimental binders. Do not silently treat unavailable AlphaFold 3 infrastructure as completed validation; record the runtime blocker and preserve the gate.
 5. Run RoseTTAFold3 (RF3) as a complementary independent prediction and disagreement-analysis layer on the AF3-evaluated subset.
 6. Pin the RF3 Foundry version, checkpoint, input schema, inference steps, diffusion batch size, and random seeds because the RF3 inference API and confidence outputs are still evolving.
 7. Do not provide the designed antibody–antigen interface as a structural template during RF3 or AlphaFold 3 validation.
