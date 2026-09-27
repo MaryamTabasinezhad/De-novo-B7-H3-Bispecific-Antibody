@@ -415,6 +415,15 @@ Arm A and 13 Arm B are at least 4.0 Å. The pass subset is now the valid input
 for the next interface-screening stage, while the rejected structures remain
 excluded.
 
+The interface-screening worker was committed as `ab5ffc5` and submitted as
+CPU Slurm job `21885408`. It uses the canonical crop mappings (Arm A target
+86–169 and Arm B target 188–281) to translate RF2's renumbered target chain
+back to the selected Arm A residues 126–129 and Arm B residues 228, 229, 232,
+234, 236, 238, 240 and 241. It screens only the 322 geometry-passing models
+and writes durable per-model TSV files under
+`results/rfantibody_b7h3_interface_20260927/`. The job was pending at
+submission; its completion and contact-coverage counts will be recorded here.
+
 ## Current RF2 gate interpretation — 2026-09-27 04:15 UTC
 
 There are 322 geometry-passing RF2 models in total (167 Arm A plus 155 Arm B).
