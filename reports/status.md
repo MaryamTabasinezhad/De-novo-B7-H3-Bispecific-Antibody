@@ -381,3 +381,6 @@ by module discovery but is not available on this cluster (`21885138`, exit
 `1:0`). The worker was corrected to use the available `scipy-stack/2025a`
 module; no scientific QC calculation ran in the failed attempt. A replacement
 submission is required and will supersede the failed job.
+
+Replacement QC job `21885145` was submitted with the corrected module and was
+pending at the scheduler check. Its Slurm result and QC counts remain pending.
