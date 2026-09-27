@@ -368,3 +368,10 @@ not yet passed the project geometry/interface QC or candidate-ranking gate.
 RF2 completion therefore does not authorize AF3/RF3, whole-IgG assembly, or
 experimental claims. The next computational gate is a traceable QC summary
 over the 2,364 RF2 outputs, with rejected structures and reasons preserved.
+
+The QC worker was committed as `57925db` and submitted to Slurm as CPU job
+`21885138`. It loads the verified `scipy-stack/2026b` environment and writes
+separate Arm A and Arm B TSV summaries under
+`results/rfantibody_b7h3_rf2_qc_20260927/`. The job was pending at submission;
+its completion and scientific pass/reject counts will be recorded here before
+any downstream ranking.
