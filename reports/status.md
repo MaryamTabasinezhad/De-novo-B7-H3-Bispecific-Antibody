@@ -375,3 +375,9 @@ separate Arm A and Arm B TSV summaries under
 `results/rfantibody_b7h3_rf2_qc_20260927/`. The job was pending at submission;
 its completion and scientific pass/reject counts will be recorded here before
 any downstream ranking.
+
+The first submission failed immediately because `scipy-stack/2026b` is listed
+by module discovery but is not available on this cluster (`21885138`, exit
+`1:0`). The worker was corrected to use the available `scipy-stack/2025a`
+module; no scientific QC calculation ran in the failed attempt. A replacement
+submission is required and will supersede the failed job.

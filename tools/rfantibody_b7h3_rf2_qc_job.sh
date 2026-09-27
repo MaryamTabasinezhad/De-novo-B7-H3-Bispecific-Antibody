@@ -9,7 +9,7 @@
 
 set -euo pipefail
 source /lustre09/project/6089454/ghaedi/mab/config/hpc/rorqual.sh
-module load scipy-stack/2026b
+module load scipy-stack/2025a
 
 RUN="$MAB_SCRATCH_ROOT/rfantibody_b7h3_rf2_20260926"
 OUT="$MAB_RESULTS_DIR/rfantibody_b7h3_rf2_qc_20260927"
