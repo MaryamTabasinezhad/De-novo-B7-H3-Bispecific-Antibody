@@ -23,5 +23,6 @@ cd "$AF3"
 "$UV" sync --no-dev --no-install-project --offline
 "$UV" pip install --offline --python "$AF3/.venv/bin/python" scikit-build-core pybind11==2.12.0 'cmake>=3.28' ninja setuptools_scm
 "$UV" sync --no-dev --no-build-isolation --offline
+LIBCIFPP_DATA_DIR="$LIBCIFPP_DATA_DIR" "$UV" run python -c 'from alphafold3.build_data import build_data; build_data()'
 "$UV" run python run_alphafold_data_test.py
 printf 'alphafold3_install_complete commit=%s venv=%s\n' "$(git rev-parse HEAD)" "$AF3/.venv"
