@@ -642,3 +642,5 @@ The HMMER runtime was located as module `hmmer-alphafold3/3.4`; the worker now l
 
 
 HMMER validation retry job `21966382` was submitted with `hmmer-alphafold3/3.4` loaded. It runs intermediate-data generation and the official AF3 data test only.
+
+Job `21966382` completed successfully on `rc32319` from `12:34:44` to `12:36:04 UTC` (1:20, exit `0:0`). The worker loaded `hmmer-alphafold3/3.4`; `build_data()` generated both CCD intermediates; Jackhmmer, Hmmbuild, and Hmmsearch ran against the official miniature test databases; and all 7 official AF3 data tests passed. Two nonfatal chemistry warnings were emitted for component `7BU`, but the tests completed `OK`. This validates the AF3 source installation and data pipeline only; no model weights, full databases, GPU inference, or antibody predictions were run.
