@@ -654,3 +654,6 @@ AlphaFold 3 validation pilot job `` was submitted as a two-task H100 array for A
 
 
 The initial AF3 GPU pilot submission was rejected before execution because the fixed `gpubase_interac` partition could not accept the request. The worker now omits a fixed partition and retains the verified `def-ghaedi_gpu` account plus `gpu:h100:1`, allowing scheduler placement.
+
+
+AF3 GPU validation pilot retry job `21972327` was accepted by Slurm as a two-task H100 array for the Arm A and Arm B representative inputs.
