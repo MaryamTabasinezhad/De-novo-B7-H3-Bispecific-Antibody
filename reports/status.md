@@ -502,6 +502,6 @@ CPU Slurm allocation with eight build CPUs; it does not download databases or
 model weights.
 
 The Slurm installation/data-test job `21934560` was submitted with the
-authorized CPU account and was pending at the scheduler check. Its build,
+authorized CPU account and is now running on compute node `rc32308`. Its build,
 data-test result, and any infrastructure failure will be recorded before model
 weights or databases are considered.
