@@ -39,6 +39,13 @@ may remain intermediate design inputs; they do not define the final product.
 ## Agent Execution Rules
 
 - Record sources, software/model versions, commands, important parameters, relevant random seeds, and output locations in concise analysis notes. Use checksums only when they answer a concrete identity or integrity question.
+- After every Slurm, installation, validation, or analysis job, notify the user
+  with the exact job ID, success or failure state, evidence inspected, and the
+  next plan. Update the canonical `reports/status.md` and any relevant report
+  in the tracked workspace, commit the durable update, push it to GitHub, and
+  report the commit and push status. A job is not considered closed until its
+  result, blocker or failure disposition, and next plan are recorded and
+  communicated.
 - Use human canonical CD276 numbering as the reporting coordinate system.
 - Keep experimental contacts, region-defining residues, and computational design anchors in separate fields.
 - Do not treat one predicted structure or one score as proof of binding or affinity.

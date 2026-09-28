@@ -524,3 +524,12 @@ network access.
 Retry installation/data-test job `21935156` was submitted with the prefetched
 dependency paths and was pending at the scheduler check. Its build and AF3 data
 test result will be recorded separately from failed job `21934560`.
+
+## Job-result notification contract — 2026-09-28
+
+After every Slurm, installation, validation, or analysis job, DEV must notify
+the user with the exact job ID, success/failure state, inspected evidence, and
+the next plan. DEV must update this canonical status report and any relevant
+report, commit and push the durable record to GitHub, and report the commit and
+push status. A job remains open until its result, blocker or failure
+disposition, and next plan are both recorded and communicated.
