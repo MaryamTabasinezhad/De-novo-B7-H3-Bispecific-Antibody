@@ -620,3 +620,6 @@ The official wwPDB chemical-component dictionary was downloaded on the login env
 Repair installation/data-test job `21963372` was submitted with the staged wwPDB CCD file and offline C++ dependencies. This is the single authorized retry after failure `21961067`; no prediction job is part of it.
 
 Repair job `21963372` started at `2026-09-28 11:26:26 UTC` on `rc32610` and failed at `11:26:42 UTC` with exit `1:0` after 16 seconds. The AF3 package rebuilt, but the official data test still raised `ImportError: Could not find the libcifpp components.cif file`; the staged CCD file was not available in the runtime data directory used by the extension. Per the user instruction, no further job will be submitted now. The next repair would need a clean build/install with an explicitly verified libcifpp data path, but it is not being run in this cycle.
+
+
+The next repair explicitly exports `LIBCIFPP_DATA_DIR` to the staged CCD directory and checks that `components.cif` is non-empty inside the Slurm job before running the AF3 data test.
