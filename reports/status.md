@@ -639,3 +639,6 @@ Job `21965591` started at `2026-09-28 12:07:09 UTC` on `rc31830` and failed at `
 
 
 The HMMER runtime was located as module `hmmer-alphafold3/3.4`; the worker now loads it before the AF3 data test so `jackhmmer` is available.
+
+
+HMMER validation retry job `21966382` was submitted with `hmmer-alphafold3/3.4` loaded. It runs intermediate-data generation and the official AF3 data test only.
