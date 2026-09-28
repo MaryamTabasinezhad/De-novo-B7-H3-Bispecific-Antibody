@@ -651,3 +651,6 @@ The complete AF3 production assets are staged in scratch: the 974 MB parameter a
 
 
 AlphaFold 3 validation pilot job `` was submitted as a two-task H100 array for Arm A task 265 and Arm B task 131. It uses the staged model/database assets, seeds 101/202, two diffusion samples, and three recycles; no full shortlist batch has been submitted.
+
+
+The initial AF3 GPU pilot submission was rejected before execution because the fixed `gpubase_interac` partition could not accept the request. The worker now omits a fixed partition and retains the verified `def-ghaedi_gpu` account plus `gpu:h100:1`, allowing scheduler placement.

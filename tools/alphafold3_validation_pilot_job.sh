@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH --job-name=mab-af3-val
 #SBATCH --account=def-ghaedi_gpu
-#SBATCH --partition=gpubase_interac
 #SBATCH --gres=gpu:h100:1
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=64G
