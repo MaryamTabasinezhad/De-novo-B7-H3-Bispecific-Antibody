@@ -492,3 +492,11 @@ and `/scratch/ghaedi/mab/alphafold3_db`; no source, container, model weights, or
 databases will be committed to Git. The installation will use a cluster-
 compatible container/runtime if available, and commands, versions, paths, and
 job IDs will be recorded here.
+
+The first direct `uv sync --no-dev` attempt used the shallow source checkout and
+reached CMake configuration, but the login-node build failed at Ninja process
+creation with `posix_spawn: Operation not permitted`. No package install was
+completed by that attempt. The tracked worker
+`tools/alphafold3_install_job.sh` moves the same build and AF3 data test into a
+CPU Slurm allocation with eight build CPUs; it does not download databases or
+model weights.
