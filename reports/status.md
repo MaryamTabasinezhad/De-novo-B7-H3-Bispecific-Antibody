@@ -581,3 +581,6 @@ worked for `pybind11`, but CMake's content-name normalization leaves the
 `abseil-cpp` hyphen in its cache variable, so the incorrect underscore form was
 ignored and compute-node GitHub access was attempted. The next retry corrects
 that one CMake variable; no AF3 package or prediction has succeeded yet.
+
+Retry installation/data-test job `21959184` was submitted with the corrected
+`FETCHCONTENT_SOURCE_DIR_ABSEIL-CPP` setting and is pending scheduler priority.
