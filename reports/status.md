@@ -623,3 +623,6 @@ Repair job `21963372` started at `2026-09-28 11:26:26 UTC` on `rc32610` and fail
 
 
 The next repair explicitly exports `LIBCIFPP_DATA_DIR` to the staged CCD directory and checks that `components.cif` is non-empty inside the Slurm job before running the AF3 data test.
+
+
+Targeted CCD-path repair job `21965099` was submitted. It performs the explicit `LIBCIFPP_DATA_DIR` check and the official AF3 data test; no model weights, databases, or predictions are involved.
