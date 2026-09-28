@@ -505,3 +505,11 @@ The Slurm installation/data-test job `21934560` was submitted with the
 authorized CPU account and is now running on compute node `rc32308`. Its build,
 data-test result, and any infrastructure failure will be recorded before model
 weights or databases are considered.
+
+Job `21934560` failed with exit `1:0` after 6:41. The AF3 source and Python
+dependency resolution started, but CMake attempted to clone `pybind11` from
+GitHub on the compute node and failed after three connection timeouts. This is
+a compute-node network restriction, not an AF3 model or scientific result. No
+model weights or databases were downloaded. The next installation attempt must
+prefetch the C++ dependencies from the login environment and build without
+compute-node network access.
