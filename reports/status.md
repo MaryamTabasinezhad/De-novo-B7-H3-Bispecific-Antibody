@@ -631,3 +631,6 @@ Job `21965099` started at `2026-09-28 11:53:22 UTC` on `rc31830` and failed at `
 
 
 The next repair worker now runs AF3 `build_data()` with the staged `LIBCIFPP_DATA_DIR` before the official data test, generating the missing `ccd.pickle` and `chemical_component_sets.pickle` files.
+
+
+Intermediate-data repair job `21965591` was submitted. It runs `build_data()` offline, then the official AF3 data test; no weights, databases, or predictions are involved.
