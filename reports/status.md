@@ -601,3 +601,7 @@ were accepted; configuration then failed because `libcifpp` attempted to
 download the wwPDB chemical-component dictionary from a compute node. The
 current protein-only AF3 validation does not require that optional CCD download,
 so the next retry disables `CIFPP_DOWNLOAD_CCD` during configuration.
+
+Retry installation/data-test job `21960360` was submitted with the CCD
+download disabled and is pending scheduler priority. No model weights,
+databases, or AF3 predictions are involved in this retry.
