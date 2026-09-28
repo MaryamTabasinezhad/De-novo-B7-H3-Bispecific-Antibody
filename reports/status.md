@@ -603,5 +603,6 @@ current protein-only AF3 validation does not require that optional CCD download,
 so the next retry disables `CIFPP_DOWNLOAD_CCD` during configuration.
 
 Retry installation/data-test job `21960360` was submitted with the CCD
-download disabled and is pending scheduler priority. No model weights,
+download disabled. It started at `2026-09-28 10:36:18 UTC` on compute node
+`rc32421` and is currently running the AF3 C++ build. No model weights,
 databases, or AF3 predictions are involved in this retry.
