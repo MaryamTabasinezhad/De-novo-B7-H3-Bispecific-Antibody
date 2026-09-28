@@ -552,3 +552,9 @@ requirements from PyPI on the compute node and timed out. No AF3 package was
 installed and no prediction ran. The next plan is to pre-cache the pinned
 Python build requirements on the login environment, then rerun the Slurm build
 with offline resolution and the already prefetched C++ sources.
+
+Job `21935549` failed with exit `1:0` after two seconds. AF3 reached its build
+metadata stage but raised `ModuleNotFoundError: setuptools_scm`, an undeclared
+build dependency in the current AF3 `pyproject.toml`. No AF3 package, data test,
+model weights, or prediction was produced. The next plan is to cache
+`setuptools_scm` in the scratch environment and rerun the same offline build.
