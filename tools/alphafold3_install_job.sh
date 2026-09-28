@@ -14,6 +14,12 @@ module load python/3.12.4
 export CMAKE_BUILD_PARALLEL_LEVEL="${SLURM_CPUS_PER_TASK}"
 AF3="$MAB_SCRATCH_ROOT/alphafold3_src"
 UV="$MAB_SCRATCH_ROOT/uv"
+DEPS="$MAB_SCRATCH_ROOT/alphafold3_deps"
+export FETCHCONTENT_SOURCE_DIR_PYBIND11="$DEPS/pybind11"
+export FETCHCONTENT_SOURCE_DIR_ABSEIL_CPP="$DEPS/abseil-cpp"
+export FETCHCONTENT_SOURCE_DIR_PYBIND11_ABSEIL="$DEPS/pybind11_abseil"
+export FETCHCONTENT_SOURCE_DIR_CIFPP="$DEPS/cifpp"
+export FETCHCONTENT_SOURCE_DIR_DSSP="$DEPS/dssp"
 cd "$AF3"
 "$UV" sync --no-dev
 "$UV" run python run_alphafold_data_test.py

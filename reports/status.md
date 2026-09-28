@@ -513,3 +513,10 @@ a compute-node network restriction, not an AF3 model or scientific result. No
 model weights or databases were downloaded. The next installation attempt must
 prefetch the C++ dependencies from the login environment and build without
 compute-node network access.
+
+The five pinned C++ dependencies (`pybind11`, `abseil-cpp`, `pybind11_abseil`,
+`libcifpp`, and `dssp`) were prefetched into
+`/scratch/ghaedi/mab/alphafold3_deps` from the login environment at the exact
+commits declared by the AF3 CMake file. The installation worker now points
+CMake at those local source trees so the retry does not require compute-node
+network access.
