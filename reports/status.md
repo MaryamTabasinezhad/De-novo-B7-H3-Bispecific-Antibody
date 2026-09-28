@@ -648,3 +648,6 @@ Job `21966382` completed successfully on `rc32319` from `12:34:44` to `12:36:04 
 AF3 production assets are being staged in scratch after user authorization on 2026-09-28. The official model archive `af3.bin.zst` (974 MB) was downloaded from the Google storage URL into `/scratch/ghaedi/mab/alphafold3_params/`. The official `fetch_databases.sh` process is currently downloading and unpacking the versioned PDB, UniRef90, UniProt, BFD, MGnify, RNA, and RFam databases into `/scratch/ghaedi/mab/alphafold3_databases/`; it remains active and no validation prediction has been submitted yet.
 
 The complete AF3 production assets are staged in scratch: the 974 MB parameter archive plus 195,859 PDB mmCIF files and all eight official sequence/RNA databases. Two representative RF2 control-gate candidates (Arm A task 265 and Arm B task 131) were converted to AF3 inputs with chains H/L/T and seeds 101/202. The first GPU validation is a two-candidate pilot with two diffusion samples and three recycles per seed; it is a runtime/pose-validation pilot, not the full 69-candidate shortlist campaign.
+
+
+AlphaFold 3 validation pilot job `` was submitted as a two-task H100 array for Arm A task 265 and Arm B task 131. It uses the staged model/database assets, seeds 101/202, two diffusion samples, and three recycles; no full shortlist batch has been submitted.
