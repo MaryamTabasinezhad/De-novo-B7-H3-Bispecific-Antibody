@@ -533,3 +533,10 @@ the next plan. DEV must update this canonical status report and any relevant
 report, commit and push the durable record to GitHub, and report the commit and
 push status. A job remains open until its result, blocker or failure
 disposition, and next plan are both recorded and communicated.
+
+AF3 retry job `21935156` failed with exit `2:0` after 48 seconds. The local C++
+dependency paths were accepted, but `uv` attempted to fetch the Python build
+requirements from PyPI on the compute node and timed out. No AF3 package was
+installed and no prediction ran. The next plan is to pre-cache the pinned
+Python build requirements on the login environment, then rerun the Slurm build
+with offline resolution and the already prefetched C++ sources.
