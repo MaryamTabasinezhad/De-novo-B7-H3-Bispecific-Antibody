@@ -626,3 +626,5 @@ The next repair explicitly exports `LIBCIFPP_DATA_DIR` to the staged CCD directo
 
 
 Targeted CCD-path repair job `21965099` was submitted. It performs the explicit `LIBCIFPP_DATA_DIR` check and the official AF3 data test; no model weights, databases, or predictions are involved.
+
+Job `21965099` started at `2026-09-28 11:53:22 UTC` on `rc31830` and failed at `11:53:50 UTC` with exit `1:0` after 28 seconds. The explicit `LIBCIFPP_DATA_DIR` fix worked: AF3 passed the earlier CCD lookup, then failed because the generated `chemical_component_sets.pickle` intermediate was absent. AF3's `build_data.py` must be run after the CCD is available to generate `ccd.pickle` and `chemical_component_sets.pickle` before the data test. No weights, databases, or predictions were used.
