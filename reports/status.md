@@ -484,3 +484,11 @@ AF3 command is installed or visible. No AF3 job was submitted, no software was
 installed, and no alternative predictor was silently substituted. The 40 Arm A
 and 29 Arm B shortlist files remain the frozen input for AF3 once an authorized
 and verified runtime is available.
+
+The user authorized AlphaFold 3 installation and required model/runtime setup
+on 2026-09-27. Planned scratch locations are
+`/scratch/ghaedi/mab/alphafold3_src`, `/scratch/ghaedi/mab/alphafold3_model`,
+and `/scratch/ghaedi/mab/alphafold3_db`; no source, container, model weights, or
+databases will be committed to Git. The installation will use a cluster-
+compatible container/runtime if available, and commands, versions, paths, and
+job IDs will be recorded here.
