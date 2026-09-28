@@ -575,3 +575,9 @@ the build requirements offline, and then builds without isolation.
 Corrected installation/data-test job `21958028` was submitted with the explicit
 offline dependency configuration and was pending at the scheduler check. It is
 the current AF3 installation attempt; no prediction job has been submitted.
+
+Job `21958028` failed with exit `1:0` after 6:53. The explicit local override
+worked for `pybind11`, but CMake's content-name normalization leaves the
+`abseil-cpp` hyphen in its cache variable, so the incorrect underscore form was
+ignored and compute-node GitHub access was attempted. The next retry corrects
+that one CMake variable; no AF3 package or prediction has succeeded yet.
