@@ -11,6 +11,7 @@ set -euo pipefail
 source /lustre09/project/6089454/ghaedi/mab/config/hpc/rorqual.sh
 module load StdEnv/2023
 module load python/3.12.4
+module load hmmer-alphafold3/3.4
 export CMAKE_BUILD_PARALLEL_LEVEL="${SLURM_CPUS_PER_TASK}"
 AF3="$MAB_SCRATCH_ROOT/alphafold3_src"
 UV="$MAB_SCRATCH_ROOT/uv"
