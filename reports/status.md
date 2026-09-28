@@ -558,3 +558,9 @@ metadata stage but raised `ModuleNotFoundError: setuptools_scm`, an undeclared
 build dependency in the current AF3 `pyproject.toml`. No AF3 package, data test,
 model weights, or prediction was produced. The next plan is to cache
 `setuptools_scm` in the scratch environment and rerun the same offline build.
+
+`setuptools_scm` and its supporting packages were installed into the scratch
+AF3 virtual environment from the login environment. Retry installation/data-
+test job `21957223` was then submitted and was pending at the scheduler check.
+This retry still performs installation and the official AF3 data test only; no
+model parameters, databases, or antibody predictions are involved.
