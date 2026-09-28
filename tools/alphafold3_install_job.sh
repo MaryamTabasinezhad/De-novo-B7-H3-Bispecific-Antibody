@@ -15,12 +15,10 @@ export CMAKE_BUILD_PARALLEL_LEVEL="${SLURM_CPUS_PER_TASK}"
 AF3="$MAB_SCRATCH_ROOT/alphafold3_src"
 UV="$MAB_SCRATCH_ROOT/uv"
 DEPS="$MAB_SCRATCH_ROOT/alphafold3_deps"
-export FETCHCONTENT_SOURCE_DIR_PYBIND11="$DEPS/pybind11"
-export FETCHCONTENT_SOURCE_DIR_ABSEIL_CPP="$DEPS/abseil-cpp"
-export FETCHCONTENT_SOURCE_DIR_PYBIND11_ABSEIL="$DEPS/pybind11_abseil"
-export FETCHCONTENT_SOURCE_DIR_CIFPP="$DEPS/cifpp"
-export FETCHCONTENT_SOURCE_DIR_DSSP="$DEPS/dssp"
+export CMAKE_ARGS="-DFETCHCONTENT_SOURCE_DIR_PYBIND11=$DEPS/pybind11 -DFETCHCONTENT_SOURCE_DIR_ABSEIL_CPP=$DEPS/abseil-cpp -DFETCHCONTENT_SOURCE_DIR_PYBIND11_ABSEIL=$DEPS/pybind11_abseil -DFETCHCONTENT_SOURCE_DIR_CIFPP=$DEPS/cifpp -DFETCHCONTENT_SOURCE_DIR_DSSP=$DEPS/dssp"
 cd "$AF3"
-"$UV" sync --no-dev --no-build-isolation
+"$UV" sync --no-dev --no-install-project --offline
+"$UV" pip install --offline --python "$AF3/.venv/bin/python" scikit-build-core pybind11==2.12.0 'cmake>=3.28' ninja setuptools_scm
+"$UV" sync --no-dev --no-build-isolation --offline
 "$UV" run python run_alphafold_data_test.py
 printf 'alphafold3_install_complete commit=%s venv=%s\n' "$(git rev-parse HEAD)" "$AF3/.venv"

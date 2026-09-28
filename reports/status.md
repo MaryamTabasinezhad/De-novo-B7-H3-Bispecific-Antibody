@@ -564,3 +564,10 @@ AF3 virtual environment from the login environment. Retry installation/data-
 test job `21957223` was then submitted and was pending at the scheduler check.
 This retry still performs installation and the official AF3 data test only; no
 model parameters, databases, or antibody predictions are involved.
+
+Job `21957223` failed with exit `1:0` after 6:39. Although the dependency
+clones were present, CMake did not consume the environment-only source hints and
+again attempted a compute-node GitHub clone of `pybind11`. The worker also
+needed to restore build requirements after `uv sync`. The next worker revision
+passes explicit `CMAKE_ARGS` source directories, performs offline sync, restores
+the build requirements offline, and then builds without isolation.
