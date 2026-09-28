@@ -594,3 +594,10 @@ adds explicit local overrides for these nested CMake dependencies.
 Retry installation/data-test job `21960071` was submitted with the nested
 dependency overrides and is pending scheduler priority. No AF3 prediction job
 has been submitted.
+
+Job `21960071` started at `2026-09-28 10:26:18 UTC` and failed at
+`10:28:54 UTC` with exit `1:0` after 2:36. All prefetched C++ dependencies
+were accepted; configuration then failed because `libcifpp` attempted to
+download the wwPDB chemical-component dictionary from a compute node. The
+current protein-only AF3 validation does not require that optional CCD download,
+so the next retry disables `CIFPP_DOWNLOAD_CCD` during configuration.
