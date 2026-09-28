@@ -571,3 +571,7 @@ again attempted a compute-node GitHub clone of `pybind11`. The worker also
 needed to restore build requirements after `uv sync`. The next worker revision
 passes explicit `CMAKE_ARGS` source directories, performs offline sync, restores
 the build requirements offline, and then builds without isolation.
+
+Corrected installation/data-test job `21958028` was submitted with the explicit
+offline dependency configuration and was pending at the scheduler check. It is
+the current AF3 installation attempt; no prediction job has been submitted.
