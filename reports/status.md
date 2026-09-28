@@ -521,6 +521,12 @@ commits declared by the AF3 CMake file. The installation worker now points
 CMake at those local source trees so the retry does not require compute-node
 network access.
 
+On the login environment, the AF3 runtime lock was resolved and its 69 Python
+runtime packages were cached in the scratch virtual environment. The build
+requirements were restored afterward, and the Slurm worker now uses
+`--no-build-isolation` so it does not ask PyPI for build packages on the compute
+node.
+
 Retry installation/data-test job `21935156` was submitted with the prefetched
 dependency paths and was pending at the scheduler check. Its build and AF3 data
 test result will be recorded separately from failed job `21934560`.

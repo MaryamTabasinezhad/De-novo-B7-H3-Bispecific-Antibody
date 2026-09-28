@@ -21,6 +21,6 @@ export FETCHCONTENT_SOURCE_DIR_PYBIND11_ABSEIL="$DEPS/pybind11_abseil"
 export FETCHCONTENT_SOURCE_DIR_CIFPP="$DEPS/cifpp"
 export FETCHCONTENT_SOURCE_DIR_DSSP="$DEPS/dssp"
 cd "$AF3"
-"$UV" sync --no-dev
+"$UV" sync --no-dev --no-build-isolation
 "$UV" run python run_alphafold_data_test.py
 printf 'alphafold3_install_complete commit=%s venv=%s\n' "$(git rev-parse HEAD)" "$AF3/.venv"
