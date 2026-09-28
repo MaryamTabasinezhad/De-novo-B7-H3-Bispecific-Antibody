@@ -531,6 +531,12 @@ Retry installation/data-test job `21935156` was submitted with the prefetched
 dependency paths and was pending at the scheduler check. Its build and AF3 data
 test result will be recorded separately from failed job `21934560`.
 
+After `21935156` failed on compute-node PyPI access, the runtime and build
+requirements were cached on the login environment and the worker was changed
+to `--no-build-isolation`. A new installation/data-test job `21935549` was
+submitted and was pending at the scheduler check. This job is the next AF3
+installation attempt; no prediction job has been submitted.
+
 ## Job-result notification contract — 2026-09-28
 
 After every Slurm, installation, validation, or analysis job, DEV must notify
