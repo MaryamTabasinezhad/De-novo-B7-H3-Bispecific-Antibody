@@ -657,3 +657,5 @@ The initial AF3 GPU pilot submission was rejected before execution because the f
 
 
 AF3 GPU validation pilot retry job `21972327` was accepted by Slurm as a two-task H100 array for the Arm A and Arm B representative inputs.
+
+AF3 pilot array `21972327` is partially complete: task 0 (Arm A representative task 265) completed successfully on H100 node `rg21704` in 36:49, including full MSA and inference. Task 1 (Arm B representative task 131) remains running on `rg31701` in its MSA stage. Arm A output is in `/scratch/ghaedi/mab/af3_validation_pilot/armA_task265/`; no scientific result interpretation is finalized until both tasks finish.
