@@ -590,3 +590,7 @@ the next nested dependency was Eigen 3.4.0, fetched by `libcifpp` from GitLab,
 and compute-node network access failed again. Eigen 3.4.0, Boost Regex 1.83.0,
 and libmcfp 1.3.1 were prefetched on the login environment. The next retry
 adds explicit local overrides for these nested CMake dependencies.
+
+Retry installation/data-test job `21960071` was submitted with the nested
+dependency overrides and is pending scheduler priority. No AF3 prediction job
+has been submitted.
