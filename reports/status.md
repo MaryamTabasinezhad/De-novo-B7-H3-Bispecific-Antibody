@@ -634,3 +634,5 @@ The next repair worker now runs AF3 `build_data()` with the staged `LIBCIFPP_DAT
 
 
 Intermediate-data repair job `21965591` was submitted. It runs `build_data()` offline, then the official AF3 data test; no weights, databases, or predictions are involved.
+
+Job `21965591` started at `2026-09-28 12:07:09 UTC` on `rc31830` and failed at `12:08:14 UTC` with exit `1:0` after 1:05. `build_data()` succeeded and generated `ccd.pickle` and `chemical_component_sets.pickle`; the official data test then failed in its two featurisation tests because the `jackhmmer` executable was not found in `PATH`. The remaining issue is HMMER runtime availability/configuration, not the AF3 package or CCD data. No weights, databases, or predictions were used.
