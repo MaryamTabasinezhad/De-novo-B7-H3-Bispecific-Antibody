@@ -520,3 +520,7 @@ The five pinned C++ dependencies (`pybind11`, `abseil-cpp`, `pybind11_abseil`,
 commits declared by the AF3 CMake file. The installation worker now points
 CMake at those local source trees so the retry does not require compute-node
 network access.
+
+Retry installation/data-test job `21935156` was submitted with the prefetched
+dependency paths and was pending at the scheduler check. Its build and AF3 data
+test result will be recorded separately from failed job `21934560`.
