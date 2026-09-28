@@ -609,3 +609,5 @@ databases, or AF3 predictions are involved in this retry.
 
 
 Job `21960360` failed at `2026-09-28 10:43:16 UTC` on `rc32421` with Slurm exit `1:0` after 6:58. The CCD download was successfully disabled and the prefetched C++ dependencies were accepted. Configuration then entered the optional `libcifpp` test directory, which attempted to clone Catch2 v2.13.9 from GitHub and failed because compute nodes have no outbound GitHub access. No AF3 package, data test, model weights, databases, or predictions were produced. The next retry sets `BUILD_TESTING=OFF`; this skips optional dependency tests that are not required for the AF3 runtime/data-test installation and avoids downloading Catch2.
+
+Retry installation/data-test job `21961067` was submitted with `BUILD_TESTING=OFF` to skip optional Catch2 tests. It is the next offline AF3 installation attempt; no model weights, databases, or AF3 predictions are involved. The preceding milestone commit is `7e3ba16`; its push was rejected because GitHub denied the configured account `hamidghaedi` access to the repository, so the commit remains preserved locally pending authentication/remote authorization.
