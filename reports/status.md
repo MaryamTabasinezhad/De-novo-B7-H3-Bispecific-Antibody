@@ -584,3 +584,9 @@ that one CMake variable; no AF3 package or prediction has succeeded yet.
 
 Retry installation/data-test job `21959184` was submitted with the corrected
 `FETCHCONTENT_SOURCE_DIR_ABSEIL-CPP` setting and is pending scheduler priority.
+
+Job `21959184` failed with exit `1:0` after 6:55. The Abseil override worked;
+the next nested dependency was Eigen 3.4.0, fetched by `libcifpp` from GitLab,
+and compute-node network access failed again. Eigen 3.4.0, Boost Regex 1.83.0,
+and libmcfp 1.3.1 were prefetched on the login environment. The next retry
+adds explicit local overrides for these nested CMake dependencies.
