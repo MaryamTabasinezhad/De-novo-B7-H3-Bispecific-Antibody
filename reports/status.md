@@ -617,4 +617,4 @@ Job `21961067` started at `2026-09-28 10:56:15 UTC` on `rc32121` and failed at `
 
 The official wwPDB chemical-component dictionary was downloaded on the login environment from `https://files.wwpdb.org/pub/pdb/data/monomers/components.cif` (518,315,101 bytes) and staged at `/scratch/ghaedi/mab/alphafold3_deps/cifpp/rsrc/components.cif`. The repair worker now copies this staged file into the libcifpp source tree and enables CCD installation while retaining `BUILD_TESTING=OFF`; compute nodes do not need external network access.
 
-Repair installation/data-test job `21963372` was submitted with the staged wwPDB CCD file and offline C++ dependencies. This is the single authorized retry after failure ; no prediction job is part of it.
+Repair installation/data-test job `21963372` was submitted with the staged wwPDB CCD file and offline C++ dependencies. This is the single authorized retry after failure `21961067`; no prediction job is part of it.
