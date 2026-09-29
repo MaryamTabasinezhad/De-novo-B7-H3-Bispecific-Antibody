@@ -6,3 +6,7 @@ report `reports/06_02_alphafold3_shortlist_campaign.md`. The campaign covers
 samples per input (up to 276 predicted complexes). Large AF3 model files remain
 in documented scratch storage; only inspected, derived artifacts are copied
 here after the Slurm run.
+
+The completed campaign summaries are `per_input.tsv`, `per_sample.tsv`, and
+`run_manifest.json`. They cover 69 inputs and 276 seed/sample complexes; model
+CIF files remain in the documented scratch output because of their size.

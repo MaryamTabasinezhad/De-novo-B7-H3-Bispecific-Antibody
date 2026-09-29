@@ -706,6 +706,19 @@ template-search stages; no predicted complexes have completed yet and no
 candidate has passed or failed the scientific validation gate. The scheduler
 and scratch logs are the current evidence.
 
+Campaign completion update — 2026-09-29: Slurm array `21999799` completed with
+exit `0:0` for all 69 tasks. The run produced 276 seed/sample complexes (160
+Arm A and 116 Arm B) plus one aggregate model per input. No task failed and no
+AF3 summary reported a clash flag. Derived summaries were generated with the
+tracked AF3 analysis script and will be committed under
+`results/06_02_af3_validation_shortlist/`. Preliminary aggregate observations
+are 0.864/0.868 mean H–L ipTM for Arms A/B, 0.152/0.138 mean H–T ipTM, and
+0.146/0.132 mean L–T ipTM. At least one selected-epitope contact occurred in
+27/40 Arm A inputs and 29/29 Arm B inputs; at least two occurred in 21/40 and
+28/29, respectively. These are geometric computational observations, not
+binding or biological validation. The next gate is contact/pose audit followed
+by Fab-pair and same-antigen geometry analysis.
+
 Campaign update — 2026-09-29: the array is progressing normally. Fourteen
 shortlist inputs have completed successfully and produced their full four-model
 AF3 outputs (56 predicted complexes). Ten additional tasks are currently

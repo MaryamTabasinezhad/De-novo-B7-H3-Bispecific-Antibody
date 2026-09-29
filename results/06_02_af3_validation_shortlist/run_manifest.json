@@ -1,0 +1,13 @@
+{
+  "slurm_job": "21999799",
+  "completed_utc": "2026-09-29",
+  "exit_state": "0:0 for all 69 array tasks",
+  "inputs": {"arm_a": 40, "arm_b": 29, "total": 69},
+  "sampling": {"seeds": [101, 202], "diffusion_samples_per_seed": 2, "recycles": 3},
+  "predicted_sample_complexes": {"arm_a": 160, "arm_b": 116, "total": 276},
+  "scratch_input_dir": "/scratch/ghaedi/mab/af3_validation_shortlist_inputs",
+  "scratch_output_dir": "/scratch/ghaedi/mab/af3_validation_shortlist",
+  "worker": "tools/06_af3_validation/alphafold3_shortlist_job.sh",
+  "analysis_script": "tools/06_af3_validation/analyze_af3_shortlist.py",
+  "notes": "Large AF3 model files remain in scratch; tracked TSVs are derived summaries. No experimental binding or biological activity is inferred."
+}
