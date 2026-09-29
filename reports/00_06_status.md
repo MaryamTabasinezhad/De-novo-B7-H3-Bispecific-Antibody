@@ -800,3 +800,12 @@ completed output at this check. Chunks `22030424` and `22030425` remain pending
 priority. No task failure is recorded in the checked accounting rows. The
 remaining dual-Fab indices 900–1159 still cannot be queued without exceeding
 the account submission limit and will be submitted after capacity frees.
+
+Three-category progress refresh — 2026-09-29: Arm A-only has 10 completed
+outputs with tasks 10–19 running and the remainder queued. Arm B-only has 10
+completed outputs with tasks 10–14 running. Dual-Fab chunk `22030421` has
+completed its first task successfully (exit `0:0`); the chunk currently has one
+completed output and the remaining indices queued. No failures are present in
+the checked completed accounting rows. Chunks `22030424` and `22030425` remain
+pending priority, and dual-Fab indices 900–1159 remain unsubmitted because the
+account limit is still active.
