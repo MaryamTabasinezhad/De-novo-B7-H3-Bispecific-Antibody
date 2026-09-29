@@ -692,67 +692,55 @@ The pilot outputs remain preserved for runtime provenance, but promotion
 decisions will use the 69-model campaign. No whole-IgG assembly or downstream
 biological claim is authorized by this campaign alone.
 
-## Next steps after AF3 — full Arm A/Arm B antibody modeling
+## Next steps after AF3 — three-category Fab and biparatopic modeling
 
-User direction on 2026-09-29: do not perform an additional AF3 survivor
-filter solely because the shortlist is already bounded. Carry the current
-40 Arm A and 29 Arm B candidates forward to pair and whole-antibody modeling.
-This creates **40 × 29 = 1,160** Arm A/Arm B Fab-pair combinations. This is a
-planning count, not a claim that 1,160 final antibodies will pass.
+User direction on 2026-09-29: do not perform an additional AF3-only reduction
+because the shortlist is already bounded. Evaluate three categories and compare
+them directly before final Fc-containing antibody assembly. The current pools
+are 40 Arm A and 29 Arm B candidates.
 
-### Step 1 — Prepare all Fab-pair combinations
+### Category A — Arm A-only Fabs
 
-Combine each Arm A heavy/light sequence with each Arm B heavy/light sequence,
-preserving the cognate heavy/light pairing within each arm. Record the Arm A
-task, Arm B task, sequence identifiers, and exact input lineage for every pair.
+Model all 40 Arm A heavy/light pairs as isolated Fab A–B7-H3 complexes. Record
+folding, cognate heavy/light pairing, interface confidence, intended canonical
+epitope contacts, pose reproducibility, clashes, and sequence/developability
+liabilities.
 
-### Step 2 — Model Fab-pair geometry
+### Category B — Arm B-only Fabs
 
-Model the two Fabs together and check whether both can approach their intended
-epitopes without Fab–Fab clashes, impossible orientations, or incompatible
-relative geometry. Retain the full set until a physical geometry failure is
-identified and record every rejection reason.
+Model all 29 Arm B heavy/light pairs as isolated Fab B–B7-H3 complexes using the
+same fields. Keep results separate from Category A because the target epitopes
+and structural contexts differ.
 
-### Step 3 — Test simultaneous binding to one antigen
+### Category AB — dual-Fab biparatopic constructs
 
-Place both Fabs on one native human 4Ig B7-H3 model and evaluate simultaneous
-Arm A/Arm B engagement, epitope-to-epitope distance and orientation, hinge/Fab
-reach, steric interference, membrane accessibility, and glycan compatibility.
-Binding to separate B7-H3 molecules does not satisfy the project's same-antigen
-requirement.
+Combine every Arm A candidate with every Arm B candidate while preserving
+cognate heavy/light pairing within each arm. This creates **40 × 29 = 1,160**
+Fab-pair combinations. Place both Fabs on one native human 4Ig B7-H3 model and
+evaluate simultaneous engagement, epitope spacing, Fab reach, Fab–Fab
+interference, membrane accessibility, and glycan compatibility.
 
-### Step 4 — Assemble complete 1A+1B IgG-like antibodies
+### Cross-category comparison and whole-antibody continuation
 
-Add the Fc-containing antibody architecture to compatible Fab pairs. Use the
-current provisional human IgG1-like baseline and the documented cognate Fab
-pairing and heterodimerization plan; preserve unresolved format details in the
-decision log rather than silently choosing them.
+Compare A-only, B-only, and AB models with common traceable metrics. A Fab that
+works alone may become incompatible after the second Fab is added, so AB models
+have a distinct same-antigen cis-binding gate. Record every geometry-based
+rejection while preserving structural and sequence diversity.
 
-### Step 5 — Model whole-antibody conformational ensembles
+After compatible AB pairs are identified:
 
-Generate multiple plausible Fab, hinge, and Fc orientations. Test whether the
-complete antibody remains physically plausible while both arms engage the same
-B7-H3 molecule, including membrane clearance and glycan-aware accessibility.
+1. add the provisional human IgG1-like Fc-containing 1A+1B architecture;
+2. model multiple Fab, hinge, and Fc conformations;
+3. check chain connectivity, pairing, clashes, bond geometry, simultaneous
+   epitope access, Fc orientation, membrane clearance, glycan clashes, and
+   computational aggregation/self-association risk; and
+4. create a diverse complete-antibody candidate set for later developability
+   analysis and experimental testing.
 
-### Step 6 — Run whole-antibody QC
-
-Check chain connectivity, heavy/light pairing, clashes, bond geometry,
-simultaneous epitope accessibility, Fc orientation, membrane clearance, glycan
-clashes, and computational aggregation/self-association risk. Separate
-computational risk flags from properties requiring purified-protein or cellular
-measurement.
-
-### Step 7 — Create the whole-antibody candidate set
-
-Retain compatible complete 1A+1B constructs while preserving sequence and
-structural diversity. The resulting candidates are complete computational
-antibody hypotheses for subsequent developability analysis and experimental
-testing; they are not experimentally confirmed binders.
-
-No whole-antibody assembly or pairwise modeling has been submitted yet under
-this status entry. The next execution milestone is the all-by-all Fab-pair and
-same-antigen geometry campaign, with inputs, counts, rejection reasons, and
-results recorded in numbered `work/`, `results/`, and `reports/` artifacts.
+No Category A, B, or AB modeling job has been submitted yet. The next
+execution milestone is the three-category Fab campaign, with inputs, counts,
+lineage, rejection reasons, and comparison tables recorded in numbered
+`work/`, `results/`, and `reports/` artifacts.
 
 The full AF3 shortlist campaign was submitted as Slurm array job `21999799`
 from the tracked worker on 2026-09-28. Array indices 0–39 map to the 40 Arm A

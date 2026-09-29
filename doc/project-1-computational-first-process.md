@@ -434,6 +434,53 @@ or clinical activity.
 - RF3 agreement strengthens confidence, while RF3 disagreement triggers review rather than automatic rejection.
 - All raw confidence fields and derived metrics are retained.
 
+## Step 6A — Evaluate Single-Fab Categories and Biparatopic Pairings
+
+The project now uses three explicitly compared modeling categories before final
+Fc-containing antibody assembly. The current AF3 pools are carried forward
+without an additional AF3-only reduction: 40 Arm A candidates and 29 Arm B
+candidates.
+
+### Category A — Arm A-only Fabs
+
+Model each Arm A heavy/light pair as an isolated Fab against the intended
+human B7-H3 epitope A. Record folding, heavy/light pairing, interface
+confidence, canonical epitope contacts, pose reproducibility, clashes, and
+sequence/developability liabilities.
+
+### Category B — Arm B-only Fabs
+
+Model each Arm B heavy/light pair as an isolated Fab against intended epitope
+B using the same measurements and reporting fields. Results must remain
+separate from Category A because the epitopes and structural contexts differ.
+
+### Category AB — Dual-Fab biparatopic constructs
+
+Combine every Arm A candidate with every Arm B candidate, preserving cognate
+heavy/light pairing within each arm. The current all-by-all design space is
+`40 × 29 = 1,160` Fab pairs. Place both Fabs on one native human 4Ig B7-H3
+model and evaluate simultaneous A/B engagement, epitope spacing, Fab reach,
+Fab–Fab interference, membrane accessibility, and glycan compatibility.
+
+### Cross-category comparison
+
+Compare A-only, B-only, and AB models using the same traceable metrics. A Fab
+that behaves well alone may become incompatible when the other Fab is added;
+the AB category therefore has a distinct same-antigen cis-binding gate. Keep
+sequence and structural diversity and record every geometry-based rejection.
+
+### Outputs and completion gate
+
+- `work/07_primary_filtering/fab_A/`
+- `work/07_primary_filtering/fab_B/`
+- `work/07_primary_filtering/fab_AB_pairs/`
+- category-specific scorecards and rejection-reason tables;
+- comparison tables for A-only, B-only, and AB constructs.
+
+The category comparison is complete only when each candidate retains its Arm A
+and Arm B lineage, the same-antigen requirement is tested explicitly, and the
+AB survivors are ready for complete 1A+1B Fc-containing IgG modeling.
+
 ## Step 7 — Apply Primary Structural, Interface, and Developability Filters
 
 ### Inputs
