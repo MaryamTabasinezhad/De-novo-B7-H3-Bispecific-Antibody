@@ -792,3 +792,11 @@ The currently queued dual-Fab coverage is therefore indices 0–899; indices
 900–1159 remain unsubmitted until accounting capacity is available. All
 submitted arrays are pending or running under the tracked worker, and no
 category result is inferred yet.
+
+Three-category generation progress — 2026-09-29: Arm A-only job `22030417`
+has produced 10 completed input outputs so far; Arm B-only job `22030418` has
+produced 8. Dual-Fab chunk `22030421` has started its first task but has no
+completed output at this check. Chunks `22030424` and `22030425` remain pending
+priority. No task failure is recorded in the checked accounting rows. The
+remaining dual-Fab indices 900–1159 still cannot be queued without exceeding
+the account submission limit and will be submitted after capacity frees.
