@@ -698,3 +698,10 @@ shortlist rows and indices 40–68 map to the 29 Arm B rows; concurrency is
 limited to 10 H100 tasks. Each task uses two seeds, two diffusion samples, and
 three recycles. The job is active/pending according to the scheduler at
 submission time; no completion or scientific result is inferred yet.
+
+Campaign update — 2026-09-28: array job `21999799` has started. Ten tasks
+(indices 0–9) are running on H100 nodes and indices 10–68 remain pending under
+the array concurrency limit. The first tasks are completing AF3 MSA and
+template-search stages; no predicted complexes have completed yet and no
+candidate has passed or failed the scientific validation gate. The scheduler
+and scratch logs are the current evidence.
