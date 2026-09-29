@@ -665,3 +665,18 @@ Arm A AF3 pilot outputs from job `21972327_0` have been copied from scratch into
 AF3 pilot array `21972327` is complete: task 0 Arm A finished in 36:49 and task 1 Arm B finished in 1:01:22, both exit `0:0` on H100 nodes. Arm B outputs from task 1 are now copied into tracked `results/06_01_af3_validation_pilot/armB_task131/`. Arm B ranking scores were 0.60, 0.60, 0.58, and 0.60; all four models had no clashes. H/L chain-pair ipTM was high (~0.85–0.90), while H/L-to-T chain-pair ipTM was low (~0.10–0.15) with high antibody–T PAE (~11–20 Å). Together with Arm A's low antibody–T ipTM (~0.16–0.18), the pilot supports antibody folding/H-L pairing but does not support confident B7-H3 interface recovery for either arm. This is a pilot observation, not a calibrated rejection threshold or experimental conclusion.
 
 Documentation organization milestone — 2026-09-28: reports, results, work, tools, and coordination now expose a numbered visual workflow stream. Reports use `NN_SS_description`, results use matching numbered directories, and each stream has a README index. Existing scientific content and result files were renamed or moved without changing their contents; executable tool paths were updated, including the runtime-support project-root calculation. New durable artifacts must follow the numbered naming contract recorded in `AGENTS.md` and `doc/project-1-computational-first-process.md`.
+
+AlphaFold3 validation documentation update — 2026-09-28: the AF3 pilot report
+now explicitly records its aim, model lineage, and limits. The RF2 control-gate
+pool contained 42 Arm A and 30 Arm B models (40 and 29 after task-level
+deduplication), but AF3 used only one representative input per arm: RF2 task
+265 for Arm A and task 131 for Arm B. Each representative was evaluated with
+two seeds and two diffusion samples, producing four AF3 complexes per arm and
+eight total. The pilot tested antibody folding, heavy/light pairing,
+repeatability, and antibody–B7-H3 interface confidence; it was not an
+exhaustive shortlist validation and did not test Fc function, internalization,
+affinity, cellular specificity, or same-molecule biparatopic binding. AF3
+supported coherent H–L antibody units but did not provide confident
+antibody–B7-H3 interface recovery for either representative. See
+`reports/06_01_alphafold3_validation_results.md` and
+`results/06_01_af3_validation_pilot/`.

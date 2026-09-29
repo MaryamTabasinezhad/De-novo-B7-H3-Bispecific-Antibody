@@ -10,3 +10,10 @@ Results are grouped by the workflow stage that produced them. Read directories i
 | `06_01` | AlphaFold 3 independent validation pilot | `06_01_af3_validation_pilot/` |
 
 Raw model weights, full databases, Slurm scratch outputs, and caches remain outside Git in documented scratch paths. Tracked result directories contain the reviewable derived artifacts and provenance needed to interpret them.
+
+The AF3 directory contains a representative pilot, not a full-shortlist
+campaign. RF2 had 42 Arm A and 30 Arm B geometry-gate models before
+task-level deduplication, but AF3 evaluated only RF2 task 265 (Arm A) and task
+131 (Arm B). Two seeds and two diffusion samples produced four complexes per
+arm. The purpose and limitations of that sampling are documented in
+`reports/06_01_alphafold3_validation_results.md`.

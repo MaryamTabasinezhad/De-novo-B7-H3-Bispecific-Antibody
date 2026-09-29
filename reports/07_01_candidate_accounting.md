@@ -55,6 +55,26 @@ would the workflow begin parent selection, Fab-pair geometry, simultaneous
 same-antigen modeling, complete 1A+1B IgG-Fc assembly, and developability
 ranking. At present, the number of RF2 survivors is **zero**.
 
+### AlphaFold3 representative validation pilot
+
+The later RF2 control-equivalent shortlist is a separate breadth result from
+the original four-sequence RF2 pilot summarized above. It contained 42 Arm A
+and 30 Arm B models passing the geometry gate, reduced to 40 and 29 after
+task-level deduplication. AF3 did not process all of those models. It evaluated
+one representative RF2 structure from each arm (Arm A task 265 and Arm B task
+131), using two seeds and two diffusion samples per input. This produced four
+AF3 complexes for Arm A, four for Arm B, and eight total.
+
+The purpose was to test independent structural reproducibility: antibody
+heavy/light folding, H–L pairing, repeated placement against the B7-H3 target,
+and interface confidence before committing to a full-shortlist AF3 campaign.
+The AF3 outputs repeatedly showed coherent H–L antibody units and no severe
+clash flag, but low antibody–target interface confidence for both tested
+representatives. These results are computational diagnostics, not proof or
+disproof of experimental binding, affinity, internalization, Fc activity, or
+whole-IgG same-antigen engagement. The detailed model-level record is in
+`reports/06_01_alphafold3_validation_results.md`.
+
 ## Interpretation
 
 The pipeline has produced computational Fv-arm prototypes, not a final

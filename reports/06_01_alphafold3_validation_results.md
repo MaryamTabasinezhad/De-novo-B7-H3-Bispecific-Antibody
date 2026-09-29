@@ -13,7 +13,29 @@ This AF3 run was therefore an **independent arm-level structural validation pilo
 3. whether AF3 repeatedly places the arm confidently against the supplied B7-H3 chain; and
 4. whether the result is stable across independent random seeds and diffusion samples.
 
+### 1.1 What was selected before AF3 and why
+
+Before AF3, the project had a larger RF2 control-gate-passing pool: 42 Arm A
+models and 30 Arm B models. After task-level deduplication, the reviewable
+shortlists contained 40 Arm A and 29 Arm B representatives. Those numbers are
+the RF2 structural-QC population; they are **not** the number of AF3 inputs in
+this pilot.
+
+The AF3 pilot deliberately used one representative RF2 structure from each
+arm—Arm A task 265 and Arm B task 131. This bounded design addressed an
+infrastructure and model-consistency question before the more expensive option
+of running AF3 across the entire shortlist: can AF3 rebuild the antibody arm,
+preserve heavy/light pairing, and repeatedly recover a credible
+antibody–B7-H3 interface from representative RF2-derived inputs? It was a
+diagnostic validation pilot, not an exhaustive validation of all RF2 survivors
+and not a final candidate-selection run.
+
 It did **not** validate the final whole antibody, Fc-mediated killing, internalization, aggregation, affinity, specificity in cells, or simultaneous binding of Arms A and B to one native B7-H3 molecule. The AF3 inputs contained only chains H, L, and T from the RF2 arm-level complexes; they did not contain an Fc, a linker, the other arm, membrane topology, glycans, or a full-length IgG assembly.
+
+The four predictions per arm were repeated observations of the same input
+sequence and structure under two seeds and two diffusion samples. They were not
+four newly designed antibody sequences per arm. The eight AF3 outputs are not
+eight final antibody candidates.
 
 ## 2. What the eight AF3 models are
 
