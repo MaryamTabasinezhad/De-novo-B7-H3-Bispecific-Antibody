@@ -52,7 +52,7 @@ rejection reasons will be copied to the numbered result directories after the
 Slurm jobs complete.
 
 Initial submissions: Arm A array `22030417`, Arm B array `22030418`, and dual
-Fab chunk `22030421` (indices 0–299). The original 1,160-task dual array was
-rejected with `AssocMaxSubmitJobLimit`, so the remaining indices will be
-submitted in bounded chunks. No scientific result is inferred while these jobs
-are pending.
+Fab chunks `22030421` (indices 0–299), `22030424` (300–599), and `22030425`
+(600–899). The original 1,160-task dual array was rejected with
+`AssocMaxSubmitJobLimit`, so indices 900–1159 will be submitted in a later
+bounded chunk. No scientific result is inferred while these jobs are pending.

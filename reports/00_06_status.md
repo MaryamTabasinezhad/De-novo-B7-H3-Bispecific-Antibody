@@ -785,3 +785,10 @@ concurrency 10) was accepted as array job `22030421` and is pending. The
 remaining dual-Fab indices 300–1159 will be submitted in further bounded
 chunks as scheduler accounting capacity allows. This is an infrastructure
 submission limit, not a scientific result.
+
+Additional dual-Fab chunks were accepted as array job `22030424` (indices
+300–599) and array job `22030425` (indices 600–899), both with concurrency 10.
+The currently queued dual-Fab coverage is therefore indices 0–899; indices
+900–1159 remain unsubmitted until accounting capacity is available. All
+submitted arrays are pending or running under the tracked worker, and no
+category result is inferred yet.
