@@ -692,25 +692,84 @@ The pilot outputs remain preserved for runtime provenance, but promotion
 decisions will use the 69-model campaign. No whole-IgG assembly or downstream
 biological claim is authorized by this campaign alone.
 
+## Next steps after AF3 — full Arm A/Arm B antibody modeling
+
+User direction on 2026-09-29: do not perform an additional AF3 survivor
+filter solely because the shortlist is already bounded. Carry the current
+40 Arm A and 29 Arm B candidates forward to pair and whole-antibody modeling.
+This creates **40 × 29 = 1,160** Arm A/Arm B Fab-pair combinations. This is a
+planning count, not a claim that 1,160 final antibodies will pass.
+
+### Step 1 — Prepare all Fab-pair combinations
+
+Combine each Arm A heavy/light sequence with each Arm B heavy/light sequence,
+preserving the cognate heavy/light pairing within each arm. Record the Arm A
+task, Arm B task, sequence identifiers, and exact input lineage for every pair.
+
+### Step 2 — Model Fab-pair geometry
+
+Model the two Fabs together and check whether both can approach their intended
+epitopes without Fab–Fab clashes, impossible orientations, or incompatible
+relative geometry. Retain the full set until a physical geometry failure is
+identified and record every rejection reason.
+
+### Step 3 — Test simultaneous binding to one antigen
+
+Place both Fabs on one native human 4Ig B7-H3 model and evaluate simultaneous
+Arm A/Arm B engagement, epitope-to-epitope distance and orientation, hinge/Fab
+reach, steric interference, membrane accessibility, and glycan compatibility.
+Binding to separate B7-H3 molecules does not satisfy the project's same-antigen
+requirement.
+
+### Step 4 — Assemble complete 1A+1B IgG-like antibodies
+
+Add the Fc-containing antibody architecture to compatible Fab pairs. Use the
+current provisional human IgG1-like baseline and the documented cognate Fab
+pairing and heterodimerization plan; preserve unresolved format details in the
+decision log rather than silently choosing them.
+
+### Step 5 — Model whole-antibody conformational ensembles
+
+Generate multiple plausible Fab, hinge, and Fc orientations. Test whether the
+complete antibody remains physically plausible while both arms engage the same
+B7-H3 molecule, including membrane clearance and glycan-aware accessibility.
+
+### Step 6 — Run whole-antibody QC
+
+Check chain connectivity, heavy/light pairing, clashes, bond geometry,
+simultaneous epitope accessibility, Fc orientation, membrane clearance, glycan
+clashes, and computational aggregation/self-association risk. Separate
+computational risk flags from properties requiring purified-protein or cellular
+measurement.
+
+### Step 7 — Create the whole-antibody candidate set
+
+Retain compatible complete 1A+1B constructs while preserving sequence and
+structural diversity. The resulting candidates are complete computational
+antibody hypotheses for subsequent developability analysis and experimental
+testing; they are not experimentally confirmed binders.
+
+No whole-antibody assembly or pairwise modeling has been submitted yet under
+this status entry. The next execution milestone is the all-by-all Fab-pair and
+same-antigen geometry campaign, with inputs, counts, rejection reasons, and
+results recorded in numbered `work/`, `results/`, and `reports/` artifacts.
+
 The full AF3 shortlist campaign was submitted as Slurm array job `21999799`
 from the tracked worker on 2026-09-28. Array indices 0–39 map to the 40 Arm A
 shortlist rows and indices 40–68 map to the 29 Arm B rows; concurrency is
 limited to 10 H100 tasks. Each task uses two seeds, two diffusion samples, and
-three recycles. The job is active/pending according to the scheduler at
-submission time; no completion or scientific result is inferred yet.
+three recycles. The initial submission-state note below is historical; the
+completion update records the final scheduler result.
 
-Campaign update — 2026-09-28: array job `21999799` has started. Ten tasks
-(indices 0–9) are running on H100 nodes and indices 10–68 remain pending under
-the array concurrency limit. The first tasks are completing AF3 MSA and
-template-search stages; no predicted complexes have completed yet and no
-candidate has passed or failed the scientific validation gate. The scheduler
-and scratch logs are the current evidence.
+Historical campaign update — 2026-09-28: array job `21999799` initially had
+ten tasks running while the remaining tasks were pending under the array
+concurrency limit. This was superseded by the completion update above.
 
 Campaign completion update — 2026-09-29: Slurm array `21999799` completed with
 exit `0:0` for all 69 tasks. The run produced 276 seed/sample complexes (160
 Arm A and 116 Arm B) plus one aggregate model per input. No task failed and no
 AF3 summary reported a clash flag. Derived summaries were generated with the
-tracked AF3 analysis script and will be committed under
+tracked AF3 analysis script and committed under
 `results/06_02_af3_validation_shortlist/`. Preliminary aggregate observations
 are 0.864/0.868 mean H–L ipTM for Arms A/B, 0.152/0.138 mean H–T ipTM, and
 0.146/0.132 mean L–T ipTM. At least one selected-epitope contact occurred in
@@ -719,12 +778,7 @@ are 0.864/0.868 mean H–L ipTM for Arms A/B, 0.152/0.138 mean H–T ipTM, and
 binding or biological validation. The next gate is contact/pose audit followed
 by Fab-pair and same-antigen geometry analysis.
 
-Campaign update — 2026-09-29: the array is progressing normally. Fourteen
-shortlist inputs have completed successfully and produced their full four-model
-AF3 outputs (56 predicted complexes). Ten additional tasks are currently
-running; the remaining tasks are queued under the 10-task concurrency limit.
-No task failure is recorded at this check, and no scientific pass/fail calls
-have been made before the derived interface audit. Completed outputs remain in
-`/scratch/ghaedi/mab/af3_validation_shortlist/` pending summary extraction and
-copy of reviewable results into the tracked `results/06_02_af3_validation_shortlist/`
-directory.
+Historical campaign update — 2026-09-29: fourteen shortlist inputs had
+completed while ten tasks were running. This intermediate state was superseded
+by the final completion update and the committed derived summaries in
+`results/06_02_af3_validation_shortlist/`.
