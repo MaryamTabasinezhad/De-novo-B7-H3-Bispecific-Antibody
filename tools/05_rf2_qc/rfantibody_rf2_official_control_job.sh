@@ -25,5 +25,5 @@ cd "$RFA"
 # B7-H3 wrapper. The official bundled H/L/T example is the runtime control.
 .venv/bin/rf2 -i "$INPUT" -o "$OUT" -r 3 -w "$WEIGHTS" -s 101
 
-python "$MAB_PROJECT_ROOT/tools/check_rfantibody_interface_geometry.py" "$OUT"
+python "$MAB_PROJECT_ROOT/tools/05_rf2_qc/check_rfantibody_interface_geometry.py" "$OUT"
 printf '%s\n' 'rf2_official_control_complete'

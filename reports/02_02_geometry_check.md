@@ -1,7 +1,7 @@
 # Step 2 — preliminary same-antigen geometry check
 
 Prepared 2026-09-21 after the user confirmed the preliminary pair in
-`reports/step2_epitope_evidence.md`.
+`reports/02_01_epitope_evidence.md`.
 
 ## Pair carried forward
 

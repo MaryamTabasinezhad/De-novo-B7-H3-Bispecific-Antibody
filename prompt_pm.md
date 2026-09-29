@@ -50,8 +50,8 @@ Read these existing documents:
 1. `AGENTS.md`.
 2. `README.md`.
 3. `doc/project-1-computational-first-process.md`.
-4. `reports/status.md`, if present.
-5. `reports/decision_log.md`, if present.
+4. `reports/00_06_status.md`, if present.
+5. `reports/00_05_decision_log.md`, if present.
 6. `skills/INDEX.md`.
 7. `config/hpc/README.md`.
 8. Relevant project command restrictions before issuing commands.

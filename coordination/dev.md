@@ -15,8 +15,8 @@ PM wrote the matching nonce and restrictions to `coordination/pm.md` and assigne
 
 ## STEP0-001 — accepted; needs_user_decision for scope locking
 
-Prepared `reports/step0_scope.md`, `reports/decision_log.md`, and updated
-`reports/status.md`. Compared existing assumptions with the workflow; no missing
+Prepared `reports/00_01_scope.md`, `reports/00_05_decision_log.md`, and updated
+`reports/00_06_status.md`. Compared existing assumptions with the workflow; no missing
 scientific choices were filled in. No Step 1, installations, or compute.
 
 The task brief's final commit prohibition conflicts with the user's standing
@@ -39,7 +39,7 @@ restart the task or create an acknowledgement loop.
 Checked the document diff for whitespace errors and verified no diff in
 `AGENTS.md`, `.codex/`, or `.claude/`. No scientific computation, installation,
 model/data acquisition, or job submission was performed. Both agents await user
-scientific decisions listed in `reports/decision_log.md`; no Step 1 authorization
+scientific decisions listed in `reports/00_05_decision_log.md`; no Step 1 authorization
 is inferred. DEV will commit this reviewed milestone under standing authorization.
 
 ## STEP0-002 — accepted; endpoint trade-off decision pending
@@ -81,7 +81,7 @@ delayed queue notification must not restart work or trigger an acknowledgement l
 
 User explicitly authorized a Step 0 evidence review and recommendation on human
 4Ig/2Ig and soluble antigen, before asking for a decision. Prepared
-`reports/step0_isoform_review.md`: six primary sources, access levels and limits,
+`reports/00_03_isoform_review.md`: six primary sources, access levels and limits,
 policy comparison, proposed wording. No selected epitope or target preparation.
 
 Recommendation pending user approval: required membrane human 4Ig recognition
@@ -155,7 +155,7 @@ valency and planned paths, reviewed diff, and checked AGENTS/settings unchanged.
 ## STEP0-009 — review_requested
 
 User requested immediate continuation; completed bounded Fc/pairing review in
-reports/step0_fc_pairing_review.md and updated decision/status records. Proposed
+reports/00_04_fc_pairing_review.md and updated decision/status records. Proposed
 human IgG1 with retained effector function and distinct cognate light chains;
 cFAE leading route, CrossMab alternative. No scientific selection inferred.
 PM: review evidence scope, access limitations, assembly-versus-cis distinction,
@@ -172,14 +172,14 @@ Delayed STEP0-009 notifications must not repeat work or acknowledgement loops.
 
 User approved proceeding with the provisional full-antibody baseline. Recorded
 human IgG1-like 1A + 1B with active Fc, cognate heavy/light Fab pairing, cFAE
-leading assembly and CrossMab fallback in reports/decision_log.md and status.
+leading assembly and CrossMab fallback in reports/00_05_decision_log.md and status.
 Exact Fc/hinge/sequence details remain unresolved. PM: review transcription,
 append acceptance or corrections, queue one reply and freeze the record. No Step
 1, installation, target preparation or compute is authorized.
 
 ## STEP0-011 — review_requested
 
-Prepared `reports/step0_screening_policy.md` for the next bounded Step 0 task.
+Prepared `reports/00_02_screening_policy.md` for the next bounded Step 0 task.
 The policy is provisional: separate evidence tracks, preserve diversity, use
 explicit risk dispositions, and defer numerical budgets and thresholds. PM:
 review the artifact and append acceptance or corrections only in coordination/
@@ -198,11 +198,11 @@ compute is authorized.
 ## STEP1-001 — review_requested
 
 Ran the existing target-preparation worker using the verified scipy-stack module.
-Outputs and QC are recorded in `reports/step1_target_preparation.md`. The
+Outputs and QC are recorded in `reports/01_01_target_preparation.md`. The
 short 2Ig form is a membrane comparison with its own isoform-specific span
 around residues 250–271; soluble/shed antigen remains separate. Preliminary
 20G5-like and T3CL11-like contact regions are
-recorded in `reports/step2_epitope_evidence.md`; no final pair or anchors were
+recorded in `reports/02_01_epitope_evidence.md`; no final pair or anchors were
 selected. PM: review the Step 1 evidence and limitation, then append acceptance
 or corrections. Step 2 carry-forward requires the user's scientific decision.
 

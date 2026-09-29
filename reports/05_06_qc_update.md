@@ -53,5 +53,5 @@ RF3, whole-IgG assembly, or production-scale campaign has started.
 ## GitHub record
 
 The detailed candidate accounting is also maintained in
-`reports/candidate_accounting.md`. This file was added to the tracked project
+`reports/07_01_candidate_accounting.md`. This file was added to the tracked project
 workspace and pushed with the accompanying status update.

@@ -40,7 +40,7 @@ The target chain T is the cropped B7-H3 target fragment carried by the RF2 input
 
 The two structures were selected from the documented RF2 control-gate shortlist. Their PDB files contained antibody heavy chain H, light chain L, and target chain T. The input preparation script extracted the standard amino-acid sequence from each chain and wrote AF3 JSON inputs using the AF3 dialect, version 4. The target chain and antibody chains were supplied as separate protein entities; no designed interface coordinates or RF2 structure template was supplied to AF3.
 
-The durable input-generation code is `tools/prepare_af3_inputs.py`. The two JSON inputs were staged at:
+The durable input-generation code is `tools/06_af3_validation/prepare_af3_inputs.py`. The two JSON inputs were staged at:
 
 - `/scratch/ghaedi/mab/af3_validation_inputs/armA_task265.json`
 - `/scratch/ghaedi/mab/af3_validation_inputs/armB_task131.json`
@@ -58,7 +58,7 @@ The durable input-generation code is `tools/prepare_af3_inputs.py`. The two JSON
 - Input chains: H, L, T
 - Output location: `/scratch/ghaedi/mab/af3_validation_pilot/`
 
-The AF3 pilot worker is `tools/alphafold3_validation_pilot_job.sh`. The Slurm array job was accepted as `21972327`; task 0 ran on `rg21704` for 36:49 and task 1 ran on `rg31701` for 1:01:22. Both exited `0:0`.
+The AF3 pilot worker is `tools/06_af3_validation/alphafold3_validation_pilot_job.sh`. The Slurm array job was accepted as `21972327`; task 0 ran on `rg21704` for 36:49 and task 1 ran on `rg31701` for 1:01:22. Both exited `0:0`.
 
 ## 4. Validation criteria
 
@@ -132,8 +132,8 @@ Because both arms were evaluated separately, this run says nothing about whether
 
 The complete Arm A and Arm B pilot outputs are preserved under:
 
-- `results/af3_validation_pilot/armA_task265/`
-- `results/af3_validation_pilot/armB_task131/`
+- `results/06_01_af3_validation_pilot/armA_task265/`
+- `results/06_01_af3_validation_pilot/armB_task131/`
 
 Each directory contains the AF3 input-derived data JSON, aggregate confidence files, ranking-score CSV, terms-of-use file, and all four per-seed/per-sample model mmCIF and confidence files. The computational outputs are retained as provenance and are not presented as experimental evidence.
 

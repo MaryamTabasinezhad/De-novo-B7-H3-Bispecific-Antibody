@@ -9,8 +9,8 @@
 set -euo pipefail
 source /lustre09/project/6089454/ghaedi/mab/config/hpc/rorqual.sh
 INPUTS="$MAB_SCRATCH_ROOT/rfantibody_inputs_corrected3"
-python "$MAB_PROJECT_ROOT/tools/validate_rfantibody_inputs.py" \
+python "$MAB_PROJECT_ROOT/tools/01_target_input_qc/validate_rfantibody_inputs.py" \
   --framework "$INPUTS/framework_HLT.pdb" \
   --target-a "$INPUTS/target_A.pdb" \
   --target-b "$INPUTS/target_B.pdb" \
-  --output "$MAB_PROJECT_ROOT/reports/rfantibody_input_qc.json"
+  --output "$MAB_PROJECT_ROOT/reports/04_02_rfantibody_input_qc.json"

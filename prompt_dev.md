@@ -31,7 +31,7 @@ Before implementation:
 
 1. Read `AGENTS.md` and inspect relevant project settings and command restrictions.
 2. Read `README.md` and the relevant sections of `doc/project-1-computational-first-process.md`.
-3. Read `reports/status.md` and `reports/decision_log.md` when present. Treat dated notes as recorded history, not proof of current state.
+3. Read `reports/00_06_status.md` and `reports/00_05_decision_log.md` when present. Treat dated notes as recorded history, not proof of current state.
 4. Inspect Git status and relevant existing files. Preserve unrelated and in-progress changes.
 5. Check existing outputs, recorded job IDs, and current scheduler state before starting or resuming computation. Distinguish project jobs from unrelated jobs using available metadata.
 6. Consult `skills/INDEX.md`, then the matching skill's `SKILL.md`, runtime note, and relevant examples before planning or writing analysis code. If none fits, explain the gap and use a suitable direct method within the authorized scope.
@@ -100,9 +100,9 @@ Mark a task complete only after its required artifacts exist, execution has succ
 
 ## Progress and decision records
 
-Maintain `reports/status.md` when implementation or compute work begins. Record the timestamp, current work, completed work, failures or blockers, active job IDs, and next steps.
+Maintain `reports/00_06_status.md` when implementation or compute work begins. Record the timestamp, current work, completed work, failures or blockers, active job IDs, and next steps.
 
-Record unresolved scientific choices and relevant decisions in `reports/decision_log.md` when needed; create it only as part of actual authorized project work. State the decision, rationale or unresolved question, affected work, and any provisional assumption. Do not invent answers to fill the record.
+Record unresolved scientific choices and relevant decisions in `reports/00_05_decision_log.md` when needed; create it only as part of actual authorized project work. State the decision, rationale or unresolved question, affected work, and any provisional assumption. Do not invent answers to fill the record.
 
 Keep analysis notes concise and useful for another operator to understand the outputs and reproduce important steps. Do not create elaborate manifests by default.
 

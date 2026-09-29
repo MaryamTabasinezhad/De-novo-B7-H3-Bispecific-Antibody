@@ -18,7 +18,7 @@ Project inputs prepared in scratch from the approved pair: a 12-A spatial crop
 for Arm A hotspots T126–T129, a 12-A spatial crop for Arm B hotspots
 T228/T229/T232/T234/T236/T238/T240/T241, and the official hu-4D5-8 Fv HLT
 framework. The preparation implementation is tracked in
-`tools/prepare_rfantibody_inputs.py`.
+`tools/01_target_input_qc/prepare_rfantibody_inputs.py`.
 
 The corrected GPU smoke test completed successfully as job **21526260** on an
 H100: PyTorch reported CUDA 11.8, CUDA was available, and the RFantibody CLI
@@ -75,5 +75,5 @@ pilot.
 
 ProteinMPNN pilot **21719319** completed successfully with two deterministic
 CDR-loop sequences per accepted Arm A and Arm B backbone. The four candidates
-are recorded in `reports/rfantibody_b7h3_mpnn_qc.md`; RF2 is the next gated
+are recorded in `reports/04_06_proteinmpnn_qc.md`; RF2 is the next gated
 stage and has not yet been submitted.

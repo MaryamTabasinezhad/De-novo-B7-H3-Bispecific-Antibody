@@ -28,7 +28,7 @@ unverified. Binding different antigen molecules alone does not satisfy it.
 The former tandem-scFv-Fc assumption had two A and two B sites. The user-selected
 product instead has one A and one B site. Historical descriptions of the former format, including the
 unchanged AGENTS.md research-context paragraph, are superseded for architecture
-by this user decision (reports/decision_log.md, STEP0-008).
+by this user decision (reports/00_05_decision_log.md, STEP0-008).
 
 Exact Fc isotype/sequence, hinge, heavy-chain heterodimerization and light-chain
 pairing strategy remain unresolved. Do not infer a common light chain, particular
@@ -41,7 +41,7 @@ may remain intermediate design inputs; they do not define the final product.
 - Record sources, software/model versions, commands, important parameters, relevant random seeds, and output locations in concise analysis notes. Use checksums only when they answer a concrete identity or integrity question.
 - After every Slurm, installation, validation, or analysis job, notify the user
   with the exact job ID, success or failure state, evidence inspected, and the
-  next plan. Update the canonical `reports/status.md` and any relevant report
+  next plan. Update the canonical `reports/00_06_status.md` and any relevant report
   in the tracked workspace, commit the durable update, push it to GitHub, and
   report the commit and push status. A job is not considered closed until its
   result, blocker or failure disposition, and next plan are recorded and
@@ -49,7 +49,7 @@ may remain intermediate design inputs; they do not define the final product.
 - Use human canonical CD276 numbering as the reporting coordinate system.
 - Keep experimental contacts, region-defining residues, and computational design anchors in separate fields.
 - Do not treat one predicted structure or one score as proof of binding or affinity.
-- Never silently replace a missing scientific decision. Write unresolved items to `reports/decision_log.md` and stop at the relevant gate.
+- Never silently replace a missing scientific decision. Write unresolved items to `reports/00_05_decision_log.md` and stop at the relevant gate.
 - Keep multiple structurally and sequence-diverse candidates through every stage.
 - Make every numerical cutoff configurable in `config/filters.yaml`.
 - Treat developability as a staged risk assessment, not as a single score. Separate computational hypotheses from measurements that require purified protein.
@@ -121,7 +121,7 @@ counts as a useful molecule:
 - which properties are computational triage only and which will require purified
   protein or cell-based measurements.
 
-Record unresolved choices in `reports/decision_log.md`. Do not let an affinity
+Record unresolved choices in `reports/00_05_decision_log.md`. Do not let an affinity
 ranking silently choose the product format or biological endpoint.
 
 ### Scope Gate
@@ -780,7 +780,7 @@ scores do not replace these measurements.
 - `results/controls/control_panel.fasta`
 - `results/candidates/final_panel.csv`
 - `results/scorecards/final_selection_matrix.csv`
-- `reports/decision_log.md`
+- `reports/00_05_decision_log.md`
 
 ### Completion Gate
 
@@ -830,7 +830,7 @@ scores do not replace these measurements.
 ## Provisional Computational Funnel
 
 The approved Step 4–5 breadth pilot is documented in
-`reports/step4_backbone_sequence_pilot.md`. Its values are fixed for this
+`reports/04_01_backbone_sequence_pilot.md`. Its values are fixed for this
 pilot and may be revised only after the pilot is reviewed.
 
 | Stage | Suggested starting scale per epitope |
@@ -862,3 +862,15 @@ pilot and may be revised only after the pilot is reviewed.
 - [Blueprint for antibody biologics developability](https://pmc.ncbi.nlm.nih.gov/articles/10012935/)
 - [Developability considerations for bispecific and multispecific antibodies](https://pmc.ncbi.nlm.nih.gov/articles/PMC11352713/)
 - [FDA: Immunogenicity Assessment for Therapeutic Protein Products](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/immunogenicity-assessment-therapeutic-protein-products)
+
+## Visual traceability and numbered artifact contract
+
+All durable project artifacts must be organized into a numbered visual stream. Use
+`NN_SS_description` naming, where `NN` is the workflow step and `SS` is the
+substep. Keep reports, results, work areas, and execution records in matching
+numbered streams, with a README or index at each stream root. A scientist should
+be able to identify the project beginning, current stage, completed outputs, and
+next stage by listing the folders and filenames in lexical order. Do not create
+unnumbered scientific reports or result directories. Before a milestone is
+complete, verify that the report, durable result/provenance artifact, and status
+record use the same stage and substep identifiers and describe the same state.

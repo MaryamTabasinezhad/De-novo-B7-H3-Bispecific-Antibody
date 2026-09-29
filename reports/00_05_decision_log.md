@@ -30,7 +30,7 @@ Recorded requirements:
 - Require a later assessment of whether epitope placement and construct geometry permit binding without interference. No distance cutoff is inferred, and separation is not treated as proof of simultaneous binding.
 - Do not infer a requirement for cis binding on one antigen versus binding different antigen molecules from this statement alone.
 
-Affected records: `reports/step0_scope.md`, `reports/status.md`, and PM coordination. These are design objectives, not evidence of achieved biological activity or developability. No Step 1 or epitope search is initiated by recording them.
+Affected records: `reports/00_01_scope.md`, `reports/00_06_status.md`, and PM coordination. These are design objectives, not evidence of achieved biological activity or developability. No Step 1 or epitope search is initiated by recording them.
 
 ### STEP0-003 — endpoint trade-off policy, 2026-09-18
 
@@ -116,7 +116,7 @@ unauthorized; later authorization and execution are recorded in STEP1-001.
 
 ### STEP0-009 — Fc/pairing recommendation, 2026-09-19
 
-Authorized literature review completed in `reports/step0_fc_pairing_review.md`.
+Authorized literature review completed in `reports/00_04_fc_pairing_review.md`.
 Proposed: effector-competent human IgG1, preserve distinct cognate light chains,
 cFAE as leading assembly option; CrossMab plus heavy-chain heterodimerization is
 an alternative. Common-light-chain constraints would need early incorporation.
@@ -142,7 +142,7 @@ Step 1 remains separately gated.
 
 ### STEP0-011 — provisional screening policy, 2026-09-21
 
-Prepared `reports/step0_screening_policy.md` as the next bounded Step 0 task.
+Prepared `reports/00_02_screening_policy.md` as the next bounded Step 0 task.
 It proposes staged evidence tracks, preservation of sequence/structure diversity,
 approximately 20–50 parents per epitope when supported by the pool, and explicit
 hard-exclusion, review-flag, and context-dependent risk dispositions. Numerical
@@ -163,7 +163,7 @@ sequence is selected. Step 2 carry-forward awaits the user's decision.
 ### STEP2-001 — preliminary epitope pair confirmed, 2026-09-21
 
 The user confirmed the preliminary design pair recorded in
-`reports/step2_epitope_evidence.md`: Arm A targets the exposed 8H9-like IgV1
+`reports/02_01_epitope_evidence.md`: Arm A targets the exposed 8H9-like IgV1
 FG-loop region around canonical 126–129 (`IRDF`), and Arm B targets the
 coordinate-derived exposed IgC1 patch 2 around Q228, Q229, H232, S234, T236,
 T238, Q240 and R241. Arm A is supported by experimental 8H9 mapping plus the
@@ -185,7 +185,7 @@ and the oriented 9LY6 antigen chain. Centroid separation was approximately
 model; corresponding 9LY6 values were approximately 62.0 Å and 34.2 Å. These
 measurements support distinct surface locations but do not establish Fab reach,
 approach-vector compatibility, or simultaneous cis binding. Outputs are in
-`metadata/epitope_pair_geometry.csv` and `reports/step2_geometry_check.md`.
+`metadata/epitope_pair_geometry.csv` and `reports/02_02_geometry_check.md`.
 
 ### STEP3-001 — preliminary design-anchor candidates recorded, 2026-09-21
 
@@ -213,4 +213,4 @@ sequence B7-H3 RF2 run remains diagnostic and excluded from ranking; its
 coordinate failures remain visible in the QC reports. This decision authorizes
 documentation and the bounded pilot scope, not production-scale generation or
 whole-IgG assembly. Pilot gates, provenance requirements, and planned outputs
-are defined in `reports/step4_backbone_sequence_pilot.md`.
+are defined in `reports/04_01_backbone_sequence_pilot.md`.

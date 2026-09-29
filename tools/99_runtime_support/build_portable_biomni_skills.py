@@ -19,7 +19,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_SOURCE_ARCHIVES = PROJECT_ROOT / "third_party" / "biomni" / "archives"
 DEFAULT_OUTPUT_ROOT = PROJECT_ROOT / "build"
 SOURCE_URL = "https://biomni.phylo.bio/skills"

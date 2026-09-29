@@ -46,7 +46,7 @@ adapter frameworks are not required.
 the imported examples and archives. Read them selectively for methods; their
 platform paths and operational contracts are not local instructions.
 
-`tools/build_portable_biomni_skills.py` can rebuild into an isolated `build/`
+`tools/99_runtime_support/build_portable_biomni_skills.py` can rebuild into an isolated `build/`
 directory when needed. It is not part of routine analysis. The archive in `dist/`
 is the historical 2026-09-14 snapshot, not the current Rorqual-adapted skills.
 Use this Git checkout for current instructions. Existing source/archive hashes

@@ -1,7 +1,7 @@
 # Step 4–5 RFantibody/ProteinMPNN pilot plan
 
 Status: approved scope; execution state and job records are maintained in
-`reports/status.md`. Updated 2026-09-25.
+`reports/00_06_status.md`. Updated 2026-09-25.
 
 ## Purpose
 
@@ -91,7 +91,7 @@ the approved scale using the accepted toolchain.
 - `work/05_proteinmpnn_sequences/A_sequences.qv` and `B_sequences.qv`
 - `work/05_proteinmpnn_sequences/sequence_metadata.csv`
 - `work/06_structure_predictions/rf2/`
-- Pilot QC tables and status updates in `reports/status.md`
+- Pilot QC tables and status updates in `reports/00_06_status.md`
 
 No production-scale campaign is implied until the pilot completion gates are
 reviewed.

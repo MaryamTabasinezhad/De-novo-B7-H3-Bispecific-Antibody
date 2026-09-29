@@ -2,7 +2,7 @@
 
 Updated 2026-09-27 04:36 UTC.
 
-**Reporting contract:** `reports/status.md` is the single canonical project
+**Reporting contract:** `reports/00_06_status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
 and next-step updates must be recorded here and pushed to GitHub.
 
@@ -16,7 +16,7 @@ are under `coordination/`.
 The following paragraphs summarize the initial Step 0 coordination history;
 later execution updates appear below.
 
-DEV prepared `reports/step0_scope.md` and `reports/decision_log.md` from existing
+DEV prepared `reports/00_01_scope.md` and `reports/00_05_decision_log.md` from existing
 documents. PM accepted `STEP0-001` and returned its review through the session
 queue, completing a task-and-review cycle. The Step 0 scientific scope gate remains open:
 Fc/architecture details, budget/diversity, and risk
@@ -35,7 +35,7 @@ binding is not required. Isoform/soluble policy was later resolved in STEP0-006.
 PM accepted this transcription.
 
 `STEP0-005`: literature-only isoform/soluble-antigen recommendation prepared in
-`reports/step0_isoform_review.md`; PM accepted the evidence review. No target preparation or
+`reports/00_03_isoform_review.md`; PM accepted the evidence review. No target preparation or
 compute. The policy was subsequently approved in STEP0-006.
 
 `STEP0-006`: user approved required cell-surface human 4Ig binding for both
@@ -151,18 +151,18 @@ ProteinMPNN sequence pilot. No sequence-design job has started yet.
 
 ProteinMPNN pilot job `21719319` completed successfully with two deterministic
 CDR-loop sequences per accepted backbone (four candidates total). The tracked
-RF2 wrapper `tools/rfantibody_b7h3_rf2_job.sh` was committed and pushed as
+RF2 wrapper `tools/05_rf2_qc/rfantibody_b7h3_rf2_job.sh` was committed and pushed as
 `bd0dc0b`. RF2 job `21741284` completed successfully on 2026-09-24 with three
 recycles per arm, official `RF2_ab.pt` weights, and seeds 101 (Arm A) and 202
 (Arm B). It produced four best PDBs, but all four failed the preliminary
 geometry screen: each had a minimum H/L–T heavy-atom distance below 2.0 Å.
 Therefore 0/4 candidates pass RF2 QC. Results and the scratch paths are
-recorded in `reports/rfantibody_b7h3_rf2_qc.md`; no candidate advances to
+recorded in `reports/05_01_rf2_qc.md`; no candidate advances to
 independent validation or whole-IgG assembly until coordinate handling is
 diagnosed.
 
 The full pilot candidate accounting is recorded in
-`reports/candidate_accounting.md`. In the corrected lineage, 2/2 input windows
+`reports/07_01_candidate_accounting.md`. In the corrected lineage, 2/2 input windows
 passed QC, 2 arm backbones passed after the Arm A retry, ProteinMPNN produced 4
 sequence candidates (2 per arm), and RF2 evaluated all 4; 0/4 passed the RF2
 geometry screen. The workflow's approximately 10,000-backbone
@@ -171,7 +171,7 @@ not completed work or a current production run.
 
 To distinguish a model/input problem from a B7-H3-specific result, the tracked
 official RF2 H/L/T example control
-(`tools/rfantibody_rf2_official_control_job.sh`) was committed and pushed as
+(`tools/05_rf2_qc/rfantibody_rf2_official_control_job.sh`) was committed and pushed as
 `5aa41c9`, then completed successfully as Slurm job `21747881`. With the same
 RF2_ab weights, three recycles, cautious mode, and shared geometry checker, the
 official output had pLDDT `0.903`, minimum heavy-atom H/L–T distance `3.167 Å`,
@@ -180,7 +180,7 @@ corrected to recognize digit-prefixed hydrogen atom names, and both the
 official control and B7-H3 outputs were recomputed. The control still passes
 and points to a B7-H3 input/output representation issue rather than a
 universal RF2 or checker failure. Details are in
-`reports/rfantibody_rf2_official_control.md`.
+`reports/05_04_rf2_official_control.md`.
 
 ## Current refresh — 2026-09-25
 
@@ -204,11 +204,11 @@ two-definition scope is Arm A and Arm B, for a planning range of 200–600
 backbones and approximately 800–2,400 sequences before filtering. This is a
 documentation and authorization milestone only; no jobs have been launched for
 this breadth pilot. The complete scope and promotion gates are in
-`reports/step4_backbone_sequence_pilot.md`, and the decision is recorded as
-`STEP4-001` in `reports/decision_log.md`.
+`reports/04_01_backbone_sequence_pilot.md`, and the decision is recorded as
+`STEP4-001` in `reports/00_05_decision_log.md`.
 
 The first breadth-pilot execution has now been submitted through the tracked
-array wrapper `tools/rfantibody_b7h3_backbone_pilot_array.sh` (commit
+array wrapper `tools/04_design_sequence/rfantibody_b7h3_backbone_pilot_array.sh` (commit
 `fe5da2d`). Arm A array `21799356` and Arm B array `21799357` each contain 100
 one-design GPU tasks with a maximum concurrency of 20 and a two-hour task
 limit. They use the corrected target crops, the fixed H/L/T framework, the
@@ -258,12 +258,12 @@ B sequences (2,400 total) before sequence QC. RF2 remains downstream of
 ProteinMPNN outputs and will not be submitted in advance.
 
 The detailed RF2_ab scientific explanation is recorded in
-`reports/rf2_ab_review.md`. It documents why RF2_ab is the antibody-specific
+`reports/05_05_rf2_ab_review.md`. It documents why RF2_ab is the antibody-specific
 post-ProteinMPNN validation gate, what it can and cannot establish, and how the
 earlier B7-H3 diagnostic result is interpreted. The separate RF3 note remains
-in `reports/rf3_ab_review.md` for future independent-validation planning.
+in `reports/06_02_rf3_ab_review.md` for future independent-validation planning.
 
-The ProteinMPNN wrapper `tools/rfantibody_b7h3_proteinmpnn_array.sh` was
+The ProteinMPNN wrapper `tools/04_design_sequence/rfantibody_b7h3_proteinmpnn_array.sh` was
 committed and pushed as `def2020`. Arm A array `21807824` and Arm B array
 `21807825` were submitted with 300 one-backbone tasks each, maximum concurrency
 20, one-hour task limits, CDR loops H1/H2/H3/L1/L2/L3, temperature 0.1, four
@@ -284,7 +284,7 @@ RF2 remains gated until all 2,400 sequence outputs are present and checked.
 
 The user authorized RF2 on the sequence models already available, without
 waiting for the missing ProteinMPNN retries. The tracked wrapper
-`tools/rfantibody_b7h3_rf2_array.sh` was committed and pushed as `434773c`.
+`tools/05_rf2_qc/rfantibody_b7h3_rf2_array.sh` was committed and pushed as `434773c`.
 Arm A RF2 array `21836656` and Arm B RF2 array `21836657` were submitted with
 300 task slots each, three recycles, `RF2_ab.pt`, task-specific seeds, and
 empty-task skipping. At submission, 1,128 Arm A and 1,064 Arm B sequence PDBs
@@ -317,7 +317,7 @@ measurements. Plan references now include antibody developability and
 immunogenicity guidance.
 
 `STEP0-009`: Fc/pairing evidence review prepared in
-`reports/step0_fc_pairing_review.md`. Recommends effector-competent human IgG1 and
+`reports/00_04_fc_pairing_review.md`. Recommends effector-competent human IgG1 and
 preservation of cognate Fab pairs, with cFAE the leading assembly route and
 CrossMab an alternative. Recommendations remain unselected; PM artifact review
 requested. No scientific runs, installations, target preparation or Step 1 work.
@@ -372,7 +372,7 @@ over the 2,364 RF2 outputs, with rejected structures and reasons preserved.
 The QC worker was committed as `57925db` and submitted to Slurm as CPU job
 `21885138`. It loads the verified `scipy-stack/2026b` environment and writes
 separate Arm A and Arm B TSV summaries under
-`results/rfantibody_b7h3_rf2_qc_20260927/`. The job was pending at submission;
+`results/05_01_rf2_qc_20260927/`. The job was pending at submission;
 its completion and scientific pass/reject counts will be recorded here before
 any downstream ranking.
 
@@ -387,7 +387,7 @@ pending at the scheduler check. Its Slurm result and QC counts remain pending.
 
 Replacement job `21885145` completed successfully in 34 seconds (Slurm exit
 `0:0`). It processed 1,176 Arm A and 1,188 Arm B RF2 structures and wrote the
-durable TSV summaries under `results/rfantibody_b7h3_rf2_qc_20260927/`. Under
+durable TSV summaries under `results/05_01_rf2_qc_20260927/`. Under
 the current hard geometry screen (minimum heavy-atom distance at least 2.0 Å
 and zero antibody–target pairs below 2.0 Å), direct inspection found 167/1,176
 Arm A and 155/1,188 Arm B structures meeting that geometry criterion. The
@@ -421,7 +421,7 @@ CPU Slurm job `21885408`. It uses the canonical crop mappings (Arm A target
 back to the selected Arm A residues 126–129 and Arm B residues 228, 229, 232,
 234, 236, 238, 240 and 241. It screens only the 322 geometry-passing models
 and writes durable per-model TSV files under
-`results/rfantibody_b7h3_interface_20260927/`. The job was pending at
+`results/05_02_interface_screen_20260927/`. The job was pending at
 submission; its completion and contact-coverage counts will be recorded here.
 
 Interface screen job `21885408` completed successfully in four seconds (Slurm
@@ -431,8 +431,8 @@ least two selected residues. Of the 155 Arm B geometry passes, 148 contacted
 some target residue and 129 contacted at least one selected Arm B residue; 98
 contacted at least two selected residues. H/L chain contact counts were 98/167
 for Arm A and 107/155 for Arm B. The detailed method and per-model records are
-in `reports/rfantibody_b7h3_interface_screen.md` and
-`results/rfantibody_b7h3_interface_20260927/`. These are contact-coverage
+in `reports/05_02_interface_screen.md` and
+`results/05_02_interface_screen_20260927/`. These are contact-coverage
 observations, not affinity or biological validation; no final interface cutoff
 has been selected.
 
@@ -471,8 +471,8 @@ representative per RF2 task: 40 Arm A and 29 Arm B models. Among those
 representatives, 11 Arm A and 19 Arm B contact at least one selected epitope
 residue; 4 Arm A and 11 Arm B contact at least two. The durable shortlist and
 full criteria are recorded in
-`reports/rfantibody_b7h3_control_shortlist.md` and
-`results/rfantibody_b7h3_control_shortlist_20260927/`. This is a structural
+`reports/05_03_control_shortlist.md` and
+`results/05_03_control_shortlist_20260927/`. This is a structural
 shortlist only; the next independent validation gate remains AlphaFold 3.
 
 ## AlphaFold 3 runtime check — 2026-09-27
@@ -497,7 +497,7 @@ The first direct `uv sync --no-dev` attempt used the shallow source checkout and
 reached CMake configuration, but the login-node build failed at Ninja process
 creation with `posix_spawn: Operation not permitted`. No package install was
 completed by that attempt. The tracked worker
-`tools/alphafold3_install_job.sh` moves the same build and AF3 data test into a
+`tools/99_runtime_support/alphafold3_install_job.sh` moves the same build and AF3 data test into a
 CPU Slurm allocation with eight build CPUs; it does not download databases or
 model weights.
 
@@ -660,6 +660,8 @@ AF3 GPU validation pilot retry job `21972327` was accepted by Slurm as a two-tas
 
 AF3 pilot array `21972327` is partially complete: task 0 (Arm A representative task 265) completed successfully on H100 node `rg21704` in 36:49, including full MSA and inference. Task 1 (Arm B representative task 131) remains running on `rg31701` in its MSA stage. Arm A output is in `/scratch/ghaedi/mab/af3_validation_pilot/armA_task265/`; no scientific result interpretation is finalized until both tasks finish.
 
-Arm A AF3 pilot outputs from job `21972327_0` have been copied from scratch into tracked `results/af3_validation_pilot/armA_task265/`, including all four seed/sample model mmCIF files, confidence JSON files, ranking scores, generated data JSON, and the AF3 terms file. Arm A completed successfully in 36:49 on H100; the four ranking scores were 0.6139, 0.6062, 0.6080, and 0.6142. The Arm B array task remains running, so no cross-arm interpretation is recorded yet.
+Arm A AF3 pilot outputs from job `21972327_0` have been copied from scratch into tracked `results/06_01_af3_validation_pilot/armA_task265/`, including all four seed/sample model mmCIF files, confidence JSON files, ranking scores, generated data JSON, and the AF3 terms file. Arm A completed successfully in 36:49 on H100; the four ranking scores were 0.6139, 0.6062, 0.6080, and 0.6142. The Arm B array task remains running, so no cross-arm interpretation is recorded yet.
 
-AF3 pilot array `21972327` is complete: task 0 Arm A finished in 36:49 and task 1 Arm B finished in 1:01:22, both exit `0:0` on H100 nodes. Arm B outputs from task 1 are now copied into tracked `results/af3_validation_pilot/armB_task131/`. Arm B ranking scores were 0.60, 0.60, 0.58, and 0.60; all four models had no clashes. H/L chain-pair ipTM was high (~0.85–0.90), while H/L-to-T chain-pair ipTM was low (~0.10–0.15) with high antibody–T PAE (~11–20 Å). Together with Arm A's low antibody–T ipTM (~0.16–0.18), the pilot supports antibody folding/H-L pairing but does not support confident B7-H3 interface recovery for either arm. This is a pilot observation, not a calibrated rejection threshold or experimental conclusion.
+AF3 pilot array `21972327` is complete: task 0 Arm A finished in 36:49 and task 1 Arm B finished in 1:01:22, both exit `0:0` on H100 nodes. Arm B outputs from task 1 are now copied into tracked `results/06_01_af3_validation_pilot/armB_task131/`. Arm B ranking scores were 0.60, 0.60, 0.58, and 0.60; all four models had no clashes. H/L chain-pair ipTM was high (~0.85–0.90), while H/L-to-T chain-pair ipTM was low (~0.10–0.15) with high antibody–T PAE (~11–20 Å). Together with Arm A's low antibody–T ipTM (~0.16–0.18), the pilot supports antibody folding/H-L pairing but does not support confident B7-H3 interface recovery for either arm. This is a pilot observation, not a calibrated rejection threshold or experimental conclusion.
+
+Documentation organization milestone — 2026-09-28: reports, results, work, tools, and coordination now expose a numbered visual workflow stream. Reports use `NN_SS_description`, results use matching numbered directories, and each stream has a README index. Existing scientific content and result files were renamed or moved without changing their contents; executable tool paths were updated, including the runtime-support project-root calculation. New durable artifacts must follow the numbered naming contract recorded in `AGENTS.md` and `doc/project-1-computational-first-process.md`.

@@ -1,7 +1,7 @@
 # Step 0 scope record
 
 Initial record 2026-09-18; Step 0 records updated through `STEP0-011`; current
-execution state recorded in `reports/status.md` on 2026-09-21.
+execution state recorded in `reports/00_06_status.md` on 2026-09-21.
 
 **State: Step 0 documentation and policy records prepared; Step 1 preliminary
 target preparation completed.** This historical scope record does not by itself

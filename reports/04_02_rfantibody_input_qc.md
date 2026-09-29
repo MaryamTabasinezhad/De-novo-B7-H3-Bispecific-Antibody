@@ -23,9 +23,9 @@ are under `/scratch/ghaedi/mab/rfantibody_inputs_corrected3/`.
 - Failed diagnostic job `21666840`: used the earlier disconnected spatial crop;
   it reported target Cα gaps and correctly returned a nonzero QC status.
 - Passing validation job `21666857`: ran the tracked
-  `tools/validate_rfantibody_inputs.py` through
-  `tools/validate_rfantibody_inputs_job.sh` and wrote
-  `reports/rfantibody_input_qc.json`.
+  `tools/01_target_input_qc/validate_rfantibody_inputs.py` through
+  `tools/01_target_input_qc/validate_rfantibody_inputs_job.sh` and wrote
+  `reports/04_02_rfantibody_input_qc.json`.
 
 | Arm | Target window | H/L/T CA counts | Missing hotspots | Cα gaps >4.5 Å | Minimum pre-existing H/L–T distance | Result |
 |---|---:|---:|---|---|---:|---|

@@ -14,8 +14,8 @@ module load scipy-stack/2025a
 RUN="$MAB_SCRATCH_ROOT/rfantibody_b7h3_rf2_20260926"
 OUT="$MAB_RESULTS_DIR/rfantibody_b7h3_rf2_qc_20260927"
 mkdir -p "$OUT"
-python "$MAB_PROJECT_ROOT/tools/rfantibody_b7h3_rf2_qc.py" \
+python "$MAB_PROJECT_ROOT/tools/05_rf2_qc/rfantibody_b7h3_rf2_qc.py" \
   "$RUN/A" "$OUT/arm_a.tsv"
-python "$MAB_PROJECT_ROOT/tools/rfantibody_b7h3_rf2_qc.py" \
+python "$MAB_PROJECT_ROOT/tools/05_rf2_qc/rfantibody_b7h3_rf2_qc.py" \
   "$RUN/B" "$OUT/arm_b.tsv"
 printf 'qc_complete run=%s arm_a=%s arm_b=%s\n' "$RUN" "$OUT/arm_a.tsv" "$OUT/arm_b.tsv"

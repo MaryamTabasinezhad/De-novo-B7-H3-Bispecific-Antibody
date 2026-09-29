@@ -2,7 +2,7 @@
 
 Updated 2026-09-24. This audit compares the accepted RFantibody backbone, the
 ProteinMPNN input/output PDBs, and the RF2 best outputs using the tracked
-`tools/audit_rfantibody_coordinate_chain.py` and corrected heavy-atom geometry
+`tools/99_runtime_support/audit_rfantibody_coordinate_chain.py` and corrected heavy-atom geometry
 parser.
 
 ## Input-to-output comparison

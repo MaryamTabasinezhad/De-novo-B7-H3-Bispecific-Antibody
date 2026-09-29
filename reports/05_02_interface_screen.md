@@ -2,7 +2,7 @@
 
 Date: 2026-09-27 04:19 UTC  
 Slurm job: `21885408`  
-Inputs: geometry-passing RF2 models from `results/rfantibody_b7h3_rf2_qc_20260927/`
+Inputs: geometry-passing RF2 models from `results/05_01_rf2_qc_20260927/`
 
 The screen counted heavy-atom antibody–target contacts within 4.5 Å for each
 geometry-passing model. RF2 renumbers the target chain, so target residues were
@@ -21,4 +21,4 @@ The screen is a contact-coverage filter, not an affinity or biological assay.
 No numerical interface cutoff has been approved, so these counts are retained
 for review rather than treated as final candidate acceptance. The per-model
 records, including contacted selected residues and antibody-chain coverage,
-are in `results/rfantibody_b7h3_interface_20260927/`.
+are in `results/05_02_interface_screen_20260927/`.

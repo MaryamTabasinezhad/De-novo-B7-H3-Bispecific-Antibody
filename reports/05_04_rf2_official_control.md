@@ -3,7 +3,7 @@
 Updated 2026-09-24. The bundled RFantibody H/L/T example
 (`scripts/examples/rf2/example_inputs/ab_proteinmpnn_output.pdb`) was run
 through the tracked control wrapper
-`tools/rfantibody_rf2_official_control_job.sh` as Slurm job `21747881`.
+`tools/05_rf2_qc/rfantibody_rf2_official_control_job.sh` as Slurm job `21747881`.
 
 ## Runtime
 

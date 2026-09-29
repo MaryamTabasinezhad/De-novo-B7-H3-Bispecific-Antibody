@@ -13,7 +13,7 @@ This file is the local agent contract. Keep it current when the layout, responsi
 ## Session startup
 
 1. Read this file and inspect the current workspace and relevant settings.
-2. Read the relevant sections of `doc/project-1-computational-first-process.md` before scientific implementation. Read `reports/decision_log.md` and `reports/status.md` if they exist.
+2. Read the relevant sections of `doc/project-1-computational-first-process.md` before scientific implementation. Read `reports/00_05_decision_log.md` and `reports/00_06_status.md` if they exist.
 3. Check existing outputs and recorded jobs before starting or resuming compute work. Do not duplicate an active or verified run.
 4. Verify which directories and tools actually exist; the workflow includes planned infrastructure.
 5. Before planning or writing analysis code, consult `skills/INDEX.md`. Use a matching imported skill and inspect its relevant examples before inventing a method. Read its `SKILL.md` and runtime note; if no skill fits, state the gap and proceed with a suitable direct analysis.
@@ -30,12 +30,12 @@ This file is the local agent contract. Keep it current when the layout, responsi
 - `.agents/skills/`: relative links for automatic project-local Codex discovery, with implicit invocation enabled.
 - `config/hpc/`: sourceable Rorqual environment and verified capability notes. Scientific runtime paths remain unverified unless explicitly recorded.
 - `third_party/biomni/`: preserved source archives, exact extractions, and provenance manifest. The source packages did not include a package-level license; keep the repository private until redistribution rights are confirmed.
-- `tools/build_portable_biomni_skills.py`: reproducible, host-neutral converter that reads preserved archives and writes to an isolated output root.
+- `tools/99_runtime_support/build_portable_biomni_skills.py`: reproducible, host-neutral converter that reads preserved archives and writes to an isolated output root.
 - `dist/`: historical portable transfer archive from 2026-09-14. It predates the lightweight HPC adaptation; use the current Git checkout, not that archive, for active instructions.
 - `doc/project-1-computational-first-process.md`: primary research workflow and its execution rules.
 - `De-novo-B7-H3-review.md`: historical review of commit `9085bced77e6c1e289c5ab3570ede4cf87a538a0`; its Git/history observations describe that earlier checkout.
 - Git tracking is restored at this root. The local `main` branch tracks `origin/main`; preserve the existing repository history.
-- HPC configuration now exists in `config/hpc/`, and setup progress is recorded in `reports/status.md`. Scientific `data/`, `metadata/`, `work/`, and `results/` are created only as analyses need them. No antibody design or prediction runs have been completed.
+- HPC configuration now exists in `config/hpc/`, and setup progress is recorded in `reports/00_06_status.md`. Scientific `data/`, `metadata/`, `work/`, and `results/` are created only as analyses need them. No antibody design or prediction runs have been completed.
 
 ## Settings locations
 
@@ -93,7 +93,7 @@ User clarification, 2026-09-14: this is a computational research and analysis pr
 ### Run provenance and progress
 
 - Keep concise analysis notes with sources, commands, important parameters, relevant seeds, tool/model versions, output locations, and candidate lineage where scientifically needed. A machine-readable run manifest is optional, not a prerequisite to analysis.
-- Maintain `reports/status.md` once implementation or compute work begins: timestamp, current work, completed work, failures/blockers, active job IDs, and next steps. Report milestones and failures to the user in the current conversation.
+- Maintain `reports/00_06_status.md` once implementation or compute work begins: timestamp, current work, completed work, failures/blockers, active job IDs, and next steps. Report milestones and failures to the user in the current conversation.
 
 ### Data preservation
 
@@ -108,7 +108,7 @@ User clarification, 2026-09-14: this is a computational research and analysis pr
 - Keep experimental contacts, region-defining residues, and computational design anchors separate.
 - Keep numerical cutoffs configurable in `config/filters.yaml`; label provisional values and preserve rejection reasons and candidate diversity.
 - Treat predicted binding and in-silico affinity optimization as computational hypotheses. Experimental affinity or biological activity requires measurement.
-- Record unresolved scientific choices in `reports/decision_log.md` and stop only the work dependent on the relevant gate. Continue independent authorized work.
+- Record unresolved scientific choices in `reports/00_05_decision_log.md` and stop only the work dependent on the relevant gate. Continue independent authorized work.
 
 ## Milestone commits and pushes
 
@@ -172,3 +172,7 @@ have been committed, pushed, and verified on GitHub.
 Deliver the artifacts specified by `README.md` and `doc/project-1-computational-first-process.md`, with the workflow's inputs, outputs, and completion gates guiding implementation. Keep contracts proportional to that work.
 
 The scratch project's `CLAUDE.md` was consulted for general development practices. It is not an authority for this project. Adopt an external convention only when it serves a concrete requirement here; do not import another project's operational structure. These contracts are self-contained and require no scratch-project documents at session startup.
+
+## Visual documentation and naming contract
+
+Every durable scientific artifact must carry a numeric workflow prefix in its filename or directory name: `NN_SS_description`, where `NN` is the workflow step and `SS` is the substep. Reports, results, work areas, and execution records must be readable in lexical order so a researcher can follow the process by inspecting the tree. Each numbered stage must have an index or README that states its inputs, outputs, current status, and next stage. New files must be placed in the matching numbered stream; do not create unnumbered scientific reports or result directories. A milestone is incomplete until its report, result/provenance record, and status entry agree.

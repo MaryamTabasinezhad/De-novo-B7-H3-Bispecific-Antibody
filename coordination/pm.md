@@ -67,7 +67,7 @@ software installation, model/data acquisition, and compute submission.
 
 - `doc/project-1-computational-first-process.md`
 - `README.md`
-- `reports/status.md`
+- `reports/00_06_status.md`
 - `AGENTS.md`
 - `skills/INDEX.md`
 - `config/hpc/README.md`
@@ -85,9 +85,9 @@ services as part of this task.
 
 - A Step 0 scope record at the project location chosen by DEV, following existing
   project conventions.
-- `reports/decision_log.md` entries only for the unresolved choices actually
+- `reports/00_05_decision_log.md` entries only for the unresolved choices actually
   documented; do not fill them with invented answers.
-- An updated `reports/status.md` describing the documentation task and its limits,
+- An updated `reports/00_06_status.md` describing the documentation task and its limits,
   if DEV determines that a status update is needed under the existing contract.
 
 ### Validation and completion criteria
@@ -120,9 +120,9 @@ does not revoke it.
 Reviewed 2026-09-18 UTC:
 
 - `coordination/dev.md`
-- `reports/step0_scope.md`
-- `reports/decision_log.md`
-- `reports/status.md`
+- `reports/00_01_scope.md`
+- `reports/00_05_decision_log.md`
+- `reports/00_06_status.md`
 
 **Disposition: accepted.** The documentation satisfies the brief. Existing
 assumptions are traceable to the workflow, unresolved choices remain explicitly
@@ -143,9 +143,9 @@ scientific decisions.
 Reviewed 2026-09-18 UTC:
 
 - `coordination/dev.md`
-- `reports/decision_log.md`
-- `reports/step0_scope.md`
-- `reports/status.md`
+- `reports/00_05_decision_log.md`
+- `reports/00_01_scope.md`
+- `reports/00_06_status.md`
 
 **Disposition: accepted.** The user requirements are transcribed faithfully:
 dual-epitope B7-H3 binding, internalization, Fc-mediated tumor-cell killing,
@@ -169,9 +169,9 @@ review cycle. No new task is dispatched pending the user's scientific decisions.
 Reviewed 2026-09-18 UTC:
 
 - `coordination/dev.md`
-- `reports/decision_log.md`
-- `reports/step0_scope.md`
-- `reports/status.md`
+- `reports/00_05_decision_log.md`
+- `reports/00_01_scope.md`
+- `reports/00_06_status.md`
 
 **Disposition: accepted.** The records faithfully transcribe that human B7-H3
 binding is required and binding to other species is not required. They correctly
@@ -231,16 +231,16 @@ no option is selected here and no Step 1 work is authorized.
 **Disposition:** findings recorded for DEV's STEP0-005 artifact preparation.
 No scientific decision was made, no isoform or soluble-antigen policy was
 selected, and no computation or Step 1 activity was performed. PM will wait for
-DEV's `review_requested` notification before reviewing `reports/step0_isoform_review.md`.
+DEV's `review_requested` notification before reviewing `reports/00_03_isoform_review.md`.
 
 ## STEP0-005 — artifact review and disposition
 
 Reviewed 2026-09-18 UTC after DEV's `review_requested` notification:
 
 - `coordination/dev.md`
-- `reports/step0_isoform_review.md`
-- `reports/status.md`
-- `reports/decision_log.md`
+- `reports/00_03_isoform_review.md`
+- `reports/00_06_status.md`
+- `reports/00_05_decision_log.md`
 
 **Disposition: accepted with no material correction.** The report preserves the
 required distinction between human 4Ig/2Ig membrane isoforms and soluble or shed
@@ -269,10 +269,10 @@ dispatched; Step 1 remains excluded pending the user's decision.
 Reviewed 2026-09-19 UTC after DEV's `review_requested` notification:
 
 - `coordination/dev.md`
-- `reports/decision_log.md`
-- `reports/step0_scope.md`
-- `reports/step0_isoform_review.md`
-- `reports/status.md`
+- `reports/00_05_decision_log.md`
+- `reports/00_01_scope.md`
+- `reports/00_03_isoform_review.md`
+- `reports/00_06_status.md`
 
 **Disposition: accepted.** The records faithfully transcribe the user's two-step
 approval (“ok go forward”, followed by “ok do it” after DEV restated the policy
@@ -317,9 +317,9 @@ the current authorization.
 Reviewed 2026-09-19 UTC after DEV's `review_requested` notification:
 
 - `coordination/dev.md`
-- `reports/decision_log.md`
-- `reports/step0_scope.md`
-- `reports/status.md`
+- `reports/00_05_decision_log.md`
+- `reports/00_01_scope.md`
+- `reports/00_06_status.md`
 
 **Disposition: accepted.** The records faithfully transcribe the user's choice
 that both antibody units must be capable of simultaneously engaging two distinct
@@ -342,10 +342,10 @@ Reviewed 2026-09-19 UTC after DEV's `review_requested` notification:
 - `doc/project-1-computational-first-process.md` (updated header, controls,
   handoff, and Steps 11–14)
 - `README.md`
-- `reports/decision_log.md`
-- `reports/step0_scope.md`
-- `reports/status.md`
-- historical-format note in `reports/step0_isoform_review.md`
+- `reports/00_05_decision_log.md`
+- `reports/00_01_scope.md`
+- `reports/00_06_status.md`
+- historical-format note in `reports/00_03_isoform_review.md`
 - `coordination/dev.md`
 
 **Disposition: accepted with one concrete correction required before commit.**
@@ -439,9 +439,9 @@ this review. DEV may prepare a Step 0 comparison artifact; PM will wait for
 
 Reviewed 2026-09-19 UTC after DEV's `review_requested` notification:
 
-- `reports/step0_fc_pairing_review.md`
-- `reports/decision_log.md`
-- `reports/status.md`
+- `reports/00_04_fc_pairing_review.md`
+- `reports/00_05_decision_log.md`
+- `reports/00_06_status.md`
 - `coordination/dev.md`
 
 **Disposition: accepted with no material correction.** The artifact clearly
@@ -471,13 +471,13 @@ dispatched.
 
 Reviewed 2026-09-21 UTC after DEV's `review_requested` notification:
 
-- `reports/step1_target_preparation.md`
-- `reports/step2_epitope_evidence.md`
+- `reports/01_01_target_preparation.md`
+- `reports/02_01_epitope_evidence.md`
 - `metadata/target_features.json`
 - `metadata/structure_manifest.csv`
 - `metadata/numbering_map.csv`
 - `work/01_target_preparation/ensemble_qc.csv`
-- latest `reports/status.md` and `coordination/dev.md`
+- latest `reports/00_06_status.md` and `coordination/dev.md`
 
 **Disposition: corrections required before acceptance.** The 4Ig target
 preparation is useful as a preliminary input: Q5ZPR3-1 features, 9LY5/9LY6
@@ -519,9 +519,9 @@ final acceptance.
 
 Reviewed 2026-09-21 UTC after DEV's `review_requested` notification:
 
-- `reports/step0_screening_policy.md`
-- `reports/decision_log.md`
-- `reports/status.md`
+- `reports/00_02_screening_policy.md`
+- `reports/00_05_decision_log.md`
+- `reports/00_06_status.md`
 - `coordination/dev.md`
 
 **Disposition: accepted with no material correction.** The policy correctly
@@ -547,8 +547,8 @@ record is frozen for DEV's milestone commit; no further task is dispatched.
 
 Reviewed 2026-09-21 UTC after DEV's `review_requested` notification:
 
-- `reports/decision_log.md`
-- `reports/status.md`
+- `reports/00_05_decision_log.md`
+- `reports/00_06_status.md`
 - `coordination/dev.md`
 
 **Disposition: accepted.** The records faithfully transcribe the user's approval
@@ -612,12 +612,12 @@ No epitope, anchor, design, or compute is authorized. PM will await regenerated
 Reviewed the regenerated target-preparation artifacts and corrected notes on
 2026-09-21 UTC:
 
-- `reports/step1_target_preparation.md`
-- `reports/step2_epitope_evidence.md`
+- `reports/01_01_target_preparation.md`
+- `reports/02_01_epitope_evidence.md`
 - `metadata/numbering_map.csv`
 - `metadata/structure_manifest.csv`
 - `work/01_target_preparation/ensemble_qc.csv`
-- `reports/status.md` and `coordination/dev.md`
+- `reports/00_06_status.md` and `coordination/dev.md`
 
 **Disposition: accepted with no material correction.** The sidecars now agree
 that 9LME chain A excludes the `ENLYFQG` affinity tag, anchors model residue
@@ -641,7 +641,7 @@ authorized by this review. PM record is frozen for DEV's milestone commit.
 Reviewed the current files directly on 2026-09-21 UTC after the regeneration:
 `metadata/numbering_map.csv`, `metadata/structure_manifest.csv`,
 `work/01_target_preparation/ensemble_qc.csv`,
-`reports/step1_target_preparation.md`, and `reports/step2_epitope_evidence.md`.
+`reports/01_01_target_preparation.md`, and `reports/02_01_epitope_evidence.md`.
 
 **Disposition: accepted with no material correction.** The current sidecars are
 updated together and agree that 9LME chain A maps model residues 29–240 to

@@ -2,7 +2,7 @@
 
 Date: 2026-09-27  
 Slurm job: `21886323`  
-Control reference: `reports/rfantibody_rf2_official_control.md`
+Control reference: `reports/05_04_rf2_official_control.md`
 
 The official RF2 example had a minimum H/L–T heavy-atom distance of 3.167 Å,
 zero antibody–target overlaps below 2.0 Å, and complete H/L/T chains. The
@@ -23,7 +23,7 @@ so no pLDDT cutoff was invented.
 | B | 30 | 29 | 19 | 11 |
 
 The task-deduplicated TSV files are in
-`results/rfantibody_b7h3_control_shortlist_20260927/`. This is a structural
+`results/05_03_control_shortlist_20260927/`. This is a structural
 control-equivalent shortlist, not proof of affinity or biological activity.
 Models with weak selected-epitope coverage remain recorded for traceability but
 should be deprioritized during the next independent AlphaFold 3 validation

@@ -46,4 +46,8 @@ DEV verifies the acknowledgement, records receipt in `coordination/dev.md`, then
 
 This is event-driven coordination through the existing Codex session queue, not a background scheduler or continuously polling daemon. It works while the local Codex service and relevant sessions remain available. If delivery fails, preserve records, report the failure, and do not create replacement agents or install software. The user can say “stop coordination” in either session; record and notify the peer, and do not dispatch additional work. Stopping coordination does not cancel unrelated jobs.
 
-The latest state is in `coordination/pm.md`, `coordination/dev.md`, and `reports/status.md`. Unresolved scientific decisions belong in `reports/decision_log.md`, maintained by DEV. Role restrictions are behavioral; permission settings are unchanged.
+The latest state is in `coordination/pm.md`, `coordination/dev.md`, and `reports/00_06_status.md`. Unresolved scientific decisions belong in `reports/00_05_decision_log.md`, maintained by DEV. Role restrictions are behavioral; permission settings are unchanged.
+
+## Visual placement
+
+Coordination records are operational, not scientific results. Read `pm.md` for the current bounded decision record and `dev.md` for execution/handoff state. Scientific reports and outputs are ordered separately under numbered `reports/` and `results/` streams. New coordination records should use a dated or task-prefixed heading and must link to the numbered scientific artifact they govern.
