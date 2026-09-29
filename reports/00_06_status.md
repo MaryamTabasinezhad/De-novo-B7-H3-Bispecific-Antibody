@@ -705,3 +705,13 @@ the array concurrency limit. The first tasks are completing AF3 MSA and
 template-search stages; no predicted complexes have completed yet and no
 candidate has passed or failed the scientific validation gate. The scheduler
 and scratch logs are the current evidence.
+
+Campaign update — 2026-09-29: the array is progressing normally. Fourteen
+shortlist inputs have completed successfully and produced their full four-model
+AF3 outputs (56 predicted complexes). Ten additional tasks are currently
+running; the remaining tasks are queued under the 10-task concurrency limit.
+No task failure is recorded at this check, and no scientific pass/fail calls
+have been made before the derived interface audit. Completed outputs remain in
+`/scratch/ghaedi/mab/af3_validation_shortlist/` pending summary extraction and
+copy of reviewable results into the tracked `results/06_02_af3_validation_shortlist/`
+directory.
