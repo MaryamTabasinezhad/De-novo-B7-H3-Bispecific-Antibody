@@ -25,3 +25,9 @@ The `06_02` campaign is the current decision-stage validation: 40 Arm A plus
 It will produce up to 276 predicted complexes. Outputs are promoted into this
 directory only after the Slurm run and derived contact/QC summaries have been
 inspected.
+
+| `06_04` | AlphaFold3 Validation 1 publication figures | `Alphafold3_Validation1_figures/` |
+
+The publication figures are derived from the tracked AF3 shortlist tables and
+retain RF2 task identifiers for traceability. They are computational structural
+predictions; no experimental binding or biological activity is inferred.

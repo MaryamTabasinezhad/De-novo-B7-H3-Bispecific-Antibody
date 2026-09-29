@@ -1,0 +1,17 @@
+{
+  "figures": [
+    "Figure1_validation_funnel",
+    "Figure2_interface_confidence",
+    "Figure3_contact_heatmaps",
+    "Figure4_candidate_structures"
+  ],
+  "representative_structures": {
+    "Arm A": "RF2 task 283, AF3 seed 202 sample 1",
+    "Arm B": "RF2 task 101, AF3 seed 202 sample 1"
+  },
+  "source_tables": [
+    "per_input.tsv",
+    "per_sample.tsv"
+  ],
+  "note": "All figures are computational structural predictions; no affinity or biological activity is inferred."
+}

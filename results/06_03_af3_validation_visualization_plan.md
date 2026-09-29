@@ -141,3 +141,11 @@ Every figure caption must state that the results are computational structural
 predictions. Terms such as “experimentally confirmed binder,” “high-affinity,”
 or “validated therapeutic antibody” should not be used without experimental
 measurements.
+
+## 9. Generated figure package
+
+The four figures specified above were generated from the completed AF3 campaign
+and are stored in `results/Alphafold3_Validation1_figures/` in both PNG and PDF
+formats. The package includes a README, a figure manifest, and traceable
+representative structures. The plotting implementation is
+`tools/06_af3_validation/plot_af3_validation_figures.py`.
