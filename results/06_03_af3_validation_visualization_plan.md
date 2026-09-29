@@ -97,3 +97,47 @@ H–T/L–T confidence and epitope contacts are evidence about a predicted
 antibody–target pose. Neither establishes experimental affinity, specificity,
 internalization, Fc-mediated killing, aggregation stability, or clinical
 benefit.
+
+## 8. Recommended publication figure set
+
+For a research article, the most informative main-text figure sequence is:
+
+### Figure 1 — Workflow and validation funnel
+
+Show the process from the RF2 shortlist through AF3 completion, clash-free
+models, epitope-contact models, and reproducible-contact models. Display Arm A
+and Arm B separately. Include the distinction between 69 RF2 inputs and 276
+repeated AF3 seed/sample complexes.
+
+### Figure 2 — Interface-confidence distributions
+
+Use paired Arm A/Arm B violin or boxplots for H–L ipTM, H–T ipTM, L–T ipTM,
+and H–T/L–T interface PAE. This figure should make clear that internal
+antibody folding confidence and antibody–B7-H3 interface confidence are
+different measurements.
+
+### Figure 3 — Epitope-contact reproducibility
+
+Use separate Arm A and Arm B heatmaps with RF2 tasks as rows and canonical
+selected epitope residues as columns. A cell value from 0 to 4 represents the
+number of AF3 samples contacting that residue. This is the clearest figure for
+showing whether the intended epitope is recovered repeatedly.
+
+### Figure 4 — Candidate comparison and structural examples
+
+Use a scatter plot with mean H–T ipTM on the x-axis and the number of AF3
+samples with at least two selected-epitope contacts on the y-axis. Color points
+by arm and label only candidates selected for structural follow-up. Pair this
+plot with side-by-side molecular views of representative Arm A and Arm B
+complexes showing B7-H3, heavy and light chains, selected epitope residues, and
+predicted contact residues.
+
+The complete per-sample table, all candidate labels, full heatmaps, additional
+structure views, and detailed contact-distance tables should be supplementary
+material. Main figures should remain readable while retaining traceable task
+identifiers in accompanying tables or captions.
+
+Every figure caption must state that the results are computational structural
+predictions. Terms such as “experimentally confirmed binder,” “high-affinity,”
+or “validated therapeutic antibody” should not be used without experimental
+measurements.
