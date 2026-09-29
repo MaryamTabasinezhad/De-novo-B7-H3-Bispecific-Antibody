@@ -1,7 +1,7 @@
 # AlphaFold 3 validation campaign for the 69-model RF2 shortlist
 
-**Status:** campaign authorized by the user on 2026-09-28; Slurm submission
-recorded in `reports/00_06_status.md` when launched. This report is the
+**Status:** campaign authorized by the user on 2026-09-28; Slurm array
+`21999799` submitted on 2026-09-28. This report is the
 campaign specification and will be extended with the job result table after
 completion.
 

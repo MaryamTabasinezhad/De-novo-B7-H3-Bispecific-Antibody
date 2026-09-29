@@ -691,3 +691,10 @@ reporting plan are in `reports/06_02_alphafold3_shortlist_campaign.md`.
 The pilot outputs remain preserved for runtime provenance, but promotion
 decisions will use the 69-model campaign. No whole-IgG assembly or downstream
 biological claim is authorized by this campaign alone.
+
+The full AF3 shortlist campaign was submitted as Slurm array job `21999799`
+from the tracked worker on 2026-09-28. Array indices 0–39 map to the 40 Arm A
+shortlist rows and indices 40–68 map to the 29 Arm B rows; concurrency is
+limited to 10 H100 tasks. Each task uses two seeds, two diffusion samples, and
+three recycles. The job is active/pending according to the scheduler at
+submission time; no completion or scientific result is inferred yet.
