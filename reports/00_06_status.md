@@ -770,3 +770,18 @@ Historical campaign update — 2026-09-29: fourteen shortlist inputs had
 completed while ten tasks were running. This intermediate state was superseded
 by the final completion update and the committed derived summaries in
 `results/06_02_af3_validation_shortlist/`.
+
+Three-category Fab generation started on 2026-09-29 using the shared human 4Ig
+extracellular target (canonical residues 29–466) and the tracked worker in
+`tools/07_fab_categories/`. Arm A-only generation was submitted as array job
+`22030417` (40 tasks, concurrency 10) and Arm B-only generation as array job
+`22030418` (29 tasks, concurrency 10). Both were accepted by Slurm and are
+pending scheduler priority.
+
+The full 1,160-task dual-Fab array was initially rejected before execution with
+Slurm error `AssocMaxSubmitJobLimit`. No dual-Fab task was lost or run under a
+different configuration. A bounded first dual-Fab chunk (indices 0–299,
+concurrency 10) was accepted as array job `22030421` and is pending. The
+remaining dual-Fab indices 300–1159 will be submitted in further bounded
+chunks as scheduler accounting capacity allows. This is an infrastructure
+submission limit, not a scientific result.

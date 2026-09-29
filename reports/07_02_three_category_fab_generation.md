@@ -50,3 +50,9 @@ Scratch inputs are written under
 `/scratch/ghaedi/mab/fab_category_outputs/`. Reviewable summaries and
 rejection reasons will be copied to the numbered result directories after the
 Slurm jobs complete.
+
+Initial submissions: Arm A array `22030417`, Arm B array `22030418`, and dual
+Fab chunk `22030421` (indices 0–299). The original 1,160-task dual array was
+rejected with `AssocMaxSubmitJobLimit`, so the remaining indices will be
+submitted in bounded chunks. No scientific result is inferred while these jobs
+are pending.
