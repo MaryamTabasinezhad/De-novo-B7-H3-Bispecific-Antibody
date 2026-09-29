@@ -9,6 +9,7 @@ Results are grouped by the workflow stage that produced them. Read directories i
 | `05_03` | RF2 control-gate shortlist | `05_03_control_shortlist_20260927/` |
 | `06_01` | AlphaFold 3 independent validation pilot | `06_01_af3_validation_pilot/` |
 | `06_02` | AlphaFold 3 full RF2-shortlist validation | `06_02_af3_validation_shortlist/` |
+| `06_03` | AlphaFold 3 validation visualization plan | `06_03_af3_validation_visualization_plan.md` |
 
 Raw model weights, full databases, Slurm scratch outputs, and caches remain outside Git in documented scratch paths. Tracked result directories contain the reviewable derived artifacts and provenance needed to interpret them.
 
