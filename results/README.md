@@ -31,3 +31,7 @@ inspected.
 The publication figures are derived from the tracked AF3 shortlist tables and
 retain RF2 task identifiers for traceability. They are computational structural
 predictions; no experimental binding or biological activity is inferred.
+
+| `07_01` | Arm A-only Fab generation | `07_01_fab_A_only/` |
+| `07_02` | Arm B-only Fab generation | `07_02_fab_B_only/` |
+| `07_03` | Arm A + Arm B dual-Fab generation | `07_03_fab_AB_pairs/` |
