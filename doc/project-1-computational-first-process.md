@@ -383,8 +383,13 @@ biophysical triage should reduce development risk without replacing measurements
 - Relevant B7-H3 target models.
 
 **AlphaFold 3 validation policy — user-approved 2026-09-27:** AlphaFold 3 is a
-required independent validation method for the RF2-filtered shortlist, subject
-to verified local availability and documented runtime configuration. It is used
+required independent validation method for the complete RF2-filtered shortlist,
+subject to verified local availability and documented runtime configuration. On
+2026-09-28 the user instructed the project to skip the two-model pilot as a
+decision gate and run the broader shortlist campaign: all 40 task-deduplicated
+Arm A models and all 29 task-deduplicated Arm B models (69 total). The earlier
+eight-model pilot remains preserved as a runtime and diagnostic record, but its
+decision role is superseded by this campaign. AF3 is used
 to test fold plausibility, intended-epitope pose recovery, and predictor
 agreement. AlphaFold 3 confidence and interface metrics are computational
 hypotheses; they are not measurements of affinity, internalization, Fc killing,

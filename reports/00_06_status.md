@@ -680,3 +680,14 @@ supported coherent H–L antibody units but did not provide confident
 antibody–B7-H3 interface recovery for either representative. See
 `reports/06_01_alphafold3_validation_results.md` and
 `results/06_01_af3_validation_pilot/`.
+
+The user replaced the representative AF3 pilot decision gate with a broader
+shortlist campaign on 2026-09-28. The campaign will evaluate all 69
+task-deduplicated RF2 shortlist inputs: 40 Arm A and 29 Arm B. Each input will
+use seeds 101 and 202 with two diffusion samples, producing 276 predicted
+complexes in total. The tracked worker is
+`tools/06_af3_validation/alphafold3_shortlist_job.sh`; its specification and
+reporting plan are in `reports/06_02_alphafold3_shortlist_campaign.md`.
+The pilot outputs remain preserved for runtime provenance, but promotion
+decisions will use the 69-model campaign. No whole-IgG assembly or downstream
+biological claim is authorized by this campaign alone.

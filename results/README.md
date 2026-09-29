@@ -8,6 +8,7 @@ Results are grouped by the workflow stage that produced them. Read directories i
 | `05_02` | RF2 interface screen | `05_02_interface_screen_20260927/` |
 | `05_03` | RF2 control-gate shortlist | `05_03_control_shortlist_20260927/` |
 | `06_01` | AlphaFold 3 independent validation pilot | `06_01_af3_validation_pilot/` |
+| `06_02` | AlphaFold 3 full RF2-shortlist validation | `06_02_af3_validation_shortlist/` |
 
 Raw model weights, full databases, Slurm scratch outputs, and caches remain outside Git in documented scratch paths. Tracked result directories contain the reviewable derived artifacts and provenance needed to interpret them.
 
@@ -17,3 +18,9 @@ task-level deduplication, but AF3 evaluated only RF2 task 265 (Arm A) and task
 131 (Arm B). Two seeds and two diffusion samples produced four complexes per
 arm. The purpose and limitations of that sampling are documented in
 `reports/06_01_alphafold3_validation_results.md`.
+
+The `06_02` campaign is the current decision-stage validation: 40 Arm A plus
+29 Arm B RF2-shortlist inputs, two seeds, and two diffusion samples per input.
+It will produce up to 276 predicted complexes. Outputs are promoted into this
+directory only after the Slurm run and derived contact/QC summaries have been
+inspected.
