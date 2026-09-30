@@ -825,3 +825,8 @@ dual-Fab tasks are pending because nodes are unavailable or the array task
 limit is active; no failed, cancelled, or timed-out task is shown in the
 checked accounting rows. Dual-Fab indices 900–1159 remain unsubmitted until
 queued-task capacity is released.
+
+Latest scheduler check — 2026-09-30: Arm A-only and Arm B-only remain complete
+at 40/40 and 29/29. Dual-Fab output count remains 56; task 29 of chunk
+`22030421` is currently running, while the rest of the submitted chunks remain
+pending for unavailable nodes. No failure state is recorded.
