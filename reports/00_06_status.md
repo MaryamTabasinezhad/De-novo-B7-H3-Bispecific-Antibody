@@ -830,3 +830,10 @@ Latest scheduler check — 2026-09-30: Arm A-only and Arm B-only remain complete
 at 40/40 and 29/29. Dual-Fab output count remains 56; task 29 of chunk
 `22030421` is currently running, while the rest of the submitted chunks remain
 pending for unavailable nodes. No failure state is recorded.
+
+Latest scheduler check — 2026-09-30: dual-Fab output count increased to 57;
+task 30 of chunk `22030421` is running. Chunks `22030421` indices 31–299 and
+`22030424`/`22030425` remain pending with `ReqNodeNotAvail`. Arm A-only and
+Arm B-only remain complete at 40/40 and 29/29. The Slurm accounting database
+was temporarily unavailable during this check, so failure status is based on
+the active queue and output files; no failure is visible there.
