@@ -809,3 +809,11 @@ completed output and the remaining indices queued. No failures are present in
 the checked completed accounting rows. Chunks `22030424` and `22030425` remain
 pending priority, and dual-Fab indices 900–1159 remain unsubmitted because the
 account limit is still active.
+
+Three-category progress refresh — 2026-09-29: the scratch output count is now
+29 completed Arm A-only inputs, 20 completed Arm B-only inputs, and 5 completed
+dual-Fab inputs from chunk `22030421`. The remaining queued tasks are pending
+with scheduler reason `ReqNodeNotAvail (UnavailableNodes)`, an infrastructure
+availability condition. No failure state is shown in the active queue. The
+three-category result gate remains open until all currently submitted tasks
+finish and dual-Fab indices 900–1159 can be submitted.
