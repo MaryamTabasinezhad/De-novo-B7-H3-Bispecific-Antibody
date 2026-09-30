@@ -817,3 +817,11 @@ with scheduler reason `ReqNodeNotAvail (UnavailableNodes)`, an infrastructure
 availability condition. No failure state is shown in the active queue. The
 three-category result gate remains open until all currently submitted tasks
 finish and dual-Fab indices 900–1159 can be submitted.
+
+Three-category progress refresh — 2026-09-30: Arm A-only generation is complete
+at 40/40 inputs and Arm B-only generation is complete at 29/29. Dual-Fab
+generation has produced 56 completed inputs so far. The remaining submitted
+dual-Fab tasks are pending because nodes are unavailable or the array task
+limit is active; no failed, cancelled, or timed-out task is shown in the
+checked accounting rows. Dual-Fab indices 900–1159 remain unsubmitted until
+queued-task capacity is released.
