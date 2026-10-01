@@ -837,3 +837,9 @@ task 30 of chunk `22030421` is running. Chunks `22030421` indices 31–299 and
 Arm B-only remain complete at 40/40 and 29/29. The Slurm accounting database
 was temporarily unavailable during this check, so failure status is based on
 the active queue and output files; no failure is visible there.
+
+Latest scheduler check — 2026-09-30: dual-Fab output count increased to 59;
+task 32 of chunk `22030421` is running. The remaining submitted tasks are
+pending with `ReqNodeNotAvail`. Slurm accounting is responding again and shows
+completed child tasks with exit `0:0`; no failure is visible. Single-Fab
+categories remain complete at 40/40 and 29/29.
