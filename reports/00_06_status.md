@@ -851,3 +851,9 @@ count has increased to 70 completed A+B combinations. Slurm chunks `22030421`,
 is visible in the current queue. The remaining dual-Fab combinations are not
 scientifically interpreted until the submitted chunks finish and the unsubmitted
 900–1159 range can be queued.
+
+Latest three-category scheduler/output refresh — 2026-10-02: Arm A-only remains
+complete at 40/40 and Arm B-only remains complete at 29/29. Dual-Fab output
+count is now 72/1,160 combinations. Slurm task `22030421_45` is running on
+`rg21703`; remaining submitted chunks are queued with unavailable-node reasons.
+No failed task is visible in the current queue.
