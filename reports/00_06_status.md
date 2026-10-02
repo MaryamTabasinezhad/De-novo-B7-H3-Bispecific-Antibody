@@ -843,3 +843,11 @@ task 32 of chunk `22030421` is running. The remaining submitted tasks are
 pending with `ReqNodeNotAvail`. Slurm accounting is responding again and shows
 completed child tasks with exit `0:0`; no failure is visible. Single-Fab
 categories remain complete at 40/40 and 29/29.
+
+Latest three-category scheduler/output refresh — 2026-10-01: Arm A-only remains
+complete at 40/40 and Arm B-only remains complete at 29/29. The dual-Fab output
+count has increased to 70 completed A+B combinations. Slurm chunks `22030421`,
+`22030424`, and `22030425` remain queued with `ReqNodeNotAvail`; no failed task
+is visible in the current queue. The remaining dual-Fab combinations are not
+scientifically interpreted until the submitted chunks finish and the unsubmitted
+900–1159 range can be queued.
