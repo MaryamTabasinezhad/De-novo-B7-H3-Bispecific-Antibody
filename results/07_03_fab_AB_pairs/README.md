@@ -13,3 +13,9 @@ As audited on 2026-10-18 UTC: 164 combinations have complete execution artifacts
 
 Next: inspect completed outputs and summarize five-chain integrity, simultaneous
 epitope engagement, and Fab-pair clashes before advancement to Fc assembly.
+
+## Exported structures
+
+`07_04_top_five_20261018/` contains five distinct confidence-ranked inputs,
+one winning CIF per input, native summaries, ranking tables and source lineage.
+See its README and selection TSV; scientific interface QC remains open.

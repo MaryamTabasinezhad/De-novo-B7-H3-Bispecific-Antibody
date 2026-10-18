@@ -881,3 +881,15 @@ measurements. Existing tasks report unavailable-node reasons; the newly submitte
 array awaits priority. See `07_03_dual_fab_resumption.md` and the durable audit
 and accounting tables in `results/07_03_fab_AB_pairs/`. Next: monitor completion,
 repeat artifact checks, and perform scientific structural/interface QC.
+
+
+## Top-five structure export — 2026-10-18
+
+Exported five distinct sequence inputs per category (A-only, B-only, AB pairs),
+ranked by each input's best native AF3 ranking score. Fifteen winning-sample
+CIFs plus confidence, ranking, and lineage records are now in tracked
+`07_04_top_five_20261018/` directories under the three category result streams.
+The snapshot considers 40 A, 29 B, and 164 AB completed inputs; AB rankings
+remain provisional. Coordinate chain IDs and exact source copies were checked.
+No scientific interface acceptance or new compute is claimed. Details:
+`07_04_top_five_structure_export.md`. Next: interface/epitope and pair QC.

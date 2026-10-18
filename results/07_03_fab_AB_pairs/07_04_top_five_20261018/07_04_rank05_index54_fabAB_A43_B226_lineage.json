@@ -1,0 +1,6 @@
+{
+  "arm_a_task": "43",
+  "arm_b_task": "226",
+  "arm_a_pdb": "/scratch/ghaedi/mab/rfantibody_b7h3_rf2_20260926/A/task_43/ab_0_dldesign_2_best.pdb",
+  "arm_b_pdb": "/scratch/ghaedi/mab/rfantibody_b7h3_rf2_20260926/B/task_226/ab_0_dldesign_0_best.pdb"
+}

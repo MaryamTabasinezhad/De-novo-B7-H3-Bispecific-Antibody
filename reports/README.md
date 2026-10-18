@@ -17,3 +17,5 @@ Read `00_06_status.md` for the current active job and next authorized stage. A r
 
 Step 07 execution refresh: `07_03_dual_fab_resumption.md` documents the complete
 artifact audit and submission of the remaining dual-Fab combinations.
+
+`07_04_top_five_structure_export.md` records the five-per-category CIF export.
