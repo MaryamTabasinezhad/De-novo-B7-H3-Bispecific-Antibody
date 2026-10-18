@@ -913,3 +913,17 @@ Created `results/07_05_top_15_cif_models.zip` from the 15 tracked CIFs in
 and exact decompressed contents against each original. No models changed.
 The archive provides a single-file GitHub download. Scientific QC remains
 as recorded for the original category exports.
+
+
+## Slurm refresh — 2026-10-18 04:54 UTC
+
+Read-only queue/accounting and scratch-output check: 164 dual-Fab tasks
+COMPLETED; 996 pending, none running. Existing arrays 22030421 (129–299),
+22030424 (325–599), and 22030425 (610–899) report ReqNodeNotAvail with
+unavailable nodes rg12903/rg13403. Array 23455046 (900–1159) reports Priority.
+No failed task appears in queried array accounting. Output counts remain
+40 A-only, 29 B-only, and 164 AB selected CIFs, with 160, 116, and 656 sample
+CIFs respectively under `/scratch/ghaedi/mab/fab_category_outputs/`.
+Commands: source config/hpc/rorqual.sh; squeue -u ghaedi; sacct -X for the four
+arrays; count index_*/*/*_model.cif and seed/sample model CIFs. No jobs changed.
+Next: await allocation, inspect completed outputs, then scientific interface QC.
