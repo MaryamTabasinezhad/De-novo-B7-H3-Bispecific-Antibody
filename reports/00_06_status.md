@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-09-27 04:36 UTC.
+Updated 2026-10-18 03:33 UTC.
 
 **Reporting contract:** `reports/00_06_status.md` is the single canonical project
 status report. All future job submissions, completions, QC results, blockers,
@@ -864,3 +864,20 @@ count is now 105/1,160 combinations. Slurm task `22030421_75` is running on
 `rg32403`; the remaining submitted tasks are queued with `ReqNodeNotAvail`.
 No failed task is visible in the current queue. The dual-Fab structures remain
 computational AF3 predictions pending campaign completion and comparison.
+
+
+## Dual-Fab audit and remaining submission — 2026-10-18 UTC
+
+The artifact audit confirms 164/1,160 combinations have all four sample models
+and confidence files (656 samples); no existing output was incomplete. This
+is execution completeness, not scientific acceptance. The 736 existing pending
+tasks were preserved. Slurm accepted the final 260 indices (900–1159) as array
+23455046, concurrency 10, initially PENDING (Priority). All 1,160 combinations
+are now accounted for: 164 artifact-complete and 996 queued.
+
+Resources and AF3 scientific settings remain unchanged. Completed tasks took
+43.5–195.38 minutes; peak batch host RSS was 7.46–11.05 GiB, without GPU-memory
+measurements. Existing tasks report unavailable-node reasons; the newly submitted
+array awaits priority. See `07_03_dual_fab_resumption.md` and the durable audit
+and accounting tables in `results/07_03_fab_AB_pairs/`. Next: monitor completion,
+repeat artifact checks, and perform scientific structural/interface QC.

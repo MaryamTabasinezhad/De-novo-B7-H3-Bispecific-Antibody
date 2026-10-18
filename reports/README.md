@@ -14,3 +14,6 @@ Read the reports in numeric order. The two-digit prefix is the workflow step; th
 | `07` | Candidate accounting and advancement decision | `07_01_candidate_accounting.md` |
 
 Read `00_06_status.md` for the current active job and next authorized stage. A report is not a completed result unless its corresponding durable artifact appears under the matching numbered `results/` directory.
+
+Step 07 execution refresh: `07_03_dual_fab_resumption.md` documents the complete
+artifact audit and submission of the remaining dual-Fab combinations.
