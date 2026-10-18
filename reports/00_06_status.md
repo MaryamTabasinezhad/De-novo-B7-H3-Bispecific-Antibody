@@ -904,3 +904,12 @@ All copies were verified byte-for-byte against the tracked source CIFs.
 Ranking, lineage, and limitations remain in the original category export
 directories and `07_04_top_five_structure_export.md`; no new selection or
 scientific acceptance is implied. Next: interface/epitope and pair QC.
+
+
+## Downloadable CIF archive — 2026-10-18
+
+Created `results/07_05_top_15_cif_models.zip` from the 15 tracked CIFs in
+`results/07_05_top_15_cif_models/`. Verified archive integrity, 15 entries,
+and exact decompressed contents against each original. No models changed.
+The archive provides a single-file GitHub download. Scientific QC remains
+as recorded for the original category exports.

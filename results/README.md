@@ -41,3 +41,7 @@ confidence-ranked models per category exported in `07_04_top_five_20261018/`.
 Its inputs and provenance remain in the category directories; status is copied
 and byte-verified, with scientific interface QC still pending. Next: interface,
 epitope, and same-antigen pair assessment.
+
+Download all 15 CIFs together from `07_05_top_15_cif_models.zip`. The archive
+contains only the 15 CIFs in their named folder; extraction contents were
+compared byte-for-byte with the tracked originals.
