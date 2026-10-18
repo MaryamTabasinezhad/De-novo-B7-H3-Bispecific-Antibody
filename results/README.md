@@ -35,3 +35,9 @@ predictions; no experimental binding or biological activity is inferred.
 | `07_01` | Arm A-only Fab generation | `07_01_fab_A_only/` |
 | `07_02` | Arm B-only Fab generation | `07_02_fab_B_only/` |
 | `07_03` | Arm A + Arm B dual-Fab generation | `07_03_fab_AB_pairs/` |
+
+`07_05_top_15_cif_models/` is the CIF-only collection of the same five
+confidence-ranked models per category exported in `07_04_top_five_20261018/`.
+Its inputs and provenance remain in the category directories; status is copied
+and byte-verified, with scientific interface QC still pending. Next: interface,
+epitope, and same-antigen pair assessment.

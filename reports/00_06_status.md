@@ -893,3 +893,14 @@ The snapshot considers 40 A, 29 B, and 164 AB completed inputs; AB rankings
 remain provisional. Coordinate chain IDs and exact source copies were checked.
 No scientific interface acceptance or new compute is claimed. Details:
 `07_04_top_five_structure_export.md`. Next: interface/epitope and pair QC.
+
+
+## CIF-only model collection — 2026-10-18
+
+Copied the same 15 previously exported top-five-per-category models into
+`results/07_05_top_15_cif_models/`, containing only CIF files as requested.
+Filenames identify A-only, B-only, or AB pairs and preserve rank and input ID.
+All copies were verified byte-for-byte against the tracked source CIFs.
+Ranking, lineage, and limitations remain in the original category export
+directories and `07_04_top_five_structure_export.md`; no new selection or
+scientific acceptance is implied. Next: interface/epitope and pair QC.
