@@ -94,3 +94,59 @@ computational residue mappings, select new epitopes, validate cis/trans reach,
 or establish affinity, clustering, internalization or Fc effector activity.
 Next: use this domain-consistent schematic for communication with the original
 hypothesis caveats retained; validate actual contacts and mechanisms separately.
+
+
+## 00_04 — Original visual artwork with corrected molecular foregrounds
+
+`00_04_b7h3_original_style_corrected_binding.png` is the requested combination:
+00_01 supplies the visual base and 00_03 supplies the green/domain-1 and
+purple/domain-3 contact convention. No earlier image is overwritten.
+
+The top overview, tumor illustrations, NK-cell/macrophage artwork, lipid
+bilayer textures, C1q/MAC artwork, lysosome, cell-cycle diagram, panel borders,
+labels and hypothesis caveats come from **00_01**. Edits are confined to
+molecular foreground fields and their immediate background cleanup. Existing
+FcγR/C1q attachment artwork is retained, with new gray Fc endpoints aligned to
+it. Antibodies are redrawn using the original's paired-chain appearance,
+gray constant domains, green/purple binding tips and shaded tubular material.
+Blue ectodomain beads use matching shaded surfaces, with four explicit domains
+where the generated source had inconsistent domain counts. This is a local
+composite edit, not an AI regeneration or wholesale replacement of panel interiors.
+
+**Scientific drawing rules retained from 00_03:** exactly one green Fab and one
+purple Fab per antibody; green contacts domain 1 and purple contacts domain 3,
+counting extracellular domains from the distal tip toward the membrane.
+Clustering and endocytosis show intermolecular crosslinks; the blockade,
+modulation and Fc-effector examples show schematic dual-domain engagement.
+Gray Fc connects to FcγR or C1q. The original overview antibody is already
+one-green/one-purple and is retained unchanged. These remain conceptual
+positions, not experimentally established or residue-mapped epitopes.
+
+Files:
+
+- `00_04_b7h3_original_style_corrected_binding.png`: 2382 × 2642 PNG.
+- `00_04_b7h3_original_style_corrected_binding.svg`: cleaned original raster base and editable shaded vector molecular overlays; a mixed raster/vector file.
+- `00_04_build_style_preserved_figure.py`: direct builder using the existing Pillow 10.0.0 and rsvg-convert 2.56.1.
+- `00_04_local_edit_geometry.json`: drawing coordinates, domain assignments and edit-scope check; not a structure-derived molecular model.
+
+Reproduce: `python3 results/pic_fig/00_04_build_style_preserved_figure.py`.
+No installations, AI generation, GPU inference or new scientific analyses
+were required. The 2× raster export improves vector-edge sampling; it does
+not increase the information content of the original raster cell artwork.
+
+Validation: inspected the final composite, including domain contacts and Fc
+attachments; checked 15 corrected mechanism-panel antibodies plus the retained
+overview antibody, 18 four-domain antigen mappings, green/1 and purple/3
+endpoint assignments, SVG XML and PNG dimensions/decoding. The builder also
+confirms that every source-base pixel outside its local cleanup mask is
+unchanged before overlays are added. Titles and mechanism qualifiers are
+retained; this does not establish efficacy, binding geometry or mechanism.
+Next: use this new original-style revision for the user's intended figure.
+
+Temporary inspection crops were `/tmp/b7h3_00_04_cluster_reference.png`,
+`/tmp/b7h3_00_04_internal_reference.png`, `/tmp/b7h3_00_04_effector_reference.png`
+and `/tmp/b7h3_00_04_cdc_reference.png`. They were made with Pillow by cropping
+00_01 at (15,405,384,615), (20,705,380,928), (812,425,1168,615), and
+(815,1007,1168,1242), respectively, and enlarging 3× for visual inspection.
+They are temporary previews, not durable project outputs; the final composite,
+SVG, builder and coordinate record are preserved here.

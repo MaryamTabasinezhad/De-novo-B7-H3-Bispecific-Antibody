@@ -986,3 +986,27 @@ instructions, not new residue-level epitope decisions or evidence for binding
 geometry/mechanism. No protein inference, installation, or cluster job was run.
 Next: use the corrected schematic with its hypothesis qualifiers retained and
 validate actual structural contacts independently.
+
+
+## Original-style molecular correction — 2026-10-21 UTC
+
+Created `results/pic_fig/00_04_b7h3_original_style_corrected_binding.png`
+at the user's request to combine 00_01's visual artwork with 00_03's
+Fab/domain assignments. The original tumor, effector-cell, membrane,
+complement, degradation/cell-cycle artwork and panel layout form the base.
+Localized molecular replacements retain paired-chain antibody styling and
+correct green/domain-1, purple/domain-3 and Fc-specific attachments. Prior
+images remain unchanged. This uses the user's standing vector-editing
+authorization rather than another generative redraw.
+
+Command: `python3 results/pic_fig/00_04_build_style_preserved_figure.py`.
+Runtime: existing Pillow 10.0.0 and rsvg-convert 2.56.1. Durable outputs
+include the 2382 × 2642 PNG, mixed raster/vector SVG, direct builder,
+coordinate record and directory README. Temporary reference crop paths
+and commands are recorded in that README. Checked 15 corrected antibody
+pairs plus the original overview antibody, 18 four-domain mappings,
+Fab endpoints, local cleanup scope, SVG XML and PNG decoding; visually
+inspected the composite and attachment geometry. No new residue/epitope
+decisions, biological validation, installation or protein-inference jobs
+are implied. Next: use the original-style revision with its existing
+hypothesis and experimental-validation qualifiers retained.

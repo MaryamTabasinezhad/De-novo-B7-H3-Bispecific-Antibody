@@ -1,0 +1,846 @@
+{
+  "source": "00_01_b7h3_biparatopic_mechanisms.png",
+  "method": "localized foreground cleanup and shaded vector replacement; original cell and membrane artwork retained",
+  "modified_background_pixels": 153362,
+  "all_unmasked_source_pixels_preserved": true,
+  "domain_numbering": "outermost extracellular bead 1 toward membrane bead 4; conceptual only",
+  "targets": {
+    "c0": {
+      "domains": [
+        [
+          89,
+          464
+        ],
+        [
+          86,
+          486
+        ],
+        [
+          84,
+          509
+        ],
+        [
+          83,
+          532
+        ]
+      ],
+      "rx": 10.5,
+      "ry": 11.5,
+      "redrawn": true
+    },
+    "c1": {
+      "domains": [
+        [
+          166,
+          463
+        ],
+        [
+          159,
+          486
+        ],
+        [
+          152,
+          508
+        ],
+        [
+          147,
+          531
+        ]
+      ],
+      "rx": 10.5,
+      "ry": 11.5,
+      "redrawn": true
+    },
+    "c2": {
+      "domains": [
+        [
+          216,
+          479
+        ],
+        [
+          215,
+          499
+        ],
+        [
+          215,
+          519
+        ],
+        [
+          215,
+          540
+        ]
+      ],
+      "rx": 10.5,
+      "ry": 11.5,
+      "redrawn": true
+    },
+    "c3": {
+      "domains": [
+        [
+          290,
+          480
+        ],
+        [
+          290,
+          502
+        ],
+        [
+          289,
+          524
+        ],
+        [
+          290,
+          545
+        ]
+      ],
+      "rx": 10.5,
+      "ry": 11.5,
+      "redrawn": true
+    },
+    "c4": {
+      "domains": [
+        [
+          361,
+          480
+        ],
+        [
+          355,
+          501
+        ],
+        [
+          348,
+          522
+        ],
+        [
+          343,
+          542
+        ]
+      ],
+      "rx": 10.5,
+      "ry": 11.5,
+      "redrawn": true
+    },
+    "i0": {
+      "domains": [
+        [
+          104,
+          739
+        ],
+        [
+          101,
+          759
+        ],
+        [
+          94,
+          780
+        ],
+        [
+          88,
+          800
+        ]
+      ],
+      "rx": 10.5,
+      "ry": 11.5,
+      "redrawn": true
+    },
+    "i2": {
+      "domains": [
+        [
+          218,
+          806
+        ],
+        [
+          224,
+          831
+        ],
+        [
+          230,
+          858
+        ],
+        [
+          236,
+          884
+        ]
+      ],
+      "rx": 10.5,
+      "ry": 11.5,
+      "redrawn": true
+    },
+    "block": {
+      "domains": [
+        [
+          519,
+          466
+        ],
+        [
+          521,
+          487
+        ],
+        [
+          522,
+          508
+        ],
+        [
+          523,
+          529
+        ]
+      ],
+      "rx": 10.5,
+      "ry": 11.5,
+      "redrawn": true
+    },
+    "adcc": {
+      "domains": [
+        [
+          896,
+          448
+        ],
+        [
+          901,
+          470
+        ],
+        [
+          901,
+          493
+        ],
+        [
+          894,
+          516
+        ]
+      ],
+      "rx": 10.5,
+      "ry": 11.5,
+      "redrawn": true
+    },
+    "adcp": {
+      "domains": [
+        [
+          899,
+          748
+        ],
+        [
+          903,
+          771
+        ],
+        [
+          903,
+          794
+        ],
+        [
+          897,
+          815
+        ]
+      ],
+      "rx": 10.5,
+      "ry": 11.5,
+      "redrawn": true
+    },
+    "i1": {
+      "domains": [
+        [
+          182,
+          817
+        ],
+        [
+          176,
+          836
+        ],
+        [
+          169,
+          855
+        ],
+        [
+          163,
+          875
+        ]
+      ],
+      "rx": 10.1,
+      "ry": 10.8,
+      "redrawn": true
+    },
+    "i3": {
+      "domains": [
+        [
+          310,
+          748
+        ],
+        [
+          312,
+          768
+        ],
+        [
+          313,
+          788
+        ],
+        [
+          315,
+          808
+        ]
+      ],
+      "rx": 9.8,
+      "ry": 10.5,
+      "redrawn": true
+    },
+    "mod": {
+      "domains": [
+        [
+          565,
+          735
+        ],
+        [
+          565,
+          755
+        ],
+        [
+          566,
+          775
+        ],
+        [
+          567,
+          795
+        ]
+      ],
+      "rx": 9.6,
+      "ry": 10.3,
+      "redrawn": true
+    },
+    "d0": {
+      "domains": [
+        [
+          867,
+          1124
+        ],
+        [
+          870,
+          1140
+        ],
+        [
+          873,
+          1156
+        ],
+        [
+          876,
+          1172
+        ]
+      ],
+      "rx": 8.1,
+      "ry": 8.7,
+      "redrawn": true
+    },
+    "d1": {
+      "domains": [
+        [
+          929,
+          1124
+        ],
+        [
+          929,
+          1140
+        ],
+        [
+          929,
+          1156
+        ],
+        [
+          929,
+          1172
+        ]
+      ],
+      "rx": 8.1,
+      "ry": 8.7,
+      "redrawn": true
+    },
+    "d2": {
+      "domains": [
+        [
+          979,
+          1124
+        ],
+        [
+          979,
+          1140
+        ],
+        [
+          979,
+          1156
+        ],
+        [
+          979,
+          1172
+        ]
+      ],
+      "rx": 8.1,
+      "ry": 8.7,
+      "redrawn": true
+    },
+    "d3": {
+      "domains": [
+        [
+          1009,
+          1124
+        ],
+        [
+          1009,
+          1140
+        ],
+        [
+          1009,
+          1156
+        ],
+        [
+          1009,
+          1172
+        ]
+      ],
+      "rx": 8.1,
+      "ry": 8.7,
+      "redrawn": true
+    },
+    "d4": {
+      "domains": [
+        [
+          1065,
+          1124
+        ],
+        [
+          1060,
+          1140
+        ],
+        [
+          1055,
+          1156
+        ],
+        [
+          1050,
+          1172
+        ]
+      ],
+      "rx": 8.1,
+      "ry": 8.7,
+      "redrawn": true
+    }
+  },
+  "antibodies": [
+    {
+      "id": "cluster_1",
+      "hinge": [
+        122,
+        464
+      ],
+      "green": {
+        "target": "c0",
+        "domain": 1,
+        "tip": [
+          97.4,
+          457.1
+        ]
+      },
+      "purple": {
+        "target": "c1",
+        "domain": 3,
+        "tip": [
+          141.5,
+          508.0
+        ]
+      },
+      "fc_tip": [
+        125,
+        417
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "cluster_2",
+      "hinge": [
+        185,
+        470
+      ],
+      "green": {
+        "target": "c1",
+        "domain": 1,
+        "tip": [
+          174.4,
+          456.1
+        ]
+      },
+      "purple": {
+        "target": "c2",
+        "domain": 3,
+        "tip": [
+          204.5,
+          519.0
+        ]
+      },
+      "fc_tip": [
+        202,
+        418
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "cluster_3",
+      "hinge": [
+        253,
+        482
+      ],
+      "green": {
+        "target": "c2",
+        "domain": 1,
+        "tip": [
+          224.4,
+          472.1
+        ]
+      },
+      "purple": {
+        "target": "c3",
+        "domain": 3,
+        "tip": [
+          278.5,
+          524.0
+        ]
+      },
+      "fc_tip": [
+        257,
+        425
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "cluster_4",
+      "hinge": [
+        324,
+        481
+      ],
+      "green": {
+        "target": "c3",
+        "domain": 1,
+        "tip": [
+          298.4,
+          473.1
+        ]
+      },
+      "purple": {
+        "target": "c4",
+        "domain": 3,
+        "tip": [
+          337.5,
+          522.0
+        ]
+      },
+      "fc_tip": [
+        327,
+        426
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "internal_1",
+      "hinge": [
+        141,
+        773
+      ],
+      "green": {
+        "target": "i0",
+        "domain": 1,
+        "tip": [
+          112.4,
+          732.1
+        ]
+      },
+      "purple": {
+        "target": "i1",
+        "domain": 3,
+        "tip": [
+          158.9,
+          855.0
+        ]
+      },
+      "fc_tip": [
+        166,
+        725
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "internal_2",
+      "hinge": [
+        211,
+        787
+      ],
+      "green": {
+        "target": "i1",
+        "domain": 1,
+        "tip": [
+          190.08,
+          810.52
+        ]
+      },
+      "purple": {
+        "target": "i2",
+        "domain": 3,
+        "tip": [
+          219.5,
+          858.0
+        ]
+      },
+      "fc_tip": [
+        235,
+        737
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "internal_3",
+      "hinge": [
+        266,
+        767
+      ],
+      "green": {
+        "target": "i2",
+        "domain": 1,
+        "tip": [
+          226.4,
+          799.1
+        ]
+      },
+      "purple": {
+        "target": "i3",
+        "domain": 3,
+        "tip": [
+          303.2,
+          788.0
+        ]
+      },
+      "fc_tip": [
+        279,
+        716
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "blockade",
+      "hinge": [
+        572,
+        474
+      ],
+      "green": {
+        "target": "block",
+        "domain": 1,
+        "tip": [
+          529.057175994822,
+          462.69549931598704
+        ]
+      },
+      "purple": {
+        "target": "block",
+        "domain": 3,
+        "tip": [
+          532.5,
+          508.0
+        ]
+      },
+      "fc_tip": [
+        600,
+        420
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "modulation",
+      "hinge": [
+        607,
+        756
+      ],
+      "green": {
+        "target": "mod",
+        "domain": 1,
+        "tip": [
+          573.9133762324985,
+          731.1746760335527
+        ]
+      },
+      "purple": {
+        "target": "mod",
+        "domain": 3,
+        "tip": [
+          575.6,
+          775.0
+        ]
+      },
+      "fc_tip": [
+        641,
+        710
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "ADCC",
+      "hinge": [
+        956,
+        463
+      ],
+      "green": {
+        "target": "adcc",
+        "domain": 1,
+        "tip": [
+          905.3914855054991,
+          442.8570436517505
+        ]
+      },
+      "purple": {
+        "target": "adcc",
+        "domain": 3,
+        "tip": [
+          911.5,
+          493.0
+        ]
+      },
+      "fc_tip": [
+        1019,
+        495
+      ],
+      "fc_binding": "Fc\u03b3R"
+    },
+    {
+      "id": "ADCP",
+      "hinge": [
+        957,
+        770
+      ],
+      "green": {
+        "target": "adcp",
+        "domain": 1,
+        "tip": [
+          908.3914855054991,
+          742.8570436517505
+        ]
+      },
+      "purple": {
+        "target": "adcp",
+        "domain": 3,
+        "tip": [
+          913.5,
+          794.0
+        ]
+      },
+      "fc_tip": [
+        1019,
+        802
+      ],
+      "fc_binding": "Fc\u03b3R"
+    },
+    {
+      "id": "CDC_1",
+      "hinge": [
+        896,
+        1124
+      ],
+      "green": {
+        "target": "d0",
+        "domain": 1,
+        "tip": [
+          873.48,
+          1118.78
+        ]
+      },
+      "purple": {
+        "target": "d1",
+        "domain": 3,
+        "tip": [
+          920.9,
+          1156.0
+        ]
+      },
+      "fc_tip": [
+        915,
+        1085
+      ],
+      "fc_binding": "C1q"
+    },
+    {
+      "id": "CDC_2",
+      "hinge": [
+        953,
+        1120
+      ],
+      "green": {
+        "target": "d1",
+        "domain": 1,
+        "tip": [
+          935.48,
+          1118.78
+        ]
+      },
+      "purple": {
+        "target": "d2",
+        "domain": 3,
+        "tip": [
+          970.9,
+          1156.0
+        ]
+      },
+      "fc_tip": [
+        948,
+        1097
+      ],
+      "fc_binding": "C1q"
+    },
+    {
+      "id": "CDC_3",
+      "hinge": [
+        994,
+        1120
+      ],
+      "green": {
+        "target": "d2",
+        "domain": 1,
+        "tip": [
+          985.48,
+          1118.78
+        ]
+      },
+      "purple": {
+        "target": "d3",
+        "domain": 3,
+        "tip": [
+          1000.9,
+          1156.0
+        ]
+      },
+      "fc_tip": [
+        987,
+        1095
+      ],
+      "fc_binding": "C1q"
+    },
+    {
+      "id": "CDC_4",
+      "hinge": [
+        1037,
+        1120
+      ],
+      "green": {
+        "target": "d3",
+        "domain": 1,
+        "tip": [
+          1015.48,
+          1118.78
+        ]
+      },
+      "purple": {
+        "target": "d4",
+        "domain": 3,
+        "tip": [
+          1046.9,
+          1156.0
+        ]
+      },
+      "fc_tip": [
+        1018,
+        1085
+      ],
+      "fc_binding": "C1q"
+    }
+  ],
+  "overview_antibody": "original unchanged; one green and one purple Fab"
+}
