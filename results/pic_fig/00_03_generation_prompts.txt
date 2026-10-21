@@ -1,0 +1,24 @@
+FINAL METHOD: precise SVG/vector editing, explicitly authorized by the user after image-generated drafts failed the Fab/domain consistency requirement. No generated draft from this request was selected as the final image. The initial abandoned image-generation prompt is preserved below as a method record, not as the final rendering recipe.
+
+FINAL REPRODUCTION COMMAND:
+python3 results/pic_fig/00_03_build_domain_specific_figure.py
+
+FINAL SOURCE: 00_01_b7h3_biparatopic_mechanisms.png.
+FINAL BINDING CONVENTION: extracellular beads numbered from distal tip (1) to membrane-proximal (4); green Fab contacts domain 1 and purple Fab contacts domain 3. Gray Fc alone engages FcγR/C1q.
+FINAL OUTPUT: 00_03_b7h3_domain_specific_fab_binding.png, with an SVG companion.
+
+Built-in image-generation tool; target source: 00_01_b7h3_biparatopic_mechanisms.png.
+INITIAL REQUEST (intermediate output required correction of Fab/Fc consistency):
+Edit the supplied image 00_01_b7h3_biparatopic_mechanisms.png. Preserve its exact overall design, portrait format, top tumor overview, scientific drawing style, panel borders, all nine panels and their titles, cell and membrane artwork, and hypothesis footer. This is a targeted antibody-binding correction, not a redesign.
+
+Use the RIGHTMOST ANTIBODY in the original upper-left "B7-H3 clustering" panel as the antibody template throughout: a gray Fc-bearing Y with TWO Fab branches, ONE GREEN Fab branch and ONE PURPLE Fab branch. Make all intact antibodies in ALL PANELS have this SAME architecture and the same two specificities. Do not draw green-green or purple-purple antibodies, extra Fab branches or disconnected Fab parts. A paired heavy/light-chain drawing within one Fab must have the SAME binding-tip color, not one purple tip and one green tip on a single Fab.
+
+CRITICAL ANTIGEN GEOMETRY: each B7-H3 membrane protein is a chain of FOUR rounded BLUE extracellular domains with a thin membrane anchor. Number mentally from the OUTERMOST/DISTAL TIP toward the MEMBRANE: domain 1 is the outermost blue bead, then 2, then 3, then 4 is membrane-proximal. GREEN Fab binds domain 1 ONLY. PURPLE Fab binds the SIDE of domain 3 (or domain 4) ONLY. Purple must NEVER attach to the outermost bead. The third/fourth bead is lower down the chain, not the hinge or another antibody. This rule applies throughout clustering, internalization, interaction blockade, signaling modulation, ADCC, ADCP and CDC. Do not add visible domain numbering or residue numbers.
+
+UPPER LEFT CLUSTERING: show three or four upright B7-H3 chains separated sufficiently to see individual antibodies. An intact antibody's GREEN arm attaches to the OUTERMOST domain 1 of one B7-H3; its PURPLE arm slopes down to the SIDE of domain 3 on a NEIGHBORING B7-H3. This diagonal bridge is essential: the two Fab tips are at DIFFERENT HEIGHTS. Gray Fc stem points away from cell. Repeat this SAME green-distal/purple-lower-domain bridging pattern for all antibodies, creating a cluster. Draw fewer antibodies if needed to make every Y traceable. Do not keep purple arms at the same upper height as green arms. Keep the rightmost antibody's existing green-domain-1 contact as the template but MOVE its purple Fab tip DOWN to the neighboring antigen's third or fourth bead.
+
+MIDDLE LEFT INTERNALIZATION: same crosslinking antibodies, green on outermost bead and purple on third/fourth bead of adjacent B7-H3, following membrane orientation in the pit. All intact antibodies have one green and one purple branch.
+
+OTHER ANTIBODY PANELS: maintain exactly the same one-green/one-purple Y. A free Fab may remain visibly unoccupied; never force an incorrect contact. Wherever a Fab touches B7-H3, green touches distal domain 1, purple touches domain 3 or 4. In ADCC and ADCP the GRAY Fc stem binds effector-cell FcγR, not a colored Fab; leave the second Fab free if needed. In CDC, C1q binds gray Fc stems. Lysosome may contain broken fragments; do not imply those are intact antibodies.
+
+Top-center antibody should be the same template with one green Fab and one purple Fab. Add only a small unobtrusive key near it: "Green: outer domain | Purple: domain 3/4". Preserve all other text including "Proposed", "Putative", "Potential", and the experimental-validation caveat. Epitope/domain placements are conceptual drawing instructions, not experimentally verified contacts. No new medical or efficacy claims. High-quality scientific PNG, same composition as source.

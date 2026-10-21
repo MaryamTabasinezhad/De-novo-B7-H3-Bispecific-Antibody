@@ -44,3 +44,53 @@ patches are schematic, not atomic structures, residue-mapped epitopes or a
 validated demonstration of clustering geometry. All original hypothesis
 qualifiers remain applicable. Next: use this revised illustration in place
 of version 00_01 when communicating the intended dual-epitope concept.
+
+
+## 00_03 — Domain-specific Fab contacts (precise vector revision)
+
+At the user's explicit authorization, the selected final version uses manual
+SVG/vector geometry rather than an image-generated redraw. Its base image is
+**00_01**, as requested; 00_02 and all original images are preserved.
+
+- `00_03_b7h3_domain_specific_fab_binding.png`: new 2382 × 2642 PNG.
+- `00_03_b7h3_domain_specific_fab_binding.svg`: original raster background plus editable vector overlays for the revised antibody-containing interiors, antibody overview and color key. It is a mixed raster/vector file, not an entirely vector recreation of the original illustration.
+- `00_03_build_domain_specific_figure.py`: direct, reproducible builder.
+- `00_03_fab_domain_geometry.json`: coordinates and domain-contact assignments used to check the requested drawing geometry; not a structure-derived epitope mapping.
+- `00_03_generation_prompts.txt`: records the initial abandoned image-generation request and final vector method.
+
+**Contact convention:** each redrawn B7-H3 ectodomain has four blue beads.
+Counting from the extracellular outer tip toward the membrane, green Fab
+contacts bead/domain 1 and purple Fab contacts bead/domain 3. Each intact
+antibody is drawn with exactly one green Fab, one purple Fab and one gray Fc
+stem. Clustering uses two antibodies bridging three neighboring antigens;
+internalization shows a bridged complex in a membrane pit. Some panels show
+cis binding to two domains of one antigen, while clustering illustrates trans
+crosslinking. These are conceptual geometries, not demonstrated conformations.
+In ADCC/ADCP, FcγR attaches at Fc; in CDC, C1q attaches at Fc.
+
+Rebuild from the repository root:
+
+```bash
+python3 results/pic_fig/00_03_build_domain_specific_figure.py
+```
+
+Rendering uses existing `rsvg-convert` 2.56.1; Pillow is used to inspect the
+source and verify PNG decoding. No software was installed. The source canvas
+and preserved panel headings remain at their original resolution; only the
+vector overlays acquire additional raster detail in the 2× export.
+
+Validation: inspected the finished full figure; checked all 10 intact antibody
+symbols and 13 redrawn four-domain antigens, verified every bound green endpoint
+on domain 1 and every bound purple endpoint on domain 3, and verified PNG
+dimensions/decoding. Original mechanism headings, nine-panel layout, tumor
+overview, degradation/cell-cycle artwork and hypothesis/validation qualifiers
+remain. Only the antibody-containing interiors and explanatory color key are
+redrawn. The builder includes small coordinate checks to prevent the specific
+Fab/domain errors encountered in generated drafts.
+
+**Scientific boundary:** domain numbers here are the user's schematic drawing
+instructions. This figure does not redefine the project's experimental or
+computational residue mappings, select new epitopes, validate cis/trans reach,
+or establish affinity, clustering, internalization or Fc effector activity.
+Next: use this domain-consistent schematic for communication with the original
+hypothesis caveats retained; validate actual contacts and mechanisms separately.

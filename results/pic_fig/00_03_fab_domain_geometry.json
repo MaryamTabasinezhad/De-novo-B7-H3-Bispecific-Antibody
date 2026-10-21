@@ -1,0 +1,680 @@
+{
+  "convention": "schematic extracellular domains numbered distal tip (1) to membrane-proximal (4)",
+  "source": "00_01_b7h3_biparatopic_mechanisms.png",
+  "targets": {
+    "cluster_0": {
+      "domains": [
+        [
+          78,
+          447
+        ],
+        [
+          78,
+          474
+        ],
+        [
+          78,
+          501
+        ],
+        [
+          78,
+          528
+        ]
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "radius": 10.8
+    },
+    "cluster_1": {
+      "domains": [
+        [
+          199,
+          447
+        ],
+        [
+          199,
+          474
+        ],
+        [
+          199,
+          501
+        ],
+        [
+          199,
+          528
+        ]
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "radius": 10.8
+    },
+    "cluster_2": {
+      "domains": [
+        [
+          320,
+          447
+        ],
+        [
+          320,
+          474
+        ],
+        [
+          320,
+          501
+        ],
+        [
+          320,
+          528
+        ]
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "radius": 10.8
+    },
+    "internal_left": {
+      "domains": [
+        [
+          118,
+          765
+        ],
+        [
+          118,
+          790
+        ],
+        [
+          118,
+          815
+        ],
+        [
+          118,
+          840
+        ]
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "radius": 10.5
+    },
+    "internal_right": {
+      "domains": [
+        [
+          266,
+          765
+        ],
+        [
+          266,
+          790
+        ],
+        [
+          266,
+          815
+        ],
+        [
+          266,
+          840
+        ]
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "radius": 10.5
+    },
+    "blockade": {
+      "domains": [
+        [
+          508,
+          447
+        ],
+        [
+          508,
+          473
+        ],
+        [
+          508,
+          499
+        ],
+        [
+          508,
+          525
+        ]
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "radius": 10.8
+    },
+    "modulation": {
+      "domains": [
+        [
+          547.0,
+          735.0
+        ],
+        [
+          547.0,
+          758.5
+        ],
+        [
+          547.0,
+          782.0
+        ],
+        [
+          547.0,
+          805.5
+        ]
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "radius": 10.2
+    },
+    "adcc_target": {
+      "domains": [
+        [
+          978,
+          519
+        ],
+        [
+          951,
+          519
+        ],
+        [
+          924,
+          519
+        ],
+        [
+          897,
+          519
+        ]
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "radius": 10.8
+    },
+    "adcp_target": {
+      "domains": [
+        [
+          978,
+          827
+        ],
+        [
+          951,
+          827
+        ],
+        [
+          924,
+          827
+        ],
+        [
+          897,
+          827
+        ]
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "radius": 10.8
+    },
+    "cdc_0": {
+      "domains": [
+        [
+          849,
+          1090
+        ],
+        [
+          849,
+          1115
+        ],
+        [
+          849,
+          1140
+        ],
+        [
+          849,
+          1165
+        ]
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "radius": 9.5
+    },
+    "cdc_1": {
+      "domains": [
+        [
+          929,
+          1090
+        ],
+        [
+          929,
+          1115
+        ],
+        [
+          929,
+          1140
+        ],
+        [
+          929,
+          1165
+        ]
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "radius": 9.5
+    },
+    "cdc_2": {
+      "domains": [
+        [
+          1009,
+          1090
+        ],
+        [
+          1009,
+          1115
+        ],
+        [
+          1009,
+          1140
+        ],
+        [
+          1009,
+          1165
+        ]
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "radius": 9.5
+    },
+    "cdc_3": {
+      "domains": [
+        [
+          1089,
+          1090
+        ],
+        [
+          1089,
+          1115
+        ],
+        [
+          1089,
+          1140
+        ],
+        [
+          1089,
+          1165
+        ]
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "radius": 9.5
+    }
+  },
+  "antibodies": [
+    {
+      "id": "overview",
+      "hinge": [
+        580,
+        94
+      ],
+      "green_tip": [
+        543,
+        53
+      ],
+      "purple_tip": [
+        617,
+        53
+      ],
+      "fc_tip": [
+        580,
+        147
+      ],
+      "green_binding": null,
+      "purple_binding": null,
+      "fc_binding": null
+    },
+    {
+      "id": "cluster_ab_1",
+      "hinge": [
+        137,
+        467
+      ],
+      "green_tip": [
+        86.84770474160564,
+        440.06110563320374
+      ],
+      "purple_tip": [
+        188.2,
+        501.0
+      ],
+      "fc_tip": [
+        151,
+        414
+      ],
+      "green_binding": [
+        "cluster_0",
+        1,
+        [
+          1,
+          -0.7
+        ]
+      ],
+      "purple_binding": [
+        "cluster_1",
+        3,
+        [
+          -1,
+          0
+        ]
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "cluster_ab_2",
+      "hinge": [
+        258,
+        467
+      ],
+      "green_tip": [
+        207.84770474160564,
+        440.06110563320374
+      ],
+      "purple_tip": [
+        309.2,
+        501.0
+      ],
+      "fc_tip": [
+        273,
+        414
+      ],
+      "green_binding": [
+        "cluster_1",
+        1,
+        [
+          1,
+          -0.7
+        ]
+      ],
+      "purple_binding": [
+        "cluster_2",
+        3,
+        [
+          -1,
+          0
+        ]
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "internal_ab",
+      "hinge": [
+        185,
+        783
+      ],
+      "green_tip": [
+        127.74900525429523,
+        760.6175900190216
+      ],
+      "purple_tip": [
+        255.5,
+        815.0
+      ],
+      "fc_tip": [
+        210,
+        716
+      ],
+      "green_binding": [
+        "internal_left",
+        1,
+        [
+          1,
+          -0.4
+        ]
+      ],
+      "purple_binding": [
+        "internal_right",
+        3,
+        [
+          -1,
+          0
+        ]
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "blockade_ab",
+      "hinge": [
+        564,
+        470
+      ],
+      "green_tip": [
+        516.1278283028342,
+        439.0320942447909
+      ],
+      "purple_tip": [
+        518.8,
+        499.0
+      ],
+      "fc_tip": [
+        603,
+        417
+      ],
+      "green_binding": [
+        "blockade",
+        1,
+        [
+          0.8,
+          -0.7
+        ]
+      ],
+      "purple_binding": [
+        "blockade",
+        3,
+        [
+          1,
+          0
+        ]
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "modulation_ab",
+      "hinge": [
+        603,
+        757
+      ],
+      "green_tip": [
+        556.4704622470297,
+        730.7290072219278
+      ],
+      "purple_tip": [
+        557.2,
+        782.0
+      ],
+      "fc_tip": [
+        647,
+        709
+      ],
+      "green_binding": [
+        "modulation",
+        1,
+        [
+          1,
+          -0.4
+        ]
+      ],
+      "purple_binding": [
+        "modulation",
+        3,
+        [
+          1,
+          0
+        ]
+      ],
+      "fc_binding": null
+    },
+    {
+      "id": "adcc_ab",
+      "hinge": [
+        951,
+        463
+      ],
+      "green_tip": [
+        978.0,
+        506.9
+      ],
+      "purple_tip": [
+        924.0,
+        506.9
+      ],
+      "fc_tip": [
+        1025,
+        458
+      ],
+      "green_binding": [
+        "adcc_target",
+        1,
+        [
+          0,
+          -1
+        ]
+      ],
+      "purple_binding": [
+        "adcc_target",
+        3,
+        [
+          0,
+          -1
+        ]
+      ],
+      "fc_binding": "Fc\u03b3R"
+    },
+    {
+      "id": "adcp_ab",
+      "hinge": [
+        951,
+        771
+      ],
+      "green_tip": [
+        978.0,
+        814.9
+      ],
+      "purple_tip": [
+        924.0,
+        814.9
+      ],
+      "fc_tip": [
+        1025,
+        766
+      ],
+      "green_binding": [
+        "adcp_target",
+        1,
+        [
+          0,
+          -1
+        ]
+      ],
+      "purple_binding": [
+        "adcp_target",
+        3,
+        [
+          0,
+          -1
+        ]
+      ],
+      "fc_binding": "Fc\u03b3R"
+    },
+    {
+      "id": "cdc_ab_1",
+      "hinge": [
+        890,
+        1090
+      ],
+      "green_tip": [
+        854.7,
+        1081.36
+      ],
+      "purple_tip": [
+        919.5,
+        1140.0
+      ],
+      "fc_tip": [
+        919,
+        1048
+      ],
+      "green_binding": [
+        "cdc_0",
+        1,
+        [
+          0.6,
+          -0.8
+        ]
+      ],
+      "purple_binding": [
+        "cdc_1",
+        3,
+        [
+          -1,
+          0
+        ]
+      ],
+      "fc_binding": "C1q"
+    },
+    {
+      "id": "cdc_ab_2",
+      "hinge": [
+        1049,
+        1090
+      ],
+      "green_tip": [
+        1014.7,
+        1081.36
+      ],
+      "purple_tip": [
+        1079.5,
+        1140.0
+      ],
+      "fc_tip": [
+        1030,
+        1048
+      ],
+      "green_binding": [
+        "cdc_2",
+        1,
+        [
+          0.6,
+          -0.8
+        ]
+      ],
+      "purple_binding": [
+        "cdc_3",
+        3,
+        [
+          -1,
+          0
+        ]
+      ],
+      "fc_binding": "C1q"
+    }
+  ],
+  "not_structure_derived": true
+}

@@ -963,3 +963,26 @@ validation limits are recorded in the directory README and
 Fab specificity/Fc attachment visually and verified PNG decoding. No
 structural analysis, protein inference or experimental claims are added.
 Next: use the revised conceptual diagram with its hypothesis labels retained.
+
+
+## Domain-specific Fab illustration — 2026-10-21 UTC
+
+Completed the user's requested revision of
+`results/pic_fig/00_01_b7h3_biparatopic_mechanisms.png`, saved separately as
+`00_03_b7h3_domain_specific_fab_binding.png` in the same directory. After
+image-generation drafts failed contact consistency checks, the user explicitly
+authorized precise vector editing. The final uses the original 00_01 canvas
+with native SVG overlays: green Fab contacts the distal first blue domain;
+purple Fab contacts the third blue domain, counting toward the membrane.
+Every intact antibody has one Fab of each specificity and a gray Fc.
+
+Reproduce with `python3 results/pic_fig/00_03_build_domain_specific_figure.py`.
+Renderer: existing rsvg-convert 2.56.1. SVG, direct builder, geometry record,
+method notes and directory README are saved alongside the new 2382 × 2642 PNG.
+Verified 10 intact antibody symbols, 13 four-domain antigens, requested Fab
+endpoint assignments and PNG decoding; visually inspected the final figure.
+Original files are preserved. Domain assignments are conceptual drawing
+instructions, not new residue-level epitope decisions or evidence for binding
+geometry/mechanism. No protein inference, installation, or cluster job was run.
+Next: use the corrected schematic with its hypothesis qualifiers retained and
+validate actual structural contacts independently.
