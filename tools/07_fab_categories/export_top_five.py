@@ -3,12 +3,19 @@
 
 Uses the ranking/sample layout in tools/06_af3_validation/analyze_af3_shortlist.py.
 """
+import argparse
 import csv
 import json
 import shutil
 from pathlib import Path
 import os
 
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--snapshot', default='20261018', help='Output snapshot YYYYMMDD; default preserves the original export location')
+args = parser.parse_args()
+if len(args.snapshot) != 8 or not args.snapshot.isdigit():
+    parser.error('--snapshot must be YYYYMMDD')
+snapshot_label = f'{args.snapshot[:4]}-{args.snapshot[4:6]}-{args.snapshot[6:]}'
 root = Path(os.environ['MAB_SCRATCH_ROOT'])
 project = Path(os.environ['MAB_PROJECT_ROOT'])
 categories = [('fab_A_only', '07_01_fab_A_only'),
@@ -35,7 +42,7 @@ for category, destination in categories:
                           for s in data['sequences'] if s['protein']['id'] != 'T')
         candidates.append((float(best['ranking_score']), index, ranking, best, sequences, inp))
     candidates.sort(key=lambda r: (-r[0], r[1]))
-    out = project / 'results' / destination / '07_04_top_five_20261018'
+    out = project / 'results' / destination / f'07_04_top_five_{args.snapshot}'
     out.mkdir(parents=True, exist_ok=True)
     seen = set()
     records = []
@@ -77,11 +84,11 @@ for category, destination in categories:
     if len(records) != 5:
         raise SystemExit(f'Only {len(records)} distinct inputs for {category}')
     with (out / '07_04_selection.tsv').open('w') as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(records[0]), delimiter='\t')
+        writer = csv.DictWriter(handle, fieldnames=list(records[0]), delimiter='\t', lineterminator='\n')
         writer.writeheader(); writer.writerows(records)
     (out / 'README.md').write_text(
         f'# Top five {category} inputs by AF3 ranking score\n\n'
-        f'2026-10-18 snapshot: {len(candidates)} completed inputs considered.\n'
+        f'{snapshot_label} snapshot: {len(candidates)} completed inputs considered.\n'
         'Inputs are ranked by their maximum native ranking_scores.csv score across\n'
         'seeds 101/202 and samples 0/1; ties use ascending input index. Antibody\n'
         'sequence tuples are deduplicated (AB identity is the ordered A/B pair).\n'

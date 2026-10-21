@@ -1,0 +1,6 @@
+rank	index	name	seed	sample	ranking_score	iptm	ptm	has_clash	chains	source	model
+1	10	fabB_rf2_task10	101	0	0.38060374881794723	0.36	0.42	0.0	HB,LB,T	/scratch/ghaedi/mab/fab_category_outputs/fab_B_only/index_10/fabB_rf2_task10/seed-101_sample-0/fabB_rf2_task10_seed-101_sample-0_model.cif	07_04_rank01_index10_fabB_rf2_task10_model.cif
+2	15	fabB_rf2_task234	202	1	0.3400945158381982	0.31	0.42	0.0	HB,LB,T	/scratch/ghaedi/mab/fab_category_outputs/fab_B_only/index_15/fabB_rf2_task234/seed-202_sample-1/fabB_rf2_task234_seed-202_sample-1_model.cif	07_04_rank02_index15_fabB_rf2_task234_model.cif
+3	13	fabB_rf2_task272	202	0	0.3390817492716179	0.31	0.42	0.0	HB,LB,T	/scratch/ghaedi/mab/fab_category_outputs/fab_B_only/index_13/fabB_rf2_task272/seed-202_sample-0/fabB_rf2_task272_seed-202_sample-0_model.cif	07_04_rank03_index13_fabB_rf2_task272_model.cif
+4	25	fabB_rf2_task226	202	0	0.3330420208435108	0.3	0.41	0.0	HB,LB,T	/scratch/ghaedi/mab/fab_category_outputs/fab_B_only/index_25/fabB_rf2_task226/seed-202_sample-0/fabB_rf2_task226_seed-202_sample-0_model.cif	07_04_rank04_index25_fabB_rf2_task226_model.cif
+5	28	fabB_rf2_task124	101	0	0.3246149404305629	0.29	0.41	0.0	HB,LB,T	/scratch/ghaedi/mab/fab_category_outputs/fab_B_only/index_28/fabB_rf2_task124/seed-101_sample-0/fabB_rf2_task124_seed-101_sample-0_model.cif	07_04_rank05_index28_fabB_rf2_task124_model.cif

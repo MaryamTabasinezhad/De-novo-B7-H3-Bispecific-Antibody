@@ -1,0 +1,1161 @@
+index	artifact_status	samples_present	issues
+0	complete	4	
+1	complete	4	
+2	complete	4	
+3	complete	4	
+4	complete	4	
+5	complete	4	
+6	complete	4	
+7	complete	4	
+8	complete	4	
+9	complete	4	
+10	complete	4	
+11	complete	4	
+12	complete	4	
+13	complete	4	
+14	complete	4	
+15	complete	4	
+16	complete	4	
+17	complete	4	
+18	complete	4	
+19	complete	4	
+20	complete	4	
+21	complete	4	
+22	complete	4	
+23	complete	4	
+24	complete	4	
+25	complete	4	
+26	complete	4	
+27	complete	4	
+28	complete	4	
+29	complete	4	
+30	complete	4	
+31	complete	4	
+32	complete	4	
+33	complete	4	
+34	complete	4	
+35	complete	4	
+36	complete	4	
+37	complete	4	
+38	complete	4	
+39	complete	4	
+40	complete	4	
+41	complete	4	
+42	complete	4	
+43	complete	4	
+44	complete	4	
+45	complete	4	
+46	complete	4	
+47	complete	4	
+48	complete	4	
+49	complete	4	
+50	complete	4	
+51	complete	4	
+52	complete	4	
+53	complete	4	
+54	complete	4	
+55	complete	4	
+56	complete	4	
+57	complete	4	
+58	complete	4	
+59	complete	4	
+60	complete	4	
+61	complete	4	
+62	complete	4	
+63	complete	4	
+64	complete	4	
+65	complete	4	
+66	complete	4	
+67	complete	4	
+68	complete	4	
+69	complete	4	
+70	complete	4	
+71	complete	4	
+72	complete	4	
+73	complete	4	
+74	complete	4	
+75	complete	4	
+76	complete	4	
+77	complete	4	
+78	complete	4	
+79	complete	4	
+80	complete	4	
+81	complete	4	
+82	complete	4	
+83	complete	4	
+84	complete	4	
+85	complete	4	
+86	complete	4	
+87	complete	4	
+88	complete	4	
+89	complete	4	
+90	complete	4	
+91	complete	4	
+92	complete	4	
+93	complete	4	
+94	complete	4	
+95	complete	4	
+96	complete	4	
+97	complete	4	
+98	complete	4	
+99	complete	4	
+100	complete	4	
+101	complete	4	
+102	complete	4	
+103	complete	4	
+104	complete	4	
+105	complete	4	
+106	complete	4	
+107	complete	4	
+108	complete	4	
+109	complete	4	
+110	complete	4	
+111	complete	4	
+112	complete	4	
+113	complete	4	
+114	complete	4	
+115	complete	4	
+116	complete	4	
+117	complete	4	
+118	complete	4	
+119	complete	4	
+120	complete	4	
+121	complete	4	
+122	complete	4	
+123	complete	4	
+124	complete	4	
+125	complete	4	
+126	complete	4	
+127	complete	4	
+128	complete	4	
+129	complete	4	
+130	complete	4	
+131	complete	4	
+132	complete	4	
+133	complete	4	
+134	complete	4	
+135	absent	0	missing or ambiguous ranking file
+136	absent	0	missing or ambiguous ranking file
+137	absent	0	missing or ambiguous ranking file
+138	absent	0	missing or ambiguous ranking file
+139	absent	0	missing or ambiguous ranking file
+140	absent	0	missing or ambiguous ranking file
+141	absent	0	missing or ambiguous ranking file
+142	absent	0	missing or ambiguous ranking file
+143	absent	0	missing or ambiguous ranking file
+144	absent	0	missing or ambiguous ranking file
+145	absent	0	missing or ambiguous ranking file
+146	absent	0	missing or ambiguous ranking file
+147	absent	0	missing or ambiguous ranking file
+148	absent	0	missing or ambiguous ranking file
+149	absent	0	missing or ambiguous ranking file
+150	absent	0	missing or ambiguous ranking file
+151	absent	0	missing or ambiguous ranking file
+152	absent	0	missing or ambiguous ranking file
+153	absent	0	missing or ambiguous ranking file
+154	absent	0	missing or ambiguous ranking file
+155	absent	0	missing or ambiguous ranking file
+156	absent	0	missing or ambiguous ranking file
+157	absent	0	missing or ambiguous ranking file
+158	absent	0	missing or ambiguous ranking file
+159	absent	0	missing or ambiguous ranking file
+160	absent	0	missing or ambiguous ranking file
+161	absent	0	missing or ambiguous ranking file
+162	absent	0	missing or ambiguous ranking file
+163	absent	0	missing or ambiguous ranking file
+164	absent	0	missing or ambiguous ranking file
+165	absent	0	missing or ambiguous ranking file
+166	absent	0	missing or ambiguous ranking file
+167	absent	0	missing or ambiguous ranking file
+168	absent	0	missing or ambiguous ranking file
+169	absent	0	missing or ambiguous ranking file
+170	absent	0	missing or ambiguous ranking file
+171	absent	0	missing or ambiguous ranking file
+172	absent	0	missing or ambiguous ranking file
+173	absent	0	missing or ambiguous ranking file
+174	absent	0	missing or ambiguous ranking file
+175	absent	0	missing or ambiguous ranking file
+176	absent	0	missing or ambiguous ranking file
+177	absent	0	missing or ambiguous ranking file
+178	absent	0	missing or ambiguous ranking file
+179	absent	0	missing or ambiguous ranking file
+180	absent	0	missing or ambiguous ranking file
+181	absent	0	missing or ambiguous ranking file
+182	absent	0	missing or ambiguous ranking file
+183	absent	0	missing or ambiguous ranking file
+184	absent	0	missing or ambiguous ranking file
+185	absent	0	missing or ambiguous ranking file
+186	absent	0	missing or ambiguous ranking file
+187	absent	0	missing or ambiguous ranking file
+188	absent	0	missing or ambiguous ranking file
+189	absent	0	missing or ambiguous ranking file
+190	absent	0	missing or ambiguous ranking file
+191	absent	0	missing or ambiguous ranking file
+192	absent	0	missing or ambiguous ranking file
+193	absent	0	missing or ambiguous ranking file
+194	absent	0	missing or ambiguous ranking file
+195	absent	0	missing or ambiguous ranking file
+196	absent	0	missing or ambiguous ranking file
+197	absent	0	missing or ambiguous ranking file
+198	absent	0	missing or ambiguous ranking file
+199	absent	0	missing or ambiguous ranking file
+200	absent	0	missing or ambiguous ranking file
+201	absent	0	missing or ambiguous ranking file
+202	absent	0	missing or ambiguous ranking file
+203	absent	0	missing or ambiguous ranking file
+204	absent	0	missing or ambiguous ranking file
+205	absent	0	missing or ambiguous ranking file
+206	absent	0	missing or ambiguous ranking file
+207	absent	0	missing or ambiguous ranking file
+208	absent	0	missing or ambiguous ranking file
+209	absent	0	missing or ambiguous ranking file
+210	absent	0	missing or ambiguous ranking file
+211	absent	0	missing or ambiguous ranking file
+212	absent	0	missing or ambiguous ranking file
+213	absent	0	missing or ambiguous ranking file
+214	absent	0	missing or ambiguous ranking file
+215	absent	0	missing or ambiguous ranking file
+216	absent	0	missing or ambiguous ranking file
+217	absent	0	missing or ambiguous ranking file
+218	absent	0	missing or ambiguous ranking file
+219	absent	0	missing or ambiguous ranking file
+220	absent	0	missing or ambiguous ranking file
+221	absent	0	missing or ambiguous ranking file
+222	absent	0	missing or ambiguous ranking file
+223	absent	0	missing or ambiguous ranking file
+224	absent	0	missing or ambiguous ranking file
+225	absent	0	missing or ambiguous ranking file
+226	absent	0	missing or ambiguous ranking file
+227	absent	0	missing or ambiguous ranking file
+228	absent	0	missing or ambiguous ranking file
+229	absent	0	missing or ambiguous ranking file
+230	absent	0	missing or ambiguous ranking file
+231	absent	0	missing or ambiguous ranking file
+232	absent	0	missing or ambiguous ranking file
+233	absent	0	missing or ambiguous ranking file
+234	absent	0	missing or ambiguous ranking file
+235	absent	0	missing or ambiguous ranking file
+236	absent	0	missing or ambiguous ranking file
+237	absent	0	missing or ambiguous ranking file
+238	absent	0	missing or ambiguous ranking file
+239	absent	0	missing or ambiguous ranking file
+240	absent	0	missing or ambiguous ranking file
+241	absent	0	missing or ambiguous ranking file
+242	absent	0	missing or ambiguous ranking file
+243	absent	0	missing or ambiguous ranking file
+244	absent	0	missing or ambiguous ranking file
+245	absent	0	missing or ambiguous ranking file
+246	absent	0	missing or ambiguous ranking file
+247	absent	0	missing or ambiguous ranking file
+248	absent	0	missing or ambiguous ranking file
+249	absent	0	missing or ambiguous ranking file
+250	absent	0	missing or ambiguous ranking file
+251	absent	0	missing or ambiguous ranking file
+252	absent	0	missing or ambiguous ranking file
+253	absent	0	missing or ambiguous ranking file
+254	absent	0	missing or ambiguous ranking file
+255	absent	0	missing or ambiguous ranking file
+256	absent	0	missing or ambiguous ranking file
+257	absent	0	missing or ambiguous ranking file
+258	absent	0	missing or ambiguous ranking file
+259	absent	0	missing or ambiguous ranking file
+260	absent	0	missing or ambiguous ranking file
+261	absent	0	missing or ambiguous ranking file
+262	absent	0	missing or ambiguous ranking file
+263	absent	0	missing or ambiguous ranking file
+264	absent	0	missing or ambiguous ranking file
+265	absent	0	missing or ambiguous ranking file
+266	absent	0	missing or ambiguous ranking file
+267	absent	0	missing or ambiguous ranking file
+268	absent	0	missing or ambiguous ranking file
+269	absent	0	missing or ambiguous ranking file
+270	absent	0	missing or ambiguous ranking file
+271	absent	0	missing or ambiguous ranking file
+272	absent	0	missing or ambiguous ranking file
+273	absent	0	missing or ambiguous ranking file
+274	absent	0	missing or ambiguous ranking file
+275	absent	0	missing or ambiguous ranking file
+276	absent	0	missing or ambiguous ranking file
+277	absent	0	missing or ambiguous ranking file
+278	absent	0	missing or ambiguous ranking file
+279	absent	0	missing or ambiguous ranking file
+280	absent	0	missing or ambiguous ranking file
+281	absent	0	missing or ambiguous ranking file
+282	absent	0	missing or ambiguous ranking file
+283	absent	0	missing or ambiguous ranking file
+284	absent	0	missing or ambiguous ranking file
+285	absent	0	missing or ambiguous ranking file
+286	absent	0	missing or ambiguous ranking file
+287	absent	0	missing or ambiguous ranking file
+288	absent	0	missing or ambiguous ranking file
+289	absent	0	missing or ambiguous ranking file
+290	absent	0	missing or ambiguous ranking file
+291	absent	0	missing or ambiguous ranking file
+292	absent	0	missing or ambiguous ranking file
+293	absent	0	missing or ambiguous ranking file
+294	absent	0	missing or ambiguous ranking file
+295	absent	0	missing or ambiguous ranking file
+296	absent	0	missing or ambiguous ranking file
+297	absent	0	missing or ambiguous ranking file
+298	absent	0	missing or ambiguous ranking file
+299	absent	0	missing or ambiguous ranking file
+300	complete	4	
+301	complete	4	
+302	complete	4	
+303	complete	4	
+304	complete	4	
+305	complete	4	
+306	complete	4	
+307	complete	4	
+308	complete	4	
+309	complete	4	
+310	complete	4	
+311	complete	4	
+312	complete	4	
+313	complete	4	
+314	complete	4	
+315	complete	4	
+316	complete	4	
+317	complete	4	
+318	complete	4	
+319	complete	4	
+320	complete	4	
+321	complete	4	
+322	complete	4	
+323	complete	4	
+324	complete	4	
+325	absent	0	missing or ambiguous ranking file
+326	absent	0	missing or ambiguous ranking file
+327	absent	0	missing or ambiguous ranking file
+328	absent	0	missing or ambiguous ranking file
+329	absent	0	missing or ambiguous ranking file
+330	absent	0	missing or ambiguous ranking file
+331	absent	0	missing or ambiguous ranking file
+332	absent	0	missing or ambiguous ranking file
+333	absent	0	missing or ambiguous ranking file
+334	absent	0	missing or ambiguous ranking file
+335	absent	0	missing or ambiguous ranking file
+336	absent	0	missing or ambiguous ranking file
+337	absent	0	missing or ambiguous ranking file
+338	absent	0	missing or ambiguous ranking file
+339	absent	0	missing or ambiguous ranking file
+340	absent	0	missing or ambiguous ranking file
+341	absent	0	missing or ambiguous ranking file
+342	absent	0	missing or ambiguous ranking file
+343	absent	0	missing or ambiguous ranking file
+344	absent	0	missing or ambiguous ranking file
+345	absent	0	missing or ambiguous ranking file
+346	absent	0	missing or ambiguous ranking file
+347	absent	0	missing or ambiguous ranking file
+348	absent	0	missing or ambiguous ranking file
+349	absent	0	missing or ambiguous ranking file
+350	absent	0	missing or ambiguous ranking file
+351	absent	0	missing or ambiguous ranking file
+352	absent	0	missing or ambiguous ranking file
+353	absent	0	missing or ambiguous ranking file
+354	absent	0	missing or ambiguous ranking file
+355	absent	0	missing or ambiguous ranking file
+356	absent	0	missing or ambiguous ranking file
+357	absent	0	missing or ambiguous ranking file
+358	absent	0	missing or ambiguous ranking file
+359	absent	0	missing or ambiguous ranking file
+360	absent	0	missing or ambiguous ranking file
+361	absent	0	missing or ambiguous ranking file
+362	absent	0	missing or ambiguous ranking file
+363	absent	0	missing or ambiguous ranking file
+364	absent	0	missing or ambiguous ranking file
+365	absent	0	missing or ambiguous ranking file
+366	absent	0	missing or ambiguous ranking file
+367	absent	0	missing or ambiguous ranking file
+368	absent	0	missing or ambiguous ranking file
+369	absent	0	missing or ambiguous ranking file
+370	absent	0	missing or ambiguous ranking file
+371	absent	0	missing or ambiguous ranking file
+372	absent	0	missing or ambiguous ranking file
+373	absent	0	missing or ambiguous ranking file
+374	absent	0	missing or ambiguous ranking file
+375	absent	0	missing or ambiguous ranking file
+376	absent	0	missing or ambiguous ranking file
+377	absent	0	missing or ambiguous ranking file
+378	absent	0	missing or ambiguous ranking file
+379	absent	0	missing or ambiguous ranking file
+380	absent	0	missing or ambiguous ranking file
+381	absent	0	missing or ambiguous ranking file
+382	absent	0	missing or ambiguous ranking file
+383	absent	0	missing or ambiguous ranking file
+384	absent	0	missing or ambiguous ranking file
+385	absent	0	missing or ambiguous ranking file
+386	absent	0	missing or ambiguous ranking file
+387	absent	0	missing or ambiguous ranking file
+388	absent	0	missing or ambiguous ranking file
+389	absent	0	missing or ambiguous ranking file
+390	absent	0	missing or ambiguous ranking file
+391	absent	0	missing or ambiguous ranking file
+392	absent	0	missing or ambiguous ranking file
+393	absent	0	missing or ambiguous ranking file
+394	absent	0	missing or ambiguous ranking file
+395	absent	0	missing or ambiguous ranking file
+396	absent	0	missing or ambiguous ranking file
+397	absent	0	missing or ambiguous ranking file
+398	absent	0	missing or ambiguous ranking file
+399	absent	0	missing or ambiguous ranking file
+400	absent	0	missing or ambiguous ranking file
+401	absent	0	missing or ambiguous ranking file
+402	absent	0	missing or ambiguous ranking file
+403	absent	0	missing or ambiguous ranking file
+404	absent	0	missing or ambiguous ranking file
+405	absent	0	missing or ambiguous ranking file
+406	absent	0	missing or ambiguous ranking file
+407	absent	0	missing or ambiguous ranking file
+408	absent	0	missing or ambiguous ranking file
+409	absent	0	missing or ambiguous ranking file
+410	absent	0	missing or ambiguous ranking file
+411	absent	0	missing or ambiguous ranking file
+412	absent	0	missing or ambiguous ranking file
+413	absent	0	missing or ambiguous ranking file
+414	absent	0	missing or ambiguous ranking file
+415	absent	0	missing or ambiguous ranking file
+416	absent	0	missing or ambiguous ranking file
+417	absent	0	missing or ambiguous ranking file
+418	absent	0	missing or ambiguous ranking file
+419	absent	0	missing or ambiguous ranking file
+420	absent	0	missing or ambiguous ranking file
+421	absent	0	missing or ambiguous ranking file
+422	absent	0	missing or ambiguous ranking file
+423	absent	0	missing or ambiguous ranking file
+424	absent	0	missing or ambiguous ranking file
+425	absent	0	missing or ambiguous ranking file
+426	absent	0	missing or ambiguous ranking file
+427	absent	0	missing or ambiguous ranking file
+428	absent	0	missing or ambiguous ranking file
+429	absent	0	missing or ambiguous ranking file
+430	absent	0	missing or ambiguous ranking file
+431	absent	0	missing or ambiguous ranking file
+432	absent	0	missing or ambiguous ranking file
+433	absent	0	missing or ambiguous ranking file
+434	absent	0	missing or ambiguous ranking file
+435	absent	0	missing or ambiguous ranking file
+436	absent	0	missing or ambiguous ranking file
+437	absent	0	missing or ambiguous ranking file
+438	absent	0	missing or ambiguous ranking file
+439	absent	0	missing or ambiguous ranking file
+440	absent	0	missing or ambiguous ranking file
+441	absent	0	missing or ambiguous ranking file
+442	absent	0	missing or ambiguous ranking file
+443	absent	0	missing or ambiguous ranking file
+444	absent	0	missing or ambiguous ranking file
+445	absent	0	missing or ambiguous ranking file
+446	absent	0	missing or ambiguous ranking file
+447	absent	0	missing or ambiguous ranking file
+448	absent	0	missing or ambiguous ranking file
+449	absent	0	missing or ambiguous ranking file
+450	absent	0	missing or ambiguous ranking file
+451	absent	0	missing or ambiguous ranking file
+452	absent	0	missing or ambiguous ranking file
+453	absent	0	missing or ambiguous ranking file
+454	absent	0	missing or ambiguous ranking file
+455	absent	0	missing or ambiguous ranking file
+456	absent	0	missing or ambiguous ranking file
+457	absent	0	missing or ambiguous ranking file
+458	absent	0	missing or ambiguous ranking file
+459	absent	0	missing or ambiguous ranking file
+460	absent	0	missing or ambiguous ranking file
+461	absent	0	missing or ambiguous ranking file
+462	absent	0	missing or ambiguous ranking file
+463	absent	0	missing or ambiguous ranking file
+464	absent	0	missing or ambiguous ranking file
+465	absent	0	missing or ambiguous ranking file
+466	absent	0	missing or ambiguous ranking file
+467	absent	0	missing or ambiguous ranking file
+468	absent	0	missing or ambiguous ranking file
+469	absent	0	missing or ambiguous ranking file
+470	absent	0	missing or ambiguous ranking file
+471	absent	0	missing or ambiguous ranking file
+472	absent	0	missing or ambiguous ranking file
+473	absent	0	missing or ambiguous ranking file
+474	absent	0	missing or ambiguous ranking file
+475	absent	0	missing or ambiguous ranking file
+476	absent	0	missing or ambiguous ranking file
+477	absent	0	missing or ambiguous ranking file
+478	absent	0	missing or ambiguous ranking file
+479	absent	0	missing or ambiguous ranking file
+480	absent	0	missing or ambiguous ranking file
+481	absent	0	missing or ambiguous ranking file
+482	absent	0	missing or ambiguous ranking file
+483	absent	0	missing or ambiguous ranking file
+484	absent	0	missing or ambiguous ranking file
+485	absent	0	missing or ambiguous ranking file
+486	absent	0	missing or ambiguous ranking file
+487	absent	0	missing or ambiguous ranking file
+488	absent	0	missing or ambiguous ranking file
+489	absent	0	missing or ambiguous ranking file
+490	absent	0	missing or ambiguous ranking file
+491	absent	0	missing or ambiguous ranking file
+492	absent	0	missing or ambiguous ranking file
+493	absent	0	missing or ambiguous ranking file
+494	absent	0	missing or ambiguous ranking file
+495	absent	0	missing or ambiguous ranking file
+496	absent	0	missing or ambiguous ranking file
+497	absent	0	missing or ambiguous ranking file
+498	absent	0	missing or ambiguous ranking file
+499	absent	0	missing or ambiguous ranking file
+500	absent	0	missing or ambiguous ranking file
+501	absent	0	missing or ambiguous ranking file
+502	absent	0	missing or ambiguous ranking file
+503	absent	0	missing or ambiguous ranking file
+504	absent	0	missing or ambiguous ranking file
+505	absent	0	missing or ambiguous ranking file
+506	absent	0	missing or ambiguous ranking file
+507	absent	0	missing or ambiguous ranking file
+508	absent	0	missing or ambiguous ranking file
+509	absent	0	missing or ambiguous ranking file
+510	absent	0	missing or ambiguous ranking file
+511	absent	0	missing or ambiguous ranking file
+512	absent	0	missing or ambiguous ranking file
+513	absent	0	missing or ambiguous ranking file
+514	absent	0	missing or ambiguous ranking file
+515	absent	0	missing or ambiguous ranking file
+516	absent	0	missing or ambiguous ranking file
+517	absent	0	missing or ambiguous ranking file
+518	absent	0	missing or ambiguous ranking file
+519	absent	0	missing or ambiguous ranking file
+520	absent	0	missing or ambiguous ranking file
+521	absent	0	missing or ambiguous ranking file
+522	absent	0	missing or ambiguous ranking file
+523	absent	0	missing or ambiguous ranking file
+524	absent	0	missing or ambiguous ranking file
+525	absent	0	missing or ambiguous ranking file
+526	absent	0	missing or ambiguous ranking file
+527	absent	0	missing or ambiguous ranking file
+528	absent	0	missing or ambiguous ranking file
+529	absent	0	missing or ambiguous ranking file
+530	absent	0	missing or ambiguous ranking file
+531	absent	0	missing or ambiguous ranking file
+532	absent	0	missing or ambiguous ranking file
+533	absent	0	missing or ambiguous ranking file
+534	absent	0	missing or ambiguous ranking file
+535	absent	0	missing or ambiguous ranking file
+536	absent	0	missing or ambiguous ranking file
+537	absent	0	missing or ambiguous ranking file
+538	absent	0	missing or ambiguous ranking file
+539	absent	0	missing or ambiguous ranking file
+540	absent	0	missing or ambiguous ranking file
+541	absent	0	missing or ambiguous ranking file
+542	absent	0	missing or ambiguous ranking file
+543	absent	0	missing or ambiguous ranking file
+544	absent	0	missing or ambiguous ranking file
+545	absent	0	missing or ambiguous ranking file
+546	absent	0	missing or ambiguous ranking file
+547	absent	0	missing or ambiguous ranking file
+548	absent	0	missing or ambiguous ranking file
+549	absent	0	missing or ambiguous ranking file
+550	absent	0	missing or ambiguous ranking file
+551	absent	0	missing or ambiguous ranking file
+552	absent	0	missing or ambiguous ranking file
+553	absent	0	missing or ambiguous ranking file
+554	absent	0	missing or ambiguous ranking file
+555	absent	0	missing or ambiguous ranking file
+556	absent	0	missing or ambiguous ranking file
+557	absent	0	missing or ambiguous ranking file
+558	absent	0	missing or ambiguous ranking file
+559	absent	0	missing or ambiguous ranking file
+560	absent	0	missing or ambiguous ranking file
+561	absent	0	missing or ambiguous ranking file
+562	absent	0	missing or ambiguous ranking file
+563	absent	0	missing or ambiguous ranking file
+564	absent	0	missing or ambiguous ranking file
+565	absent	0	missing or ambiguous ranking file
+566	absent	0	missing or ambiguous ranking file
+567	absent	0	missing or ambiguous ranking file
+568	absent	0	missing or ambiguous ranking file
+569	absent	0	missing or ambiguous ranking file
+570	absent	0	missing or ambiguous ranking file
+571	absent	0	missing or ambiguous ranking file
+572	absent	0	missing or ambiguous ranking file
+573	absent	0	missing or ambiguous ranking file
+574	absent	0	missing or ambiguous ranking file
+575	absent	0	missing or ambiguous ranking file
+576	absent	0	missing or ambiguous ranking file
+577	absent	0	missing or ambiguous ranking file
+578	absent	0	missing or ambiguous ranking file
+579	absent	0	missing or ambiguous ranking file
+580	absent	0	missing or ambiguous ranking file
+581	absent	0	missing or ambiguous ranking file
+582	absent	0	missing or ambiguous ranking file
+583	absent	0	missing or ambiguous ranking file
+584	absent	0	missing or ambiguous ranking file
+585	absent	0	missing or ambiguous ranking file
+586	absent	0	missing or ambiguous ranking file
+587	absent	0	missing or ambiguous ranking file
+588	absent	0	missing or ambiguous ranking file
+589	absent	0	missing or ambiguous ranking file
+590	absent	0	missing or ambiguous ranking file
+591	absent	0	missing or ambiguous ranking file
+592	absent	0	missing or ambiguous ranking file
+593	absent	0	missing or ambiguous ranking file
+594	absent	0	missing or ambiguous ranking file
+595	absent	0	missing or ambiguous ranking file
+596	absent	0	missing or ambiguous ranking file
+597	absent	0	missing or ambiguous ranking file
+598	absent	0	missing or ambiguous ranking file
+599	absent	0	missing or ambiguous ranking file
+600	complete	4	
+601	complete	4	
+602	complete	4	
+603	complete	4	
+604	complete	4	
+605	complete	4	
+606	complete	4	
+607	complete	4	
+608	complete	4	
+609	complete	4	
+610	absent	0	missing or ambiguous ranking file
+611	absent	0	missing or ambiguous ranking file
+612	absent	0	missing or ambiguous ranking file
+613	absent	0	missing or ambiguous ranking file
+614	absent	0	missing or ambiguous ranking file
+615	absent	0	missing or ambiguous ranking file
+616	absent	0	missing or ambiguous ranking file
+617	absent	0	missing or ambiguous ranking file
+618	absent	0	missing or ambiguous ranking file
+619	absent	0	missing or ambiguous ranking file
+620	absent	0	missing or ambiguous ranking file
+621	absent	0	missing or ambiguous ranking file
+622	absent	0	missing or ambiguous ranking file
+623	absent	0	missing or ambiguous ranking file
+624	absent	0	missing or ambiguous ranking file
+625	absent	0	missing or ambiguous ranking file
+626	absent	0	missing or ambiguous ranking file
+627	absent	0	missing or ambiguous ranking file
+628	absent	0	missing or ambiguous ranking file
+629	absent	0	missing or ambiguous ranking file
+630	absent	0	missing or ambiguous ranking file
+631	absent	0	missing or ambiguous ranking file
+632	absent	0	missing or ambiguous ranking file
+633	absent	0	missing or ambiguous ranking file
+634	absent	0	missing or ambiguous ranking file
+635	absent	0	missing or ambiguous ranking file
+636	absent	0	missing or ambiguous ranking file
+637	absent	0	missing or ambiguous ranking file
+638	absent	0	missing or ambiguous ranking file
+639	absent	0	missing or ambiguous ranking file
+640	absent	0	missing or ambiguous ranking file
+641	absent	0	missing or ambiguous ranking file
+642	absent	0	missing or ambiguous ranking file
+643	absent	0	missing or ambiguous ranking file
+644	absent	0	missing or ambiguous ranking file
+645	absent	0	missing or ambiguous ranking file
+646	absent	0	missing or ambiguous ranking file
+647	absent	0	missing or ambiguous ranking file
+648	absent	0	missing or ambiguous ranking file
+649	absent	0	missing or ambiguous ranking file
+650	absent	0	missing or ambiguous ranking file
+651	absent	0	missing or ambiguous ranking file
+652	absent	0	missing or ambiguous ranking file
+653	absent	0	missing or ambiguous ranking file
+654	absent	0	missing or ambiguous ranking file
+655	absent	0	missing or ambiguous ranking file
+656	absent	0	missing or ambiguous ranking file
+657	absent	0	missing or ambiguous ranking file
+658	absent	0	missing or ambiguous ranking file
+659	absent	0	missing or ambiguous ranking file
+660	absent	0	missing or ambiguous ranking file
+661	absent	0	missing or ambiguous ranking file
+662	absent	0	missing or ambiguous ranking file
+663	absent	0	missing or ambiguous ranking file
+664	absent	0	missing or ambiguous ranking file
+665	absent	0	missing or ambiguous ranking file
+666	absent	0	missing or ambiguous ranking file
+667	absent	0	missing or ambiguous ranking file
+668	absent	0	missing or ambiguous ranking file
+669	absent	0	missing or ambiguous ranking file
+670	absent	0	missing or ambiguous ranking file
+671	absent	0	missing or ambiguous ranking file
+672	absent	0	missing or ambiguous ranking file
+673	absent	0	missing or ambiguous ranking file
+674	absent	0	missing or ambiguous ranking file
+675	absent	0	missing or ambiguous ranking file
+676	absent	0	missing or ambiguous ranking file
+677	absent	0	missing or ambiguous ranking file
+678	absent	0	missing or ambiguous ranking file
+679	absent	0	missing or ambiguous ranking file
+680	absent	0	missing or ambiguous ranking file
+681	absent	0	missing or ambiguous ranking file
+682	absent	0	missing or ambiguous ranking file
+683	absent	0	missing or ambiguous ranking file
+684	absent	0	missing or ambiguous ranking file
+685	absent	0	missing or ambiguous ranking file
+686	absent	0	missing or ambiguous ranking file
+687	absent	0	missing or ambiguous ranking file
+688	absent	0	missing or ambiguous ranking file
+689	absent	0	missing or ambiguous ranking file
+690	absent	0	missing or ambiguous ranking file
+691	absent	0	missing or ambiguous ranking file
+692	absent	0	missing or ambiguous ranking file
+693	absent	0	missing or ambiguous ranking file
+694	absent	0	missing or ambiguous ranking file
+695	absent	0	missing or ambiguous ranking file
+696	absent	0	missing or ambiguous ranking file
+697	absent	0	missing or ambiguous ranking file
+698	absent	0	missing or ambiguous ranking file
+699	absent	0	missing or ambiguous ranking file
+700	absent	0	missing or ambiguous ranking file
+701	absent	0	missing or ambiguous ranking file
+702	absent	0	missing or ambiguous ranking file
+703	absent	0	missing or ambiguous ranking file
+704	absent	0	missing or ambiguous ranking file
+705	absent	0	missing or ambiguous ranking file
+706	absent	0	missing or ambiguous ranking file
+707	absent	0	missing or ambiguous ranking file
+708	absent	0	missing or ambiguous ranking file
+709	absent	0	missing or ambiguous ranking file
+710	absent	0	missing or ambiguous ranking file
+711	absent	0	missing or ambiguous ranking file
+712	absent	0	missing or ambiguous ranking file
+713	absent	0	missing or ambiguous ranking file
+714	absent	0	missing or ambiguous ranking file
+715	absent	0	missing or ambiguous ranking file
+716	absent	0	missing or ambiguous ranking file
+717	absent	0	missing or ambiguous ranking file
+718	absent	0	missing or ambiguous ranking file
+719	absent	0	missing or ambiguous ranking file
+720	absent	0	missing or ambiguous ranking file
+721	absent	0	missing or ambiguous ranking file
+722	absent	0	missing or ambiguous ranking file
+723	absent	0	missing or ambiguous ranking file
+724	absent	0	missing or ambiguous ranking file
+725	absent	0	missing or ambiguous ranking file
+726	absent	0	missing or ambiguous ranking file
+727	absent	0	missing or ambiguous ranking file
+728	absent	0	missing or ambiguous ranking file
+729	absent	0	missing or ambiguous ranking file
+730	absent	0	missing or ambiguous ranking file
+731	absent	0	missing or ambiguous ranking file
+732	absent	0	missing or ambiguous ranking file
+733	absent	0	missing or ambiguous ranking file
+734	absent	0	missing or ambiguous ranking file
+735	absent	0	missing or ambiguous ranking file
+736	absent	0	missing or ambiguous ranking file
+737	absent	0	missing or ambiguous ranking file
+738	absent	0	missing or ambiguous ranking file
+739	absent	0	missing or ambiguous ranking file
+740	absent	0	missing or ambiguous ranking file
+741	absent	0	missing or ambiguous ranking file
+742	absent	0	missing or ambiguous ranking file
+743	absent	0	missing or ambiguous ranking file
+744	absent	0	missing or ambiguous ranking file
+745	absent	0	missing or ambiguous ranking file
+746	absent	0	missing or ambiguous ranking file
+747	absent	0	missing or ambiguous ranking file
+748	absent	0	missing or ambiguous ranking file
+749	absent	0	missing or ambiguous ranking file
+750	absent	0	missing or ambiguous ranking file
+751	absent	0	missing or ambiguous ranking file
+752	absent	0	missing or ambiguous ranking file
+753	absent	0	missing or ambiguous ranking file
+754	absent	0	missing or ambiguous ranking file
+755	absent	0	missing or ambiguous ranking file
+756	absent	0	missing or ambiguous ranking file
+757	absent	0	missing or ambiguous ranking file
+758	absent	0	missing or ambiguous ranking file
+759	absent	0	missing or ambiguous ranking file
+760	absent	0	missing or ambiguous ranking file
+761	absent	0	missing or ambiguous ranking file
+762	absent	0	missing or ambiguous ranking file
+763	absent	0	missing or ambiguous ranking file
+764	absent	0	missing or ambiguous ranking file
+765	absent	0	missing or ambiguous ranking file
+766	absent	0	missing or ambiguous ranking file
+767	absent	0	missing or ambiguous ranking file
+768	absent	0	missing or ambiguous ranking file
+769	absent	0	missing or ambiguous ranking file
+770	absent	0	missing or ambiguous ranking file
+771	absent	0	missing or ambiguous ranking file
+772	absent	0	missing or ambiguous ranking file
+773	absent	0	missing or ambiguous ranking file
+774	absent	0	missing or ambiguous ranking file
+775	absent	0	missing or ambiguous ranking file
+776	absent	0	missing or ambiguous ranking file
+777	absent	0	missing or ambiguous ranking file
+778	absent	0	missing or ambiguous ranking file
+779	absent	0	missing or ambiguous ranking file
+780	absent	0	missing or ambiguous ranking file
+781	absent	0	missing or ambiguous ranking file
+782	absent	0	missing or ambiguous ranking file
+783	absent	0	missing or ambiguous ranking file
+784	absent	0	missing or ambiguous ranking file
+785	absent	0	missing or ambiguous ranking file
+786	absent	0	missing or ambiguous ranking file
+787	absent	0	missing or ambiguous ranking file
+788	absent	0	missing or ambiguous ranking file
+789	absent	0	missing or ambiguous ranking file
+790	absent	0	missing or ambiguous ranking file
+791	absent	0	missing or ambiguous ranking file
+792	absent	0	missing or ambiguous ranking file
+793	absent	0	missing or ambiguous ranking file
+794	absent	0	missing or ambiguous ranking file
+795	absent	0	missing or ambiguous ranking file
+796	absent	0	missing or ambiguous ranking file
+797	absent	0	missing or ambiguous ranking file
+798	absent	0	missing or ambiguous ranking file
+799	absent	0	missing or ambiguous ranking file
+800	absent	0	missing or ambiguous ranking file
+801	absent	0	missing or ambiguous ranking file
+802	absent	0	missing or ambiguous ranking file
+803	absent	0	missing or ambiguous ranking file
+804	absent	0	missing or ambiguous ranking file
+805	absent	0	missing or ambiguous ranking file
+806	absent	0	missing or ambiguous ranking file
+807	absent	0	missing or ambiguous ranking file
+808	absent	0	missing or ambiguous ranking file
+809	absent	0	missing or ambiguous ranking file
+810	absent	0	missing or ambiguous ranking file
+811	absent	0	missing or ambiguous ranking file
+812	absent	0	missing or ambiguous ranking file
+813	absent	0	missing or ambiguous ranking file
+814	absent	0	missing or ambiguous ranking file
+815	absent	0	missing or ambiguous ranking file
+816	absent	0	missing or ambiguous ranking file
+817	absent	0	missing or ambiguous ranking file
+818	absent	0	missing or ambiguous ranking file
+819	absent	0	missing or ambiguous ranking file
+820	absent	0	missing or ambiguous ranking file
+821	absent	0	missing or ambiguous ranking file
+822	absent	0	missing or ambiguous ranking file
+823	absent	0	missing or ambiguous ranking file
+824	absent	0	missing or ambiguous ranking file
+825	absent	0	missing or ambiguous ranking file
+826	absent	0	missing or ambiguous ranking file
+827	absent	0	missing or ambiguous ranking file
+828	absent	0	missing or ambiguous ranking file
+829	absent	0	missing or ambiguous ranking file
+830	absent	0	missing or ambiguous ranking file
+831	absent	0	missing or ambiguous ranking file
+832	absent	0	missing or ambiguous ranking file
+833	absent	0	missing or ambiguous ranking file
+834	absent	0	missing or ambiguous ranking file
+835	absent	0	missing or ambiguous ranking file
+836	absent	0	missing or ambiguous ranking file
+837	absent	0	missing or ambiguous ranking file
+838	absent	0	missing or ambiguous ranking file
+839	absent	0	missing or ambiguous ranking file
+840	absent	0	missing or ambiguous ranking file
+841	absent	0	missing or ambiguous ranking file
+842	absent	0	missing or ambiguous ranking file
+843	absent	0	missing or ambiguous ranking file
+844	absent	0	missing or ambiguous ranking file
+845	absent	0	missing or ambiguous ranking file
+846	absent	0	missing or ambiguous ranking file
+847	absent	0	missing or ambiguous ranking file
+848	absent	0	missing or ambiguous ranking file
+849	absent	0	missing or ambiguous ranking file
+850	absent	0	missing or ambiguous ranking file
+851	absent	0	missing or ambiguous ranking file
+852	absent	0	missing or ambiguous ranking file
+853	absent	0	missing or ambiguous ranking file
+854	absent	0	missing or ambiguous ranking file
+855	absent	0	missing or ambiguous ranking file
+856	absent	0	missing or ambiguous ranking file
+857	absent	0	missing or ambiguous ranking file
+858	absent	0	missing or ambiguous ranking file
+859	absent	0	missing or ambiguous ranking file
+860	absent	0	missing or ambiguous ranking file
+861	absent	0	missing or ambiguous ranking file
+862	absent	0	missing or ambiguous ranking file
+863	absent	0	missing or ambiguous ranking file
+864	absent	0	missing or ambiguous ranking file
+865	absent	0	missing or ambiguous ranking file
+866	absent	0	missing or ambiguous ranking file
+867	absent	0	missing or ambiguous ranking file
+868	absent	0	missing or ambiguous ranking file
+869	absent	0	missing or ambiguous ranking file
+870	absent	0	missing or ambiguous ranking file
+871	absent	0	missing or ambiguous ranking file
+872	absent	0	missing or ambiguous ranking file
+873	absent	0	missing or ambiguous ranking file
+874	absent	0	missing or ambiguous ranking file
+875	absent	0	missing or ambiguous ranking file
+876	absent	0	missing or ambiguous ranking file
+877	absent	0	missing or ambiguous ranking file
+878	absent	0	missing or ambiguous ranking file
+879	absent	0	missing or ambiguous ranking file
+880	absent	0	missing or ambiguous ranking file
+881	absent	0	missing or ambiguous ranking file
+882	absent	0	missing or ambiguous ranking file
+883	absent	0	missing or ambiguous ranking file
+884	absent	0	missing or ambiguous ranking file
+885	absent	0	missing or ambiguous ranking file
+886	absent	0	missing or ambiguous ranking file
+887	absent	0	missing or ambiguous ranking file
+888	absent	0	missing or ambiguous ranking file
+889	absent	0	missing or ambiguous ranking file
+890	absent	0	missing or ambiguous ranking file
+891	absent	0	missing or ambiguous ranking file
+892	absent	0	missing or ambiguous ranking file
+893	absent	0	missing or ambiguous ranking file
+894	absent	0	missing or ambiguous ranking file
+895	absent	0	missing or ambiguous ranking file
+896	absent	0	missing or ambiguous ranking file
+897	absent	0	missing or ambiguous ranking file
+898	absent	0	missing or ambiguous ranking file
+899	absent	0	missing or ambiguous ranking file
+900	absent	0	missing or ambiguous ranking file
+901	absent	0	missing or ambiguous ranking file
+902	absent	0	missing or ambiguous ranking file
+903	absent	0	missing or ambiguous ranking file
+904	absent	0	missing or ambiguous ranking file
+905	absent	0	missing or ambiguous ranking file
+906	absent	0	missing or ambiguous ranking file
+907	absent	0	missing or ambiguous ranking file
+908	absent	0	missing or ambiguous ranking file
+909	absent	0	missing or ambiguous ranking file
+910	absent	0	missing or ambiguous ranking file
+911	absent	0	missing or ambiguous ranking file
+912	absent	0	missing or ambiguous ranking file
+913	absent	0	missing or ambiguous ranking file
+914	absent	0	missing or ambiguous ranking file
+915	absent	0	missing or ambiguous ranking file
+916	absent	0	missing or ambiguous ranking file
+917	absent	0	missing or ambiguous ranking file
+918	absent	0	missing or ambiguous ranking file
+919	absent	0	missing or ambiguous ranking file
+920	absent	0	missing or ambiguous ranking file
+921	absent	0	missing or ambiguous ranking file
+922	absent	0	missing or ambiguous ranking file
+923	absent	0	missing or ambiguous ranking file
+924	absent	0	missing or ambiguous ranking file
+925	absent	0	missing or ambiguous ranking file
+926	absent	0	missing or ambiguous ranking file
+927	absent	0	missing or ambiguous ranking file
+928	absent	0	missing or ambiguous ranking file
+929	absent	0	missing or ambiguous ranking file
+930	absent	0	missing or ambiguous ranking file
+931	absent	0	missing or ambiguous ranking file
+932	absent	0	missing or ambiguous ranking file
+933	absent	0	missing or ambiguous ranking file
+934	absent	0	missing or ambiguous ranking file
+935	absent	0	missing or ambiguous ranking file
+936	absent	0	missing or ambiguous ranking file
+937	absent	0	missing or ambiguous ranking file
+938	absent	0	missing or ambiguous ranking file
+939	absent	0	missing or ambiguous ranking file
+940	absent	0	missing or ambiguous ranking file
+941	absent	0	missing or ambiguous ranking file
+942	absent	0	missing or ambiguous ranking file
+943	absent	0	missing or ambiguous ranking file
+944	absent	0	missing or ambiguous ranking file
+945	absent	0	missing or ambiguous ranking file
+946	absent	0	missing or ambiguous ranking file
+947	absent	0	missing or ambiguous ranking file
+948	absent	0	missing or ambiguous ranking file
+949	absent	0	missing or ambiguous ranking file
+950	absent	0	missing or ambiguous ranking file
+951	absent	0	missing or ambiguous ranking file
+952	absent	0	missing or ambiguous ranking file
+953	absent	0	missing or ambiguous ranking file
+954	absent	0	missing or ambiguous ranking file
+955	absent	0	missing or ambiguous ranking file
+956	absent	0	missing or ambiguous ranking file
+957	absent	0	missing or ambiguous ranking file
+958	absent	0	missing or ambiguous ranking file
+959	absent	0	missing or ambiguous ranking file
+960	absent	0	missing or ambiguous ranking file
+961	absent	0	missing or ambiguous ranking file
+962	absent	0	missing or ambiguous ranking file
+963	absent	0	missing or ambiguous ranking file
+964	absent	0	missing or ambiguous ranking file
+965	absent	0	missing or ambiguous ranking file
+966	absent	0	missing or ambiguous ranking file
+967	absent	0	missing or ambiguous ranking file
+968	absent	0	missing or ambiguous ranking file
+969	absent	0	missing or ambiguous ranking file
+970	absent	0	missing or ambiguous ranking file
+971	absent	0	missing or ambiguous ranking file
+972	absent	0	missing or ambiguous ranking file
+973	absent	0	missing or ambiguous ranking file
+974	absent	0	missing or ambiguous ranking file
+975	absent	0	missing or ambiguous ranking file
+976	absent	0	missing or ambiguous ranking file
+977	absent	0	missing or ambiguous ranking file
+978	absent	0	missing or ambiguous ranking file
+979	absent	0	missing or ambiguous ranking file
+980	absent	0	missing or ambiguous ranking file
+981	absent	0	missing or ambiguous ranking file
+982	absent	0	missing or ambiguous ranking file
+983	absent	0	missing or ambiguous ranking file
+984	absent	0	missing or ambiguous ranking file
+985	absent	0	missing or ambiguous ranking file
+986	absent	0	missing or ambiguous ranking file
+987	absent	0	missing or ambiguous ranking file
+988	absent	0	missing or ambiguous ranking file
+989	absent	0	missing or ambiguous ranking file
+990	absent	0	missing or ambiguous ranking file
+991	absent	0	missing or ambiguous ranking file
+992	absent	0	missing or ambiguous ranking file
+993	absent	0	missing or ambiguous ranking file
+994	absent	0	missing or ambiguous ranking file
+995	absent	0	missing or ambiguous ranking file
+996	absent	0	missing or ambiguous ranking file
+997	absent	0	missing or ambiguous ranking file
+998	absent	0	missing or ambiguous ranking file
+999	absent	0	missing or ambiguous ranking file
+1000	absent	0	missing or ambiguous ranking file
+1001	absent	0	missing or ambiguous ranking file
+1002	absent	0	missing or ambiguous ranking file
+1003	absent	0	missing or ambiguous ranking file
+1004	absent	0	missing or ambiguous ranking file
+1005	absent	0	missing or ambiguous ranking file
+1006	absent	0	missing or ambiguous ranking file
+1007	absent	0	missing or ambiguous ranking file
+1008	absent	0	missing or ambiguous ranking file
+1009	absent	0	missing or ambiguous ranking file
+1010	absent	0	missing or ambiguous ranking file
+1011	absent	0	missing or ambiguous ranking file
+1012	absent	0	missing or ambiguous ranking file
+1013	absent	0	missing or ambiguous ranking file
+1014	absent	0	missing or ambiguous ranking file
+1015	absent	0	missing or ambiguous ranking file
+1016	absent	0	missing or ambiguous ranking file
+1017	absent	0	missing or ambiguous ranking file
+1018	absent	0	missing or ambiguous ranking file
+1019	absent	0	missing or ambiguous ranking file
+1020	absent	0	missing or ambiguous ranking file
+1021	absent	0	missing or ambiguous ranking file
+1022	absent	0	missing or ambiguous ranking file
+1023	absent	0	missing or ambiguous ranking file
+1024	absent	0	missing or ambiguous ranking file
+1025	absent	0	missing or ambiguous ranking file
+1026	absent	0	missing or ambiguous ranking file
+1027	absent	0	missing or ambiguous ranking file
+1028	absent	0	missing or ambiguous ranking file
+1029	absent	0	missing or ambiguous ranking file
+1030	absent	0	missing or ambiguous ranking file
+1031	absent	0	missing or ambiguous ranking file
+1032	absent	0	missing or ambiguous ranking file
+1033	absent	0	missing or ambiguous ranking file
+1034	absent	0	missing or ambiguous ranking file
+1035	absent	0	missing or ambiguous ranking file
+1036	absent	0	missing or ambiguous ranking file
+1037	absent	0	missing or ambiguous ranking file
+1038	absent	0	missing or ambiguous ranking file
+1039	absent	0	missing or ambiguous ranking file
+1040	absent	0	missing or ambiguous ranking file
+1041	absent	0	missing or ambiguous ranking file
+1042	absent	0	missing or ambiguous ranking file
+1043	absent	0	missing or ambiguous ranking file
+1044	absent	0	missing or ambiguous ranking file
+1045	absent	0	missing or ambiguous ranking file
+1046	absent	0	missing or ambiguous ranking file
+1047	absent	0	missing or ambiguous ranking file
+1048	absent	0	missing or ambiguous ranking file
+1049	absent	0	missing or ambiguous ranking file
+1050	absent	0	missing or ambiguous ranking file
+1051	absent	0	missing or ambiguous ranking file
+1052	absent	0	missing or ambiguous ranking file
+1053	absent	0	missing or ambiguous ranking file
+1054	absent	0	missing or ambiguous ranking file
+1055	absent	0	missing or ambiguous ranking file
+1056	absent	0	missing or ambiguous ranking file
+1057	absent	0	missing or ambiguous ranking file
+1058	absent	0	missing or ambiguous ranking file
+1059	absent	0	missing or ambiguous ranking file
+1060	absent	0	missing or ambiguous ranking file
+1061	absent	0	missing or ambiguous ranking file
+1062	absent	0	missing or ambiguous ranking file
+1063	absent	0	missing or ambiguous ranking file
+1064	absent	0	missing or ambiguous ranking file
+1065	absent	0	missing or ambiguous ranking file
+1066	absent	0	missing or ambiguous ranking file
+1067	absent	0	missing or ambiguous ranking file
+1068	absent	0	missing or ambiguous ranking file
+1069	absent	0	missing or ambiguous ranking file
+1070	absent	0	missing or ambiguous ranking file
+1071	absent	0	missing or ambiguous ranking file
+1072	absent	0	missing or ambiguous ranking file
+1073	absent	0	missing or ambiguous ranking file
+1074	absent	0	missing or ambiguous ranking file
+1075	absent	0	missing or ambiguous ranking file
+1076	absent	0	missing or ambiguous ranking file
+1077	absent	0	missing or ambiguous ranking file
+1078	absent	0	missing or ambiguous ranking file
+1079	absent	0	missing or ambiguous ranking file
+1080	absent	0	missing or ambiguous ranking file
+1081	absent	0	missing or ambiguous ranking file
+1082	absent	0	missing or ambiguous ranking file
+1083	absent	0	missing or ambiguous ranking file
+1084	absent	0	missing or ambiguous ranking file
+1085	absent	0	missing or ambiguous ranking file
+1086	absent	0	missing or ambiguous ranking file
+1087	absent	0	missing or ambiguous ranking file
+1088	absent	0	missing or ambiguous ranking file
+1089	absent	0	missing or ambiguous ranking file
+1090	absent	0	missing or ambiguous ranking file
+1091	absent	0	missing or ambiguous ranking file
+1092	absent	0	missing or ambiguous ranking file
+1093	absent	0	missing or ambiguous ranking file
+1094	absent	0	missing or ambiguous ranking file
+1095	absent	0	missing or ambiguous ranking file
+1096	absent	0	missing or ambiguous ranking file
+1097	absent	0	missing or ambiguous ranking file
+1098	absent	0	missing or ambiguous ranking file
+1099	absent	0	missing or ambiguous ranking file
+1100	absent	0	missing or ambiguous ranking file
+1101	absent	0	missing or ambiguous ranking file
+1102	absent	0	missing or ambiguous ranking file
+1103	absent	0	missing or ambiguous ranking file
+1104	absent	0	missing or ambiguous ranking file
+1105	absent	0	missing or ambiguous ranking file
+1106	absent	0	missing or ambiguous ranking file
+1107	absent	0	missing or ambiguous ranking file
+1108	absent	0	missing or ambiguous ranking file
+1109	absent	0	missing or ambiguous ranking file
+1110	absent	0	missing or ambiguous ranking file
+1111	absent	0	missing or ambiguous ranking file
+1112	absent	0	missing or ambiguous ranking file
+1113	absent	0	missing or ambiguous ranking file
+1114	absent	0	missing or ambiguous ranking file
+1115	absent	0	missing or ambiguous ranking file
+1116	absent	0	missing or ambiguous ranking file
+1117	absent	0	missing or ambiguous ranking file
+1118	absent	0	missing or ambiguous ranking file
+1119	absent	0	missing or ambiguous ranking file
+1120	absent	0	missing or ambiguous ranking file
+1121	absent	0	missing or ambiguous ranking file
+1122	absent	0	missing or ambiguous ranking file
+1123	absent	0	missing or ambiguous ranking file
+1124	absent	0	missing or ambiguous ranking file
+1125	absent	0	missing or ambiguous ranking file
+1126	absent	0	missing or ambiguous ranking file
+1127	absent	0	missing or ambiguous ranking file
+1128	absent	0	missing or ambiguous ranking file
+1129	absent	0	missing or ambiguous ranking file
+1130	absent	0	missing or ambiguous ranking file
+1131	absent	0	missing or ambiguous ranking file
+1132	absent	0	missing or ambiguous ranking file
+1133	absent	0	missing or ambiguous ranking file
+1134	absent	0	missing or ambiguous ranking file
+1135	absent	0	missing or ambiguous ranking file
+1136	absent	0	missing or ambiguous ranking file
+1137	absent	0	missing or ambiguous ranking file
+1138	absent	0	missing or ambiguous ranking file
+1139	absent	0	missing or ambiguous ranking file
+1140	absent	0	missing or ambiguous ranking file
+1141	absent	0	missing or ambiguous ranking file
+1142	absent	0	missing or ambiguous ranking file
+1143	absent	0	missing or ambiguous ranking file
+1144	absent	0	missing or ambiguous ranking file
+1145	absent	0	missing or ambiguous ranking file
+1146	absent	0	missing or ambiguous ranking file
+1147	absent	0	missing or ambiguous ranking file
+1148	absent	0	missing or ambiguous ranking file
+1149	absent	0	missing or ambiguous ranking file
+1150	absent	0	missing or ambiguous ranking file
+1151	absent	0	missing or ambiguous ranking file
+1152	absent	0	missing or ambiguous ranking file
+1153	absent	0	missing or ambiguous ranking file
+1154	absent	0	missing or ambiguous ranking file
+1155	absent	0	missing or ambiguous ranking file
+1156	absent	0	missing or ambiguous ranking file
+1157	absent	0	missing or ambiguous ranking file
+1158	absent	0	missing or ambiguous ranking file
+1159	absent	0	missing or ambiguous ranking file

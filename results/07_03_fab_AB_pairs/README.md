@@ -19,3 +19,9 @@ epitope engagement, and Fab-pair clashes before advancement to Fc assembly.
 `07_04_top_five_20261018/` contains five distinct confidence-ranked inputs,
 one winning CIF per input, native summaries, ranking tables and source lineage.
 See its README and selection TSV; scientific interface QC remains open.
+
+## Current check — 2026-10-21
+
+170 completed inputs (680 sample predictions). The updated top five are
+in `07_04_top_five_20261021/`; earlier exports are preserved.
+See `reports/07_06_current_fab_inventory.md` for all categories and interpretation.

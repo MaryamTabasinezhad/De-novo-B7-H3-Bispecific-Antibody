@@ -1032,3 +1032,23 @@ Checked source/audit counts, plot values, PNG decoding, PDF fonts and editable
 PowerPoint XML/relationships; visually reviewed the slide. Desktop PowerPoint
 rendering was unavailable. Next: present the overview; continue dual-arm
 scientific QC before complete IgG-Fc assembly and experimental validation.
+
+
+## Current Fab inventory and refreshed top five — 2026-10-21 UTC
+
+Rechecked existing AF3 files at the user's request. Complete input counts:
+A-only40 (160 samples), B-only29 (116), A+B170 (680); total239 inputs/956
+samples. Dual audit:170 complete,0 incomplete,990 absent. This supersedes
+only the current inventory interpretation of the earlier164-input snapshot;
+previous reports/exports remain historical records.
+
+Saved `reports/07_06_current_fab_inventory.md`, a new dual-output audit and
+15 winning CIFs with native summaries, ranking tables and sequence lineage in
+`07_04_top_five_20261021/` under each category. Existing exporter now accepts
+`--snapshot`; default location and scientific ranking are preserved. A/B
+single-arm winners are unchanged; dual index133 A149/B86 enters rank3.
+Checked model chains, sequence-tuple deduplication and exact CIF copying.
+No inference, installation or scheduler changes. This is confidence ranking,
+not binding validation or complete IgG-Fc production. Next: interface/epitope
+and simultaneous cis-engagement QC. Commands and scratch locations are recorded
+in the inventory report; durable outputs are in the tracked workspace.
