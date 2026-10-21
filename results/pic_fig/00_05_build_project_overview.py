@@ -118,7 +118,7 @@ with zipfile.ZipFile(P/f'{STEM}_editable.pptx','w',zipfile.ZIP_DEFLATED) as z:
  for path,content in files.items():ET.fromstring(content);z.writestr(path,content)
 with (P/'00_05_arm_validation_plot_data.csv').open('w',newline='') as f:
  keys=['arm','input','n_samples','mean_HL_iptm','mean_HT_iptm','samples_contact_ge2']
- w=csv.DictWriter(f,fieldnames=keys);w.writeheader();w.writerows({k:r[k] for k in keys} for r in rows)
+ w=csv.DictWriter(f,fieldnames=keys,lineterminator="\n");w.writeheader();w.writerows({k:r[k] for k in keys} for r in rows)
 summary.update({'rf2_screened_models':counts,'af3_arm_predictions':276,'pair_inputs':1160,'pair_completed_snapshot_20261018':164,'pair_completion_is_not_scientific_acceptance':True})
 (P/'00_05_overview_summary.json').write_text(json.dumps(summary,indent=2)+'\n')
 print(json.dumps(summary,indent=2));print('Native editable shapes:',serial-1)
