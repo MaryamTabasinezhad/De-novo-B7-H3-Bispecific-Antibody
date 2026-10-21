@@ -948,3 +948,18 @@ conceptual artwork, not a structural result or evidence of efficacy,
 internalization, signaling blockade or Fc activity for the project antibodies.
 No compute jobs submitted or changed. Next: use as a conceptual illustration
 and retain hypothesis labels; scientific mechanism claims require experiments.
+
+
+## Biparatopic illustration arm-color correction — 2026-10-21 UTC
+
+At the user's request, saved the separately named
+`results/pic_fig/00_02_b7h3_biparatopic_consistent_arms.png`. Purple denotes
+epitope-A binding and green denotes epitope-B binding; gray denotes Fc.
+The clustering and internalization cartoons illustrate intermolecular
+crosslinking, while ADCC/ADCP and CDC retain Fc-mediated attachment. The
+prior PNG and reference JPG are preserved. Sources, prompt iterations and
+validation limits are recorded in the directory README and
+`00_02_generation_prompts.txt`. Used the built-in image tool, reviewed
+Fab specificity/Fc attachment visually and verified PNG decoding. No
+structural analysis, protein inference or experimental claims are added.
+Next: use the revised conceptual diagram with its hypothesis labels retained.
