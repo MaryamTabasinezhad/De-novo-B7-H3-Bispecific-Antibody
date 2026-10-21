@@ -64,3 +64,12 @@ python3 tools/07_fab_categories/export_top_five.py --snapshot 20261021
 The source artifact inventory also checked all four nonempty model, summary-confidence and full-confidence files for each single-arm input: A40 and B29 complete, no incomplete ranking sets. Python standard library only; no installation or inference. The audit verifies execution artifacts, not interface geometry or simultaneous engagement.
 
 Status: inventory and updated exports complete. Rankings remain confidence-based and provisional for the unfinished dual campaign. These scores do not demonstrate affinity, correct epitope binding, simultaneous cis binding or experimental activity. Next: inspect interfaces, canonical epitope contacts and same-antigen A/B engagement before advancing to Fc assembly.
+
+## 07_07 — Downloadable structure archive
+
+`results/07_07_top_15_structures_20261021.zip` contains the 2026-10-21 top
+five CIFs per group (A-only, B-only, A+B), three source selection tables,
+a combined model index and README. Original antigen-containing coordinates
+are preserved without conversion. Verified ZIP integrity,15 CIFs/five per
+group and exact agreement of archived bytes with tracked source files.
+No new predictions or ranking changes; the historical07_05 ZIP is preserved.

@@ -1052,3 +1052,15 @@ No inference, installation or scheduler changes. This is confidence ranking,
 not binding validation or complete IgG-Fc production. Next: interface/epitope
 and simultaneous cis-engagement QC. Commands and scratch locations are recorded
 in the inventory report; durable outputs are in the tracked workspace.
+
+
+## Top-15 structure ZIP — 2026-10-21 UTC
+
+At the user's request, saved `results/07_07_top_15_structures_20261021.zip`:
+5 A-only,5 B-only and5 A+B mmCIFs from the latest07_04 exports, organized
+by group, with source selections, combined index and README. Used Python
+stdlib zipfile after sourcing config/hpc/rorqual.sh. Checked archive integrity,
+15 structures/five per group and identical archived/source bytes. Original
+coordinates and historical archive are preserved. No inference or scientific
+acceptance changes. Status: delivery complete; next scientific work remains
+interface/epitope and simultaneous-engagement QC.
