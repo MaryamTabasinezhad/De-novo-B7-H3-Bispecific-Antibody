@@ -927,3 +927,24 @@ CIFs respectively under `/scratch/ghaedi/mab/fab_category_outputs/`.
 Commands: source config/hpc/rorqual.sh; squeue -u ghaedi; sacct -X for the four
 arrays; count index_*/*/*_model.cif and seed/sample model CIFs. No jobs changed.
 Next: await allocation, inspect completed outputs, then scientific interface QC.
+
+
+## Conceptual B7-H3 biparatopic mechanism illustration — 2026-10-21 UTC
+
+Created `results/pic_fig/00_01_b7h3_biparatopic_mechanisms.png` from the
+user-provided `bipara_lrg.jpg` using the built-in image-generation tool.
+Preserved the top tumor overview and three-column/nine-panel layout, with
+refreshed styling and B7-H3 labels. HER2-specific dimerization/signaling
+panels were adapted to explicitly hypothetical B7-H3 mechanisms rather
+than transferred as established biology. The image labels the overall
+schematic as proposed and requiring experimental validation.
+
+Original input preserved. Prompt, sources, output and scientific limits
+are recorded in `results/pic_fig/README.md` and `00_01_generation_prompt.txt`.
+Generation source: `/home/ghaedi/.codex/generated_images/01a159bd-02ff-76f2-8575-8e6ea8b2ede6/exec-bdbd35b4-1414-46a8-9b97-e907127667c9.png`;
+final PNG copied into the tracked workspace. Visually checked layout,
+B7-H3 labels and hypothesis qualifiers; verified PNG decoding. This is
+conceptual artwork, not a structural result or evidence of efficacy,
+internalization, signaling blockade or Fc activity for the project antibodies.
+No compute jobs submitted or changed. Next: use as a conceptual illustration
+and retain hypothesis labels; scientific mechanism claims require experiments.
