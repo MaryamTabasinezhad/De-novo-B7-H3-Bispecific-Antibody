@@ -1,4 +1,4 @@
-# Conceptual project figures
+# Project figures and presentation slides
 
 ## 00_01 — B7-H3 biparatopic antibody mechanisms
 
@@ -150,3 +150,81 @@ and `/tmp/b7h3_00_04_cdc_reference.png`. They were made with Pillow by cropping
 (815,1007,1168,1242), respectively, and enlarging 3× for visual inspection.
 They are temporary previews, not durable project outputs; the final composite,
 SVG, builder and coordinate record are preserved here.
+
+
+## 00_05 — One-slide B7-H3 project overview
+
+Completed 2026-10-21 using tracked project results through the **2026-10-18
+recorded snapshot**. This is a data-based presentation slide, distinct from the
+conceptual mechanism artwork above. Layout follows the user's Alzheimer
+`08_03_alzheimer_bispecific_interview_slide.png`: five workflow cards, three
+count cards, two evidence plots and a next-milestone footer. Typography uses
+Arial in PowerPoint and the installed Liberation Sans fallback in rendering.
+
+Deliverables:
+
+- `00_05_b7h3_project_overview.png`: 2400 × 1350 slide preview.
+- `00_05_b7h3_project_overview_editable.pptx`: one 16:9 slide; text, panels,
+  axes, points and bars are native editable PowerPoint objects. The plots use
+  editable shapes, not native chart workbooks or a flattened slide image.
+- `00_05_b7h3_project_overview.pdf` and `.svg`: vector exports.
+- `00_05_arm_validation_plot_data.csv`: the 69 plotted arm-level records.
+- `00_05_overview_summary.json`: counts underlying the slide.
+- `00_05_build_project_overview.py`: self-contained direct builder, reusing
+  scene/layout and OOXML packaging patterns from the Alzheimer project's
+  `build_editable_slide.py` (implementation introduced at `b046eb1`).
+
+Inputs and exact count meanings:
+
+| Slide value | Tracked input | Meaning |
+|---|---|---|
+| 1,176 A + 1,188 B = 2,364 | `results/05_01_rf2_qc_20260927/arm_{a,b}.tsv` | Model records screened by RF2 geometry QC, not necessarily distinct sequences or distinct backbones |
+| 40 A + 29 B = 69 | `results/05_03_control_shortlist_20260927/arm_{a,b}.tsv`; AF3 per-input table | Task-deduplicated RF2 control-equivalent shortlist; not experimentally confirmed binders |
+| 276 | `results/06_02_af3_validation_shortlist/per_{input,sample}.tsv` | 69 cropped-target inputs × seeds 101/202 × 2 samples per seed |
+| 1,160 | `reports/07_02_three_category_fab_generation.md` | All-by-all 40 × 29 shared-full-target dual-arm inputs |
+| 164 completed | `results/07_03_fab_AB_pairs/07_03_output_audit_20261017.tsv`; directory README updated 18 October | Artifact-complete inputs in the recorded snapshot, not scientific acceptance; 996 remained outstanding |
+
+**Left graph:** each dot is one arm candidate, averaged over its four AF3
+samples. The horizontal axis is H–L chain-pair ipTM (VH–VL pairing); the
+vertical axis is H–target chain-pair ipTM. Both scores range from 0 to 1;
+the displayed windows are 0.75–1.00 and 0–0.40 respectively. Strong predicted
+VH–VL association does not imply confident antigen binding. No binding-affinity
+interpretation or universal pass threshold is assigned. H–target is only one
+part of the antibody–antigen interface; L–target scores are in the source data.
+
+**Right graph:** a sample meets this descriptive contact criterion if at least
+two selected epitope residues have a non-hydrogen atom within 4.5 Å of an H/L
+atom, following `tools/06_af3_validation/analyze_af3_shortlist.py`. The first
+group counts candidates meeting it in at least one of four samples: A 21/40,
+B 28/29. The second requires it in all four: A 0/40, B 2/29. Bar heights are
+percentages of arm-specific input counts. These are geometric contact counts,
+not an approved overall binding gate, independent experimental replicates or
+proof of affinity. Four predictions from one input are correlated samples.
+
+Scientific scope: the current intended architecture is **1A+1B IgG-like with
+Fc**, not the superseded tandem-scFv-Fc dimer. Project Arm A is IgV1 FG-loop
+canonical 126–129; Arm B is the selected IgC1 patch around canonical 228–241.
+The domain assignments in earlier conceptual illustration edits are not used
+as residue-level evidence. Full-target dual-arm scientific QC, same-antigen
+cis engagement, Fc/pairing engineering, developability and experimental
+binding/function remain subsequent work. A cropped-target arm-validation
+cohort must not be combined with the later full-target paired campaign as if
+it were one screening population. The slide does not report a final passed
+bispecific count because that gate is still open.
+
+Reproduce from the repository root:
+
+```bash
+source config/hpc/rorqual.sh
+python3 results/pic_fig/00_05_build_project_overview.py
+```
+
+Runtime: existing Python standard library and rsvg-convert 2.56.1; no install,
+protein inference or scheduler submission. Checked source-table counts,
+69 plotted records, 276 underlying samples, contact numerators/denominators,
+1,160/164 audit counts, SVG/PPTX XML, package relationships, native editable
+objects, PDF font embedding and PNG decoding. Visually inspected the complete
+slide for label fit, graph ranges and consistency with the reference layout.
+A desktop PowerPoint rendering was not available for application-level testing.
+Status: presentation artifact complete. Next scientific stage: finish and
+inspect dual-arm models before complete IgG-Fc assembly and experiments.

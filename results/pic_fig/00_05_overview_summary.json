@@ -1,0 +1,20 @@
+{
+  "A": {
+    "inputs": 40,
+    "contact_ge2_any_sample": 21,
+    "contact_ge2_all_four": 0
+  },
+  "B": {
+    "inputs": 29,
+    "contact_ge2_any_sample": 28,
+    "contact_ge2_all_four": 2
+  },
+  "rf2_screened_models": {
+    "A": 1176,
+    "B": 1188
+  },
+  "af3_arm_predictions": 276,
+  "pair_inputs": 1160,
+  "pair_completed_snapshot_20261018": 164,
+  "pair_completion_is_not_scientific_acceptance": true
+}

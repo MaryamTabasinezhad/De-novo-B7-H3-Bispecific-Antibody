@@ -1010,3 +1010,25 @@ inspected the composite and attachment geometry. No new residue/epitope
 decisions, biological validation, installation or protein-inference jobs
 are implied. Next: use the original-style revision with its existing
 hypothesis and experimental-validation qualifiers retained.
+
+
+## One-slide project overview — 2026-10-21 UTC
+
+Completed `results/pic_fig/00_05_b7h3_project_overview.png` and an editable
+16:9 PPTX, vector SVG/PDF, plotted CSV, summary JSON and direct builder.
+The layout follows the Alzheimer's interview slide requested by the user.
+Source records show 2,364 RF2-screened model records, 69 task-deduplicated
+shortlisted arms, 276 cropped-target AF3 validation predictions and 1,160
+full-target A+B inputs. The 18 October recorded audit has 164 artifact-complete
+pair inputs; completion is not a scientific binding pass. No final accepted
+bispecific count is claimed. The two plots show H–L versus H–target ipTM and
+selected-epitope contact recovery across four AF3 samples, with explicit cohort
+and contact definitions in the figure-directory README.
+
+Command: `source config/hpc/rorqual.sh` followed by
+`python3 results/pic_fig/00_05_build_project_overview.py`.
+Used existing stdlib/rsvg-convert; no new software, inference or cluster jobs.
+Checked source/audit counts, plot values, PNG decoding, PDF fonts and editable
+PowerPoint XML/relationships; visually reviewed the slide. Desktop PowerPoint
+rendering was unavailable. Next: present the overview; continue dual-arm
+scientific QC before complete IgG-Fc assembly and experimental validation.
