@@ -1148,3 +1148,11 @@ each. Verified four nonempty backbone PDBs and four associated TRB files
 per arm in the recorded scratch destinations. See the
 [completion record](../results/04_12_design_inputs/04_12_gpu_completion.txt).
 Scientific QC and comparison with the historical baseline remain pending.
+
+## Expanded B7-H3 antibody references for Paths A and B — 2026-11-25 UTC
+
+Saved the [named antibody reference inventory](02_03_b7h3_antibody_reference_inventory.md)
+with eight Arm A and seven Arm B evidence-panel entries, additional
+experimental clones, clinical asset aliases, and market-status source links.
+The Arm B panel contains one partial direct reference (20G5); the broader
+intended patch remains unresolved. No redesign or compute was run.
