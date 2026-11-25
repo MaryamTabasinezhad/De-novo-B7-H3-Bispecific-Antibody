@@ -1129,3 +1129,14 @@ design crop. See the [follow-up record](../results/04_11_followup/README.md)
 for per-arm results, exact commands, and next checks. Four existing Fab
 arrays remain pending on an unavailable node. No redesign or new
 generation was run.
+
+## Expanded-context design pilot — 2026-11-25 UTC
+
+Four CPU jobs (27635695–27635698) completed. The durable record includes
+69 parent sequence alignments, a corrected 9LY5 Arm B patch comparison and
+the identities of residues responsible for the historical crop-replay
+clashes. Q228 is within 3.001 Å of 20G5 in 9LY5. Submitted separate
+RFantibody GPU diagnostics with expanded crops for Arm A (27635726) and
+Arm B (27635727). See the [job record](../results/04_12_design_inputs/README.md)
+for job states, commands and scratch paths. Next is pilot output inspection
+and internal format review for GPT-6 redesign.

@@ -1,0 +1,6 @@
+27635695|mab-inputs-A|COMPLETED|0:0
+27635696|mab-inputs-B|COMPLETED|0:0
+27635697|mab-inputs-references|COMPLETED|0:0
+27635698|mab-inputs-pilot|COMPLETED|0:0
+27635726|mab-context-A|PENDING|0:0
+27635727|mab-context-B|PENDING|0:0
