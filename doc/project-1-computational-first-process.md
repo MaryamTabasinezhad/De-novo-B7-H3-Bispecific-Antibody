@@ -26,15 +26,86 @@ one native cell-surface human 4Ig-B7-H3 molecule. This geometry is required but
 unverified. Binding different antigen molecules alone does not satisfy it.
 
 The former tandem-scFv-Fc assumption had two A and two B sites. The user-selected
-product instead has one A and one B site. Historical descriptions of the former format, including the
-unchanged AGENTS.md research-context paragraph, are superseded for architecture
-by this user decision (reports/00_05_decision_log.md, STEP0-008).
+product instead has one A and one B site. This architecture supersedes the former format under STEP0-008 in the
+[decision log](../reports/00_05_decision_log.md).
 
 Exact Fc isotype/sequence, hinge, heavy-chain heterodimerization and light-chain
 pairing strategy remain unresolved. Do not infer a common light chain, particular
 pairing mutations, or a different format. Record approved implementation settings
 in `config/project.yaml` before format-dependent design and assembly. Fv models
 may remain intermediate design inputs; they do not define the final product.
+
+## Four-path development plan
+
+### Shared first milestone
+
+Audit the sequences and modeled chains of the 40 Arm A and 29 Arm B parents.
+Identify whether shortness affects VH or VL sequence, a CDR, framework
+coverage, or only the exported coordinates. Define required domain boundaries,
+framework coverage, and permissible loop lengths before format-dependent work.
+Use these criteria for both GPT-6 redesign and de novo design. Map experimental
+references and reconstruct the prior C and D job settings in parallel.
+
+### Path A and Path B — GPT-6 redesign
+
+- **Path A:** Redesign all 40 existing Arm A parents against the IgV1 FG-loop
+  epitope. Use the 8H9 lineage as the initial experimental reference and verify
+  the variant, antigen construct, and residue mapping. Use A232 and A275 as
+  repeatability benchmarks and A217 and A283 as crop-to-4Ig diagnostic cases.
+- **Path B:** Redesign all 29 existing Arm B parents against the IgC1 patch
+  around Q228–R241. Check whether the published 20G5 interface or another
+  eligible experimental reference directly overlaps the patch. Use B282,
+  B131, B114, and B50 as comparison benchmarks. Record any unresolved
+  epitope mapping and continue independent parent and format review.
+- Eligible references include marketed anti-B7-H3 therapeutics, antibodies
+  evaluated in registered clinical trials, and antibodies characterized in
+  peer-reviewed experimental studies. Record each exact variant, source,
+  development status, assay or structure, and evidence for epitope overlap.
+  Use residue-level evidence where it supports redesign. References with
+  unresolved epitope assignments can serve as B7-H3 binding benchmarks.
+- Give GPT-6 the parent sequence, domain boundaries, length diagnosis, 4Ig
+  contact evidence, and mapped experimental reference. Record the rationale
+  and sequence lineage for every parent. Evaluate each redesign against its
+  parent on matched 4Ig inputs. Advance diverse candidates that meet the
+  shared format, repeatable intended-contact, local interface confidence,
+  and developability criteria. Apply the later ranking steps to the resulting
+  candidates after covering the complete parent cohorts.
+
+### Path C — De novo design of both arms
+
+Reuse the previous jobs and verified settings for RFantibody backbone
+generation, ProteinMPNN sequence design, RF2_ab screening, and AlphaFold 3
+independent assessment. Use RoseTTAFold3 in its documented complementary
+role. Check domain completeness early and compare a small pilot with the
+previous workflow at a similar compute budget. In the pilot, place generated
+poses on intact 4Ig, check neighboring domains, glycans, and membrane
+clearance, and run early 4Ig AlphaFold 3 on representative survivors. Compare
+evidence-backed anchor definitions within each established epitope and retain
+diverse Fab approach angles.
+
+Compare the number of distinct lineages per arm that pass domain coverage,
+repeatable 4Ig engagement, and plausible Fab geometry. Review representative
+failures before scaling. Affinity and kinetics require experimental measurement.
+
+### Path D — Pairing and full construct
+
+Reuse the previous AlphaFold 3 single- and dual-Fab workflow with qualified A
+and B lineages from either route, including mixed-route pairs. Assess both
+interfaces and Fab geometry on one 4Ig molecule. Use A275/B20 and A205/B251 as
+comparison cases with dual contacts in one sample each and insufficient
+evidence for the simultaneous-binding gate. Continue into Steps 11–17 after
+the required architecture decisions and preceding gates are met. Evaluate
+one-arm occupancy and simultaneous same-antigen binding in the 1A + 1B
+Fc-containing ensemble, and record two-antigen occupancy separately.
+
+### Agent verification
+
+Track route, parent or de novo lineage, reference evidence, domain lengths,
+model versions, per-sample outcomes, and gate decisions. Before applying the
+updated workflow, verify coverage of all 69 parents, rejection of a
+contact-positive candidate with inadequate format, the Arm A crop-to-4Ig
+losses, B282's repeatability, and the two dual-contact cases remaining below
+the simultaneous-binding gate.
 
 ## Agent Execution Rules
 

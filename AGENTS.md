@@ -48,7 +48,22 @@ This file is the local agent contract. Keep it current when the layout, responsi
 
 ## Research context
 
-The specification concerns two binders to distinct B7-H3/CD276 epitopes, combined into a biparatopic construct. Its current architecture assumption is a tandem-scFv-Fc dimer with two A and two B binding units. Planned tools and outputs in the workflow are not evidence of installed dependencies or completed experiments. Consult the workflow's execution rules and completion gates before implementing scientific work.
+The product is a 1A + 1B IgG-like antibody with Fc. Both Fabs must be able
+to engage distinct epitopes on one native human 4Ig B7-H3 molecule.
+
+Follow the [four-path development plan](doc/project-1-computational-first-process.md#four-path-development-plan).
+
+- Use GPT-6 for experimental-reference-guided redesign of all 40 Arm A
+  parents (Path A) and all 29 Arm B parents (Path B). The prior shortlists
+  provide benchmarks. Confirm cohort coverage before closing either path.
+- Reuse verified previous protein-design jobs and settings for de novo design
+  of both arms (Path C), and previous single- and dual-Fab modeling jobs
+  and settings for pairing (Path D). Compare the early intact-4Ig screening
+  pilot with the previous Path C workflow before scaling.
+- Audit sequence and structure coverage before setting arm-specific format
+  criteria. Apply the same advancement gates across routes and record which
+  experimental evidence supports each redesign. Check prior jobs and outputs
+  before submitting compute.
 
 ## Analysis-first contract and standing memory
 

@@ -1085,3 +1085,13 @@ the two-residue criterion in three samples. B131, B114, and B50 met it in
 two each. None met it in all four. No new inference or scheduler changes.
 See [Arm B contact review](07_09_arm_b_contact_review.md) for the comparison
 with cropped-antigen results and the confidence-ranked export.
+
+## Four-path development plan and agent instructions
+
+Recorded GPT-6 redesign of all 40 Arm A and 29 Arm B parents, experimental
+reference eligibility, prior-job reuse for de novo design and Fab pairing,
+and a baseline comparison for earlier intact-4Ig screening. Updated the
+agent instructions to reflect the approved 1A + 1B IgG-like format.
+Next work is the parent length and coverage audit, experimental reference
+mapping, and review of prior job settings. No design, inference, or Slurm jobs
+were run for this update.
