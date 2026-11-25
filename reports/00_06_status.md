@@ -1077,3 +1077,11 @@ contact criterion for both arms once per pair. Global ipTM was 0.19 and
 inference or jobs. See [contact review](07_08_arm_a_contact_review.md) for
 the method, inputs, and limitations. Next is local interface and confidence
 inspection of the two dual-contact samples.
+
+## Arm B contact repeatability
+
+Checked 29 existing Arm B-only 4Ig inputs with four samples each. B282 met
+the two-residue criterion in three samples. B131, B114, and B50 met it in
+two each. None met it in all four. No new inference or scheduler changes.
+See [Arm B contact review](07_09_arm_b_contact_review.md) for the comparison
+with cropped-antigen results and the confidence-ranked export.
