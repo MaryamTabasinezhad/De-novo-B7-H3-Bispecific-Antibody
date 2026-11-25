@@ -1,0 +1,6 @@
+Fetching clinicaltrials: https://clinicaltrials.gov/api/v2/studies?query.term=%28B7-H3+OR+CD276+OR+omburtamab+OR+enoblituzumab%29+AND+%28antibody+OR+ADC%29&pageSize=100&fields=NCTId%2CBriefTitle%2COverallStatus%2CPhase%2CInterventionName%2CInterventionType
+Fetching europe_pmc: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22B7-H3%22+OR+TITLE_ABS%3ACD276%29+AND+%28TITLE_ABS%3Aantibody+OR+TITLE_ABS%3Aomburtamab%29+AND+%28TITLE_ABS%3Aepitope+OR+TITLE_ABS%3Astructure+OR+TITLE_ABS%3Abinding%29&format=json&pageSize=100
+Fetching fda: https://api.fda.gov/drug/drugsfda.json?search=openfda.generic_name%3A%28omburtamab+OR+enoblituzumab+OR+ifinatamab+OR+vobramitamab+OR+risvutatug+OR+b7-h3+OR+cd276%29&limit=100
+clinicaltrials: <urlopen error [Errno 101] Network is unreachable>
+europe_pmc: <urlopen error timed out>
+fda: <urlopen error [Errno 101] Network is unreachable>

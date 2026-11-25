@@ -1105,3 +1105,15 @@ RFantibody backbone task records per arm. See the
 exact input paths, and output tables. No redesign or generation job was
 submitted. Next gates are domain coverage and format criteria, experimental
 reference mapping for redesign, and setup of the intact-4Ig comparison.
+
+## Separate readiness jobs — 2026-11-25 UTC
+
+Submitted reference retrieval (27635091), parent coverage (27635092), and
+Path C input preparation (27635093) as separate Slurm jobs. Coverage checks
+found 138 exact AF3-input-to-RF2 chain sequence matches. Both historical crops
+matched the corresponding intact 4Ig sequence. Compute-node network errors
+affected source retrieval. The browser-verified starting evidence and local
+9LY6 overlap calculation are in the [job record](../results/04_10_parallel_readiness/README.md).
+The 20G5 complex did not directly contact any of the eight designated Arm B
+residues at 4.5 Å. Numbered coverage, broader evidence review, and the intact
+4Ig comparison remain pending. No redesign or generation was run.

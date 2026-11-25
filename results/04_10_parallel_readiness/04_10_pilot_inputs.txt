@@ -1,0 +1,7 @@
+RFantibody checkout: 8fe311415754e0276d1a39c87c57e69c88927a2d
+Full target: data/processed/target_ensemble/human_4ig_afdb_v6_oriented.pdb
+Arm	Crop	First	Last	Residues	Canonical sequence discrepancies
+A	/scratch/ghaedi/mab/rfantibody_inputs_corrected3/target_A.pdb	86	169	84	none
+B	/scratch/ghaedi/mab/rfantibody_inputs_corrected3/target_B.pdb	188	281	94	none
+Baseline script: tools/04_design_sequence/rfantibody_b7h3_backbone_pilot_array.sh
+Baseline records: results/04_09_path_launch/04_09_path_c_baseline.tsv
