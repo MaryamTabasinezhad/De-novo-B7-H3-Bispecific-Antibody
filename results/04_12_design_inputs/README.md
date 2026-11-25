@@ -51,3 +51,10 @@ Next, inspect GPU pilot outputs and compare intact-4Ig clash and epitope contact
 metrics with the historical runs before scaling. GPT-6 redesign awaits
 verified internal format criteria and experimental reference inputs. No GPT-6
 redesign or AF3 inference was submitted in this milestone.
+
+## GPU completion
+
+Both jobs completed in 15 minutes 33 seconds with exit code 0. Each produced
+four nonempty backbone PDBs and four associated TRB files. The completion
+record lists paths and file sizes. Scientific geometry and contact QC remain
+pending.

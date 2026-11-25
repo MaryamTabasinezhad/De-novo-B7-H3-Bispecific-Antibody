@@ -1,0 +1,26 @@
+27635726|mab-context-A|COMPLETED|00:15:33|0:0
+27635727|mab-context-B|COMPLETED|00:15:33|0:0
+GPU 0: NVIDIA H100 80GB HBM3 (UUID: GPU-1106b4c2-7026-470a-d086-57e5152aa23a)
+arm=A job=27635726 crop=29-169 anchors=T126,T127,T128,T129 input=/lustre09/project/6089454/ghaedi/mab/data/processed/target_ensemble/human_4ig_afdb_v6_oriented.pdb output=/scratch/ghaedi/mab/04_12_context_pilot/A/27635726 framework=/scratch/ghaedi/mab/rfantibody_inputs_corrected3/framework_HLT.pdb weights=/scratch/ghaedi/mab/third_party/RFantibody/weights/RFdiffusion_Ab.pt
++ .venv/bin/rfdiffusion --target /scratch/ghaedi/mab/04_12_context_pilot/A/27635726/target.pdb --framework /scratch/ghaedi/mab/rfantibody_inputs_corrected3/framework_HLT.pdb --output /scratch/ghaedi/mab/04_12_context_pilot/A/27635726/ab --num-designs 4 --design-loops L1:8-13,L2:7,L3:9-11,H1:7,H2:6,H3:5-13 --hotspots T126,T127,T128,T129 --final-step 1 --no-trajectory --weights /scratch/ghaedi/mab/third_party/RFantibody/weights/RFdiffusion_Ab.pt --deterministic
+/scratch/ghaedi/mab/04_12_context_pilot/A/27635726/ab_0.pdb	101681 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/A/27635726/ab_0.trb	77369 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/A/27635726/ab_1.pdb	101681 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/A/27635726/ab_1.trb	77369 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/A/27635726/ab_2.pdb	100166 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/A/27635726/ab_2.trb	76369 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/A/27635726/ab_3.pdb	99560 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/A/27635726/ab_3.trb	75969 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/A/27635726/target.pdb	86273 bytes
+GPU 0: NVIDIA H100 80GB HBM3 (UUID: GPU-8befa382-cfd5-895f-79c2-078b948c69dc)
+arm=B job=27635727 crop=141-281 anchors=T228,T229,T232,T234,T236,T238,T240,T241 input=/lustre09/project/6089454/ghaedi/mab/data/processed/target_ensemble/human_4ig_afdb_v6_oriented.pdb output=/scratch/ghaedi/mab/04_12_context_pilot/B/27635727 framework=/scratch/ghaedi/mab/rfantibody_inputs_corrected3/framework_HLT.pdb weights=/scratch/ghaedi/mab/third_party/RFantibody/weights/RFdiffusion_Ab.pt
++ .venv/bin/rfdiffusion --target /scratch/ghaedi/mab/04_12_context_pilot/B/27635727/target.pdb --framework /scratch/ghaedi/mab/rfantibody_inputs_corrected3/framework_HLT.pdb --output /scratch/ghaedi/mab/04_12_context_pilot/B/27635727/ab --num-designs 4 --design-loops L1:8-13,L2:7,L3:9-11,H1:7,H2:6,H3:5-13 --hotspots T228,T229,T232,T234,T236,T238,T240,T241 --final-step 1 --no-trajectory --weights /scratch/ghaedi/mab/third_party/RFantibody/weights/RFdiffusion_Ab.pt --deterministic
+/scratch/ghaedi/mab/04_12_context_pilot/B/27635727/ab_0.pdb	101681 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/B/27635727/ab_0.trb	77397 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/B/27635727/ab_1.pdb	101681 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/B/27635727/ab_1.trb	77397 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/B/27635727/ab_2.pdb	100166 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/B/27635727/ab_2.trb	76397 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/B/27635727/ab_3.pdb	99560 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/B/27635727/ab_3.trb	75997 bytes
+/scratch/ghaedi/mab/04_12_context_pilot/B/27635727/target.pdb	85706 bytes

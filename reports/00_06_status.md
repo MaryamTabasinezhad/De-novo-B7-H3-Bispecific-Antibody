@@ -1140,3 +1140,11 @@ RFantibody GPU diagnostics with expanded crops for Arm A (27635726) and
 Arm B (27635727). See the [job record](../results/04_12_design_inputs/README.md)
 for job states, commands and scratch paths. Next is pilot output inspection
 and internal format review for GPT-6 redesign.
+
+## Expanded-context GPU jobs completed
+
+Jobs 27635726 (A) and 27635727 (B) completed with exit code 0 in 15m33s
+each. Verified four nonempty backbone PDBs and four associated TRB files
+per arm in the recorded scratch destinations. See the
+[completion record](../results/04_12_design_inputs/04_12_gpu_completion.txt).
+Scientific QC and comparison with the historical baseline remain pending.
