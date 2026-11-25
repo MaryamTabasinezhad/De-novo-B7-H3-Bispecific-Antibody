@@ -1064,3 +1064,16 @@ stdlib zipfile after sourcing config/hpc/rorqual.sh. Checked archive integrity,
 coordinates and historical archive are preserved. No inference or scientific
 acceptance changes. Status: delivery complete; next scientific work remains
 interface/epitope and simultaneous-engagement QC.
+
+## Arm A contact repeatability — 2026-11-25 UTC
+
+Reviewed 40 cropped-antigen shortlist inputs, 40 single-arm 4Ig inputs, and
+280 dual-arm 4Ig inputs against the existing 4.5 Å contact definition. A217
+and A283 each passed the Arm A criterion in three cropped samples but in
+zero single-arm 4Ig samples. A232 and A275 each passed in two single-arm
+4Ig samples. Two dual-arm samples, A275/B20 and A205/B251, passed the
+contact criterion for both arms once per pair. Global ipTM was 0.19 and
+0.18, respectively. Simultaneous binding remains unverified. No new
+inference or jobs. See [contact review](07_08_arm_a_contact_review.md) for
+the method, inputs, and limitations. Next is local interface and confidence
+inspection of the two dual-contact samples.
