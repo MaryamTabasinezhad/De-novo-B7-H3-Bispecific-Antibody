@@ -1095,3 +1095,13 @@ agent instructions to reflect the approved 1A + 1B IgG-like format.
 Next work is the parent length and coverage audit, experimental reference
 mapping, and review of prior job settings. No design, inference, or Slurm jobs
 were run for this update.
+
+## Three-path Slurm preflight — 2026-11-25 UTC
+
+Submitted CPU array 27634890 on Rorqual. All three tasks completed with exit
+code 0. The results confirm 40 A and 29 B parent input records and 300 prior
+RFantibody backbone task records per arm. See the
+[preflight record](../results/04_09_path_launch/README.md) for commands,
+exact input paths, and output tables. No redesign or generation job was
+submitted. Next gates are domain coverage and format criteria, experimental
+reference mapping for redesign, and setup of the intact-4Ig comparison.
