@@ -1117,3 +1117,15 @@ affected source retrieval. The browser-verified starting evidence and local
 The 20G5 complex did not directly contact any of the eight designated Arm B
 residues at 4.5 Å. Numbered coverage, broader evidence review, and the intact
 4Ig comparison remain pending. No redesign or generation was run.
+
+## Slurm follow-up on framework ends and intact 4Ig — 2026-11-25 UTC
+
+Four separate CPU jobs (27635634–27635637) completed with exit 0. All 138
+parent chains retain matching framework terminal eight-residue segments.
+The 20G5 comparison reproduced the raw 9LY6 distances and flagged the
+9LY5 canonical mapping for review. In a 40-backbone historical replay,
+37 designs had a heavy-atom distance below 2 Å to antigen outside their
+design crop. See the [follow-up record](../results/04_11_followup/README.md)
+for per-arm results, exact commands, and next checks. Four existing Fab
+arrays remain pending on an unavailable node. No redesign or new
+generation was run.
