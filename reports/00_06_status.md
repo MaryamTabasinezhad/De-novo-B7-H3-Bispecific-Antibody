@@ -1360,3 +1360,14 @@ The array is queued for GPU priority, with a tentative November 27 start.
 CPU QC job 27718920 will run after both array tasks succeed. The
 [bound-pose pilot record](../results/04_23_arm_b_bound_pose/README.md)
 contains inputs, job paths, and the post-run geometry checks.
+
+## Path C Arm A conditioned pilot partial results — 2026-11-26 UTC
+
+Jobs 27718318 and 27718320 produced four backbones. Job 27718319
+timed out without outputs and QC 27718507 was cancelled. The four
+finished backbones pass the short-distance protein and glycan screens,
+three clear the nominal membrane, and none retains all four anchors.
+Resubmitted placement 2 as 27722542 with a 25-minute limit, with
+replacement QC 27722544 dependent on success. The
+[partial review](../results/04_22_arm_a_conditioned/README.md#partial-results-and-retry)
+records the findings and retry. Sequence design remains on hold.

@@ -65,3 +65,24 @@ table with the updated script. The QC job writes temporary tables under
 `/scratch/ghaedi/mab/04_22_arm_a_conditioned/qc/27718507/` and records
 the six PDBs and two tables here after the checks execute. Its logs
 are in the same scratch log directory as the GPU jobs.
+
+## Partial results and retry
+
+Jobs 27718318 and 27718320 completed with seeds 411/412 and 431/432.
+Job 27718319 timed out before writing either output. Its dependent QC
+job 27718507 was cancelled. The [partial geometry table](04_22_partial_geometry.tsv)
+and [approach and loop metrics](04_22_partial_geometry_detail.tsv) cover the
+four finished backbones. All four clear the sub-2 Å protein and glycan
+distance checks. Three clear the nominal membrane. None retains all four
+anchors. Seed 412 contacts 127–129 with +10.92 Å nominal clearance, and
+seed 431 contacts 126, 127 and 129 with +0.52 Å nominal clearance.
+Framework Cα coordinates moved 2.32–3.75 Å relative to the input after
+antigen alignment despite the fixed-dock mask. Evaluate realized poses
+when ranking candidates.
+
+Placement 2 was resubmitted as 27722542 with the same input, seeds and
+scientific settings and the original 25-minute limit. Its outputs go
+under `/scratch/ghaedi/mab/04_22_arm_a_conditioned/A/27722542`.
+Dependent job 27722544 runs the six-backbone QC with 27722542 as the
+placement 2 output directory. The QC inputs are passed as a positional
+job ID to the existing worker. Sequence design remains on hold.
