@@ -1179,3 +1179,8 @@ for commands and output locations. Results are pending at submission.
 GPT-6 redesign jobs 27672795 and 27672796 both failed on the first parent
 request after 90 seconds. No verified redesigns were produced. Queue empty
 at status check. See the [completion status](../results/04_13_gpt6_redesign/README.md#completion-status).
+
+Network diagnostic 27673607 isolated the Slurm failure to TCP port 443
+timeouts. Login-node probes confirmed a second issue: the account rejects
+the literal gpt-6 model ID and accepts gpt-6.2-sol. No redesign was run
+during troubleshooting.

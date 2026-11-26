@@ -37,3 +37,23 @@ Both jobs failed with exit code 1 after 90 seconds. The initial GPT-6
 request timed out for A265 and B131. Both logs reported a model metadata
 refresh timeout. Neither response was verified. The remaining 39 Arm A
 and 28 Arm B parents were never attempted. The queue was empty when checked.
+
+## Connectivity and model diagnostics
+
+Slurm CPU diagnostic 27673607 on rc32108 resolved IPv4 for api.openai.com
+and chatgpt.com. Both TCP connections to port 443 timed out after 5 seconds
+before TLS (HTTP 000, curl exit 28). The same HTTPS root probes from login
+node rorqual2 completed TLS and returned HTTP 421 and 200 respectively.
+The comparison verifies connectivity at the transport layer, independently
+of API authorization. The compute-node raw log is
+`work/04_13_gpt6_redesign/network_27673607.log`.
+
+A harmless login-node probe with Codex CLI v0.172.0 explicitly rejected
+model ID `gpt-6` under the signed-in ChatGPT account. The same test with
+`gpt-6.2-sol` returned READY. No antibody data was sent in either test.
+
+Probe commands were `timeout 4 getent ahostsv4 <host>` and
+`curl -sS -o /dev/null -w 'http=%{http_code} dns=%{time_namelookup} tcp=%{time_connect} tls=%{time_appconnect}\n' --connect-timeout 5 --max-time 8 https://<host>/`.
+Model probes used `timeout 30 codex exec --skip-git-repo-check --sandbox read-only -m <model> 'Reply READY only. Do not use tools.'` from /tmp.
+No redesign jobs were resubmitted. An approved connected runner or
+compute-node egress exception is required for the cloud inference step.
