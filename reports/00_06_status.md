@@ -1294,3 +1294,11 @@ Linked the A0/A1 review and the three completed seeds to the
 [geometry-first plan and hold](../results/04_18_arm_a_backbone_pilot/README.md#current-plan-and-authorization).
 The remaining nine seeds, revised sampling, and sequence design await
 the user's instruction to run. This update records the plan only.
+
+## Path C Arm A membrane clearance criterion — 2026-11-26 UTC
+
+Recorded positive worst-case clearance across the tested Fab placements
+and membrane orientations as the provisional screen, with no validated
+minimum positive margin. The [next-run record](../results/04_18_arm_a_backbone_pilot/README.md#provisional-membrane-clearance-criterion)
+uses seed 301 for the placement screen and seed 201 as the interface
+benchmark. No compute was submitted.

@@ -104,3 +104,24 @@ to run. The completed jobs and their outputs are recorded above.
    pass the geometry checks and the shared Fab format is confirmed.
    If zero or one qualifies, review the failures before expanding the
    pilot.
+
+### Provisional membrane clearance criterion
+
+Clearance is the signed distance from the modeled membrane plane
+(z = 15.35 Å in the nominal orientation) to the lowest heavy atom
+of the estimated full Fab. Zero is contact with the plane. Negative
+values indicate crossing. The Fab binds B7-H3 above the membrane,
+so the target is positive clearance across all tested Fab placements
+and membrane orientations while retaining the intended anchor contacts.
+For otherwise comparable poses, prefer the larger minimum clearance.
+There is no validated optimum or minimum positive margin. Record the
+nominal and tilted results separately because the plane, tilt, and Fab
+elbow are geometric approximations.
+
+Seed 301 is the starting pose for the next placement screen. Its best
+nominal clearance was −5.39 Å, and it contacted three anchors. Seed 201
+is the interface benchmark with four anchor contacts and zero sub-2 Å
+protein pairs, with best nominal clearance of −24.53 Å. Keep the
+nine unused seeds on hold. The next run is the intact-4Ig placement
+screen, followed by a small pose-conditioned backbone pilot only if a
+placement clears the geometry checks.
