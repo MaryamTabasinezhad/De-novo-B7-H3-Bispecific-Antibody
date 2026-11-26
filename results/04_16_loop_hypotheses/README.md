@@ -33,3 +33,5 @@ Scheduler output and errors use the worker's existing
 `/scratch/ghaedi/mab/jobs/fab_category_%A_%a.{out,err}` patterns.
 Next compare per-sample intended-patch contacts, local interface confidence
 and pose consistency against each unchanged parent.
+
+A one-time watcher checks both jobs every 60 seconds and publishes [04_16_completion.md](04_16_completion.md) after both terminate. Its local log is work/04_16_watch_af3/watcher.log.
