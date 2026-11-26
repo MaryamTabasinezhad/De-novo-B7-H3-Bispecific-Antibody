@@ -1190,3 +1190,10 @@ during troubleshooting.
 Launched A265 and B131 without Slurm. See the [run record](../results/04_14_direct_redesign/README.md).
 
 Both direct pilot calls returned review_required with unchanged parent chains. Recorded the exact inputs and model responses. No new designs and no cohort launch.
+
+## Parent-specific GPT-6.2 Sol pilot
+
+Ran A265, B131, A275 and B282 without Slurm using parent-specific design
+loop boundaries and four 4Ig AF3 samples per parent. All four returned
+review_required with unchanged VH/VL. The [run record](../results/04_15_parent_evidence_redesign/README.md)
+contains exact inputs, prompts, model thread IDs and outputs.
