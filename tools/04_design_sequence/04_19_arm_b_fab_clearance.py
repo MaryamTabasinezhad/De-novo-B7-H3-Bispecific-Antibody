@@ -41,7 +41,7 @@ def n215_probes(lookup):
             yield label, f"9LME_{chain}{res}_{glycan_chain}", sugar_count, residues, xyz, target_pairs
 
 
-def main(glycan_output):
+def main(glycan_output, tasks):
     full = list(qc.atoms(qc.FULL, "A"))
     lookup = {(res, name): xyz for _, res, name, xyz in full}
     ecto = [row for row in full if 29 <= row[1] <= 466]
@@ -63,7 +63,7 @@ def main(glycan_output):
                       "glycan_template", "sugars", "core_target_pairs_lt2",
                       "first_sugar_fab_min_A", "core_fab_min_A", "core_fab_pairs_lt2",
                       "clashing_sugar_residues", "clashing_fv_residues"))
-    for task in (31, 152):
+    for task in tasks:
         run = archive / f"task_{task}"
         binder, placed = qc.place_pilot_model("B", 0, lookup, run, crop)
         blocks, _, _, chains = fab.format_a.domain_blocks(run / "ab_0.pdb")
@@ -97,4 +97,4 @@ def main(glycan_output):
 
 if __name__ == "__main__":
     with Path(sys.argv[1]).open("w") as glycan_output:
-        main(glycan_output)
+        main(glycan_output, [int(task) for task in sys.argv[2:]] or (31, 152))

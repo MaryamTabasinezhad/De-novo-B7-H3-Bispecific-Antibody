@@ -1323,3 +1323,15 @@ clash-screened poses was −10.99 Å. The
 [screen record](../results/04_20_arm_a_pose_screen/README.md) holds the
 pose-conditioned pilot, nine unused seeds, and sequence design. No new
 Slurm job was submitted.
+
+## Path C Arm B glycan-aware approach screen — 2026-11-26 UTC
+
+All 12 archival protein-clash-free backbones overlapped both
+antigen-compatible N215 glycan cores at their original placements.
+A local rigid screen of tasks 31, 152 and 248 found 19 placements
+(two historical backbone lineages) passing contact, protein, glycan-core
+and membrane checks. Lead with task 248 at rotation (20°, 0°, 0°) and
+translation (+2, 0, 0 Å), with task 152 as backup. The
+[screen record](../results/04_21_arm_b_core_screen/README.md)
+contains the transforms, results and remaining validation gates.
+No Slurm job was submitted.
