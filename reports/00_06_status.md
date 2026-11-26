@@ -1160,3 +1160,11 @@ intended patch remains unresolved. No redesign or compute was run.
 ## Full-length humanized reference screen
 
 Recorded the 15-entry screen and rationale in [02_04](02_04_b7h3_full_length_humanized_reference_screen.md). Exact chain verification and parent numbering remain open.
+
+## GPT-6 Slurm access preflight
+
+CPU probes 27671411 and 27671419 failed to establish compute-node GPT-6
+access. The API HTTPS check timed out and the headless GPT-6 smoke test
+ended without a verified model response. See the
+[preflight record](../results/02_04_gpt6_preflight/README.md).
+No redesign arrays were submitted or parent data transferred.
