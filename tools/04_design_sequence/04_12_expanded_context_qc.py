@@ -39,10 +39,13 @@ def fit(source, destination):
     return rotation, destination.mean(0) - source.mean(0) @ rotation
 
 
-def place_pilot_model(arm, model, lookup):
+def place_pilot_model(arm, model, lookup, run=None):
     job, _, _ = ARMS[arm]
-    run = SCRATCH / "04_12_context_pilot" / arm / job
+    if run is None:
+        run = SCRATCH / "04_12_context_pilot" / arm / job
     crop = pdb_sequences(run / "target.pdb", {"T"})["T"]
+    full_sequence = dict(pdb_sequences(FULL, {"A"})["A"])
+    assert all(full_sequence[res] == aa for res, aa in crop), run
     path = run / f"ab_{model}.pdb"
     assert [aa for _, aa in pdb_sequences(path, {"T"})["T"]] == [aa for _, aa in crop]
     source = np.array([xyz for _, _, name, xyz in atoms(path, "T") if name == "CA"])

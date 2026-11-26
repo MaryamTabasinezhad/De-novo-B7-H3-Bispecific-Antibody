@@ -1255,3 +1255,11 @@ The [geometry record and pilot plan](../results/04_17_arm_a_geometry/README.md)
 specify 12 backbones across three loop configurations and distinct seeds,
 plus common advancement checks. No new Slurm jobs or sequence designs
 were started.
+
+## Path C Arm A seeded backbone pilot submission — 2026-11-26 UTC
+
+Submitted one backbone per audited loop configuration at seeds 101, 201,
+and 301. Slurm jobs 27715194–27715196 reached GPU inference. The
+[submission and QC record](../results/04_18_arm_a_backbone_pilot/README.md)
+lists inputs, commands and scratch outputs. The remaining nine seeds
+depend on initial full-Fab geometry, and sequence design remains gated.

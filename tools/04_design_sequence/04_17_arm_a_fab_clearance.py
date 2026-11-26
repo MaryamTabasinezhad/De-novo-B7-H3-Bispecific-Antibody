@@ -17,6 +17,29 @@ TEMPLATES = (
 )
 
 
+def place_constants(blocks, chains, fv_ca):
+    for entry, heavy, light, vh_end, vl_end in TEMPLATES:
+        template = Path(f"data/raw/structures/{entry}.pdb")
+        ends = {heavy: vh_end, light: vl_end}
+        template_atoms = list(qc.atoms(template, ends))
+        template_ca = {(chain, res): xyz for chain, res, name, xyz in template_atoms
+                       if name == "CA"}
+        constant = np.array([xyz for chain, res, _, xyz in template_atoms
+                             if res > ends[chain]])
+        for n in (8, 10):
+            ref, dest = [], []
+            for chain, source in (("H", heavy), ("L", light)):
+                assert len(blocks[chain][-1]) >= n
+                for delta, (res, _) in enumerate(reversed(chains[chain][-n:])):
+                    ref.append(template_ca[source, ends[source] - delta])
+                    dest.append(fv_ca[chain, res])
+            ref, dest = np.array(ref), np.array(dest)
+            rotation, offset = qc.fit(ref, dest)
+            rmsd = np.sqrt(np.mean(np.sum((ref @ rotation + offset - dest)**2, axis=1)))
+            extended = constant @ rotation + offset
+            yield f"{entry}:{heavy}{light}", n, rmsd, extended
+
+
 def main():
     full = list(qc.atoms(qc.FULL, "A"))
     ecto = [row for row in full if 29 <= row[1] <= 466]
@@ -41,40 +64,22 @@ def main():
                  if name == "CA"}
         distances = cdist(placed, ecto_xyz)
         i, j = np.unravel_index(distances.argmin(), distances.shape)
-        for entry, heavy, light, vh_end, vl_end in TEMPLATES:
-            template = Path(f"data/raw/structures/{entry}.pdb")
-            ends = {heavy: vh_end, light: vl_end}
-            template_atoms = list(qc.atoms(template, ends))
-            template_ca = {(chain, res): xyz for chain, res, name, xyz in template_atoms
-                           if name == "CA"}
-            constant = np.array([xyz for chain, res, _, xyz in template_atoms
-                                 if res > ends[chain]])
-            for n in (8, 10):
-                ref, dest = [], []
-                for chain, source in (("H", heavy), ("L", light)):
-                    assert len(blocks[chain][-1]) >= n
-                    for delta, (res, _) in enumerate(reversed(chains[chain][-n:])):
-                        ref.append(template_ca[source, ends[source] - delta])
-                        dest.append(fv_ca[chain, res])
-                ref, dest = np.array(ref), np.array(dest)
-                rotation, offset = qc.fit(ref, dest)
-                rmsd = np.sqrt(np.mean(np.sum((ref @ rotation + offset - dest)**2, axis=1)))
-                extended = constant @ rotation + offset
-                fab = np.vstack((placed, extended))
-                const_dist = cdist(extended, ecto_xyz)
-                glycan = cdist(fab, list(sites.values())).min(axis=0)
-                relative = fab - origin
-                tilt = np.radians(10)
-                tilted_z = relative[:, 2] * np.cos(tilt) - np.linalg.norm(
-                    relative[:, :2], axis=1) * np.sin(tilt)
-                writer.writerow((f"A{model}", f"{entry}:{heavy}{light}", n, f"{rmsd:.3f}",
-                                 int((distances < 2).sum()), qc.atom_id(binder[i]),
-                                 qc.atom_id(ecto[j]), f"{distances[i, j]:.3f}",
-                                 int((const_dist < 2).sum()), f"{const_dist.min():.3f}",
-                                 list(sites)[glycan.argmin()], f"{glycan.min():.3f}",
-                                 f"{placed[:, 2].min():.3f}", f"{fab[:, 2].min():.3f}",
-                                 f"{relative[:, 2].min() - top:.3f}",
-                                 f"{tilted_z.min() - top:.3f}"))
+        for template, n, rmsd, extended in place_constants(blocks, chains, fv_ca):
+            fab = np.vstack((placed, extended))
+            const_dist = cdist(extended, ecto_xyz)
+            glycan = cdist(fab, list(sites.values())).min(axis=0)
+            relative = fab - origin
+            tilt = np.radians(10)
+            tilted_z = relative[:, 2] * np.cos(tilt) - np.linalg.norm(
+                relative[:, :2], axis=1) * np.sin(tilt)
+            writer.writerow((f"A{model}", template, n, f"{rmsd:.3f}",
+                             int((distances < 2).sum()), qc.atom_id(binder[i]),
+                             qc.atom_id(ecto[j]), f"{distances[i, j]:.3f}",
+                             int((const_dist < 2).sum()), f"{const_dist.min():.3f}",
+                             list(sites)[glycan.argmin()], f"{glycan.min():.3f}",
+                             f"{placed[:, 2].min():.3f}", f"{fab[:, 2].min():.3f}",
+                             f"{relative[:, 2].min() - top:.3f}",
+                             f"{tilted_z.min() - top:.3f}"))
 
 
 if __name__ == "__main__":

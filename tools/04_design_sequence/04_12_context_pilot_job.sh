@@ -15,8 +15,13 @@ case "$arm" in
   *) printf 'Unknown arm %s\n' "$arm" >&2; exit 2 ;;
 esac
 
+designs=${2:-4}
+loops=${3:-L1:8-13,L2:7,L3:9-11,H1:7,H2:6,H3:5-13}
+start=${4:-0}
+stage=${5:-04_12_context_pilot}
+
 runtime="$MAB_SCRATCH_ROOT/third_party/RFantibody"
-output="$MAB_SCRATCH_ROOT/04_12_context_pilot/$arm/$SLURM_JOB_ID"
+output="$MAB_SCRATCH_ROOT/$stage/$arm/$SLURM_JOB_ID"
 input="$MAB_DATA_DIR/processed/target_ensemble/human_4ig_afdb_v6_oriented.pdb"
 framework="$MAB_SCRATCH_ROOT/rfantibody_inputs_corrected3/framework_HLT.pdb"
 weights="$runtime/weights/RFdiffusion_Ab.pt"
@@ -34,6 +39,7 @@ printf 'arm=%s job=%s crop=%s-%s anchors=%s input=%s output=%s framework=%s weig
   "$arm" "$SLURM_JOB_ID" "$lower" "$upper" "$anchors" "$input" "$output" "$framework" "$weights"
 set -x
 .venv/bin/rfdiffusion --target "$output/target.pdb" --framework "$framework" \
-  --output "$output/ab" --num-designs 4 \
-  --design-loops 'L1:8-13,L2:7,L3:9-11,H1:7,H2:6,H3:5-13' \
-  --hotspots "$anchors" --final-step 1 --no-trajectory --weights "$weights" --deterministic
+  --output "$output/ab" --num-designs "$designs" \
+  --design-loops "$loops" \
+  --hotspots "$anchors" --final-step 1 --no-trajectory --weights "$weights" --deterministic \
+  --extra "inference.design_startnum=$start"
