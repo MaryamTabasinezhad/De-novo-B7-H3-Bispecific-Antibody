@@ -1188,3 +1188,5 @@ during troubleshooting.
 ## Direct GPT-6.2 Sol pilot
 
 Launched A265 and B131 without Slurm. See the [run record](../results/04_14_direct_redesign/README.md).
+
+Both direct pilot calls returned review_required with unchanged parent chains. Recorded the exact inputs and model responses. No new designs and no cohort launch.

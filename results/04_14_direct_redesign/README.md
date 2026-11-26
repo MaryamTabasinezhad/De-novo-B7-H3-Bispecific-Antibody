@@ -17,3 +17,16 @@ Working records are in `work/04_13_gpt6_redesign/{A,B}_04_14_direct/`.
 Each record links the parent input, reference evidence, prompt, model and
 Codex thread ID. A verified response here denotes a checked response
 record. Structural validation and measured binding are separate milestones.
+
+## Pilot outcome
+
+Both model calls returned valid response records. A265 and B131 returned
+`review_required` and reproduced their original VH/VL sequences. The model
+found the reference evidence insufficient to justify residue changes for
+either specific parent. The JSON files preserve exact inputs, parent
+sequences, thread IDs, model responses, and rationales. No redesigned
+sequence was produced.
+
+The remaining 39 A and 28 B calls were not launched after the pilot. The
+inputs need parent-specific interface evidence and verified framework/CDR
+boundaries before the same prompt can produce an interpretable redesign.
