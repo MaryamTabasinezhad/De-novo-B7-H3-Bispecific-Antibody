@@ -161,3 +161,50 @@ no jobs.
   and two sub-2 Å pairs, respectively, in the prior geometry table.
   Keep B0, B1 and B2 at the geometry gate. Native N215 glycan occupancy
   and flexibility remain unresolved.
+
+### Arm A format and approach review
+
+This review uses the provisional cognate VH/VL pairing baseline in
+[STEP0-010](../../reports/00_05_decision_log.md#step0-010--provisional-full-antibody-baseline-2026-09-21).
+The exact final assembly and constant-domain settings remain open.
+
+```bash
+source config/hpc/rorqual.sh
+OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 \
+  "$MAB_SCRATCH_ROOT/third_party/RFantibody/.venv/bin/python" \
+  tools/04_design_sequence/04_12_arm_a_format.py
+```
+
+The [format table](04_12_arm_a_format.tsv) compares the HLT scaffold in
+`/scratch/ghaedi/mab/rfantibody_inputs_corrected3/framework_HLT.pdb`, all four
+pilot outputs from job 27635726, and all 40 Arm A RF2 parents listed in
+[04_09](../04_09_path_launch/04_09_arm_a_parent_lengths.tsv). All 44 models
+preserve the four fixed blocks per variable chain and have a Cα for every
+recorded VH/VL residue. All 40 RF2 length pairs match the recorded AF3 input
+length pairs. The 44 models fit the previous HLT loop lengths, in residues:
+H1 7, H2 6, H3 5–13, L1 8–13, L2 7, L3 9–11. This is a scaffold-specific
+coverage check. HLT loop positions are chain-local design annotations;
+standardized antibody numbering and final Fab sequence approval remain open.
+A2's 104-residue VL reflects its labeled loop lengths and retains all fixed
+blocks.
+
+The [approach table](04_12_arm_a_approach.tsv) compares vectors from the
+intended epitope Cα centroid to the centroid of the final eight Cα positions
+of each Fv chain in its intact-4Ig placement. It does not include the Fab
+elbow, constant domains, or membrane tilt. A0 differs from A1, A2, and A3
+by 63.7°, 44.3°, and 68.2°, respectively. A1 and A3 differ by 6.0°.
+
+- Keep A0 as the pilot benchmark. Its local clash is avoidable in the
+  Ser125 rotation scan.
+- Keep A1 as an alternate approach for full-Fab and membrane review. It
+  contacts all four anchors and has one close protein pair.
+- Retain A2 as a geometry comparison. It differs from A0 by 44.3°, contacts
+  two anchors, and has four close protein pairs.
+- Deprioritize A3 for the next screen. Its approach is close to A1, with
+  fewer anchor contacts and a membrane-proximity flag.
+
+The next Arm A batch should compare several independent backbone lineages
+at the same intact-4Ig geometry checks. The pilot loop bounds and scaffold
+can serve as the comparator under the cognate-chain baseline. The shared
+format gate and clearance checks still govern sequence-design advancement.
+No new structures, sequences, or Slurm jobs were started in this review.

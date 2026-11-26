@@ -1235,3 +1235,12 @@ Fab format criteria are ready. B0 and B1 each clash with all eight N215
 first-sugar placements and remain at the geometry gate with B2.
 See the [geometry follow-up](../results/04_12_design_inputs/README.md#ser125-rotation-scan-and-alternate-arm-b-poses).
 No Slurm jobs or sequence design were started.
+
+## Path C Arm A format and approach review — 2026-11-26 14:56 UTC
+
+All four expanded Arm A backbones and all 40 historical Arm A RF2 parents
+retain the fixed HLT VH/VL blocks, have Cα coverage of recorded residues,
+and fit the prior design-loop lengths. A0 remains the benchmark. A1 is a
+distinct approach (63.7° from A0) and requires full-Fab and membrane review.
+See the [format and approach record](../results/04_12_design_inputs/README.md#arm-a-format-and-approach-review).
+No new Slurm jobs or designs were started.
