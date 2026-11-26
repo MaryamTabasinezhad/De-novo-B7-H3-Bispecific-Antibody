@@ -107,3 +107,5 @@ each redesign record. Use the documented measurements to support only the
 contacts or epitope region they establish. Binding benchmarks can inform
 assay comparisons while their exact footprints remain unresolved. No Slurm
 jobs, sequence redesign or model generation were run for this review.
+
+See the [full-length humanized reference screen](02_04_b7h3_full_length_humanized_reference_screen.md) for sequence and format eligibility.

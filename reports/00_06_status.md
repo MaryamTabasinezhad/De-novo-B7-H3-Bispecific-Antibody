@@ -1156,3 +1156,7 @@ with eight Arm A and seven Arm B evidence-panel entries, additional
 experimental clones, clinical asset aliases, and market-status source links.
 The Arm B panel contains one partial direct reference (20G5); the broader
 intended patch remains unresolved. No redesign or compute was run.
+
+## Full-length humanized reference screen
+
+Recorded the 15-entry screen and rationale in [02_04](02_04_b7h3_full_length_humanized_reference_screen.md). Exact chain verification and parent numbering remain open.
