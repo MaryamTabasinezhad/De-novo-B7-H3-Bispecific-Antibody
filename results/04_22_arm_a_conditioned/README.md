@@ -45,3 +45,23 @@ done
 Next, QC the outputs against seed 201 on intact 4Ig and compare the
 realized framework placements with the three starting poses. The nine
 unused unconditional seeds and sequence design remain on hold.
+
+## Input verification and queued QC
+
+The installed RFantibody HLT parser read all three inputs as 232 binder
+residues plus 141 target residues, with 56 design-loop residues and all
+four requested hotspot indices. Slurm accepted job IDs 27718318–27718320.
+Their pending time limits were reduced to 10 minutes to allow shorter
+backfill windows, based on observed 50-step pilot timings and the
+15-step conditioned workload.
+
+CPU job 27718507 uses dependency `afterok:27718318:27718319:27718320`.
+It compares all six output backbones with A0 and seed 201, checks the
+target and variable-domain mapping, and records framework and loop Cα
+RMSDs to each input, within-placement loop RMSDs, approach angles,
+anchor contacts, protein pairs, and glycan and full-Fab clearance
+proxies. The legacy 04_18 comparison reproduces the archived geometry
+table with the updated script. The QC job writes temporary tables under
+`/scratch/ghaedi/mab/04_22_arm_a_conditioned/qc/27718507/` and records
+the six PDBs and two tables here after the checks execute. Its logs
+are in the same scratch log directory as the GPU jobs.

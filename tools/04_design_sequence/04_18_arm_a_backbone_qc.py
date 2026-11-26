@@ -53,6 +53,7 @@ def main(args):
             crop = None
         entries.append((seed, int(seed), qc.SCRATCH / run_stage / "A" / job, crop))
 
+    conditioned = any(crop is not None for _, _, _, crop in entries)
     writer = csv.writer(sys.stdout, delimiter="\t", lineterminator="\n")
     writer.writerow(("pose", "H3_L1_L3", "VH_VL", "fixed_blocks_match",
                      "max_adjacent_CA_A", "anchors_le4p5", "fv_pairs_lt2",
@@ -60,13 +61,31 @@ def main(args):
                      "max_constant_pairs_lt2", "nearest_site", "min_fab_ND2_A",
                      "min_fab_N104_NAG_A", "min_fv_z_A",
                      "worst_fab_clearance_A", "best_fab_clearance_A",
-                     "worst_fab_clearance_10deg_A", "angle_from_A0_deg"))
+                     "worst_fab_clearance_10deg_A", "angle_from_A0_deg",
+                     *(("framework_to_input_CA_rmsd_A", "loops_to_input_CA_rmsd_A")
+                       if conditioned else ())))
     directions = {}
+    conditioned_loops = {}
     for label, seed, run, crop in entries:
-        blocks, lengths, _, chains = format_a.domain_blocks(run / f"ab_{seed}.pdb")
+        blocks, lengths, ranges, chains = format_a.domain_blocks(run / f"ab_{seed}.pdb")
         binder, placed = qc.place_pilot_model("A", seed, lookup, run, crop)
         fv_ca = {(chain, res): xyz for (chain, res, name, _), xyz in zip(binder, placed)
                  if name == "CA"}
+        realized = ("-", "-") if conditioned else ()
+        if crop is not None:
+            _, initial_lengths, initial_ranges, initial_chains = format_a.domain_blocks(crop)
+            assert (lengths, ranges) == (initial_lengths, initial_ranges)
+            assert all([r for r, _ in chains[c]] == [r for r, _ in initial_chains[c]]
+                       for c in "HL")
+            initial_ca = {(c, r): xyz for c, r, name, xyz in qc.atoms(crop, "HL")
+                          if name == "CA"}
+            loop_keys = {(loop[0], chains[loop[0]][i - 1][0])
+                         for loop, positions in ranges.items() for i in positions}
+            fixed = [key for key in fv_ca if key not in loop_keys]
+            loops = sorted(loop_keys)
+            realized = tuple(f"{rmsd([fv_ca[k] for k in group], [initial_ca[k] for k in group]):.3f}"
+                             for group in (fixed, loops))
+            conditioned_loops[label] = (crop, [fv_ca[k] for k in loops])
         terminal_ca = [fv_ca[chain, res] for chain in "HL" for res, _ in chains[chain][-8:]]
         direction = np.mean(terminal_ca, axis=0) - patch
         directions[label] = direction / np.linalg.norm(direction)
@@ -97,10 +116,19 @@ def main(args):
                          list(sites)[site_min.argmin()], f"{site_min.min():.3f}",
                          f"{min(nag_distances):.3f}", f"{placed[:, 2].min():.3f}",
                          f"{min(clearance):.3f}", f"{max(clearance):.3f}",
-                         f"{min(tilted):.3f}", f"{angle(directions[label], directions['A0']):.1f}"))
+                         f"{min(tilted):.3f}", f"{angle(directions[label], directions['A0']):.1f}", *realized))
     for first, second in combinations(directions, 2):
         print(first, second, f"{angle(directions[first], directions[second]):.1f}", sep="\t",
               file=sys.stderr)
+    for first, second in combinations(conditioned_loops, 2):
+        if conditioned_loops[first][0] == conditioned_loops[second][0]:
+            print("within_pose_loop_CA_rmsd", first, second,
+                  f"{rmsd(conditioned_loops[first][1], conditioned_loops[second][1]):.3f}",
+                  sep="\t", file=sys.stderr)
+
+
+def rmsd(first, second):
+    return np.sqrt(np.mean(np.sum((np.array(first) - second) ** 2, axis=1)))
 
 
 def angle(first, second):

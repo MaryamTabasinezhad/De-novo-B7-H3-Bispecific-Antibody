@@ -1344,3 +1344,8 @@ Each requests two independent seeds. The 10° tilt check is a risk flag
 for this pilot. The [run record](../results/04_22_arm_a_conditioned/README.md)
 lists inputs, seeds, commands, and scratch paths. Sequence design remains
 on hold pending geometry review and the shared format gate.
+
+The HLT parser verified the design-loop and target anchor mapping on
+all three inputs. GPU jobs are queued and CPU QC job 27718507 is
+scheduled after all three GPU jobs complete successfully. No conditioned
+backbones or sequence designs were available at this check.
