@@ -1197,3 +1197,11 @@ Ran A265, B131, A275 and B282 without Slurm using parent-specific design
 loop boundaries and four 4Ig AF3 samples per parent. All four returned
 review_required with unchanged VH/VL. The [run record](../results/04_15_parent_evidence_redesign/README.md)
 contains exact inputs, prompts, model thread IDs and outputs.
+
+## Loop hypothesis pilot — 2026-11-26 UTC
+
+GPT-6.2 Sol proposed A275 VH S104T and B282 VH S31T in a direct run.
+Verified one design-loop substitution per candidate and submitted AF3
+validation jobs 27674443 and 27674444. See the
+[run record](../results/04_16_loop_hypotheses/README.md) for exact prompts,
+variant inputs, submission details and output paths.

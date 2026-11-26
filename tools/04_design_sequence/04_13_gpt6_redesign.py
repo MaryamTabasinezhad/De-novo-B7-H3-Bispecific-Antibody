@@ -13,6 +13,7 @@ parser.add_argument("arm", choices=["A", "B"])
 parser.add_argument("--limit", type=int, choices=[1])
 parser.add_argument("--run-id", required=True)
 parser.add_argument("--parent")
+parser.add_argument("--hypothesis", action="store_true")
 args = parser.parse_args()
 arm = args.arm
 model = "gpt-6.2-sol"
@@ -43,12 +44,18 @@ for row in parents:
     sequences = json.loads(source.read_text())["sequences"]
     chains = {item["protein"]["id"]: item["protein"]["sequence"] for item in sequences}
     evidence = interface(root, arm, row, chains)
+    objective = (
+        "Nominate one conservative loop substitution to test against the unchanged parent. "
+        "Treat modeled patch contacts as a basis for proposing an experiment. "
+        "A speculative hypothesis is acceptable if its mechanistic rationale and uncertainty are explicit."
+        if args.hypothesis else
+        "If evidence is insufficient for a warranted sequence change, return review_required."
+    )
     prompt = f"""Propose one experimentally testable VH/VL redesign for B7-H3 Arm {arm}
 parent {parent}, for a Y-shaped humanized IgG with separate HC and LC.
 Use only the reference evidence below at its stated strength. Preserve the arm's
 intended epitope and complete variable-domain framework. Treat reference-chain
-and internal-coverage uncertainties explicitly. If evidence is insufficient for
-a warranted sequence change, return a review_required result with the reason.
+and internal-coverage uncertainties explicitly. {objective}
 Return JSON with parent_id, arm, status, vh, vl, changes, rationale and uncertainties.
 Do not use tools or read other files. The final Fc and pairing architecture are
 outside this proposal. Do not represent predicted binding as measured.
