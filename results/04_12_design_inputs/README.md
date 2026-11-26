@@ -58,3 +58,49 @@ Both jobs completed in 15 minutes 33 seconds with exit code 0. Each produced
 four nonempty backbone PDBs and four associated TRB files. The completion
 record lists paths and file sizes. Scientific geometry and contact QC remain
 pending.
+
+## Intact 4Ig geometry review — 2026-11-26 UTC
+
+[Per-model results](04_12_expanded_context_qc.tsv) cover four expanded backbones
+per arm and the first four historical tasks per arm. The analysis read the
+scratch outputs listed above and the historical inputs under
+`/scratch/ghaedi/mab/rfantibody_b7h3_backbone_pilot_20260925/{A,B}/task_{0..3}`
+and `/scratch/ghaedi/mab/rfantibody_inputs_corrected3/target_{A,B}.pdb`.
+No Slurm job was submitted.
+
+```bash
+source config/hpc/rorqual.sh
+OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 \
+  "$MAB_SCRATCH_ROOT/third_party/RFantibody/.venv/bin/python" \
+  tools/04_design_sequence/04_12_expanded_context_qc.py \
+  > results/04_12_design_inputs/04_12_expanded_context_qc.tsv
+```
+
+NumPy 1.26.4 and SciPy 1.15.3. Crop sequences matched the canonical Q5ZPR3
+model and RFantibody output target chains. The replay used crop Cα alignment
+and counted atom pairs below 2 Å on ectodomain residues 29–466. Intended
+anchor contacts use a 4.5 Å cutoff. The eight historical outside-crop counts
+reproduced the earlier replay exactly. Expanded crop fits were 0.123–0.175 Å
+RMSD. Every model had both variable chains and adjacent Cα distances at or
+below 3.89 Å. These are preliminary fold continuity checks on Fv backbones.
+
+- **Arm A.** Outside-crop clashes fell from 4/4 historical poses to 0/4
+  expanded poses. All four expanded poses contact at least two of four
+  anchors and each has 1–4 sub-2 Å pairs against the ectodomain. Models 0
+  and 1 contact all four anchors. Their lowest Fv atoms are at z=24.11 and
+  11.19 Å, respectively. Model 3 also reaches z=12.95 Å. The transmembrane
+  Cα span is z=−15.18 to +15.35 Å. Models 1 and 3 warrant membrane review. The nearest
+  annotated glycosite is N104, at 20.36–21.91 Å from the Fv to Asn ND2.
+- **Arm B.** Outside-crop clashes fell from 3/4 historical poses to 0/4
+  expanded poses. Expanded models contact 4–7 of eight anchors. Model 2
+  contacts seven anchors and has zero sub-2 Å ectodomain pairs. Its nearest
+  Fv atom is 2.90 Å from N215 ND2, which flags possible glycan interference.
+  Model 3 is similarly close to N215. The lowest Fv atoms for all four B
+  models are above z=61 Å.
+
+The z coordinate is an orientation proxy on one predicted 4Ig model.
+Asn ND2 distances flag proximity to glycan attachment points. Native glycan
+occupancy and motion, membrane tilt, and complete Fab constant-domain
+clearance remain unverified. Inspect the close protein contacts for A0 and
+the N215 glycan for B2 before advancing. The comparison uses a small sample
+and supports continued pilot review before scaling.

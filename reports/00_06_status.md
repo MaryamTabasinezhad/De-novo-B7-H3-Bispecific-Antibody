@@ -1205,3 +1205,14 @@ Verified one design-loop substitution per candidate and submitted AF3
 validation jobs 27674443 and 27674444. See the
 [run record](../results/04_16_loop_hypotheses/README.md) for exact prompts,
 variant inputs, submission details and output paths.
+
+## Path C expanded-context geometry review — 2026-11-26 14:25 UTC
+
+Reviewed all eight existing backbones from jobs 27635726 and 27635727 on
+intact 4Ig. None had a sub-2 Å pair outside its design crop, compared with
+seven of eight historical comparators. A0 contacts all four anchors and
+has one close protein pair. B2 contacts seven of eight anchors and has
+zero close protein pairs, with N215 glycan proximity requiring review.
+The [geometry record](../results/04_12_design_inputs/README.md#intact-4ig-geometry-review--2026-11-26-utc)
+documents per-model results and the membrane and glycan proxy limits.
+No new compute jobs were submitted.
