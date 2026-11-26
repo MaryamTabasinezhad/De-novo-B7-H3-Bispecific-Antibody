@@ -162,6 +162,39 @@ no jobs.
   Keep B0, B1 and B2 at the geometry gate. Native N215 glycan occupancy
   and flexibility remain unresolved.
 
+### Arm B archive screen
+
+Screened all four expanded Arm B poses from job 27635727 and all 300
+historical Arm B backbones (tasks 0–299). Used the intact human 4Ig crop
+Cα alignment and the same eight N215 first-NAG placements described above.
+The screen counted heavy-atom pairs below 2 Å and anchor contacts within
+4.5 Å. The two AFDB-based N189 transfers had zero clashes with neighboring
+antigen atoms. The other six placements were retained as sensitivity checks.
+
+| Pose | Intact 4Ig protein pairs <2 Å | Anchors contacted | First-sugar placements cleared | Closest first-sugar distance across eight |
+| --- | ---: | ---: | ---: | ---: |
+| Historical task 31 | 0 | 6/8 | 8/8 | 3.047 Å |
+| Historical task 152 | 0 | 4/8 | 8/8 | 3.219 Å |
+| Historical task 248 | 0 | 2/8 | 4/8 | 1.795 Å |
+| Expanded B3 | 7 | 5/8 | 6/8 | 1.863 Å |
+
+Twelve of 300 historical poses had zero protein clashes. Of those,
+only the three in the table cleared both antigen-compatible sugar
+placements. B3 also cleared both compatible placements, but its seven
+protein overlaps include a 1.363 Å pair with canonical Lys144. All four
+expanded poses remain on hold. Prioritize historical task 31 for full-Fab,
+membrane, and full-glycan geometry review, with task 152 as a second
+candidate. Native occupancy and flexibility at N215 remain unresolved.
+
+Reproduce with the QC command above using argument `b-archive`. The
+[per-pose TSV](04_12_arm_b_archive_screen.tsv) reports contacted anchors in
+the `template` column of protein rows. Historical inputs were
+`/scratch/ghaedi/mab/rfantibody_b7h3_backbone_pilot_20260925/B/task_{0..299}/ab_0.pdb`
+and `/scratch/ghaedi/mab/rfantibody_inputs_corrected3/target_B.pdb`;
+expanded inputs were under `/scratch/ghaedi/mab/04_12_context_pilot/B/27635727`.
+The original `followup` and `b-alternates` outputs reproduced byte for byte.
+No new Slurm job was submitted.
+
 ### Arm A format and approach review
 
 This review uses the provisional cognate VH/VL pairing baseline in

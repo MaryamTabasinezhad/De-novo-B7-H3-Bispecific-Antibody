@@ -1265,3 +1265,25 @@ and 301. Slurm jobs 27715194–27715196 reached GPU inference. The
 [submission and QC record](../results/04_18_arm_a_backbone_pilot/README.md)
 lists inputs, commands and scratch outputs. The remaining nine seeds
 depend on initial full-Fab geometry, and sequence design remains gated.
+
+## Path C Arm B archive screen — 2026-11-26 UTC
+
+Screened all 300 historical and four expanded Arm B poses on intact
+human 4Ig B7-H3 with the eight existing N215 first-sugar placements.
+Historical tasks 31 and 152 cleared all eight placements with no
+sub-2 Å protein pairs and contacted six and four anchors, respectively.
+Prioritize task 31 for full-Fab, membrane, and full-glycan review.
+Expanded B3 has seven protein overlaps and joins B0–B2 on hold.
+The [screen record](../results/04_12_design_inputs/README.md#arm-b-archive-screen)
+links the per-pose results and reproduction command. No new Slurm job
+was submitted.
+
+## Path C Arm A seeded backbone pilot decision — 2026-11-26 UTC
+
+Jobs 27715194–27715196 completed successfully. Seeds 201 and 301 had
+zero sub-2 Å Fv–target atom pairs. Seed 201 retained all four anchors,
+and seed 301 had the best membrane clearance at −5.39 Å in the best
+rigid Fab placement. All three crossed the membrane proxy. Hold the
+remaining nine seeds and sequence design. The
+[review and outputs](../results/04_18_arm_a_backbone_pilot/README.md)
+record the results and a geometry-first revision for the next pilot.

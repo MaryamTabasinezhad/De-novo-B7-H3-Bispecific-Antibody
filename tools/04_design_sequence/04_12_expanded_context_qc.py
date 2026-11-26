@@ -39,11 +39,11 @@ def fit(source, destination):
     return rotation, destination.mean(0) - source.mean(0) @ rotation
 
 
-def place_pilot_model(arm, model, lookup, run=None):
+def place_pilot_model(arm, model, lookup, run=None, crop_path=None):
     job, _, _ = ARMS[arm]
     if run is None:
         run = SCRATCH / "04_12_context_pilot" / arm / job
-    crop = pdb_sequences(run / "target.pdb", {"T"})["T"]
+    crop = pdb_sequences(crop_path or run / "target.pdb", {"T"})["T"]
     full_sequence = dict(pdb_sequences(FULL, {"A"})["A"])
     assert all(full_sequence[res] == aa for res, aa in crop), run
     path = run / f"ab_{model}.pdb"
@@ -92,7 +92,7 @@ def ser125_scan():
                         int((to_target < 2).sum()), residue_list(anchors)))
 
 
-def followup(b_models=(2,), include_a0=True):
+def followup(b_models=(2,), include_a0=True, screen_archive=False):
     experiment = Path("data/raw/structures/9LME.pdb")
     full = [row for row in atoms(FULL, "A") if 29 <= row[1] <= 466]
     lookup = {(res, name): xyz for _, res, name, xyz in full}
@@ -105,7 +105,27 @@ def followup(b_models=(2,), include_a0=True):
         for i, j in zip(*np.where(distances < 2)):
             table.writerow(("A0_protein", "AFDB_v6", "-", atom_id(binder[i]),
                             atom_id(full[j]), f"{distances[i, j]:.3f}", 1, "-"))
-    b_poses = {model: place_pilot_model("B", model, lookup) for model in b_models}
+    b_poses = {f"B{model}": place_pilot_model("B", model, lookup) for model in b_models}
+    if screen_archive:
+        archive = SCRATCH / "rfantibody_b7h3_backbone_pilot_20260925" / "B"
+        crop = SCRATCH / "rfantibody_inputs_corrected3" / "target_B.pdb"
+        paths = sorted(archive.glob("task_*/ab_0.pdb"),
+                       key=lambda path: int(path.parent.name.split("_")[-1]))
+        assert paths, archive
+        b_poses.update({
+            path.parent.name: place_pilot_model("B", 0, lookup, path.parent, crop)
+            for path in paths
+        })
+        antigen_xyz = [row[3] for row in full]
+        antigen_residues = np.array([row[1] for row in full])
+        for model, (binder, placed) in b_poses.items():
+            distances = cdist(placed, antigen_xyz)
+            i, j = np.unravel_index(distances.argmin(), distances.shape)
+            contacts = set(antigen_residues[(distances <= 4.5).any(axis=0)])
+            table.writerow((f"{model}_protein", "AFDB_v6",
+                            residue_list(contacts & ARMS["B"][2]), atom_id(binder[i]),
+                            atom_id(full[j]), f"{distances[i, j]:.3f}",
+                            int((distances < 2).sum()), "-"))
 
     observed = list(atoms(experiment, "A"))
     experimental_map = {(res, name): xyz for _, res, name, xyz in observed}
@@ -137,12 +157,12 @@ def followup(b_models=(2,), include_a0=True):
 
         for model, (binder, placed) in b_poses.items():
             nd2 = cdist(placed, site[2:3])[:, 0]
-            table.writerow((f"B{model}_N215", label, "-", atom_id(binder[nd2.argmin()]),
+            table.writerow((f"{model}_N215", label, "-", atom_id(binder[nd2.argmin()]),
                             "A:215:ND2", f"{nd2.min():.3f}", int((nd2 < 2).sum()), "-"))
             for template, nag, glycan, target_clashes in glycan_poses:
                 distances = cdist(placed, glycan)
                 i, j = np.unravel_index(distances.argmin(), distances.shape)
-                table.writerow((f"B{model}_N215_first_NAG", label, template,
+                table.writerow((f"{model}_N215_first_NAG", label, template,
                                 atom_id(binder[i]), f"NAG:{nag[j][2]}",
                                 f"{distances[i, j]:.3f}", int((distances < 2).sum()),
                                 target_clashes))
@@ -218,6 +238,8 @@ if __name__ == "__main__":
         followup()
     elif sys.argv[1:] == ["b-alternates"]:
         followup((0, 1), include_a0=False)
+    elif sys.argv[1:] == ["b-archive"]:
+        followup((0, 1, 2, 3), include_a0=False, screen_archive=True)
     elif sys.argv[1:] == ["ser125"]:
         ser125_scan()
     else:

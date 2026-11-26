@@ -32,8 +32,52 @@ for spec in '101 6 9 9' '201 9 11 10' '301 12 13 11'; do
 done
 ```
 
-All three jobs started and reached GPU inference. Their outputs will be
-compared against A0 on intact 4Ig before deciding whether to submit the
-remaining nine seeds. The QC baseline reproduced the previous A0 protein
-and Fab clearance metrics. Sequence design stays at the geometry and
-shared Fab format gates.
+## Completion and geometry decision
+
+All three jobs completed with exit code 0 in 2:00–3:10 and produced
+one PDB and one TRB each. The [scheduler record](04_18_scheduler.psv) and
+seed PDBs are preserved here. The original TRBs and logs remain at the
+scratch paths above.
+
+The [geometry table](04_18_geometry.tsv) and [pairwise approach angles](04_18_approach_angles.tsv)
+compare the poses with A0. All three have the requested loop lengths,
+preserve both fixed HLT frameworks, cover every variable-domain Cα, and
+have a maximum adjacent Cα distance below 3.86 Å. All avoid sub-2 Å
+contacts outside the design crop. Fab clearance uses the four rigid
+20G5 placements and membrane proxy from 04_17.
+
+| Seed | Anchor contacts | Fv–antigen pairs below 2 Å | Fab membrane clearance (Å) | Angle from A0 |
+| --- | ---: | ---: | ---: | ---: |
+| 101 | 1 of 4 | 2 | −29.01 to −27.65 | 62.1° |
+| 201 | 4 of 4 | 0 | −24.83 to −24.53 | 55.6° |
+| 301 | 3 of 4 | 0 | −5.63 to −5.39 | 71.6° |
+
+Seed 201 is the cleanest protein interface and seed 301 is the closest
+to clearing the membrane plane. All three cross the plane across all
+four placements. The 10° worst-azimuth tilt also leaves all three with
+negative clearance. None shows a solvent-facing exit that clears the
+proxy. The tested Fabs come within 13.16–20.85 Å of the closest
+transferred first N104 NAG, using two local 9LME placements aligned on
+Asn CG/OD1/ND2. This samples only the first sugar at the nearest site.
+
+Hold the remaining nine seeds and sequence design. For a revised
+pilot, review 301 as the least-occluded starting geometry. Evaluate
+solvent-facing rigid Fv placements around the same FG-loop patch on
+intact 4Ig, extending each to a Fab and retaining only placements that
+clear the plane, preserve the anchor footprint, and avoid protein
+clashes. Use any such placements to assess pose-conditioned backbone
+sampling before launching another GPU batch. The current unconditional
+worker does not enforce full-Fab membrane clearance. A revised sampling
+method has not been run.
+
+To regenerate the geometry metrics, source the Rorqual environment and
+run the QC script with the three seed-to-job inputs. Standard output
+contains geometry values and standard error lists pairwise angles.
+
+```bash
+source config/hpc/rorqual.sh
+OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 \
+  "$MAB_SCRATCH_ROOT/third_party/RFantibody/.venv/bin/python" \
+  tools/04_design_sequence/04_18_arm_a_backbone_qc.py \
+  101:27715194 201:27715195 301:27715196
+```
