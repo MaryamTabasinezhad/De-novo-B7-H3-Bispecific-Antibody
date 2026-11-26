@@ -1,0 +1,4 @@
+placement	minimum_angle_from_previous_deg	seed	rx_deg	ry_deg	rz_deg	tx_A	ty_A	tz_A	anchors_le4p5	protein_min_A	N104_NAG_min_A	nearest_ND2_A	nominal_clearance_A	tilted_clearance_A	pass
+1	-	301	-10	30	20	-2	2	0	126,127,128,129	2.2976	17.9066	20.5149	10.4185	-10.9940	False
+2	27.29	301	-10	10	30	2	2	-2	126,127,128,129	2.5328	19.2039	21.4408	0.9943	-22.8058	False
+3	23.18	301	-10	10	0	2	2	-2	126,127,128,129	2.3011	17.6819	18.9769	0.9943	-20.4452	False

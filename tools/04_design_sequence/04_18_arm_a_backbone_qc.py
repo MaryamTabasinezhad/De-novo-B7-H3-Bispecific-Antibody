@@ -42,10 +42,16 @@ def main(args):
         rotation, offset = qc.fit(np.array([asn[name] for name in names]),
                                   np.array([lookup[104, name] for name in names]))
         n104_poses.append(np.array(nag) @ rotation + offset)
-    entries = [("A0", 0, baseline)]
+    entries = [("A0", 0, baseline, None)]
     for spec in args:
-        seed, job = spec.split(":")
-        entries.append((seed, int(seed), qc.SCRATCH / "04_18_arm_a_backbone_pilot/A" / job))
+        seed, job, *pose = spec.split(":")
+        if pose:
+            run_stage = "04_22_arm_a_conditioned"
+            crop = Path("results") / run_stage / f"04_22_pose_{pose[0]}.pdb"
+        else:
+            run_stage = "04_18_arm_a_backbone_pilot"
+            crop = None
+        entries.append((seed, int(seed), qc.SCRATCH / run_stage / "A" / job, crop))
 
     writer = csv.writer(sys.stdout, delimiter="\t", lineterminator="\n")
     writer.writerow(("pose", "H3_L1_L3", "VH_VL", "fixed_blocks_match",
@@ -56,9 +62,9 @@ def main(args):
                      "worst_fab_clearance_A", "best_fab_clearance_A",
                      "worst_fab_clearance_10deg_A", "angle_from_A0_deg"))
     directions = {}
-    for label, seed, run in entries:
+    for label, seed, run, crop in entries:
         blocks, lengths, _, chains = format_a.domain_blocks(run / f"ab_{seed}.pdb")
-        binder, placed = qc.place_pilot_model("A", seed, lookup, run)
+        binder, placed = qc.place_pilot_model("A", seed, lookup, run, crop)
         fv_ca = {(chain, res): xyz for (chain, res, name, _), xyz in zip(binder, placed)
                  if name == "CA"}
         terminal_ca = [fv_ca[chain, res] for chain in "HL" for res, _ in chains[chain][-8:]]

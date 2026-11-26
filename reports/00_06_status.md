@@ -1335,3 +1335,12 @@ translation (+2, 0, 0 Å), with task 152 as backup. The
 [screen record](../results/04_21_arm_b_core_screen/README.md)
 contains the transforms, results and remaining validation gates.
 No Slurm job was submitted.
+
+## Path C Arm A conditioned pilot submission — 2026-11-26 UTC
+
+Selected three distinct nominally clear placements from the seed 301
+grid and submitted fixed-dock loop-backbone jobs 27718318–27718320.
+Each requests two independent seeds. The 10° tilt check is a risk flag
+for this pilot. The [run record](../results/04_22_arm_a_conditioned/README.md)
+lists inputs, seeds, commands, and scratch paths. Sequence design remains
+on hold pending geometry review and the shared format gate.
