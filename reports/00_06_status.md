@@ -1175,3 +1175,7 @@ Cancelled superseded Fab arrays 22030421, 22030424, 22030425, and 23455046.
 Submitted GPT-6 redesign jobs 27672795 (Arm A, 40 parents) and 27672796
 (Arm B, 29 parents). See the [submission record](../results/04_13_gpt6_redesign/README.md)
 for commands and output locations. Results are pending at submission.
+
+GPT-6 redesign jobs 27672795 and 27672796 both failed on the first parent
+request after 90 seconds. No verified redesigns were produced. Queue empty
+at status check. See the [completion status](../results/04_13_gpt6_redesign/README.md#completion-status).

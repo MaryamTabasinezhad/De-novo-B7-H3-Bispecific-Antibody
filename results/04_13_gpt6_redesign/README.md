@@ -30,3 +30,10 @@ A failed first request stops that arm. A model reply requires additional
 scientific and sequence validation before being treated as a design.
 Prior connectivity tests timed out. Exact reference-chain reconciliation
 and standardized internal parent numbering remain open.
+
+## Completion status
+
+Both jobs failed with exit code 1 after 90 seconds. The initial GPT-6
+request timed out for A265 and B131. Both logs reported a model metadata
+refresh timeout. Neither response was verified. The remaining 39 Arm A
+and 28 Arm B parents were never attempted. The queue was empty when checked.
