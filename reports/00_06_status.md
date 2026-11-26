@@ -1232,7 +1232,9 @@ No Slurm job was submitted.
 An A0 Ser125 χ1 of −60° clears the local overlap in the rigid scan while
 retaining all four anchor contacts. A0 can be considered once shared
 Fab format criteria are ready. B0 and B1 each clash with all eight N215
-first-sugar placements and remain at the geometry gate with B2.
+first-sugar placements, matching the earlier B2 result. Arm B models B0,
+B1, and B2 remain on hold at the geometry gate. Native N215 glycan
+occupancy and flexibility remain unresolved.
 See the [geometry follow-up](../results/04_12_design_inputs/README.md#ser125-rotation-scan-and-alternate-arm-b-poses).
 No Slurm jobs or sequence design were started.
 
