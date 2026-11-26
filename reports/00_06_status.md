@@ -1302,3 +1302,13 @@ and membrane orientations as the provisional screen, with no validated
 minimum positive margin. The [next-run record](../results/04_18_arm_a_backbone_pilot/README.md#provisional-membrane-clearance-criterion)
 uses seed 301 for the placement screen and seed 201 as the interface
 benchmark. No compute was submitted.
+
+## Path C Arm B full-Fab clearance — 2026-11-26 UTC
+
+Historical tasks 31 and 152 cleared the antigen and membrane proxy
+in all four rigid Fab placements. Both clashed with the second sugar
+of each of the two antigen-compatible N215 core transfers, on the
+Fab light chain. Hold both poses at the geometry gate and defer
+pairing and sequence optimization. The [geometry record](../results/04_19_arm_b_geometry/README.md)
+links the per-placement results and describes the native glycan
+uncertainties. No Slurm job was submitted.
