@@ -1244,3 +1244,14 @@ and fit the prior design-loop lengths. A0 remains the benchmark. A1 is a
 distinct approach (63.7° from A0) and requires full-Fab and membrane review.
 See the [format and approach record](../results/04_12_design_inputs/README.md#arm-a-format-and-approach-review).
 No new Slurm jobs or designs were started.
+
+## Path C Arm A Fab geometry and pilot plan — 2026-11-26 UTC
+
+On intact 4Ig, A1 has one sub-2 Å pair, H102 carbonyl O against canonical
+Arg127 carbonyl O at 1.707 Å. Rigid 20G5 constant-domain placements cross
+the membrane proxy for A1 by 33.60–34.09 Å and for A0 by 10.29–10.68 Å.
+Keep A0 as the benchmark and hold both poses at the geometry gate.
+The [geometry record and pilot plan](../results/04_17_arm_a_geometry/README.md)
+specify 12 backbones across three loop configurations and distinct seeds,
+plus common advancement checks. No new Slurm jobs or sequence designs
+were started.
