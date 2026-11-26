@@ -1312,3 +1312,14 @@ Fab light chain. Hold both poses at the geometry gate and defer
 pairing and sequence optimization. The [geometry record](../results/04_19_arm_b_geometry/README.md)
 links the per-placement results and describes the native glycan
 uncertainties. No Slurm job was submitted.
+
+## Path C Arm A solvent-facing placement screen — 2026-11-26 UTC
+
+Screened 9,261 seed 301 placements against intact 4Ig with seed 201 as the
+interface control. Sixty retained all four anchors, cleared the short-distance
+protein and glycan proxies, and cleared the nominal membrane plane. All 60
+failed the 10° tilt check. The best tilted clearance among four-anchor,
+clash-screened poses was −10.99 Å. The
+[screen record](../results/04_20_arm_a_pose_screen/README.md) holds the
+pose-conditioned pilot, nine unused seeds, and sequence design. No new
+Slurm job was submitted.
