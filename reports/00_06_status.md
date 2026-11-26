@@ -1216,3 +1216,13 @@ zero close protein pairs, with N215 glycan proximity requiring review.
 The [geometry record](../results/04_12_design_inputs/README.md#intact-4ig-geometry-review--2026-11-26-utc)
 documents per-model results and the membrane and glycan proxy limits.
 No new compute jobs were submitted.
+
+## Path C close-contact follow-up — 2026-11-26 14:31 UTC
+
+Identified the A0 overlap as heavy-chain residue 101 carbonyl O against
+B7-H3 Ser125 OG at 1.680 Å. B2 clashes with all first-sugar placements
+tested at N215, including both AFDB-based N189 transfers with no clash
+against neighboring antigen. A0 remains pending local contact review.
+B2 is held at the geometry gate pending native glycan evidence.
+See the [contact results](../results/04_12_design_inputs/04_12_contact_followup.tsv).
+No Slurm job was submitted.

@@ -19,9 +19,9 @@ ARMS = {
 GLYCOSITES = (104, 189, 215, 322, 407, 433)
 
 
-def atoms(path, chains):
+def atoms(path, chains, record="ATOM  "):
     for line in path.read_text().splitlines():
-        if (line.startswith("ATOM  ") and line[21] in chains
+        if (line.startswith(record) and line[21] in chains
                 and line[76:78].strip() not in {"H", "D"}):
             yield (line[21], int(line[22:26]), line[12:16].strip(),
                    [float(line[i:i + 8]) for i in (30, 38, 46)])
@@ -29,6 +29,79 @@ def atoms(path, chains):
 
 def residue_list(residues):
     return ",".join(map(str, sorted(set(residues)))) or "-"
+
+
+def fit(source, destination):
+    u, _, vt = np.linalg.svd((source - source.mean(0)).T
+                            @ (destination - destination.mean(0)))
+    rotation = u @ np.diag([1, 1, np.linalg.det(u @ vt)]) @ vt
+    return rotation, destination.mean(0) - source.mean(0) @ rotation
+
+
+def followup():
+    experiment = Path("data/raw/structures/9LME.pdb")
+    full = [row for row in atoms(FULL, "A") if 29 <= row[1] <= 466]
+    lookup = {(res, name): xyz for _, res, name, xyz in full}
+    table = csv.writer(sys.stdout, delimiter="\t", lineterminator="\n")
+    table.writerow(("check", "target_conformer", "template", "fv_atom", "target_atom",
+                    "distance_A", "fv_pairs_lt2", "other_target_pairs_lt2"))
+    placed_b = None
+    for arm, model in (("A", 0), ("B", 2)):
+        job, _, _ = ARMS[arm]
+        run = SCRATCH / "04_12_context_pilot" / arm / job
+        crop = pdb_sequences(run / "target.pdb", {"T"})["T"]
+        path = run / f"ab_{model}.pdb"
+        assert [aa for _, aa in pdb_sequences(path, {"T"})["T"]] == [aa for _, aa in crop]
+        source = np.array([xyz for _, _, name, xyz in atoms(path, "T") if name == "CA"])
+        rotation, offset = fit(source, np.array([lookup[res, "CA"] for res, _ in crop]))
+        binder = list(atoms(path, "HL"))
+        placed = np.array([xyz for _, _, _, xyz in binder]) @ rotation + offset
+        if arm == "B":
+            placed_b = placed
+            binder_b = binder
+            continue
+        distances = cdist(placed, [xyz for _, _, _, xyz in full])
+        for i, j in zip(*np.where(distances < 2)):
+            table.writerow(("A0_protein", "AFDB_v6", "-", atom_id(binder[i]),
+                            atom_id(full[j]), f"{distances[i, j]:.3f}", 1, "-"))
+
+    observed = list(atoms(experiment, "A"))
+    experimental_map = {(res, name): xyz for _, res, name, xyz in observed}
+    with Path("metadata/numbering_map.csv").open() as handle:
+        mapped = {int(r["canonical_residue"]): int(r["model_residue"])
+                  for r in csv.DictReader(handle) if r["source"] == "9LME"
+                  and r["chain"] == "A" and r["canonical_residue"].isdigit()}
+    assert all(mapped[res] == res for res in range(210, 221))
+    window = [(res, "CA") for res in range(210, 221)]
+    rotation, offset = fit(np.array([experimental_map[key] for key in window]),
+                           np.array([lookup[key] for key in window]))
+    observed_aligned = {(res, name): np.array(xyz) @ rotation + offset
+                        for (res, name), xyz in experimental_map.items()}
+    side_names = ("CG", "OD1", "ND2")
+    for label, target in (("AFDB_v6", lookup), ("9LME_local_210_220", observed_aligned)):
+        site = np.array([target[215, name] for name in side_names])
+        nd2 = cdist(placed_b, site[2:3])[:, 0]
+        table.writerow(("B2_N215", label, "-", atom_id(binder_b[nd2.argmin()]),
+                        "A:215:ND2", f"{nd2.min():.3f}", int((nd2 < 2).sum()), "-"))
+        other = [xyz for (res, _), xyz in target.items() if res != 215 and 29 <= res <= 466]
+        for chain, res, nag_chain in (("A", 104, "H"), ("A", 189, "D"),
+                                      ("B", 104, "E"), ("B", 189, "G")):
+            template_asn = {name: xyz for _, n, name, xyz in atoms(experiment, chain)
+                            if n == res}
+            nag = [row for row in atoms(experiment, nag_chain, "HETATM") if row[1] == 1]
+            assert len(nag) == 14, (nag_chain, nag)
+            rotation, offset = fit(np.array([template_asn[name] for name in side_names]), site)
+            glycan = np.array([xyz for _, _, _, xyz in nag]) @ rotation + offset
+            distances = cdist(placed_b, glycan)
+            i, j = np.unravel_index(distances.argmin(), distances.shape)
+            table.writerow(("B2_N215_first_NAG", label, f"9LME_{chain}{res}_{nag_chain}1",
+                            atom_id(binder_b[i]), f"NAG:{nag[j][2]}",
+                            f"{distances[i, j]:.3f}", int((distances < 2).sum()),
+                            int((cdist(glycan, other) < 2).sum())))
+
+
+def atom_id(atom):
+    return ":".join(map(str, atom[:3]))
 
 
 def main():
@@ -71,10 +144,7 @@ def main():
                 target_seq = pdb_sequences(path, {"T"})["T"]
                 assert [aa for _, aa in target_seq] == [aa for _, aa in crop], path
                 assert len(target) == len(crop), path
-                u, _, vt = np.linalg.svd((target - target.mean(0)).T
-                                        @ (destination - destination.mean(0)))
-                rotation = u @ np.diag([1, 1, np.linalg.det(u @ vt)]) @ vt
-                offset = destination.mean(0) - target.mean(0) @ rotation
+                rotation, offset = fit(target, destination)
                 rmsd = np.sqrt(np.mean(np.sum((target @ rotation + offset - destination)**2,
                                               axis=1)))
                 binder = np.array([xyz for chain, _, _, xyz in design if chain in {"H", "L"}])
@@ -96,4 +166,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if sys.argv[1:] == ["followup"]:
+        followup()
+    else:
+        main()

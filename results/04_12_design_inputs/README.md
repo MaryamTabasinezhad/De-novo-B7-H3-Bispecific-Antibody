@@ -104,3 +104,32 @@ occupancy and motion, membrane tilt, and complete Fab constant-domain
 clearance remain unverified. Inspect the close protein contacts for A0 and
 the N215 glycan for B2 before advancing. The comparison uses a small sample
 and supports continued pilot review before scaling.
+
+### Close-contact and N215 follow-up
+
+Run the same QC command with the argument `followup` and redirect to
+[04_12_contact_followup.tsv](04_12_contact_followup.tsv). The original geometry
+table was reproduced byte for byte after sharing the alignment routine.
+
+- **Arm A model 0.** The only protein pair below 2 Å is the heavy-chain
+  residue 101 backbone carbonyl oxygen against canonical B7-H3 Ser125 OG
+  (1.680 Å). This is a local steric overlap in the starting pose. It remains
+  open whether a Ser125 rotamer change can remove it while retaining the
+  intended contacts.
+- **Arm B model 2.** The first N215 sugar was unresolved in the available
+  experimental structures. To test geometric sensitivity, the first NAG
+  linked to Asn104 or Asn189 on each of chains A and B in local
+  `data/raw/structures/9LME.pdb` was transferred by CG/OD1/ND2 alignment
+  to N215. The target site was evaluated in AFDB v6 and in 9LME chain A
+  after fitting canonical Cα positions 210–220 to AFDB v6 using the project
+  numbering map. B2 was held fixed. For the AFDB side chain, both transfers
+  from N189 had zero sub-2 Å pairs with other target residues and each
+  overlapped B2 (8–10 pairs below 2 Å). All four placements clashed with B2
+  in both conformers. The 9LME-based transfers also clashed with the
+  surrounding antigen, reducing their value as physical glycan poses.
+  This fixed-pose sensitivity test flags a credible interference risk.
+  Native N215 occupancy, alternate rotamers, and full glycan flexibility
+  remain unresolved. Hold B2 at the geometry gate pending that evidence.
+
+The analysis reused jobs 27635726 and 27635727 from the scratch paths
+recorded above. No Slurm job was submitted and no structure was relaxed.
