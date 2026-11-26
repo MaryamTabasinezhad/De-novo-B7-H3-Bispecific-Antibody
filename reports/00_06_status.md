@@ -1355,6 +1355,8 @@ backbones or sequence designs were available at this check.
 The four archived intact-4Ig task 152 AF3 Fv models retained zero or one
 intended anchors and had Fab–target pair ipTM 0.09–0.12. Submitted AF3
 array 27718731 for task 248 and task 152 full Fabs on intact 4Ig with
-a linked N215 glycan core. The array is queued. The
+a linked N215 glycan core. Both inputs passed AF3 structure construction.
+The array is queued for GPU priority, with a tentative November 27 start.
+CPU QC job 27718920 will run after both array tasks succeed. The
 [bound-pose pilot record](../results/04_23_arm_b_bound_pose/README.md)
 contains inputs, job paths, and the post-run geometry checks.

@@ -53,7 +53,11 @@ sbatch --parsable \
 
 ## Evaluation and current status
 
-The array is queued. The QC aligns 438 target Cα atoms to the oriented
+The array is queued for priority as of November 26 UTC, with a tentative
+November 27 start shown by Slurm. Both JSONs passed the installed AF3
+fold-input parser and structure construction with its chemical component
+dictionary. CPU job **27718920** depends on successful completion of the
+entire array (`afterok:27718731`). The QC aligns 438 target Cα atoms to the oriented
 reference, measures all intended Fv contacts, and compares the Fab
 approach direction to the original and screened references. It checks
 Fab clearance from predicted protein and glycan and from both fixed
@@ -70,6 +74,12 @@ OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 \
   "$MAB_SCRATCH_ROOT/04_23_arm_b_bound_pose/27718731" \
   > results/04_23_arm_b_bound_pose/04_23_per_sample.tsv
 ```
+
+The QC job runs the same command using one CPU, 2 GB of memory and a
+10-minute limit. It first writes
+`/scratch/ghaedi/mab/04_23_arm_b_bound_pose/27718731/per_sample_qc.tsv`
+and copies the table to the project result directory upon success.
+Scheduler logs are `/scratch/ghaedi/mab/jobs/04_23_arm_b_qc_27718920.{out,err}`.
 
 Compare the completed predictions before deciding whether either lineage
 advances. Pairing also depends on the Arm A membrane screen.
