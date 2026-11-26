@@ -1,0 +1,90 @@
+{
+  "name": "arm_b_task152_n215",
+  "sequences": [
+    {
+      "protein": {
+        "id": "H",
+        "sequence": "EVQLVESGGGLVQPGGSLRLSCAASGFDLSSTYIHWVRQAPGKGLEWVARIHPATGTTRYADSVKGRFTISADTSKNTAYLQMNSLRAEDTAVYYCSRGDSLTMSHWGQGTLVTVSSASTKGPSVFPLAPSSKSTSGGTAALGCLVKDYFPEPVTVSWNSGALTSGVHTFPAVLQSSGLYSLSSVVTVPSSSLGTQTYICNVNHKPSNTKVDKKVEPKSCDK"
+      }
+    },
+    {
+      "protein": {
+        "id": "L",
+        "sequence": "DIQMTQSPSSLSASVGDRVTITCKTSSSTLVSWYQQKPGKAPKLLIYNSSNRAPGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCSVYDPTSGLVFGQGTKVEIKRTVAAPSVFIFPPSDEQLKSGTASVVCLLNNFYPREAKVQWKVDNALQSGNSQESVTEQDSKDSTYSLSSTLTLSKADYEKHKVYACEVTHQGLSSPVTKSFNRGEC"
+      }
+    },
+    {
+      "protein": {
+        "id": "T",
+        "sequence": "LEVQVPEDPVVALVGTDATLCCSFSPEPGFSLAQLNLIWQLTDTKQLVHSFAEGQDQGSAYANRTALFPDLLAQGNASLRLQRVRVADEGSFTCFVSIRDFGSAAVSLQVAAPYSKPSMTLEPNKDLRPGDTVTITCSSYQGYPEAEVFWQDGQGVPLTGNVTTSQMANEQGLFDVHSILRVVLGANGTYSCLVRNPVLQQDAHSSVTITPQRSPTGAVEVQVPEDPVVALVGTDATLRCSFSPEPGFSLAQLNLIWQLTDTKQLVHSFTEGRDQGSAYANRTALFPDLLAQGNASLRLQRVRVADEGSFTCFVSIRDFGSAAVSLQVAAPYSKPSMTLEPNKDLRPGDTVTITCSSYRGYPEAEVFWQDGQGVPLTGNVTTSQMANEQGLFDVHSVLRVVLGANGTYSCLVRNPVLQQDAHGSVTITGQPMTFPPEA"
+      }
+    },
+    {
+      "ligand": {
+        "id": "G",
+        "ccdCodes": [
+          "NAG",
+          "NAG",
+          "MAN",
+          "FUC"
+        ]
+      }
+    }
+  ],
+  "modelSeeds": [
+    101,
+    202
+  ],
+  "dialect": "alphafold3",
+  "version": 4,
+  "bondedAtomPairs": [
+    [
+      [
+        "T",
+        187,
+        "ND2"
+      ],
+      [
+        "G",
+        1,
+        "C1"
+      ]
+    ],
+    [
+      [
+        "G",
+        1,
+        "O4"
+      ],
+      [
+        "G",
+        2,
+        "C1"
+      ]
+    ],
+    [
+      [
+        "G",
+        2,
+        "O4"
+      ],
+      [
+        "G",
+        3,
+        "C1"
+      ]
+    ],
+    [
+      [
+        "G",
+        1,
+        "O6"
+      ],
+      [
+        "G",
+        4,
+        "C1"
+      ]
+    ]
+  ]
+}

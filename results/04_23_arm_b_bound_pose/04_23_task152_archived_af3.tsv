@@ -1,0 +1,5 @@
+sample	target_ca	anchors_le4p5	angle_to_original_deg	angle_to_screened_deg	protein_min_A	closest_N215_core_A	ht_iptm	lt_iptm
+seed-101_sample-0	438	-	122.752	118.427	2.017	21.289	0.1	0.1
+seed-101_sample-1	438	-	131.332	133.382	1.533	25.499	0.09	0.09
+seed-202_sample-0	438	-	22.813	20.038	2.286	0.523	0.09	0.09
+seed-202_sample-1	438	228	63.134	57.254	2.079	9.591	0.12	0.12

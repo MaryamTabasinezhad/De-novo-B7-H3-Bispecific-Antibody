@@ -1349,3 +1349,12 @@ The HLT parser verified the design-loop and target anchor mapping on
 all three inputs. GPU jobs are queued and CPU QC job 27718507 is
 scheduled after all three GPU jobs complete successfully. No conditioned
 backbones or sequence designs were available at this check.
+
+## Path C Arm B glycosylated bound-pose pilot — 2026-11-26 UTC
+
+The four archived intact-4Ig task 152 AF3 Fv models retained zero or one
+intended anchors and had Fab–target pair ipTM 0.09–0.12. Submitted AF3
+array 27718731 for task 248 and task 152 full Fabs on intact 4Ig with
+a linked N215 glycan core. The array is queued. The
+[bound-pose pilot record](../results/04_23_arm_b_bound_pose/README.md)
+contains inputs, job paths, and the post-run geometry checks.
