@@ -92,5 +92,5 @@ Replay each pose on intact 4Ig and compare it with A0 under the same checks.
    scaling. In particular, assess whether the designs repeatedly point
    their constant domains toward the membrane.
 
-The existing A0 and A1 geometry was reviewed. The 12-backbone pilot is
-planned. No Slurm jobs, new backbones or sequence designs were started.
+Three of the 12 planned seeds were subsequently run. See the
+[seeded pilot results and current hold](../04_18_arm_a_backbone_pilot/README.md#current-plan-and-authorization).

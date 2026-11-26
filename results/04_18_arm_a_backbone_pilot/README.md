@@ -81,3 +81,26 @@ OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 \
   tools/04_design_sequence/04_18_arm_a_backbone_qc.py \
   101:27715194 201:27715195 301:27715196
 ```
+
+## Current plan and authorization
+
+This entry records the plan only. The remaining nine seeds, any revised
+sampling, and sequence design are on hold pending the user's instruction
+to run. The completed jobs and their outputs are recorded above.
+
+1. Keep A0 as the anchor-contact benchmark, A1 as a distinct approach
+   with a backbone overlap, and seed 301 as the least membrane-occluded
+   starting pose from the three seeded runs.
+2. When authorized, first evaluate solvent-facing placements around the
+   Arm A FG-loop on intact 4Ig using the audited HLT scaffold and cognate
+   VH/VL pairing. Extend each placement to a Fab. Review anchor contacts,
+   protein clashes, nearby glycans, and membrane clearance across the
+   existing template and tilt checks. The membrane and glycan models
+   remain geometric approximations.
+3. Use qualifying placements to evaluate whether pose-conditioned
+   sampling can preserve clearance. Compare multiple independent
+   lineages by their poses, loop geometry, and contact patterns.
+   Advance to sequence design only after several distinct candidates
+   pass the geometry checks and the shared Fab format is confirmed.
+   If zero or one qualifies, review the failures before expanding the
+   pilot.

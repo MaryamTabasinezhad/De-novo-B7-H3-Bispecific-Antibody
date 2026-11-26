@@ -1287,3 +1287,10 @@ rigid Fab placement. All three crossed the membrane proxy. Hold the
 remaining nine seeds and sequence design. The
 [review and outputs](../results/04_18_arm_a_backbone_pilot/README.md)
 record the results and a geometry-first revision for the next pilot.
+
+## Path C Arm A plan recorded — 2026-11-26 UTC
+
+Linked the A0/A1 review and the three completed seeds to the
+[geometry-first plan and hold](../results/04_18_arm_a_backbone_pilot/README.md#current-plan-and-authorization).
+The remaining nine seeds, revised sampling, and sequence design await
+the user's instruction to run. This update records the plan only.
