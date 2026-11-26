@@ -1184,3 +1184,7 @@ Network diagnostic 27673607 isolated the Slurm failure to TCP port 443
 timeouts. Login-node probes confirmed a second issue: the account rejects
 the literal gpt-6 model ID and accepts gpt-6.2-sol. No redesign was run
 during troubleshooting.
+
+## Direct GPT-6.2 Sol pilot
+
+Launched A265 and B131 without Slurm. See the [run record](../results/04_14_direct_redesign/README.md).

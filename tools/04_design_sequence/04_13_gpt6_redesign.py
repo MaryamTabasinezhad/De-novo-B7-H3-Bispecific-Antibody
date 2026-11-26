@@ -1,15 +1,24 @@
 """Run one traceable GPT-6 redesign campaign for a single arm."""
 import csv
 import json
-import os
 import subprocess
-import sys
+import re
 from pathlib import Path
 
-arm = sys.argv[1]
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("arm", choices=["A", "B"])
+parser.add_argument("--limit", type=int, choices=[1])
+parser.add_argument("--run-id", required=True)
+args = parser.parse_args()
+arm = args.arm
+model = "gpt-6.2-sol"
 expected = {"A": 40, "B": 29}[arm]
-root = Path(os.environ["SLURM_SUBMIT_DIR"])
-job_id = os.environ["SLURM_JOB_ID"]
+root = Path(__file__).resolve().parents[2]
+job_id = args.run_id
+if not re.fullmatch(r"[A-Za-z0-9_-]+", job_id):
+    parser.error("Invalid run ID")
 output = root / "work/04_13_gpt6_redesign" / f"{arm}_{job_id}"
 output.mkdir(parents=True, exist_ok=True)
 screen = root / "reports/02_04_b7h3_full_length_humanized_reference_screen.md"
@@ -18,7 +27,8 @@ with (root / f"results/04_09_path_launch/04_09_arm_{arm.lower()}_parent_lengths.
     parents = list(csv.DictReader(file, delimiter="\t"))
 if len(parents) != expected or len({row["parent"] for row in parents}) != expected:
     raise SystemExit(f"Expected {expected} unique Arm {arm} parents")
-print(f"Slurm job {job_id}: Arm {arm}, {expected} parents, model gpt-6", flush=True)
+parents = parents[:args.limit]
+print(f"Run {job_id}: Arm {arm}, {len(parents)} parents, model {model}", flush=True)
 failures = []
 for row in parents:
     parent = row["parent"]
@@ -40,19 +50,48 @@ Parent VH: {chains[f'H{arm}']}
 Parent VL: {chains[f'L{arm}']}
 """
     base = output / f"parent_{parent}"
+    verified = base.with_suffix(".result.json")
+    if verified.exists():
+        continue
+    base.with_suffix(".input.json").write_text(json.dumps({
+        "arm": arm, "parent_id": parent, "model": model, "af3_input": str(source),
+        "reference": str(screen.relative_to(root)), "prompt": prompt,
+    }, indent=2) + "\n")
     with base.with_suffix(".events.jsonl").open("w") as events, base.with_suffix(".err").open("w") as errors:
         try:
             result = subprocess.run(
                 ["codex", "exec", "--skip-git-repo-check", "--sandbox", "read-only",
-                 "-m", "gpt-6", "--json", "-o", str(base.with_suffix(".proposal.txt")), "-"],
-                input=prompt, text=True, stdout=events, stderr=errors, cwd=output, timeout=90,
+                 "-m", model, "--json", "-o", str(base.with_suffix(".proposal.txt")), "-"],
+                input=prompt, text=True, stdout=events, stderr=errors, cwd=output, timeout=180,
             )
-            valid = result.returncode == 0 and base.with_suffix(".proposal.txt").is_file()
+            valid = result.returncode == 0 and base.with_suffix(".proposal.txt").exists() and base.with_suffix(".proposal.txt").stat().st_size > 0
         except subprocess.TimeoutExpired:
             print(f"Parent {parent}: GPT-6 request timed out", flush=True)
             valid = False
     if valid:
-        print(f"Parent {parent}: model response saved", flush=True)
+        try:
+            response = base.with_suffix(".proposal.txt").read_text().strip()
+            response = re.sub(r"^```(?:json)?\s*|\s*```$", "", response)
+            proposal = json.loads(response)
+            valid = (
+                str(proposal["parent_id"]).upper() in {parent, arm + parent}
+                and proposal["arm"] == arm
+                and bool(proposal["rationale"])
+                and (proposal["status"] == "review_required" or (
+                    all(re.fullmatch(r"[ACDEFGHIKLMNPQRSTVWY]+", proposal[key]) for key in ("vh", "vl"))
+                    and (proposal["vh"], proposal["vl"]) != (chains[f"H{arm}"], chains[f"L{arm}"])
+                    and bool(proposal["changes"])
+                ))
+            )
+        except (ValueError, TypeError, KeyError):
+            valid = False
+    if valid:
+        thread_ids = [event.get("thread_id") for event in map(json.loads, base.with_suffix(".events.jsonl").read_text().splitlines())
+                      if event.get("type") == "thread.started"]
+        verified.write_text(json.dumps({"run_id": job_id, "model": model,
+                                       "codex_thread_ids": thread_ids, "input": json.loads(base.with_suffix(".input.json").read_text()),
+                                       "proposal": proposal}, indent=2) + "\n")
+        print(f"Parent {parent}: {proposal['status']}", flush=True)
     else:
         failures.append(parent)
         print(f"Parent {parent}: no verified model response", flush=True)
