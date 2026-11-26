@@ -1226,3 +1226,12 @@ against neighboring antigen. A0 remains pending local contact review.
 B2 is held at the geometry gate pending native glycan evidence.
 See the [contact results](../results/04_12_design_inputs/04_12_contact_followup.tsv).
 No Slurm job was submitted.
+
+## Path C Ser125 and alternate Arm B screen — 2026-11-26 14:40 UTC
+
+An A0 Ser125 χ1 of −60° clears the local overlap in the rigid scan while
+retaining all four anchor contacts. A0 can be considered once shared
+Fab format criteria are ready. B0 and B1 each clash with all eight N215
+first-sugar placements and remain at the geometry gate with B2.
+See the [geometry follow-up](../results/04_12_design_inputs/README.md#ser125-rotation-scan-and-alternate-arm-b-poses).
+No Slurm jobs or sequence design were started.

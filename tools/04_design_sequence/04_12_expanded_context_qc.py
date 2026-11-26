@@ -6,6 +6,7 @@ from pathlib import Path
 
 import numpy as np
 from scipy.spatial.distance import cdist
+from scipy.spatial.transform import Rotation
 
 sys.path.insert(0, "tools/07_fab_categories")
 from prepare_fab_category_input import pdb_sequences
@@ -38,32 +39,70 @@ def fit(source, destination):
     return rotation, destination.mean(0) - source.mean(0) @ rotation
 
 
-def followup():
+def place_pilot_model(arm, model, lookup):
+    job, _, _ = ARMS[arm]
+    run = SCRATCH / "04_12_context_pilot" / arm / job
+    crop = pdb_sequences(run / "target.pdb", {"T"})["T"]
+    path = run / f"ab_{model}.pdb"
+    assert [aa for _, aa in pdb_sequences(path, {"T"})["T"]] == [aa for _, aa in crop]
+    source = np.array([xyz for _, _, name, xyz in atoms(path, "T") if name == "CA"])
+    rotation, offset = fit(source, np.array([lookup[res, "CA"] for res, _ in crop]))
+    binder = list(atoms(path, "HL"))
+    return binder, np.array([xyz for _, _, _, xyz in binder]) @ rotation + offset
+
+
+def ser125_scan():
+    full = [row for row in atoms(FULL, "A") if 29 <= row[1] <= 466]
+    lookup = {(res, name): xyz for _, res, name, xyz in full}
+    assert dict(pdb_sequences(FULL, {"A"})["A"])[125] == "S"
+    _, placed = place_pilot_model("A", 0, lookup)
+
+    site = {(res, name): np.array(xyz) for (res, name), xyz in lookup.items() if res == 125}
+    n, ca, cb, og = (site[125, name] for name in ("N", "CA", "CB", "OG"))
+    axis = (cb - ca) / np.linalg.norm(cb - ca)
+    n_plane = n - ca - np.dot(n - ca, axis) * axis
+    og_plane = og - cb - np.dot(og - cb, axis) * axis
+    chi1 = np.degrees(np.arctan2(np.dot(np.cross(axis, n_plane), og_plane),
+                                  np.dot(n_plane, og_plane)))
+
+    fixed = [row for row in full if row[1:3] != (125, "OG")]
+    distances = cdist(placed, [xyz for _, _, _, xyz in fixed])
+    fixed_clashes = int((distances < 2).sum())
+    assert fixed_clashes == 0
+    contacts = {row[1] for row, hit in zip(fixed, (distances <= 4.5).any(axis=0)) if hit}
+    anchors = contacts & ARMS["A"][2]
+    assert anchors == ARMS["A"][2]
+    # Exclude directly bonded and angle-linked atoms CB and CA.
+    target = [xyz for _, res, name, xyz in fixed if res != 125 or name not in {"CA", "CB"}]
+
+    table = csv.writer(sys.stdout, delimiter="\t", lineterminator="\n")
+    table.writerow(("pose", "chi1_deg", "rotation_deg", "og_min_to_fv_A",
+                    "og_min_to_target_A", "fv_protein_pairs_lt2",
+                    "og_target_pairs_lt2", "anchor_contacts_le4p5"))
+    for pose, angle in [("original", chi1), *(("scan", angle) for angle in range(-180, 180, 5))]:
+        delta = (angle - chi1 + 180) % 360 - 180
+        moved = cb + Rotation.from_rotvec(axis * np.radians(delta)).apply(og - cb)
+        to_fv = cdist([moved], placed)
+        to_target = cdist([moved], target)
+        table.writerow((pose, f"{angle:.2f}", f"{delta:.2f}", f"{to_fv.min():.3f}",
+                        f"{to_target.min():.3f}", fixed_clashes + int((to_fv < 2).sum()),
+                        int((to_target < 2).sum()), residue_list(anchors)))
+
+
+def followup(b_models=(2,), include_a0=True):
     experiment = Path("data/raw/structures/9LME.pdb")
     full = [row for row in atoms(FULL, "A") if 29 <= row[1] <= 466]
     lookup = {(res, name): xyz for _, res, name, xyz in full}
     table = csv.writer(sys.stdout, delimiter="\t", lineterminator="\n")
     table.writerow(("check", "target_conformer", "template", "fv_atom", "target_atom",
                     "distance_A", "fv_pairs_lt2", "other_target_pairs_lt2"))
-    placed_b = None
-    for arm, model in (("A", 0), ("B", 2)):
-        job, _, _ = ARMS[arm]
-        run = SCRATCH / "04_12_context_pilot" / arm / job
-        crop = pdb_sequences(run / "target.pdb", {"T"})["T"]
-        path = run / f"ab_{model}.pdb"
-        assert [aa for _, aa in pdb_sequences(path, {"T"})["T"]] == [aa for _, aa in crop]
-        source = np.array([xyz for _, _, name, xyz in atoms(path, "T") if name == "CA"])
-        rotation, offset = fit(source, np.array([lookup[res, "CA"] for res, _ in crop]))
-        binder = list(atoms(path, "HL"))
-        placed = np.array([xyz for _, _, _, xyz in binder]) @ rotation + offset
-        if arm == "B":
-            placed_b = placed
-            binder_b = binder
-            continue
+    if include_a0:
+        binder, placed = place_pilot_model("A", 0, lookup)
         distances = cdist(placed, [xyz for _, _, _, xyz in full])
         for i, j in zip(*np.where(distances < 2)):
             table.writerow(("A0_protein", "AFDB_v6", "-", atom_id(binder[i]),
                             atom_id(full[j]), f"{distances[i, j]:.3f}", 1, "-"))
+    b_poses = {model: place_pilot_model("B", model, lookup) for model in b_models}
 
     observed = list(atoms(experiment, "A"))
     experimental_map = {(res, name): xyz for _, res, name, xyz in observed}
@@ -80,10 +119,8 @@ def followup():
     side_names = ("CG", "OD1", "ND2")
     for label, target in (("AFDB_v6", lookup), ("9LME_local_210_220", observed_aligned)):
         site = np.array([target[215, name] for name in side_names])
-        nd2 = cdist(placed_b, site[2:3])[:, 0]
-        table.writerow(("B2_N215", label, "-", atom_id(binder_b[nd2.argmin()]),
-                        "A:215:ND2", f"{nd2.min():.3f}", int((nd2 < 2).sum()), "-"))
         other = [xyz for (res, _), xyz in target.items() if res != 215 and 29 <= res <= 466]
+        glycan_poses = []
         for chain, res, nag_chain in (("A", 104, "H"), ("A", 189, "D"),
                                       ("B", 104, "E"), ("B", 189, "G")):
             template_asn = {name: xyz for _, n, name, xyz in atoms(experiment, chain)
@@ -92,12 +129,20 @@ def followup():
             assert len(nag) == 14, (nag_chain, nag)
             rotation, offset = fit(np.array([template_asn[name] for name in side_names]), site)
             glycan = np.array([xyz for _, _, _, xyz in nag]) @ rotation + offset
-            distances = cdist(placed_b, glycan)
-            i, j = np.unravel_index(distances.argmin(), distances.shape)
-            table.writerow(("B2_N215_first_NAG", label, f"9LME_{chain}{res}_{nag_chain}1",
-                            atom_id(binder_b[i]), f"NAG:{nag[j][2]}",
-                            f"{distances[i, j]:.3f}", int((distances < 2).sum()),
-                            int((cdist(glycan, other) < 2).sum())))
+            glycan_poses.append((f"9LME_{chain}{res}_{nag_chain}1", nag, glycan,
+                                 int((cdist(glycan, other) < 2).sum())))
+
+        for model, (binder, placed) in b_poses.items():
+            nd2 = cdist(placed, site[2:3])[:, 0]
+            table.writerow((f"B{model}_N215", label, "-", atom_id(binder[nd2.argmin()]),
+                            "A:215:ND2", f"{nd2.min():.3f}", int((nd2 < 2).sum()), "-"))
+            for template, nag, glycan, target_clashes in glycan_poses:
+                distances = cdist(placed, glycan)
+                i, j = np.unravel_index(distances.argmin(), distances.shape)
+                table.writerow((f"B{model}_N215_first_NAG", label, template,
+                                atom_id(binder[i]), f"NAG:{nag[j][2]}",
+                                f"{distances[i, j]:.3f}", int((distances < 2).sum()),
+                                target_clashes))
 
 
 def atom_id(atom):
@@ -168,5 +213,9 @@ def main():
 if __name__ == "__main__":
     if sys.argv[1:] == ["followup"]:
         followup()
+    elif sys.argv[1:] == ["b-alternates"]:
+        followup((0, 1), include_a0=False)
+    elif sys.argv[1:] == ["ser125"]:
+        ser125_scan()
     else:
         main()

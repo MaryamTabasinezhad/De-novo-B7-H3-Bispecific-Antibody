@@ -133,3 +133,31 @@ table was reproduced byte for byte after sharing the alignment routine.
 
 The analysis reused jobs 27635726 and 27635727 from the scratch paths
 recorded above. No Slurm job was submitted and no structure was relaxed.
+
+### Ser125 rotation scan and alternate Arm B poses
+
+Reran the QC command with argument `ser125` for
+[04_12_ser125_scan.tsv](04_12_ser125_scan.tsv) and `b-alternates` for
+[04_12_b_alternate_glycan.tsv](04_12_b_alternate_glycan.tsv). The original
+geometry and contact follow-up tables reproduced byte for byte. The runs
+read the same scratch outputs for jobs 27635726 and 27635727 and submitted
+no jobs.
+
+- **A0.** Rotated only Ser125 OG about the Cα–Cβ axis over a 5° χ1 grid,
+  holding the Fv and all other target atoms fixed. At χ1 = −60°, the
+  nearest OG–Fv and OG–target distances are 3.635 and 2.852 Å,
+  respectively. There are zero sub-2 Å Fv–target pairs and all four
+  intended anchors remain in contact at 4.5 Å. χ1 = +60° also clears the
+  distance screen. The target-side check excludes the bonded Cβ and
+  angle-linked Cα. This rigid geometric scan shows that the overlap can
+  be removed by a local rotamer change. Energetic compatibility,
+  occupancy of the rotated side chain, and full-Fab geometry remain
+  unverified. A0 can be retained for sequence-design consideration once
+  the shared Fab format criteria are ready.
+- **B0 and B1.** Each clashed with all eight first-NAG placements in the
+  same two-conformer screen used for B2. Against the two AFDB-based
+  transfers that cleared neighboring antigen atoms, B0 had 7–8 and B1
+  had 9–10 sub-2 Å Fv–sugar pairs. The fixed protein models also had one
+  and two sub-2 Å pairs, respectively, in the prior geometry table.
+  Keep B0, B1 and B2 at the geometry gate. Native N215 glycan occupancy
+  and flexibility remain unresolved.
