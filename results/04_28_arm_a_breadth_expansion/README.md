@@ -47,3 +47,11 @@ coverage. Audit lead sequences for uniqueness and framework retention.
 Replay the fresh backbones on intact 4Ig and inspect anchor contacts,
 protein and glycan clashes, approach diversity, and nominal Fab
 clearance. Record 10° tilt sensitivity as a risk flag.
+
+## Array concurrency update
+
+Removed the original 20-task submission throttle in place with
+`scontrol update JobId=27799114 ArrayTaskThrottle=0`. Slurm confirmed
+the full 0–121 task range with no user-set array throttle. The
+scheduler still governs concurrent allocations through GPU
+availability, priority, and account or partition limits.

@@ -1457,3 +1457,7 @@ request four designs each with up to 20 tasks running concurrently.
 Slurm applied its one-hour default to both submissions. The
 [run record](../results/04_28_arm_a_breadth_expansion/README.md)
 records commands, seed mapping, and output locations.
+
+Removed the 20-task throttle from GPU array 27799114 at the user's
+request. Slurm verified the same 122 tasks with scheduler-managed
+concurrency. The seed mapping and resource request per task are unchanged.
