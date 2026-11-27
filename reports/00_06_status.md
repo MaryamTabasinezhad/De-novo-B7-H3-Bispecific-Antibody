@@ -1380,3 +1380,12 @@ anchors with +0.93 and +0.45 Å nominal membrane clearance and represent
 one approach. Seed 412 offers a distinct three-anchor approach with
 +10.92 Å clearance. The [complete review](../results/04_22_arm_a_conditioned/README.md#six-backbone-results)
 records the tradeoffs and archived structures. No sequence design started.
+
+## Path C Arm A targeted H3 refinement — 2026-11-27 UTC
+
+Mapped residue 126 to H3 in both backbones. The nearest pair is 3.197 Å
+for 421 and 5.508 Å for 412. Submitted two H3-only refinements of 412
+(seeds 441 and 442) under GPU job 27785227, with geometry QC 27785246
+dependent on success. The [run record](../results/04_24_arm_a_h3_refinement/README.md)
+contains the loop table, input, and comparison criteria. Sequence
+design remains on hold.

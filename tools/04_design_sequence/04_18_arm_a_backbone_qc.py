@@ -45,7 +45,10 @@ def main(args):
     entries = [("A0", 0, baseline, None)]
     for spec in args:
         seed, job, *pose = spec.split(":")
-        if pose:
+        if len(pose) == 2:
+            run_stage, filename = pose
+            crop = Path("results") / run_stage / filename
+        elif pose:
             run_stage = "04_22_arm_a_conditioned"
             crop = Path("results") / run_stage / f"04_22_pose_{pose[0]}.pdb"
         else:
