@@ -43,3 +43,15 @@ fresh backbones on intact 4Ig and compare anchor coverage, protein and glycan
 distance checks, approach diversity, and full-Fab membrane clearance.
 Record tilt sensitivity as a risk flag. Full-Fab validation remains a
 separate advancement step.
+
+## Lead sequence expansion results
+
+Slurm job 27798098 completed in 3:26 with exit code 0. It produced 24
+threaded PDBs per backbone. The [VH/VL sequence table](04_27_lead_sequences.tsv)
+records 48 distinct pairs across the two backbones, of which 40 are new
+to this project pilot (20 per backbone). The other eight match the
+original pilot. The audit compared complete VH/VL sequences, retained
+all fixed framework blocks and loop lengths, confirmed Cα coverage,
+and checked that all residues use standard amino acids. Threaded PDBs
+remain in the scratch output directories above. This stage generated
+sequences. Full-Fab prediction and pose assessment are separate.

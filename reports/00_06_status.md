@@ -1439,3 +1439,11 @@ Submitted 27798098 for matched ProteinMPNN expansion on 412 and 421
 one-hour default. The [run record](../results/04_27_arm_a_parallel_expansion/README.md)
 lists the separate inputs, output paths, and review criteria. The
 earlier full-Fab AF3 jobs remain queued.
+
+## Path C Arm A lead sequence expansion complete — 2026-11-27 UTC
+
+ProteinMPNN job 27798098 completed. The [sequence audit](../results/04_27_arm_a_parallel_expansion/README.md#lead-sequence-expansion-results)
+verified 48 distinct VH/VL pairs across 412 and 421, including 40 new
+pairs and all eight prior pairs. All preserve the fixed frameworks and
+loop lengths. Full-Fab validation of the two original representatives
+remains a separate stage.
