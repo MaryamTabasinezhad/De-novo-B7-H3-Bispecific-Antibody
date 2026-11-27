@@ -1447,3 +1447,13 @@ verified 48 distinct VH/VL pairs across 412 and 421, including 40 new
 pairs and all eight prior pairs. All preserve the fixed frameworks and
 loop lengths. Full-Fab validation of the two original representatives
 remains a separate stage.
+
+## Path C de novo Arm A breadth expansion — 2026-11-27 UTC
+
+Submitted job 27799113 for 100 ProteinMPNN samples each on 412 and 421.
+Submitted GPU array 27799114 for 488 more fresh backbones, seeds 513–1000,
+to reach 500 with the original 12 from 27798099. The 122 array tasks
+request four designs each with up to 20 tasks running concurrently.
+Slurm applied its one-hour default to both submissions. The
+[run record](../results/04_28_arm_a_breadth_expansion/README.md)
+records commands, seed mapping, and output locations.
