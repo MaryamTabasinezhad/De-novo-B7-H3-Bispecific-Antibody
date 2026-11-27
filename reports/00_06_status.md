@@ -1430,3 +1430,12 @@ and 27790229 for sample 0 of each backbone, with dependent geometry
 QC 27790230. The [pilot record](../results/04_26_arm_a_sequence_pilot/README.md)
 contains sequences, provisional Fab format, and run details. AF3 results
 are pending.
+
+## Path C de novo Arm A parallel expansion — 2026-11-27 UTC
+
+Submitted 27798098 for matched ProteinMPNN expansion on 412 and 421
+(24 samples per backbone) and 27798099 for 12 fresh RFantibody backbones
+(seeds 501–512). No wall time was requested. Slurm assigned both a
+one-hour default. The [run record](../results/04_27_arm_a_parallel_expansion/README.md)
+lists the separate inputs, output paths, and review criteria. The
+earlier full-Fab AF3 jobs remain queued.
