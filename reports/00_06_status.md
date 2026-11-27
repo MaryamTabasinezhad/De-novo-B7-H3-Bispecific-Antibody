@@ -1371,3 +1371,12 @@ Resubmitted placement 2 as 27722542 with a 25-minute limit, with
 replacement QC 27722544 dependent on success. The
 [partial review](../results/04_22_arm_a_conditioned/README.md#partial-results-and-retry)
 records the findings and retry. Sequence design remains on hold.
+
+## Path C Arm A conditioned pilot complete — 2026-11-26 UTC
+
+Retry 27722542 and QC 27722544 completed. All six backbones cleared
+the short-distance clash screens. Seeds 421 and 422 retain all four
+anchors with +0.93 and +0.45 Å nominal membrane clearance and represent
+one approach. Seed 412 offers a distinct three-anchor approach with
++10.92 Å clearance. The [complete review](../results/04_22_arm_a_conditioned/README.md#six-backbone-results)
+records the tradeoffs and archived structures. No sequence design started.

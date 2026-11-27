@@ -86,3 +86,27 @@ under `/scratch/ghaedi/mab/04_22_arm_a_conditioned/A/27722542`.
 Dependent job 27722544 runs the six-backbone QC with 27722542 as the
 placement 2 output directory. The QC inputs are passed as a positional
 job ID to the existing worker. Sequence design remains on hold.
+
+## Six-backbone results
+
+Placement 2 retry 27722542 completed in 6:14 and QC job 27722544 in
+8 seconds, both with exit code 0. The [geometry table](04_22_geometry.tsv)
+and [approach and loop metrics](04_22_geometry_detail.tsv) cover all six
+archived backbones and the A0 and seed-201 controls.
+
+All six retained the expected HLT framework sequences and passed the
+sub-2 Å protein and glycan-proxy screen. Five cleared the nominal
+membrane plane. Seeds 421 and 422 are the only all-four-anchor poses.
+They clear the nominal plane by +0.93 and +0.45 Å, respectively, with
+−22.55 and −22.11 Å clearance in the 10° sensitivity check. They come
+from the same starting placement, differ by 2.3° in approach, and have
+1.35 Å within-placement loop Cα RMSD. Seed 412 is the complementary
+three-anchor pose with +10.92 Å nominal clearance. Framework Cα RMSD
+to the input ranges from 2.32 to 5.34 Å after target alignment.
+
+Keep 421 and 422 as one approach with two loop variants. Prioritize
+421 for interface review and use 412 as the distinct comparison for
+recovering contact to residue 126. The small positive margin for 421
+and 422 and their tilt sensitivity should be carried forward. Sequence
+design remains on hold pending review of these tradeoffs and the shared
+Fab format. No new job was submitted for this update.
