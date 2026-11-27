@@ -1461,3 +1461,21 @@ records commands, seed mapping, and output locations.
 Removed the 20-task throttle from GPU array 27799114 at the user's
 request. Slurm verified the same 122 tasks with scheduler-managed
 concurrency. The seed mapping and resource request per task are unchanged.
+
+## Slurm snapshot — 2026-11-27 06:00 UTC
+
+- Arm A lead sequence job 27799113 (100 samples each for 412 and 421)
+  was running. No sequence PDBs had been written at the snapshot.
+  Completed job 27798098 previously yielded 48 distinct pairs.
+- Arm A fresh job 27798099 was running with six of 12 nonempty
+  backbone PDBs. Array 27799114 had seven running and 115 pending
+  tasks, with no backbone PDBs written at the snapshot.
+- Arm A full-Fab AF3 jobs 27789933 and 27790229, Arm B bound-pose
+  array 27718731, and Path A jobs 27785535 (A232) and 27790007
+  (A275 retry) were pending GPU priority.
+- QC jobs 27790230 (Arm A full-Fab) and 27718920 (Arm B bound-pose)
+  were waiting on their prediction dependencies.
+
+Counts for running jobs are preliminary file counts. The
+[Arm A breadth run record](../results/04_28_arm_a_breadth_expansion/README.md)
+identifies the scratch outputs and seed provenance.
