@@ -60,3 +60,11 @@ After predictions finish, inspect all four samples per variant against the
 parent on intended-patch contacts, pose repeatability and interface
 confidence before scaling the redesign review. The 40-parent baseline
 audit is complete. The 40-parent redesign review is open.
+
+Run `python3 tools/04_design_sequence/04_25_compare_path_a_af3.py PARENT_DIR VARIANT_DIR`
+with the directories containing the four seed/sample folders after each prediction
+finishes. The output reports matched sample contacts, chain-pair confidence,
+clashes, and antigen-relative Fab placement. Cross-seed distances are also
+reported within each construct. An A232 parent self-comparison reproduced two
+passing samples, zero matched placement differences, and 6.43 Å between the
+two positive poses.

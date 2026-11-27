@@ -1400,3 +1400,5 @@ matched A232 AF3 comparison **27785535**, pending at the first check.
 A275 job **27674443** remained in the data pipeline at the check.
 Next inspect the matched variant predictions before expanding the redesign
 review. See the [Path A benchmark record](../results/04_25_path_a_benchmark/README.md).
+Prepared the matched AF3 comparison worker and verified it against the four
+A232 parent samples. Variant comparison awaits complete prediction outputs.
