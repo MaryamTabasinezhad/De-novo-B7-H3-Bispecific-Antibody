@@ -53,3 +53,10 @@ git show d10cc162097b59a2328744a13054c68729d21a75:tools/07_fab_categories/alphaf
 
 Scratch output root is `/scratch/ghaedi/mab/04_16_loop_hypotheses/27790007`.
 Logs are `/scratch/ghaedi/mab/jobs/fab_category_27790007_%a.{out,err}`.
+
+## B282 validation status — 2026-11-27 UTC
+
+Slurm recorded B282 S31T job 27674444 as TIMEOUT at its four-hour
+limit. The recorded scratch output directory had no model CIFs at
+the status check. The matched comparison with the unchanged B282
+parent is pending. No B282 retry was submitted in this update.

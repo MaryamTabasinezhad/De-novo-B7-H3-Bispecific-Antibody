@@ -1479,3 +1479,39 @@ concurrency. The seed mapping and resource request per task are unchanged.
 Counts for running jobs are preliminary file counts. The
 [Arm A breadth run record](../results/04_28_arm_a_breadth_expansion/README.md)
 identifies the scratch outputs and seed provenance.
+
+## Four-path status — 2026-11-27 06:01 UTC
+
+- **Path A — Arm A parent redesign.** Audited all 40 parent baselines
+  on intact 4Ig. A232 T26S (job 27785535) and the A275 S104T retry
+  (27790007) are pending GPU priority. The original A275 prediction
+  timed out without models. The redesign cohort remains open pending
+  matched parent–variant comparisons.
+  [Benchmark and analysis plan](../results/04_25_path_a_benchmark/README.md)
+- **Path B — Arm B parent redesign.** The B282 S31T prediction
+  (27674444) timed out at four hours without model CIFs. The matched
+  comparison and the full 29-parent redesign review remain open.
+  No B282 retry is queued.
+  [B282 run record](../results/04_16_loop_hypotheses/README.md#b282-validation-status--2026-11-27-utc)
+- **Path C — De novo Arm A.** Completed and audited 48 distinct VH/VL
+  pairs from 412 and 421. Job 27799113 is running toward 100 samples
+  per backbone, with no PDBs at this check. Fresh job 27798099 had
+  written seven of 12 PDBs. Array 27799114 had seven running and
+  115 pending tasks, with no output PDBs at this check. The two
+  full-Fab AF3 predictions (27789933 and 27790229) are queued.
+  QC 27790230 depends on both predictions.
+  [Arm A breadth expansion](../results/04_28_arm_a_breadth_expansion/README.md)
+- **Path C — De novo Arm B.** Historical backbones 248 and 152 were
+  selected for a glycosylated full-Fab prediction pilot after geometry
+  screening. AF3 array 27718731 is pending GPU priority. QC 27718920
+  waits for both tasks and will check the designed contacts, approach,
+  N215 glycan geometry and membrane clearance.
+  [Arm B bound-pose pilot](../results/04_23_arm_b_bound_pose/README.md)
+- **Path D — Dual-Fab pairing.** A275/B20 and A205/B251 remain the
+  archived comparators. Each reached both intended patches in one of
+  four prediction samples, with global ipTM of 0.19 and 0.18. The
+  same-antigen cis-binding gate remains open. No Path D job is queued.
+  [Dual-contact review](07_08_arm_a_contact_review.md)
+
+This snapshot records scheduler state and preliminary file counts for
+running jobs. No compute was submitted for this update.
