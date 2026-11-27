@@ -1418,3 +1418,15 @@ A275 AF3 job 27674443 timed out in database searches without models.
 Resubmitted the same input as job **27790007** with an eight-hour limit.
 Slurm reported it pending at submission. The A232 comparison remains under
 job 27785535. See the [A275 retry record](../results/04_16_loop_hypotheses/README.md#a275-retry--2026-11-27-utc).
+
+## Path C de novo Arm A matched sequence pilot — 2026-11-27 UTC
+
+ProteinMPNN sampled four pairs each for backbones 412 and 421. The 412
+results were verified after CPU job 27788267 was stopped during the
+slow 421 invocation. Single-thread retry 27790209 completed all four
+421 designs. All eight pairs are distinct and retain the fixed HLT
+frameworks and loop lengths. Submitted full-Fab AF3 jobs 27789933
+and 27790229 for sample 0 of each backbone, with dependent geometry
+QC 27790230. The [pilot record](../results/04_26_arm_a_sequence_pilot/README.md)
+contains sequences, provisional Fab format, and run details. AF3 results
+are pending.

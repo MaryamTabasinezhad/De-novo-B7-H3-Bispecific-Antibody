@@ -19,7 +19,7 @@ AF3="$MAB_SCRATCH_ROOT/alphafold3_src"; UV="$MAB_SCRATCH_ROOT/uv"; DB="$MAB_SCRA
 PROJECT="$MAB_PROJECT_ROOT"
 if [[ -n "${AF3_COMPARISON_INPUT:-}" ]]; then
   JSON="$AF3_COMPARISON_INPUT"
-  OUT="$MAB_SCRATCH_ROOT/04_16_loop_hypotheses/$SLURM_JOB_ID"
+  OUT="$MAB_SCRATCH_ROOT/${AF3_COMPARISON_STAGE:-04_16_loop_hypotheses}/$SLURM_JOB_ID"
 else
   CAT="${FAB_CATEGORY:?FAB_CATEGORY must be A, B, or AB}"
   case "$CAT" in A) N=40; RES="fab_A_only";; B) N=29; RES="fab_B_only";; AB) N=1160; RES="fab_AB_pairs";; esac
