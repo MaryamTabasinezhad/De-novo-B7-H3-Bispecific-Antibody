@@ -1411,3 +1411,10 @@ I126, and introduce an Arg127 carbonyl overlap. Keep 412 and 421 as
 comparators and hold both refinements. The
 [completed run record](../results/04_24_arm_a_h3_refinement/README.md#completion-and-disposition)
 contains both structures and QC tables. Sequence design remains on hold.
+
+## Path A A275 retry — 2026-11-27 UTC
+
+A275 AF3 job 27674443 timed out in database searches without models.
+Resubmitted the same input as job **27790007** with an eight-hour limit.
+Slurm reported it pending at submission. The A232 comparison remains under
+job 27785535. See the [A275 retry record](../results/04_16_loop_hypotheses/README.md#a275-retry--2026-11-27-utc).

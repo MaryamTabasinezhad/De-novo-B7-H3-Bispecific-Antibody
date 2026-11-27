@@ -35,3 +35,21 @@ Next compare per-sample intended-patch contacts, local interface confidence
 and pose consistency against each unchanged parent.
 
 A one-time watcher checks both jobs every 60 seconds and publishes [04_16_completion.md](04_16_completion.md) after both terminate. Its local log is work/04_16_watch_af3/watcher.log.
+
+## A275 retry — 2026-11-27 UTC
+
+Job 27674443 reached its four-hour limit during database searches and
+produced zero model CIFs. Resubmitted A275 as **27790007** with eight hours,
+the same AF3 input, and the committed worker. Slurm accepted the job and
+reported it pending at submission.
+
+```bash
+source config/hpc/rorqual.sh
+git show d10cc162097b59a2328744a13054c68729d21a75:tools/07_fab_categories/alphafold3_fab_category_job.sh |
+  sbatch --parsable --account="$MAB_GPU_ACCOUNT" --time=08:00:00 \
+    --job-name=mab-loop-A275-retry \
+    --export="ALL,AF3_COMPARISON_INPUT=$MAB_PROJECT_ROOT/results/04_16_loop_hypotheses/04_16_A275_af3.json"
+```
+
+Scratch output root is `/scratch/ghaedi/mab/04_16_loop_hypotheses/27790007`.
+Logs are `/scratch/ghaedi/mab/jobs/fab_category_27790007_%a.{out,err}`.
