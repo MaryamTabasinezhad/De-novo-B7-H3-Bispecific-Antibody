@@ -1,0 +1,17 @@
+parent	context	sample	igv1_IRDF_contacts	igv2_IRDF_contacts	full_target_contact_footprint	H_target_ipTM	L_target_ipTM	H_target_PAE_min	L_target_PAE_min	source
+217	crop	seed-101_sample-0	127,128,129	.	.	0.16	0.15	12.4	12.72	results/06_02_af3_validation_shortlist/per_sample.tsv
+217	crop	seed-101_sample-1	126,127	.	.	0.14	0.14	12.7	13.61	results/06_02_af3_validation_shortlist/per_sample.tsv
+217	crop	seed-202_sample-0	127,129	.	.	0.17	0.16	11.57	11.96	results/06_02_af3_validation_shortlist/per_sample.tsv
+217	crop	seed-202_sample-1	127	.	.	0.13	0.13	12.77	13.53	results/06_02_af3_validation_shortlist/per_sample.tsv
+283	crop	seed-101_sample-0	-	.	.	0.17	0.17	10.9	11.12	results/06_02_af3_validation_shortlist/per_sample.tsv
+283	crop	seed-101_sample-1	127,128,129	.	.	0.22	0.22	7.03	7.06	results/06_02_af3_validation_shortlist/per_sample.tsv
+283	crop	seed-202_sample-0	128,129	.	.	0.15	0.15	12.25	12.07	results/06_02_af3_validation_shortlist/per_sample.tsv
+283	crop	seed-202_sample-1	126,127,128,129	.	.	0.17	0.17	9.18	9.21	results/06_02_af3_validation_shortlist/per_sample.tsv
+217	4Ig	seed-101_sample-0	.	.	259,261,262,263,265,267,302,304,305,308,309,311,314,315,316,317,322,324,326,328,329	0.09	0.09	20.96	21.9	/scratch/ghaedi/mab/fab_category_outputs/fab_A_only/index_20/fabA_rf2_task217/seed-101_sample-0/fabA_rf2_task217_seed-101_sample-0_model.cif
+217	4Ig	seed-101_sample-1	.	347	215,217,234,235,236,238,279,280,299,301,347,349,351,354,355,356,389,390,391,392,393,414,415,417,418,441,443,444	0.09	0.09	24.61	24.76	/scratch/ghaedi/mab/fab_category_outputs/fab_A_only/index_20/fabA_rf2_task217/seed-101_sample-1/fabA_rf2_task217_seed-101_sample-1_model.cif
+217	4Ig	seed-202_sample-0	.	.	150,166,168,173,174,175,176,177,187,189,190,191,192,193,194,195,196,197,198,202,203,205,207,209,391,407,408,409,410,412,413,414	0.11	0.11	23.11	23.89	/scratch/ghaedi/mab/fab_category_outputs/fab_A_only/index_20/fabA_rf2_task217/seed-202_sample-0/fabA_rf2_task217_seed-202_sample-0_model.cif
+217	4Ig	seed-202_sample-1	129	.	64,66,68,70,71,73,74,75,80,81,87,88,90,121,123,125,129,130,131,387,409,410,411,412,413,414,416,417,425	0.09	0.09	22.05	22.73	/scratch/ghaedi/mab/fab_category_outputs/fab_A_only/index_20/fabA_rf2_task217/seed-202_sample-1/fabA_rf2_task217_seed-202_sample-1_model.cif
+283	4Ig	seed-101_sample-0	.	.	175,177,179,181,182,183,184,185,187,217,219,223,232,234,393,395,397,439,441,446	0.11	0.12	23.61	23.38	/scratch/ghaedi/mab/fab_category_outputs/fab_A_only/index_25/fabA_rf2_task283/seed-101_sample-0/fabA_rf2_task283_seed-101_sample-0_model.cif
+283	4Ig	seed-101_sample-1	.	.	34,35,36,37,39,49,117,118,135,136,137,172,173,175,177,187,221,223,225,226,227,228,229,230,416	0.18	0.19	23.25	23.14	/scratch/ghaedi/mab/fab_category_outputs/fab_A_only/index_25/fabA_rf2_task283/seed-101_sample-1/fabA_rf2_task283_seed-101_sample-1_model.cif
+283	4Ig	seed-202_sample-0	.	.	41,42,43,44,141,229,276,277,278,279,301,302,303,304,305,309,311,312,313,315,316,319,320,326,328,329	0.09	0.09	23.68	24.04	/scratch/ghaedi/mab/fab_category_outputs/fab_A_only/index_25/fabA_rf2_task283/seed-202_sample-0/fabA_rf2_task283_seed-202_sample-0_model.cif
+283	4Ig	seed-202_sample-1	.	.	69,70,71,72,73,74,115,117,118,119,135,137,172,173,174,175,192,194,195,196,197,198,199,200,202,225,226,413,416	0.1	0.12	22.98	23.93	/scratch/ghaedi/mab/fab_category_outputs/fab_A_only/index_25/fabA_rf2_task283/seed-202_sample-1/fabA_rf2_task283_seed-202_sample-1_model.cif

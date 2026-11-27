@@ -1389,3 +1389,14 @@ for 421 and 5.508 Å for 412. Submitted two H3-only refinements of 412
 dependent on success. The [run record](../results/04_24_arm_a_h3_refinement/README.md)
 contains the loop table, input, and comparison criteria. Sequence
 design remains on hold.
+
+## Path A benchmark follow-up — 2026-11-27 UTC
+
+Audited 40 Arm A parent baselines on intact 4Ig and verified the ch8H9
+2Ig-Fc mutagenesis evidence and its mapping to the two canonical 4Ig IRDF
+motifs. A217 and A283 show dispersed, low-confidence poses on intact 4Ig
+and stay in diagnostic review. GPT-6.2 Sol proposed A232 VL T26S. Submitted
+matched A232 AF3 comparison **27785535**, pending at the first check.
+A275 job **27674443** remained in the data pipeline at the check.
+Next inspect the matched variant predictions before expanding the redesign
+review. See the [Path A benchmark record](../results/04_25_path_a_benchmark/README.md).

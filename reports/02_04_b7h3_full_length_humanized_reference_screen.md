@@ -7,6 +7,18 @@ The evidence for each arm's epitope is evaluated separately from IgG format.
 
 ## Arm A — IgV1 FG loop
 
+Ahmed et al. Fig. 7 and Table 10 report ch8H9 IgG SPR against recombinant
+human **2Ig-B7-H3-Fc**. R127A retained 0.1% of the wild-type response and
+D128A retained 60%. The paper maps the tested IRDF motif to canonical human
+4Ig CD276 positions 126–129 in IgV1 and 344–347 in IgV2. These results
+support FG-loop dependence in the assay. IgV1 preference on intact 4Ig
+remains a project hypothesis. The L1–R127 and H3–D128 contacts come from
+docking. 5CMA is the isolated ch8H9 Fab. The paper reports humanized
+mutant-binding results without showing the underlying data. Transfer the
+antigen-side evidence to parent review as lineage-level guidance. Exact
+humanized IgG chain-pair qualification remains open.
+[Primary study](https://pmc.ncbi.nlm.nih.gov/articles/PMC4705981/#F7)
+
 | Reference | Developer or research origin | Modality and sequence evidence | 3D evidence | Verdict and rationale |
 |---|---|---|---|---|
 | 8H9 | Memorial Sloan Kettering; Y-mAbs developed radiolabeled omburtamab | Humanized IgG1 variants. Patent pairs H1L2 with HC 10/LC 3 and H2L1 with HC 11/LC 2. | Experimental ch8H9 Fab alone, [5CMA](https://www.rcsb.org/structure/5CMA). | **Lead lineage.** H1L2 and H2L1 each showed 34.8 nM binding to 4Ig in patent Table 4. Verify full mature domain coverage and the exact selected pair before release. FG-loop binding evidence is lineage-level. [Patent](https://patents.justia.com/patent/10316093) · [Study](https://pmc.ncbi.nlm.nih.gov/articles/PMC4705981/) |
