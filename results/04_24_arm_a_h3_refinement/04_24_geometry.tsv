@@ -1,0 +1,6 @@
+pose	H3_L1_L3	VH_VL	fixed_blocks_match	max_adjacent_CA_A	anchors_le4p5	fv_pairs_lt2	outside_crop_pairs_lt2	closest_fv_pair	closest_fv_A	max_constant_pairs_lt2	nearest_site	min_fab_ND2_A	min_fab_N104_NAG_A	min_fv_z_A	worst_fab_clearance_A	best_fab_clearance_A	worst_fab_clearance_10deg_A	angle_from_A0_deg	framework_to_input_CA_rmsd_A	loops_to_input_CA_rmsd_A
+A0	11/11/9	120/107	True	3.865	126,127,128,129	1	0	H:101:O/A:125:OG	1.680	0	104	20.436	19.754	24.114	-10.680	-10.286	-40.224	0.0	-	-
+421	12/13/11	121/111	True	3.875	126,127,128,129	0	0	H:101:O/A:127:CG	2.848	0	104	22.262	19.775	16.285	0.933	0.933	-22.553	57.0	4.075	2.920
+412	12/13/11	121/111	True	3.864	127,128,129	0	0	L:149:O/A:73:CB	3.055	0	104	21.096	18.132	26.273	10.921	10.921	-10.059	81.2	2.324	1.975
+441	12/13/11	121/111	True	3.864	127,128,129	1	0	H:101:O/A:127:O	1.572	0	104	19.754	16.823	26.146	10.794	10.794	-9.934	84.6	2.016	1.603
+442	12/13/11	121/111	True	3.883	127,128,129	1	0	H:101:O/A:127:O	1.641	0	104	20.382	17.424	26.218	10.866	10.866	-9.701	84.5	1.935	1.498

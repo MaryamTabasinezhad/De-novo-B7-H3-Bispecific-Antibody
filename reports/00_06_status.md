@@ -1402,3 +1402,12 @@ Next inspect the matched variant predictions before expanding the redesign
 review. See the [Path A benchmark record](../results/04_25_path_a_benchmark/README.md).
 Prepared the matched AF3 comparison worker and verified it against the four
 A232 parent samples. Variant comparison awaits complete prediction outputs.
+
+## Path C Arm A targeted H3 refinement complete — 2026-11-27 UTC
+
+GPU job 27785227 and QC 27785246 completed. Seeds 441 and 442 retain
+three anchors and approximately +10.8 Å nominal Fab clearance, miss
+I126, and introduce an Arg127 carbonyl overlap. Keep 412 and 421 as
+comparators and hold both refinements. The
+[completed run record](../results/04_24_arm_a_h3_refinement/README.md#completion-and-disposition)
+contains both structures and QC tables. Sequence design remains on hold.

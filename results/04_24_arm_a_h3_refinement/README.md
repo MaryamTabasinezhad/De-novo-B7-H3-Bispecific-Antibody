@@ -45,3 +45,20 @@ under `/scratch/ghaedi/mab/04_24_arm_a_h3_refinement/qc/27785246/`.
 Compare with 421 and 412 for four-anchor coverage, protein and glycan
 distance checks, and nominal Fab clearance. Record 10° tilt as a risk
 flag. Sequence design remains on hold.
+
+## Completion and disposition
+
+GPU job 27785227 completed in 3:36 and QC job 27785246 in 3 seconds,
+both with exit code 0. The [geometry table](04_24_geometry.tsv) and
+[approach and loop metrics](04_24_geometry_detail.tsv) cover both outputs.
+Seeds 441 and 442 retain contacts to residues 127–129 and preserve
+about +10.8 Å of nominal Fab clearance. Both miss residue 126 and
+introduce a heavy-chain H101 carbonyl O overlap with the B7-H3 Arg127
+carbonyl O at 1.572 and 1.641 Å, respectively. The modeled glycan
+distance checks remain clear.
+
+Keep 412 as the wider-clearance approach and 421 as the all-four-anchor
+benchmark. Do not advance 441 or 442. Two seeds from the same H3-only
+setup reproduced the same failure. Review whether residue 126 needs a
+different approach or explicit local contact control before another
+backbone batch. Sequence design remains on hold.
